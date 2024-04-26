@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V.Vidhya-Contact</title>
+
+    <link href="dist/output.css" rel="stylesheet" />
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body class="bg-mainbg-color text-font-color-pri font-notosans">
+    <header
+      class="bg-navbar-color-pri flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
+    >
+      <div class="flex flex-row items-center">
+        <a href="index.html">
+          <img
+            class="h-9 sm:h-12 md:h-16 w-auto pr-0.5 md:pr-2"
+            src="public/images/full-logo.png"
+            alt="full-logo"
+          />
+        </a>
+      </div>
+      <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </div>
+      <div
+        class="topbar-menu bg-navbar-color-pri sm:flex z-[-1] md:z-auto left-0 absolute md:static w-full md:w-auto opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-200"
+      >
+        <nav
+          class="flex flex-col sm:flex-row space-x-2 md:space-x-4 font-bold text-base md:text-xl items-center justify-center"
+        >
+          <a
+            class="hover:text-font-color-sec hover:underline underline-offset-8"
+            href="index.html"
+            >About</a
+          >
+          <a
+            class="hover:text-font-color-sec hover:underline underline-offset-8"
+            href="courses.html"
+            >Courses</a
+          >
+          <a
+            class="underline underline-offset-8 hover:text-font-color-sec hover:underline"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section
+      class="flex flex-col items-center justify-center gap-3 mx-auto mb-10 max-w-md md:max-w-2xl lg:max-w-4xl"
+    >
+      <h2 class="text-3xl md:text-5xl font-bold mb-3">Address</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8672665504605!2d72.79245137589098!3d21.197431181962674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c2d21e3ffff%3A0x84eb5f824f69b049!2sVisual%20Software%20%26%20Multimedia!5e0!3m2!1sen!2sin!4v1714146551202!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p>
+        10, Samay Shopping Complex, Opposite Center Point, Anand Mahal Road,
+        Adajan, Surat, Gujarat - 395009
+      </p>
+    </section>
+
+    <section
+      class="flex flex-col items-center justify-center gap-3 mx-auto mb-10 max-w-md md:max-w-2xl lg:max-w-4xl"
+    >
+      <h2 class="text-center text-3xl md:text-5xl font-bold mt-3 mb-3">
+        Mail us At
+      </h2>
+      <div>
+        <a
+          class="hover:text-font-color-sec hover:underline underline-offset-8"
+          href="mailto:admin@vvidhya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >admin@vvidhya.com</a
+        >
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col items-center justify-center gap-3 mx-auto mb-10 max-w-md md:max-w-2xl lg:max-w-4xl"
+    >
+      <h2 class="text-center text-3xl md:text-5xl font-bold mb-3">
+        Call us On
+      </h2>
+      <div>
+        <a
+          class="hover:text-font-color-sec hover:underline underline-offset-8"
+          href="tel:+919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >+91-9429267900</a
+        >
+      </div>
+    </section>
+
+    <form action="" class="mx-auto mb-10 max-w-md md:max-w-2xl lg:max-w-4xl">
+      <legend class="text-center text-3xl md:text-5xl font-bold mt-3 mb-9">
+        Inquiry Form
+      </legend>
+      <fieldset
+        class="flex flex-col items-center justify-center gap-5 py-10 border-solid border-2 rounded-md"
+      >
+        <input class="w-3/4 p-3" type="text" placeholder="Enter your name" />
+        <input
+          class="w-3/4 p-3"
+          type="tel"
+          placeholder="Enter your contact number"
+        />
+        <input
+          class="w-3/4 p-3"
+          type="email"
+          placeholder="Enter your email id"
+        />
+        <input
+          class="w-3/4 p-3"
+          type="email"
+          placeholder="Enter your course name"
+        />
+        <textarea
+          class="w-3/4 p-3"
+          name=""
+          placeholder="Enter your message here"
+          id=""
+          cols="30"
+          rows="10"
+          resize="vertical"
+        ></textarea>
+        <button
+          class="text-font-color-ter bg-font-color-sec hover:text-font-color-pri p-3 font-bold rounded-md"
+          type="submit"
+        >
+          Submit
+        </button>
+      </fieldset>
+    </form>
+
+    <footer
+      class="bg-navbar-color-pri flex flex-col items-center justify-center gap-3 py-2.5 md:py-5 mt-auto"
+    >
+      <div>
+        <a
+          class="hover:text-font-color-sec hover:underline underline-offset-8"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >Terms & Conditions</a
+        >
+      </div>
+
+      <div class="text-2xl md:text-3xl space-x-4">
+        <a
+          class="hover:text-font-color-sec"
+          href="tel:+919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Phone"
+        >
+          <i class="fa fa-phone"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="mailto:admin@vvidhya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.whatsapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Whatsapp"
+        >
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram-square"></i>
+        </a>
+      </div>
+
+      <div>
+        <p>© 2024 All Rights Reserved by V.Vidhya Institute</p>
+      </div>
+    </footer>
+
+    <script src="src/navbar-menu.js"></script>
+  </body>
+</html>
