@@ -14,8 +14,11 @@ module.exports = {
       "mainbg-color-dark": "rgb(30, 30, 30)",
       "font-color-pri": "rgb(55, 53, 47)",
       "font-color-sec": "#20C20E",
-      "font-color-ter": "#FFFFFF",
-      "font-color-qua": "#55aff9",
+      "font-color-white": "#FFFFFF",
+      "font-color-blue": "#55aff9",
+      "font-color-yellow": "#FFD43B",
+      "font-color-purple": "#B197FC",
+      "font-color-pink": "#E599F7",
       "font-color-dark": "rgb(235, 235, 235)",
       "link-color": "rgb(232, 28, 79)",
       "hover-color": "rgb(108, 117, 125)",
@@ -29,6 +32,14 @@ module.exports = {
       borderWidth: {
         '6': "6px"
       },
+
+      maxWidth: {
+        'mdsm': "344px"
+      },
+
+      width: {
+        '152': "712px"
+      }
     },
   },
   plugins: [],
