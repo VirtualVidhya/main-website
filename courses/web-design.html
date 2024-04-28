@@ -223,22 +223,24 @@
         >
           Course Work
         </h4>
-        <div class="flex flex-row gap-6 items-center justify-center">
+        <div class="flex flex-row gap-2 md:gap-6 items-center justify-center">
           <button
             id="left-btn"
-            class="w-10 h-10 rounded-full text-2xl bg-font-color-pri text-font-color-white hover:text-font-color-sec"
+            class="w-7 h-7 md:w-10 md:h-10 rounded-full text-xl md:text-2xl bg-font-color-pri text-font-color-white hover:text-font-color-sec"
           >
             <i class="fa-solid fa-caret-left"></i>
           </button>
+          <!-- <div class="border-2 mx-auto w-80 md:w-152 flex items-center justify-center"> -->
           <img
             id="carousel-content"
-            class="w-80 h-auto md:w-152 mx-auto border-2"
+            class="border-2 mx-auto w-60 md:w-120 lg:w-200 aspect-video"
             src="../public/images/course-work/SeoMaster-webpage.png"
-            alt=""
+            alt="course-work"
           />
+          <!-- </div> -->
           <button
             id="right-btn"
-            class="w-10 h-10 rounded-full text-2xl bg-font-color-pri text-font-color-white hover:text-font-color-sec"
+            class="w-7 h-7 md:w-10 md:h-10 rounded-full text-xl md:text-2xl bg-font-color-pri text-font-color-white hover:text-font-color-sec"
           >
             <i class="fa-solid fa-caret-right"></i>
           </button>
@@ -256,7 +258,7 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto"
         >
           <a
-            href="courses/game-development.html"
+            href="game-development.html"
             class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
           >
             <img
@@ -418,9 +420,9 @@
 
     <script>
       const contents = [
-        "../public/images/course-work/SeoMaster-webpage.png",
-        "../public/images/course-work/BasicResume-webpage.png",
+        "../public/images/course-work/SeoMaster-webpage.gif",
         "../public/images/course-work/CafeMenu-webpage.png",
+        "../public/images/course-work/BasicResume-webpage.gif",
       ];
 
       let currIndex = 0;
