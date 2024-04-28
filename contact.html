@@ -138,7 +138,12 @@
       >
     </section>
 
-    <form action="" class="mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl">
+    <form
+      action=""
+      id="form"
+      autocomplete="off"
+      class="mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+    >
       <legend
         class="text-font-color-sec text-center text-3xl md:text-5xl font-extrabold mt-3 mb-9"
       >
@@ -147,35 +152,65 @@
       <fieldset
         class="flex flex-col items-center justify-center gap-5 py-10 border-solid border-2 border-b-6 rounded-xl"
       >
-        <input class="w-3/4 p-3" type="text" placeholder="Enter your name" />
-        <input
-          class="w-3/4 p-3"
-          type="tel"
-          placeholder="Enter your contact number"
-        />
-        <input
-          class="w-3/4 p-3"
-          type="email"
-          placeholder="Enter your email id"
-        />
+        <div class="flex flex-col w-3/4">
+          <input
+            id="name"
+            class="p-3"
+            type="text"
+            placeholder="Enter your name"
+          />
+          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+          <div class="error text-font-color-red-dark"></div>
+        </div>
 
-        <input
-          class="w-3/4 p-3"
-          type="text"
-          placeholder="Enter your course name"
-          list="courses"
-        />
-        <datalist id="courses">
-          <option value="Kids Course">Kids Course</option>
-          <option value="MS-Suite">MS-Suite</option>
-          <option value="Graphics Design">Graphics Design</option>
-          <option value="Web Development & Design">
-            Web Development & Design
-          </option>
-          <option value="Programming">Programming</option>
-          <option value="Game Development">Game Development</option>
-          <option value="Tally">Tally</option>
-        </datalist>
+        <div class="flex flex-col w-3/4">
+          <input
+            id="phone"
+            class="p-3"
+            type="tel"
+            placeholder="Enter your contact number"
+          />
+          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+          <div class="error text-font-color-red-dark"></div>
+        </div>
+
+        <div class="flex flex-col w-3/4">
+          <input
+            id="email"
+            class="p-3"
+            type="text"
+            placeholder="Enter your email id"
+          />
+          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+          <div class="error text-font-color-red-dark"></div>
+        </div>
+
+        <div class="flex flex-col w-3/4">
+          <input
+            id="course"
+            class="p-3"
+            type="text"
+            placeholder="Enter your course name"
+            list="courses"
+          />
+          <datalist id="courses">
+            <option value="Kids Course">Kids Course</option>
+            <option value="MS-Suite">MS-Suite</option>
+            <option value="Graphics Design">Graphics Design</option>
+            <option value="Web Development & Design">
+              Web Development & Design
+            </option>
+            <option value="Programming">Programming</option>
+            <option value="Game Development">Game Development</option>
+            <option value="Tally">Tally</option>
+          </datalist>
+          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+          <div class="error text-font-color-red-dark"></div>
+        </div>
 
         <textarea
           class="w-3/4 p-3"
@@ -186,7 +221,9 @@
           rows="10"
           resize="vertical"
         ></textarea>
+
         <button
+          id="submit"
           class="text-font-color-white bg-font-color-sec hover:text-font-color-pri px-6 py-3 font-bold rounded-md"
           type="submit"
         >
@@ -263,5 +300,6 @@
 
     <script src="src/navbar-menu.js"></script>
     <script src="src/scroll-up-btn.js"></script>
+    <script src="src/inquiry-form-validation.js"></script>
   </body>
 </html>
