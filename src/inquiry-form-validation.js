@@ -3,24 +3,37 @@ let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
 
 let username = id("name"),
-  phone = id("phone"),
-  email = id("email"),
-  form = id("form"),
-  course = id("course"),
-  errorMsg = classes("error");
-//   successIcon = classes("success-icon"),
-//   failureIcon = classes("failure-icon");
+    phone = id("phone"),
+    email = id("email"),
+    course = id("course"),
+    errorMsg = classes("error"),
+    form = id("form"),
+    successMsg = id("form-success-msg");
+    // successIcon = classes("success-icon"),
+    // failureIcon = classes("failure-icon");
+
+let errorCount = 0;
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+    e.preventDefault();
+    
+    errorCount = 0;
 
-  check(username, 0, "Name cannot be blank!");
-  check(phone, 1, "Phone number cannot be blank!");
-  check(email, 2, "Email cannot be blank!");
-  check(course, 3, "Course cannot be blank!");
-  
-  onsubmit();
+    check(username, 0, "Name cannot be blank!");
+    check(phone, 1, "Phone number cannot be blank!");
+    check(email, 2, "Email cannot be blank!");
+    check(course, 3, "Course cannot be blank!");
+
+    if (errorCount > 0) return;
+
+    onSuccessfulSubmission();
 });
+
+function onSuccessfulSubmission() {
+    form.classList.add('hidden');
+    successMsg.classList.remove('hidden');
+    successMsg.classList.add('flex');
+} 
 
 let check = (id, serial, message) => {
   if (id.value.trim() === "") {
@@ -56,8 +69,8 @@ let check = (id, serial, message) => {
 function showError(id, serial, msg) {
     errorMsg[serial].innerHTML = msg;
 
-    // id.classList.remove('border-2');
-    // id.classList.remove('rounded-md');
+    errorCount++;
+
     id.classList.remove('border-font-color-sec');
 
     if(!id.classList.contains("border-2")) {
@@ -73,8 +86,6 @@ function showError(id, serial, msg) {
 function showNoError(id, serial) {
     errorMsg[serial].innerHTML = "";
 
-    // id.classList.remove('border-2');
-    // id.classList.remove('rounded-md');
     id.classList.remove('border-font-color-red-dark');
 
 
