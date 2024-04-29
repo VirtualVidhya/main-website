@@ -140,6 +140,7 @@
 
     <form
       action=""
+      method="POST"
       id="form"
       autocomplete="off"
       class="mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
@@ -155,6 +156,7 @@
         <div class="flex flex-col w-3/4">
           <input
             id="name"
+            name="name"
             class="p-3"
             type="text"
             placeholder="Enter your name"
@@ -167,6 +169,7 @@
         <div class="flex flex-col w-3/4">
           <input
             id="phone"
+            name="phone-no."
             class="p-3"
             type="tel"
             placeholder="Enter your contact number"
@@ -179,6 +182,7 @@
         <div class="flex flex-col w-3/4">
           <input
             id="email"
+            name="email"
             class="p-3"
             type="text"
             placeholder="Enter your email id"
@@ -191,6 +195,7 @@
         <div class="flex flex-col w-3/4">
           <input
             id="course"
+            name="course"
             class="p-3"
             type="text"
             placeholder="Enter your course name"
@@ -214,9 +219,9 @@
 
         <textarea
           class="w-3/4 p-3"
-          name=""
+          id="message"
+          name="message"
           placeholder="Enter your message here"
-          id=""
           cols="30"
           rows="10"
           resize="vertical"
