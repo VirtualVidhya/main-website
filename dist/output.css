@@ -640,6 +640,10 @@ video {
   margin-top: auto;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -690,6 +694,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-10 {
@@ -816,16 +824,8 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
 .border-2 {
   border-width: 2px;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .border-b-6 {
@@ -959,14 +959,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -974,8 +969,18 @@ video {
   line-height: 1;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -1001,6 +1006,11 @@ video {
   color: rgb(55 53 47 / var(--tw-text-opacity));
 }
 
+.text-font-color-red-dark {
+  --tw-text-opacity: 1;
+  color: rgb(224 49 49 / var(--tw-text-opacity));
+}
+
 .text-font-color-sec {
   --tw-text-opacity: 1;
   color: rgb(32 194 14 / var(--tw-text-opacity));
@@ -1009,16 +1019,6 @@ video {
 .text-font-color-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-font-color-red {
-  --tw-text-opacity: 1;
-  color: rgb(255 135 135 / var(--tw-text-opacity));
-}
-
-.text-font-color-red-dark {
-  --tw-text-opacity: 1;
-  color: rgb(224 49 49 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1093,6 +1093,26 @@ video {
 
   .sm\:h-12 {
     height: 3rem;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:w-1\/4 {
+    width: 25%;
+  }
+
+  .sm\:w-3\/4 {
+    width: 75%;
+  }
+
+  .sm\:w-2\/5 {
+    width: 40%;
+  }
+
+  .sm\:w-3\/5 {
+    width: 60%;
   }
 
   .sm\:flex-row {
@@ -1205,6 +1225,11 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:opacity-100 {
