@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V.Vidhya-Home</title>
+
+    <link href="../dist/output.css" rel="stylesheet" />
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/images/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="../public/images/favicon-icons/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="../public/images/favicons/safari-pinned-tab.svg"
+      color="#000000"
+    />
+    <link rel="shortcut icon" href="../public/images/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="../public/images/favicon-icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body
+    class="bg-mainbg-color text-font-color-pri font-notosans flex flex-col min-h-screen"
+  >
+    <button
+      id="scroll-up-btn"
+      class="hidden fixed bottom-4 right-4 transition w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <header
+      class="bg-navbar-color-pri flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
+    >
+      <div class="flex flex-row items-center">
+        <a href="../index.html">
+          <img
+            class="h-9 sm:h-12 md:h-16 lg:h-18 w-auto pr-0.5 md:pr-2"
+            src="../public/images/med-logo.png"
+            alt="full-logo"
+          />
+        </a>
+      </div>
+
+      <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </div>
+
+      <div
+        class="topbar-menu bg-navbar-color-pri sm:flex z-[-1] md:z-auto left-0 absolute md:static w-full md:w-auto opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-200"
+      >
+        <nav
+          class="flex flex-col gap-1 sm:gap-0 sm:flex-row space-x-2 md:space-x-4 font-bold text-base md:text-xl items-center justify-center"
+        >
+          <a
+            class="hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
+            href="../index.html"
+            >About</a
+          >
+          <a
+            class="underline underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
+            href="../courses.html"
+            >Courses</a
+          >
+          <a
+            class="hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
+            href="../contact.html"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main
+      class="flex flex-col items-center justify-center gap-3 px-6 lg:px-0 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-6xl"
+    >
+      <h2
+        class="text-font-color-pri text-2xl md:text-5xl font-extrabold mt-3 mb-10"
+      >
+        Microsoft Office
+      </h2>
+
+      <button
+        class="text-font-color-white bg-font-color-sec hover:text-font-color-pri px-6 py-3 font-bold rounded-md mb-5"
+      >
+        <a href="../contact.html">Enroll Now</a>
+      </button>
+
+      <div class="flex flex-row items-center justify-center gap-2 mb-24">
+        <i class="fa-regular fa-clock"></i>
+        <p>7-12 months</p>
+      </div>
+
+      <!-- Overview -->
+      <section class="text-center mb-24">
+        <h4
+          class="text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5"
+        >
+          Overview
+        </h4>
+        <p class="text-justify">
+          Absolutely, understanding computer basics is fundamental in today's
+          world, both for personal and professional reasons. From navigating
+          software to performing basic troubleshooting, having a grasp of
+          computer fundamentals is essential in various fields and industries.
+        </p>
+      </section>
+
+      <!-- Curriculum -->
+      <section class="mb-24">
+        <h4
+          class="text-center text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5"
+        >
+          Course Curriculum
+        </h4>
+        <ul class="list-outside list-disc mx-auto">
+          <li>
+            <span class="text-font-color-blue font-extrabold"
+              >Operating Systems:</span
+            >
+            Understanding of how to navigate and utilize within operating
+            systems
+          </li>
+          <li>
+            <span class="text-font-color-blue font-extrabold"
+              >File Management:</span
+            >
+            Learning how to organize, store, and retrieve files efficiently on a
+            computer system.
+          </li>
+          <li>
+            <span class="text-font-color-blue font-extrabold"
+              >Word Processing:</span
+            >
+            Developing skills in using word processing software like Microsoft
+            Word or Google Docs for creating documents, reports, and
+            presentations.
+          </li>
+          <li>
+            <span class="text-font-color-blue font-extrabold"
+              >Spreadsheet Applications:</span
+            >
+            Familiarizing oneself with spreadsheet software such as Microsoft
+            Excel or Google Sheets, which are widely used for data analysis,
+            budgeting, and more.
+          </li>
+          <li>
+            <span class="text-font-color-blue font-extrabold"
+              >Internet Basics:</span
+            >
+            Exploring web browsers, search engines, and understanding online
+            safety and security measures.
+          </li>
+          <li>
+            <span class="text-font-color-blue font-extrabold"
+              >Email Communication:</span
+            >
+            Learning how to compose, send, and manage emails effectively for
+            personal and professional communication.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Course Work -->
+      <!-- <section class="text-center mb-24">
+        <h4
+          class="text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5"
+        >
+          Course Work
+        </h4>
+        <iframe
+          class="w-80 h-80 md:w-152 md:h-96 mx-auto border-2 aspect-w-16 aspect-h-9"
+          src="https://www.youtube.com/embed/mal0ApRKU58"
+          title="Crimson Tactics: The Rise of The White Banner - RELEASE GAMEPLAY TRAILER"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section> -->
+
+      <!-- Related Courses -->
+      <section class="text-center mb-24">
+        <h4
+          class="text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5"
+        >
+          Related Courses
+        </h4>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto"
+        >
+          <a
+            href="game-development.html"
+            class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
+          >
+            <img
+              class="w-32 h-auto"
+              src="../public/images/unity-icon.png"
+              alt="course-logo"
+            />
+            <h4
+              class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+            >
+              Game Development
+            </h4>
+            <p class="text-center mb-2">
+              Make cool 2D & 3D games using Unity game engine & C#...
+            </p>
+            <div class="flex flex-row items-center justify-center gap-2">
+              <i class="fa-regular fa-clock"></i>
+              <p>7-12 months</p>
+            </div>
+            <div class="flex flex-row flex-wrap gap-3">
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">Unity</div>
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">C#</div>
+            </div>
+          </a>
+
+          <a
+            href="web-design.html"
+            class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
+          >
+            <img
+              class="w-32 h-auto"
+              src="../public/images/html-icon.png"
+              alt="course-logo"
+            />
+            <h4
+              class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+            >
+              Web Design
+            </h4>
+            <p class="text-center mb-2">
+              Make cool websites using HTML, CSS, JavaScript...
+            </p>
+            <div class="flex flex-row items-center justify-center gap-2">
+              <i class="fa-regular fa-clock"></i>
+              <p>5-8 months</p>
+            </div>
+            <div class="flex flex-row flex-wrap gap-3">
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">HTML5</div>
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">CSS3</div>
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">JS</div>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
+          >
+            <img
+              class="w-32 h-auto"
+              src="../public/images/graphicdesign-icon.png"
+              alt="course-logo"
+            />
+            <h4
+              class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+            >
+              Graphics Design
+            </h4>
+            <p class="text-center mb-2">
+              Make cool designs using CorelDraw, Photoshop, Illustrator...
+            </p>
+            <div class="flex flex-row items-center justify-center gap-2">
+              <i class="fa-regular fa-clock"></i>
+              <p>5-8 months</p>
+            </div>
+            <div class="flex flex-row flex-wrap gap-3">
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                Photoshop
+              </div>
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                CorelDraw
+              </div>
+              <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                Illustrator
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-navbar-color-pri flex flex-col items-center justify-center gap-3 py-2.5 md:py-5 mt-auto"
+    >
+      <div>
+        <a
+          class="hover:text-font-color-sec hover:underline underline-offset-8"
+          href="../t&c.html"
+          rel="noopener noreferrer"
+          title="T&C"
+          >Terms & Conditions</a
+        >
+      </div>
+
+      <div class="text-2xl md:text-3xl space-x-4">
+        <a
+          class="hover:text-font-color-sec"
+          href="tel:+919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Phone"
+        >
+          <i class="fa fa-phone"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="mailto:admin@vvidhya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.whatsapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Whatsapp"
+        >
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram-square"></i>
+        </a>
+      </div>
+
+      <div>
+        <p>© 2024 All Rights Reserved by V.Vidhya Institute</p>
+      </div>
+    </footer>
+
+    <script src="../src/navbar-menu.js"></script>
+    <script src="../src/scroll-up-btn.js"></script>
+  </body>
+</html>
