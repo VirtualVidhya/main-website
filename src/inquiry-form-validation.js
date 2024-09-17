@@ -80,6 +80,7 @@ function showError(id, serial, msg) {
     if(!id.classList.contains("rounded-md")) {
         id.classList.add('rounded-md');
     }
+
     id.classList.add('border-font-color-red-dark');
 }
 
@@ -88,13 +89,14 @@ function showNoError(id, serial) {
 
     id.classList.remove('border-font-color-red-dark');
 
-
     if(!id.classList.contains("border-2")) {
         id.classList.add('border-2');
     }
+    
     if(!id.classList.contains("rounded-md")) {
         id.classList.add('rounded-md');
     }
+
     id.classList.add('border-font-color-sec');
 }
 
@@ -108,7 +110,8 @@ function validateName(id) {
 }
 
 function validatePhoneNo(id) {
-    var phoneno = /(6|7|8|9)\d{9}/;
+    var phoneno = /^(6|7|8|9)\d{9}$/;
+
     if (!id.value.match(phoneno)) {
         return "Please enter a valid contact number!";
     }
@@ -119,6 +122,7 @@ function validatePhoneNo(id) {
 
 function validateEmail(id) {
     var reg = new RegExp("^[a-zA-Z0-9_.]+@[a-zA-Z0-9.]+$");
+    
     if (!reg.test(id.value)) {
         return "Please enter a valid email address!";
     }
