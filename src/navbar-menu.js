@@ -10,5 +10,4 @@ function Menu(e) {
         list.classList.remove("top-[45px]"),
         list.classList.remove("opacity-100"),
         list.classList.remove("py-4"));
-  }
-  
+}
