@@ -14,13 +14,14 @@
       rel="stylesheet"
     /> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
+    <!-- font-awesome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -175,7 +176,7 @@
       method="POST"
       id="form"
       autocomplete="off"
-      class="mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+      class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl"
     >
       <legend
         class="text-font-color-sec text-center text-3xl md:text-5xl font-extrabold mt-3 mb-9"
@@ -183,9 +184,9 @@
         Inquiry Form
       </legend>
       <fieldset
-        class="flex flex-col items-center justify-center gap-5 py-10 border-solid border-2 border-b-6 rounded-xl"
+        class="flex flex-col items-center justify-center gap-5 py-5 sm:py-10 border-solid border-2 border-b-6 rounded-xl"
       >
-        <div class="flex flex-col w-3/4">
+        <div class="flex flex-col w-5/6 sm:w-3/4">
           <input
             id="name"
             name="name"
@@ -198,7 +199,7 @@
           <div class="error text-font-color-red-dark"></div>
         </div>
 
-        <div class="flex flex-col w-3/4">
+        <div class="flex flex-col w-5/6 sm:w-3/4">
           <input
             id="phone"
             name="phone-no."
@@ -211,7 +212,7 @@
           <div class="error text-font-color-red-dark"></div>
         </div>
 
-        <div class="flex flex-col w-3/4">
+        <div class="flex flex-col w-5/6 sm:w-3/4">
           <input
             id="email"
             name="email"
@@ -224,7 +225,7 @@
           <div class="error text-font-color-red-dark"></div>
         </div>
 
-        <div class="flex flex-col w-3/4">
+        <div class="flex flex-col w-5/6 sm:w-3/4">
           <input
             id="course"
             name="course"
@@ -250,7 +251,7 @@
         </div>
 
         <textarea
-          class="w-3/4 p-3"
+          class="w-5/6 sm:w-3/4 p-3"
           id="message"
           name="message"
           placeholder="Enter your message here"

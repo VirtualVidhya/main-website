@@ -21,6 +21,7 @@ module.exports = {
       "font-color-yellow-dark": "#FAB005",
       "font-color-purple": "#B197FC",
       "font-color-purple-dark": "#6741D9",
+      "font-color-violet": "#a570ff",
       "font-color-pink": "#E599F7",
       "font-color-pink-dark": "#9C36B5",
       "font-color-red": "#FF8787",
@@ -40,7 +41,7 @@ module.exports = {
       },
 
       maxWidth: {
-        'mdsm': "344px"
+        // 'mdsm': "320px"
       },
 
       width: {
