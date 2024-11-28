@@ -870,6 +870,11 @@ video {
   border-color: rgb(156 154 151 / var(--tw-border-opacity));
 }
 
+.border-font-color-blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(85 175 249 / var(--tw-border-opacity));
+}
+
 .border-font-color-red-dark {
   --tw-border-opacity: 1;
   border-color: rgb(224 49 49 / var(--tw-border-opacity));
@@ -1180,13 +1185,28 @@ video {
     gap: 0px;
   }
 
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
 
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .sm\:underline-offset-8 {
