@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     fontFamily: {
       'systemui': ["system-ui", "sans-serif"],
-      'serif': ["DM Sans", "serif"],
-      'opensans': ["Open Sans", "system-ui"],
-      'notosans': ["Noto Sans", "system-ui"]
+      // 'serif': ["DM Sans", "serif"],
+      // 'opensans': ["Open Sans", "system-ui"],
+      'notosans': ["NotoSans", "system-ui"]
     },
 
     colors: {
