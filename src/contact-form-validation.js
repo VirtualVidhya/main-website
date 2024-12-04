@@ -15,7 +15,7 @@ let successMsg = id("form-success-msg");
 let errorCount = 0;
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 
   errorCount = 0;
 
