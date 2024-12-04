@@ -20,3 +20,8 @@ package.jsongit
 # Ignore all local history of files
 .history
 .ionide
+
+# Local Cloudflare folder
+.wrangler
+.data.vars
+dist/

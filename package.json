@@ -1,5 +1,26 @@
 {
+  "name": "vvidhya.com",
+  "version": "0.0.0",
+  "private": true,
+  "main": "functions/api/submit-contact-form.js",
+  "scripts": {
+    "start": "wrangler dev",
+    "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
+    "build:static": "mkdir -p dist && find . -type f ! -path './dist/*' -exec cp --parents {} dist/ \\; && rm -rf dist/functions dist/package.json dist/package-lock.json dist/node_modules",
+    "build": "npm run build:worker && npm run build:static",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "log": "npx wrangler pages deployment tail"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.4.3"
+    "@cloudflare/vitest-pool-workers": "^0.5.2",
+    "tailwindcss": "^3.4.3",
+    "wrangler": "^3.92.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resend": "^4.0.1"
   }
 }

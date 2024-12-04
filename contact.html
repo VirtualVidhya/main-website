@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>V.Vidhya-Contact</title>
 
-    <link href="dist/output.css" rel="stylesheet" />
+    <link href="/dist//output.css" rel="stylesheet" />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -195,12 +195,13 @@
     </section>
 
     <form
-      action=""
+      name="contact"
       method="POST"
       id="form"
-      autocomplete="off"
+      action="/api/submit-contact-form"
       class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl"
     >
+      <!-- autocomplete="off" -->
       <h2
         class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-9"
       >
@@ -227,10 +228,23 @@
           <div class="error text-font-color-red-dark"></div>
         </div>
 
+        <div class="w-5/6 sm:w-3/4 hidden">
+          <input
+            id="address"
+            name="address"
+            class="p-3"
+            type="text"
+            placeholder="Enter your address"
+          />
+          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+          <!-- <div class="error text-font-color-red-dark"></div> -->
+        </div>
+
         <div class="flex flex-col w-5/6 sm:w-3/4">
           <input
             id="phone"
-            name="phone-no."
+            name="phone"
             class="p-3"
             type="tel"
             placeholder="Enter your contact number"
@@ -246,7 +260,7 @@
             name="email"
             class="p-3"
             type="text"
-            placeholder="Enter your email id"
+            placeholder="Enter your email address"
           />
           <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
           <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
@@ -380,6 +394,6 @@
 
     <script src="src/navbar-menu.js"></script>
     <script src="src/scroll-up-btn.js"></script>
-    <script src="src/inquiry-form-validation.js"></script>
+    <script src="src/contact-form-validation.js"></script>
   </body>
 </html>
