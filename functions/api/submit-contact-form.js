@@ -1,6 +1,6 @@
 // POST /api/submit-contact-form
 
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 export async function onRequestPost(context) {
   try {
@@ -69,3 +69,20 @@ export async function onRequestPost(context) {
     return new Response("Error parsing JSON content", { status: 400 });
   }
 }
+
+// import { Resend } from "resend";
+
+// export default {
+//   async fetch(request, env, ctx) {
+//     const resend = new Resend("rre_FkKEAwa1_AsroqhKRxMyQdzTgrXsFdgw3");
+
+//     const { data, error } = await resend.emails.send({
+//       from: "contact@vvidhya.com",  // Replace with your sender email
+//       to: "parvahdesai10@gmail.com", // Replace with recipient email
+//       subject: "Hello World",
+//       html: "<p>Hello from Workers</p>",
+//     });
+
+//     return Response.json({ data, error });
+//   },
+// };
