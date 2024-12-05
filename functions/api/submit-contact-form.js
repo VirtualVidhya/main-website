@@ -18,13 +18,6 @@ export async function onRequestPost(context) {
       }
     }
 
-    // let pretty = JSON.stringify(output, null, 2);
-    // return new Response(pretty, {
-    //   headers: {
-    //     "Content-Type": "application/json;charset=utf-8",
-    //   },
-    // });
-
     // Using text instead of email so that I don't need to sanitize it
     const resend = new Resend(context.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
@@ -42,12 +35,7 @@ export async function onRequestPost(context) {
       return Response.redirect("https://vvidhya.com/contact.html", 303);
     }
 
-    // const key = context.env.RESEND_API_KEY;
-    // console.log(context.env.RESEND_API_KEY);
-
-    // return Response.redirect(`Error: ${key}`, { status: 500 });
-  } 
-  catch (err) {
+  } catch (err) {
     return new Response("Error parsing JSON content", { status: 400 });
   }
 }
