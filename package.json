@@ -5,7 +5,6 @@
   "main": "functions/api/submit-contact-form.js",
   "scripts": {
     "start": "wrangler dev",
-    "build": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "log": "npx wrangler pages deployment tail"
