@@ -4,16 +4,15 @@
   "private": true,
   "main": "functions/api/submit-contact-form.js",
   "scripts": {
-    "build": "esbuild functions/api/submit-contact-form.js --bundle --outfile=dist/worker.js",
+    "start": "wrangler dev",
+    "build": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "test": "vitest"
+    "log": "npx wrangler pages deployment tail"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.5.2",
     "tailwindcss": "^3.4.3",
-    "vitest": "2.0.5",
     "wrangler": "^3.92.0"
   },
   "dependencies": {
