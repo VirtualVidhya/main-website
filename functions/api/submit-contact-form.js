@@ -4,6 +4,9 @@ import { Resend } from "resend";
 
 export async function onRequestPost(context) {
   try {
+    console.log('Request Method:', context.request.method);
+    console.log('Request Headers:', context.request.headers);
+
     let input = await context.request.formData();
 
     // Convert FormData to JSON
@@ -17,6 +20,8 @@ export async function onRequestPost(context) {
         output[key] = [].concat(tmp, value);
       }
     }
+
+    console.log('Form Data:', output);
 
     // Using text instead of email so that I don't need to sanitize it
     const resend = new Resend(context.env.RESEND_API_KEY);
@@ -36,6 +41,7 @@ export async function onRequestPost(context) {
     }
 
   } catch (err) {
+    console.error('Error:', err);
     return new Response("Error parsing JSON content", { status: 400 });
   }
 }
