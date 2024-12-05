@@ -46,24 +46,6 @@ export async function onRequestPost(context) {
     // console.log(context.env.RESEND_API_KEY);
 
     // return Response.redirect(`Error: ${key}`, { status: 500 });
-
-    // try {
-    //   const resend = new Resend(context.env.RESEND_API_KEY);
-    //   const { data, error } = await resend.emails.send({
-    //     from: context.env.SENDER_EMAIL,
-    //     reply_to: output.email,
-    //     to: context.env.RECIPIENT_EMAIL,
-    //     subject: `[VVIDHYA.COM] Contact form request from ${output.name}: ${output.subject}`,
-    //     text: output.message,
-    //   });
-    //   if (error) {
-    //     console.error("Resend API error:", error);
-    //   }
-    //   console.log("Email Sent:", data);
-    // } catch (err) {
-    //   console.error("Error in Resend API call:", err);
-    //   return new Response("Error sending email", { status: 500 });
-    // }
   } 
   catch (err) {
     return new Response("Error parsing JSON content", { status: 400 });
