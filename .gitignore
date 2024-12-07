@@ -24,3 +24,4 @@ package.jsongit
 # Local Cloudflare folder
 .wrangler
 .data.vars
+dist/
