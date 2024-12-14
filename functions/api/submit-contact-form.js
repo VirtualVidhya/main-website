@@ -33,10 +33,10 @@ export async function onRequestPost(context) {
     // Using text instead of email so that I don't need to sanitize it
     const resend = new Resend(context.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
-      from: `Inquiry-Form @V.Vidhya <${context.env.SENDER_EMAIL}>`,
-      to: `Contact-Team @V.Vidhya <${context.env.RECIPIENT_EMAIL}>`,
+      from: `Inquiry at V.Vidhya <${context.env.SENDER_EMAIL}>`,
+      to: `Contact at V.Vidhya <${context.env.RECIPIENT_EMAIL}>`,
       replyTo: output.email,
-      subject: `[VVIDHYA.COM] Inquiry request from ${output.name}`,
+      subject: `[vvidhya.com] Inquiry request from ${output.name}`,
       text: `Name: ${output.name}\nEmail: ${output.email}\nPhone: ${output.phone}\nCourse: ${output.course}\n\nMessage: ${output.message}`,
     });
     console.log({ data, error });
