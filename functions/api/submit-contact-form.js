@@ -35,7 +35,7 @@ export async function onRequestPost(context) {
     const { data, error } = await resend.emails.send({
       from: `Inquiry-Form @V.Vidhya <${context.env.SENDER_EMAIL}>`,
       to: `Contact-Team @V.Vidhya <${context.env.RECIPIENT_EMAIL}>`,
-      reply_to: output.email,
+      replyTo: output.email,
       subject: `[VVIDHYA.COM] Inquiry request from ${output.name}`,
       text: `Name: ${output.name}\nEmail: ${output.email}\nPhone: ${output.phone}\nCourse: ${output.course}\n\nMessage: ${output.message}`,
     });
