@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/*.{html,js}", "./*.html", "./courses/*.html"],
   theme: {
+    screens: {
+      '2xs': '320px',
+      'xs': '460px',
+      ...defaultTheme.screens,
+    },
+
     fontFamily: {
       'systemui': ["system-ui", "sans-serif"],
       // 'serif': ["DM Sans", "serif"],
@@ -41,7 +50,7 @@ module.exports = {
       },
 
       maxWidth: {
-        // 'mdsm': "320px"
+        'mdsm': "340px"
       },
 
       width: {
