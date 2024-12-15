@@ -729,6 +729,48 @@ video {
   --tw-contain-style:  ;
 }
 
+.course-card {
+  box-sizing: border-box;
+  display: flex;
+  height: auto;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-bottom-width: 6px;
+  --tw-border-opacity: 1;
+  border-color: rgb(156 154 151 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 242 233 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+}
+
+.course-card:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 53 47 / var(--tw-border-opacity));
+}
+
+@media (min-width: 768px) {
+  .course-card {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .course-card {
+    max-width: 345px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .course-card {
+    max-width: 400px;
+  }
+}
+
 .fixed {
   position: fixed;
 }
@@ -786,14 +828,14 @@ video {
   margin-right: 0.5rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .mb-10 {
@@ -932,6 +974,10 @@ video {
   width: 100%;
 }
 
+.max-w-mdsm {
+  max-width: 340px;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -978,6 +1024,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .gap-1 {
@@ -1521,6 +1571,10 @@ video {
 
   .lg\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
