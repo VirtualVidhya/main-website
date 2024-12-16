@@ -117,6 +117,10 @@
 }
 
 @layer components {
+  .course-card-grid {
+    @apply grid [grid-template-columns:repeat(auto-fit,minmax(300px,max-content))] justify-center justify-items-center gap-10 mb-24;
+  }
+
   .course-card {
     @apply flex flex-col items-center justify-between box-border max-w-[300px] md:max-w-[320px] lg:max-w-[345px] 2xl:max-w-[400px] gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri;
   }

@@ -729,6 +729,15 @@ video {
   --tw-contain-style:  ;
 }
 
+.course-card-grid {
+  margin-bottom: 6rem;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(300px,max-content));
+}
+
 .course-card {
   box-sizing: border-box;
   display: flex;
@@ -836,6 +845,11 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .mb-10 {
@@ -1024,10 +1038,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-items-center {
-  justify-items: center;
 }
 
 .gap-1 {
@@ -1571,10 +1581,6 @@ video {
 
   .lg\:max-w-6xl {
     max-width: 72rem;
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
