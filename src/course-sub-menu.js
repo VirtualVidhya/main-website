@@ -1,25 +1,6 @@
-// function SubMenu(e) {
-//     let list = document.querySelector(".sub-menu");
-
-//     if (e.name === "menu") {
-//       e.name = "close";
-
-//       list.classList.add('hidden');
-//       list.classList.remove('flex');
-//     } 
-//     else {
-//       e.name = "menu";
-      
-//       list.classList.remove('hidden');
-//       list.classList.add('flex');
-//     }
-// }
-
 const supportsHover = window.matchMedia('(hover: hover)').matches;
 
 function SubMenu(e) {
-    console.log("submenu");
-
     let list = document.querySelector(".sub-menu");
 
     if (supportsHover) {
@@ -29,25 +10,42 @@ function SubMenu(e) {
     else {
         if (e.name === "menu") {
             e.name = "close";
+
             list.classList.add('hidden');
             list.classList.remove('flex');
-        } else {
+
+            submenu_btn.classList.remove("text-font-color-sec");
+            submenu_btn.classList.remove("underline");
+        } 
+        else {
             e.name = "menu";
+
+            submenu_btn.classList.add("text-font-color-sec");
+            submenu_btn.classList.add("underline");
+
             list.classList.remove('hidden');
             list.classList.add('flex');
         }
     }
 }
 
+let submenu_btn = document.querySelector(".submenu-trigger");
+
 if (!supportsHover) {
-    document.querySelector(".submenu-trigger").addEventListener('click', (e) => {
+    submenu_btn.addEventListener('click', (e) => {
         e.preventDefault();
         SubMenu(e.target);
     });
+
+    submenu_btn.classList.remove("hover:text-font-color-sec");
+    submenu_btn.classList.remove("hover:underline");
 }
 else {
-    document.querySelector(".submenu-trigger").removeEventListener('click', (e) => {
+    submenu_btn.removeEventListener('click', (e) => {
         e.preventDefault();
         SubMenu(e.target);
     });
+
+    submenu_btn.classList.add("hover:text-font-color-sec");
+    submenu_btn.classList.add("hover:underline");
 }
