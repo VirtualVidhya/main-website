@@ -9,8 +9,6 @@ function Menu(e) {
 
       list.classList.add("translate-x-[400px]");
       list.classList.add("opacity-100");
-      list.classList.add("p-2");
-      list.classList.add("pt-8");
     } 
     else {
       e.name = "menu";
@@ -20,7 +18,5 @@ function Menu(e) {
 
       list.classList.remove("translate-x-[400px]");
       list.classList.remove("opacity-100");
-      list.classList.remove("p-2");
-      list.classList.remove("pt-8");
     }
 }
