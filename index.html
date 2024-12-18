@@ -81,15 +81,6 @@
       content="public/images/favicon-icons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </head>
 
   <body
@@ -103,7 +94,7 @@
     </button>
 
     <header
-      class="bg-navbar-color-pri flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
+      class="bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
     >
       <div class="flex flex-row items-center">
         <a href="index.html">
@@ -115,28 +106,48 @@
         </a>
       </div>
 
-      <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      <div class="text-2xl cursor-pointer mx-2 sm:hidden block">
+        <i class="fa-solid fa-bars" name="close" onclick="Menu(this)"></i>
       </div>
 
       <div
-        class="topbar-menu bg-navbar-color-pri sm:flex z-[-1] md:z-auto left-0 absolute md:static w-full md:w-auto opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-200"
+        class="topbar-menu bg-navbar-color-pri sm:flex z-10 sm:z-auto absolute sm:static h-dvh sm:h-auto w-full sm:w-auto left-[-400px] top-[50px] opacity-0 sm:opacity-100 transition-all ease-in duration-200"
       >
         <nav
-          class="flex flex-col gap-1 sm:gap-0 sm:flex-row space-x-2 md:space-x-4 font-bold text-base md:text-xl items-center justify-center"
+          class="flex flex-col items-start sm:items-stretch gap-3 sm:gap-0 sm:flex-row sm:space-x-2 md:space-x-4 font-bold text-base md:text-xl pl-2 sm:pl-0"
         >
           <a
-            class="underline underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
+            class="flex items-center underline underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
             href="index.html"
             >About</a
           >
+          <div class="sm:relative group">
+            <span
+              class="submenu-trigger h-full flex items-center hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8 cursor-pointer"
+              name="close"
+              ><span>Courses<i class="fa-solid fa-caret-down pl-1"></i></span
+            ></span>
+            <div
+              class="sub-menu sm:absolute hidden sm:group-hover:flex flex-col gap-4 bg-navbar-color-pri rounded-md py-3 pl-5 sm:pt-6 sm:pb-4 sm:px-6 min-w-max sm:right-0"
+            >
+              <a href="courses/multi-media/" class="hover:text-font-color-sec"
+                >Multimedia Courses</a
+              >
+              <a
+                href="courses/software-development/"
+                class="hover:text-font-color-sec"
+                >Programming Courses</a
+              >
+              <a href="courses/literacy/" class="hover:text-font-color-sec"
+                >Literacy Courses</a
+              >
+              <a href="courses/kids/" class="hover:text-font-color-sec"
+                >Kids Courses</a
+              >
+            </div>
+          </div>
           <a
-            class="hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
-            href="courses.html"
-            >Courses</a
-          >
-          <a
-            class="hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
+            class="flex items-center hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
             href="contact.html"
             >Contact</a
           >
@@ -159,9 +170,9 @@
         </div>
 
         <button
-          class="text-font-color-white bg-font-color-blue hover:text-font-color-pri text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-md border-2 border-b-6 border-font-color-blue hover:border-font-color-pri"
+          class="text-font-color-white bg-font-color-blue hover:text-font-color-pri text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-xl border-2 border-b-6 border-font-color-blue-dark hover:border-font-color-pri"
         >
-          <a href="courses.html">Explore Courses</a>
+          <a href="courses/">Explore Courses</a>
         </button>
 
         <!-- <h2
@@ -391,6 +402,7 @@
       </div>
     </footer>
 
+    <script src="src/course-sub-menu.js"></script>
     <script src="src/navbar-menu.js"></script>
     <script src="src/scroll-up-btn.js"></script>
   </body>
