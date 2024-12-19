@@ -1,5 +1,6 @@
 function Menu(e) {
     let list = document.querySelector(".topbar-menu");
+    let body = document.body;
 
     if (e.name === "menu") {
       e.name = "close";
@@ -9,6 +10,8 @@ function Menu(e) {
 
       list.classList.add("translate-x-[640px]");
       list.classList.add("opacity-100");
+
+      body.style.overflow = "hidden";
     } 
     else {
       e.name = "menu";
@@ -18,5 +21,7 @@ function Menu(e) {
 
       list.classList.remove("translate-x-[640px]");
       list.classList.remove("opacity-100");
+
+      body.style.overflow = "";
     }
 }
