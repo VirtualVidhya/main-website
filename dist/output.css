@@ -453,7 +453,7 @@ video {
 
   font-weight: 300;
 
-  src: url(../public/fonts/noto-sans-v37-latin-300.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-300.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -465,7 +465,7 @@ video {
 
   font-weight: 300;
 
-  src: url(../public/fonts/noto-sans-v37-latin-300italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-300italic.woff2)
       format("woff2");
 
   font-display: swap;
@@ -478,7 +478,7 @@ video {
 
   font-weight: 400;
 
-  src: url(../public/fonts/noto-sans-v37-latin-regular.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-regular.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -490,7 +490,7 @@ video {
 
   font-weight: 400;
 
-  src: url(../public/fonts/noto-sans-v37-latin-italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-italic.woff2)
       format("woff2");
 
   font-display: swap;
@@ -503,7 +503,7 @@ video {
 
   font-weight: 500;
 
-  src: url(../public/fonts/noto-sans-v37-latin-500.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-500.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -515,7 +515,7 @@ video {
 
   font-weight: 500;
 
-  src: url(../public/fonts/noto-sans-v37-latin-500italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-500italic.woff2)
       format("woff2");
 
   font-display: swap;
@@ -528,7 +528,7 @@ video {
 
   font-weight: 600;
 
-  src: url(../public/fonts/noto-sans-v37-latin-600.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-600.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -540,7 +540,7 @@ video {
 
   font-weight: 600;
 
-  src: url(../public/fonts/noto-sans-v37-latin-600italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-600italic.woff2)
       format("woff2");
 
   font-display: swap;
@@ -553,7 +553,7 @@ video {
 
   font-weight: 700;
 
-  src: url(../public/fonts/noto-sans-v37-latin-700.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-700.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -565,7 +565,7 @@ video {
 
   font-weight: 700;
 
-  src: url(../public/fonts/noto-sans-v37-latin-700italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-700italic.woff2)
       format("woff2");
 
   font-display: swap;
@@ -578,7 +578,7 @@ video {
 
   font-weight: 800;
 
-  src: url(../public/fonts/noto-sans-v37-latin-800.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-800.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -590,7 +590,7 @@ video {
 
   font-weight: 800;
 
-  src: url(../public/fonts/noto-sans-v37-latin-800italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-800italic.woff2)
       format("woff2");
 
   font-display: swap;
@@ -603,7 +603,7 @@ video {
 
   font-weight: 900;
 
-  src: url(../public/fonts/noto-sans-v37-latin-900.woff2) format("woff2");
+  src: url(/public/fonts/noto-sans-v37-latin-900.woff2) format("woff2");
 
   font-display: swap;
 }
@@ -615,7 +615,7 @@ video {
 
   font-weight: 900;
 
-  src: url(../public/fonts/noto-sans-v37-latin-900italic.woff2)
+  src: url(/public/fonts/noto-sans-v37-latin-900italic.woff2)
       format("woff2");
 
   font-display: swap;
