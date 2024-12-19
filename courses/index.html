@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>V.Vidhya-Home</title>
+    <title>V.Vidhya - Your Virtual Path to Knowledge</title>
 
-    <link href="/dist//output.css" rel="stylesheet" />
+    <link href="/dist/output.css" rel="stylesheet" />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,43 +54,35 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="public/images/favicons/apple-touch-icon.png"
+      href="/public/images/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="public/images/favicons/favicon-32x32.png"
+      href="/public/images/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="public/images/favicons/favicon-16x16.png"
+      href="/public/images/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="public/images/favicon-icons/site.webmanifest" />
+    <link rel="manifest" href="/public/images/favicon-icons/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="public/images/favicons/safari-pinned-tab.svg"
+      href="/public/images/favicons/safari-pinned-tab.svg"
       color="#000000"
     />
-    <link rel="shortcut icon" href="public/images/favicons/favicon.ico" />
+    <link rel="shortcut icon" href="/public/images/favicons/favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-config"
-      content="public/images/favicon-icons/browserconfig.xml"
+      content="/public/images/favicon-icons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </head>
+
   <body
     class="bg-mainbg-color text-font-color-pri font-notosans flex flex-col min-h-screen"
   >
@@ -102,41 +94,61 @@
     </button>
 
     <header
-      class="bg-navbar-color-pri flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
+      class="bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
     >
       <div class="flex flex-row items-center">
-        <a href="index.html">
+        <a href="/">
           <img
             class="h-9 sm:h-12 md:h-16 lg:h-18 w-auto pr-0.5 md:pr-2"
-            src="public/images/med-logo.png"
+            src="/public/images/med-logo.png"
             alt="full-logo"
           />
         </a>
       </div>
 
-      <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      <div class="text-2xl cursor-pointer mx-2 sm:hidden block">
+        <i class="fa-solid fa-bars" name="close" onclick="Menu(this)"></i>
       </div>
 
       <div
-        class="topbar-menu bg-navbar-color-pri sm:flex z-[-1] md:z-auto left-0 absolute md:static w-full md:w-auto opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-200"
+        class="topbar-menu bg-navbar-color-pri sm:flex z-10 sm:z-auto absolute sm:static h-dvh sm:h-auto w-full sm:w-auto left-[-400px] top-[50px] opacity-0 sm:opacity-100 p-2 pt-8 sm:p-0 sm:pt-0 transition-all ease-in duration-200"
       >
         <nav
-          class="flex flex-col gap-1 sm:gap-0 sm:flex-row space-x-2 md:space-x-4 font-bold text-base md:text-xl items-center justify-center"
+          class="flex flex-col items-start sm:items-stretch gap-3 sm:gap-0 sm:flex-row sm:space-x-2 md:space-x-4 font-bold text-base md:text-xl pl-2 sm:pl-0"
         >
           <a
-            class="hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
-            href="index.html"
+            class="flex items-center hover:underline underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
+            href="/"
             >About</a
           >
+          <div class="sm:relative group">
+            <span
+              class="submenu-trigger h-full flex items-center cursor-pointer underline underline-offset-4 sm:underline-offset-8"
+              name="close"
+              ><span>Courses<i class="fa-solid fa-caret-down pl-1"></i></span
+            ></span>
+            <div
+              class="sub-menu hidden sm:absolute flex-col gap-4 bg-navbar-color-pri rounded-md py-3 pl-5 sm:pt-6 sm:pb-4 sm:px-6 min-w-max sm:right-0"
+            >
+              <a href="/courses/multi-media/" class="hover:text-font-color-sec"
+                >Multimedia Courses</a
+              >
+              <a
+                href="/courses/software-development/"
+                class="hover:text-font-color-sec"
+                >Programming Courses</a
+              >
+              <a href="/courses/literacy/" class="hover:text-font-color-sec"
+                >Literacy Courses</a
+              >
+              <a href="/courses/kids/" class="hover:text-font-color-sec"
+                >Kids Courses</a
+              >
+            </div>
+          </div>
           <a
-            class="underline underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
-            href="courses.html"
-            >Courses</a
-          >
-          <a
-            class="hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
-            href="contact.html"
+            class="flex items-center hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
+            href="/contact.html"
             >Contact</a
           >
         </nav>
@@ -152,10 +164,10 @@
         </h2>
 
         <div class="course-card-grid">
-          <a href="courses/game-development.html" class="course-card">
+          <a href="/courses/game-development.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/unity-icon.png"
+              src="/public/images/unity-icon.png"
               alt="course-logo"
             />
             <h4
@@ -182,10 +194,10 @@
             </div>
           </a>
 
-          <a href="courses/web-design.html" class="course-card">
+          <a href="/courses/web-design.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/html-icon.png"
+              src="/public/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -212,7 +224,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/graphicdesign-icon.png"
+              src="/public/images/graphicdesign-icon.png"
               alt="course-logo"
             />
             <h4
@@ -244,10 +256,10 @@
         </h2>
 
         <div class="course-card-grid">
-          <a href="courses/game-development.html" class="course-card">
+          <a href="/courses/game-development.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/unity-icon.png"
+              src="/public/images/unity-icon.png"
               alt="course-logo"
             />
             <h4
@@ -273,7 +285,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/html-icon.png"
+              src="/public/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -300,7 +312,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/graphicdesign-icon.png"
+              src="/public/images/graphicdesign-icon.png"
               alt="course-logo"
             />
             <h4
@@ -335,10 +347,10 @@
         </h2>
 
         <div class="course-card-grid">
-          <a href="courses/ms-office.html" class="course-card">
+          <a href="/courses/ms-office.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/msoffice-icon.png"
+              src="/public/images/msoffice-icon.png"
               alt="course-logo"
             />
             <h4
@@ -371,7 +383,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/html-icon.png"
+              src="/public/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -442,7 +454,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/html-icon.png"
+              src="/public/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -464,10 +476,10 @@
             </div>
           </a>
 
-          <a href="courses/ms-office.html" class="course-card">
+          <a href="/courses/ms-office.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="public/images/msoffice-icon.png"
+              src="/public/images/msoffice-icon.png"
               alt="course-logo"
             />
             <h4
@@ -542,7 +554,7 @@
       <div>
         <a
           class="hover:text-font-color-sec hover:underline underline-offset-8"
-          href="t&c.html"
+          href="/t&c.html"
           rel="noopener noreferrer"
           title="T&C"
           >Terms & Conditions</a
@@ -602,8 +614,8 @@
       </div>
     </footer>
 
-    <script src="src/course-sub-menu.js"></script>
-    <script src="src/navbar-menu.js"></script>
-    <script src="src/scroll-up-btn.js"></script>
+    <script src="/src/course-sub-menu.js"></script>
+    <script src="/src/navbar-menu.js"></script>
+    <script src="/src/scroll-up-btn.js"></script>
   </body>
 </html>
