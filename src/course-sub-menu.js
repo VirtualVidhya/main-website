@@ -2,7 +2,6 @@ const supportsHover = window.matchMedia('(hover: hover)').matches;
 
 function SubMenu(e) {
     if (e.name === "menu") {
-        console.log("close menu");
         e.name = "close";
 
         submenu_btn.classList.remove("text-font-color-sec");
@@ -12,7 +11,6 @@ function SubMenu(e) {
         list.classList.remove('flex');
     } 
     else {
-        console.log("open menu");
         e.name = "menu";
 
         submenu_btn.classList.add("text-font-color-sec");
