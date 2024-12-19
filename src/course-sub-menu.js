@@ -1,34 +1,29 @@
 const supportsHover = window.matchMedia('(hover: hover)').matches;
 
 function SubMenu(e) {
-    let list = document.querySelector(".sub-menu");
+    if (e.name === "menu") {
+        console.log("close menu");
+        e.name = "close";
 
-    if (supportsHover) {
-        list.classList.add('sm:group-hover:flex');
-        list.classList.remove('hidden');
+        submenu_btn.classList.remove("text-font-color-sec");
+        submenu_btn.classList.remove("underline");
+
+        list.classList.add('hidden');
+        list.classList.remove('flex');
     } 
     else {
-        if (e.name === "menu") {
-            e.name = "close";
+        console.log("open menu");
+        e.name = "menu";
 
-            list.classList.add('hidden');
-            list.classList.remove('flex');
+        submenu_btn.classList.add("text-font-color-sec");
+        submenu_btn.classList.add("underline");
 
-            submenu_btn.classList.remove("text-font-color-sec");
-            submenu_btn.classList.remove("underline");
-        } 
-        else {
-            e.name = "menu";
-
-            submenu_btn.classList.add("text-font-color-sec");
-            submenu_btn.classList.add("underline");
-
-            list.classList.remove('hidden');
-            list.classList.add('flex');
-        }
+        list.classList.remove('hidden');
+        list.classList.add('flex');
     }
 }
 
+let list = document.querySelector(".sub-menu");
 let submenu_btn = document.querySelector(".submenu-trigger");
 
 if (!supportsHover) {
@@ -45,6 +40,8 @@ else {
         e.preventDefault();
         SubMenu(e.target);
     });
+
+    list.classList.add('sm:group-hover:flex');
 
     submenu_btn.classList.add("hover:text-font-color-sec");
     submenu_btn.classList.add("hover:underline");
