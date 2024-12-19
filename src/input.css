@@ -118,7 +118,7 @@
 
 @layer components {
   .course-card-grid {
-    @apply grid [grid-template-columns:repeat(auto-fit,minmax(300px,max-content))] justify-center justify-items-center gap-10 mb-24;
+    @apply grid [grid-template-columns:repeat(auto-fit,minmax(300px,max-content))] justify-center justify-items-center place-content-center gap-y-[20px] sm:gap-y-[30px] md:gap-y-10 gap-x-[20px] md:gap-x-10 mb-24;
   }
 
   .course-card {
