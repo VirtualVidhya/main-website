@@ -732,10 +732,27 @@ video {
 .course-card-grid {
   margin-bottom: 6rem;
   display: grid;
+  place-content: center;
   justify-content: center;
   justify-items: center;
-  gap: 2.5rem;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   grid-template-columns: repeat(auto-fit,minmax(300px,max-content));
+}
+
+@media (min-width: 640px) {
+  .course-card-grid {
+    row-gap: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .course-card-grid {
+    row-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
 }
 
 .course-card {
@@ -1500,6 +1517,11 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:my-5 {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -1577,6 +1599,11 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:mx-24 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
   .lg\:h-18 {
     height: 68px;
   }
