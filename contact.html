@@ -205,190 +205,198 @@
       </div>
     </header>
 
-    <section
-      class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
-    >
-      <h2 class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3">
-        Address
-      </h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8672665504605!2d72.79245137589098!3d21.197431181962674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c2d21e3ffff%3A0x84eb5f824f69b049!2sVisual%20Software%20%26%20Multimedia!5e0!3m2!1sen!2sin!4v1714146551202!5m2!1sen!2sin"
-        class="border-2 w-80 h-80 md:w-152 md:h-96"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <p class="font-semibold">
-        10, Samay Shopping Complex, Opposite Center Point, Anand Mahal Road,
-        Adajan, Surat, Gujarat - 395009
-      </p>
-    </section>
-
-    <section
-      class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
-    >
-      <h2
-        class="text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-3"
+    <main class="my-20">
+      <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
       >
-        Mail us At
-      </h2>
-      <a
-        class="font-semibold hover:underline underline-offset-8"
-        href="mailto:admin@vvidhya.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Email"
-        >contact@vvidhya.com</a
-      >
-    </section>
-
-    <section
-      class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
-    >
-      <h2 class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3">
-        Call us On
-      </h2>
-      <a
-        class="font-semibold hover:underline underline-offset-8"
-        href="tel:+919429267900"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Email"
-        >+91-9429267900</a
-      >
-    </section>
-
-    <form
-      name="contact"
-      method="POST"
-      id="form"
-      action="/api/submit-contact-form"
-      class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl"
-    >
-      <!-- autocomplete="off" -->
-      <h2
-        class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-9"
-      >
-        Inquiry Form
-      </h2>
-      <!-- <legend
-        class="flex flex-col items-center justify-center text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-9"
-      >
-        Inquiry Form
-      </legend> -->
-      <fieldset
-        class="flex flex-col items-center justify-center gap-5 py-5 sm:py-10 border-solid border-2 border-b-6 rounded-xl"
-      >
-        <div class="flex flex-col w-5/6 sm:w-3/4">
-          <input
-            id="name"
-            name="name"
-            class="p-3"
-            type="text"
-            placeholder="Enter your name"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <div class="w-5/6 sm:w-3/4 hidden">
-          <input
-            id="address"
-            name="address"
-            class="p-3"
-            type="text"
-            placeholder="Enter your address"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <!-- <div class="error text-font-color-red-dark"></div> -->
-        </div>
-
-        <div class="flex flex-col w-5/6 sm:w-3/4">
-          <input
-            id="phone"
-            name="phone"
-            class="p-3"
-            type="tel"
-            placeholder="Enter your contact number"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <div class="flex flex-col w-5/6 sm:w-3/4">
-          <input
-            id="email"
-            name="email"
-            class="p-3"
-            type="text"
-            placeholder="Enter your email address"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <div class="flex flex-col w-5/6 sm:w-3/4">
-          <input
-            id="course"
-            name="course"
-            class="p-3"
-            type="text"
-            placeholder="Enter your course name"
-            list="courses"
-          />
-          <datalist id="courses">
-            <option value="Kids Course">Kids Course</option>
-            <option value="MS-Suite">MS-Suite</option>
-            <option value="Graphics Design">Graphics Design</option>
-            <option value="Web Development & Design">
-              Web Development & Design
-            </option>
-            <option value="Programming">Programming</option>
-            <option value="Game Development">Game Development</option>
-            <option value="Tally">Tally</option>
-          </datalist>
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <textarea
-          class="w-5/6 sm:w-3/4 p-3"
-          id="message"
-          name="message"
-          placeholder="Enter your message here"
-          cols="30"
-          rows="10"
-          resize="vertical"
-        ></textarea>
-
-        <button
-          id="submit"
-          class="text-font-color-white bg-font-color-sec hover:text-font-color-pri px-6 py-3 font-bold rounded-md"
-          type="submit"
+        <h2
+          class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3"
         >
-          Submit
-        </button>
-      </fieldset>
-    </form>
+          Address
+        </h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8672665504605!2d72.79245137589098!3d21.197431181962674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c2d21e3ffff%3A0x84eb5f824f69b049!2sVisual%20Software%20%26%20Multimedia!5e0!3m2!1sen!2sin!4v1714146551202!5m2!1sen!2sin"
+          class="border-2 w-80 h-80 md:w-152 md:h-96"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="text-center font-semibold">
+          10, Samay Shopping Complex, Opposite Center Point, Anand Mahal Road,
+          Adajan, Surat, Gujarat - 395009
+        </p>
+      </section>
 
-    <div
-      id="form-success-msg"
-      class="hidden flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
-    >
-      <i class="fa-solid fa-circle-check text-font-color-sec text-5xl"></i>
-      <h2 class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3">
-        Thank you!
-      </h2>
-      <p class="text-lg text-center">
-        Your response has been submitted successfully.
-      </p>
-      <p class="font-bold text-center">Our team will contact you soon.</p>
-    </div>
+      <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+      >
+        <h2
+          class="text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-3"
+        >
+          Mail us At
+        </h2>
+        <a
+          class="font-semibold hover:underline underline-offset-8"
+          href="mailto:admin@vvidhya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >contact@vvidhya.com</a
+        >
+      </section>
+
+      <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+      >
+        <h2
+          class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3"
+        >
+          Call us On
+        </h2>
+        <a
+          class="font-semibold hover:underline underline-offset-8"
+          href="tel:+919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >+91-9429267900</a
+        >
+      </section>
+
+      <form
+        name="contact"
+        method="POST"
+        id="form"
+        action="/api/submit-contact-form"
+        class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl"
+      >
+        <!-- autocomplete="off" -->
+        <h2
+          class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-9"
+        >
+          Inquiry Form
+        </h2>
+        <!-- <legend
+          class="flex flex-col items-center justify-center text-font-color-sec text-3xl md:text-5xl font-extrabold mt-3 mb-9"
+        >
+          Inquiry Form
+        </legend> -->
+        <fieldset
+          class="flex flex-col items-center justify-center gap-5 py-5 sm:py-10 border-solid border-2 border-b-6 rounded-xl"
+        >
+          <div class="flex flex-col w-5/6 sm:w-3/4">
+            <input
+              id="name"
+              name="name"
+              class="p-3"
+              type="text"
+              placeholder="Enter your name"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="w-5/6 sm:w-3/4 hidden">
+            <input
+              id="address"
+              name="address"
+              class="p-3"
+              type="text"
+              placeholder="Enter your address"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <!-- <div class="error text-font-color-red-dark"></div> -->
+          </div>
+
+          <div class="flex flex-col w-5/6 sm:w-3/4">
+            <input
+              id="phone"
+              name="phone"
+              class="p-3"
+              type="tel"
+              placeholder="Enter your contact number"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="flex flex-col w-5/6 sm:w-3/4">
+            <input
+              id="email"
+              name="email"
+              class="p-3"
+              type="text"
+              placeholder="Enter your email address"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="flex flex-col w-5/6 sm:w-3/4">
+            <input
+              id="course"
+              name="course"
+              class="p-3"
+              type="text"
+              placeholder="Enter your course name"
+              list="courses"
+            />
+            <datalist id="courses">
+              <option value="Kids Course">Kids Course</option>
+              <option value="MS-Suite">MS-Suite</option>
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Web Development & Design">
+                Web Development & Design
+              </option>
+              <option value="Programming">Programming</option>
+              <option value="Game Development">Game Development</option>
+              <option value="Tally">Tally</option>
+            </datalist>
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <textarea
+            class="w-5/6 sm:w-3/4 p-3"
+            id="message"
+            name="message"
+            placeholder="Enter your message here"
+            cols="30"
+            rows="10"
+            resize="vertical"
+          ></textarea>
+
+          <button
+            id="submit"
+            class="text-font-color-white bg-font-color-sec hover:text-font-color-pri px-6 py-3 font-bold rounded-md"
+            type="submit"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+
+      <div
+        id="form-success-msg"
+        class="hidden flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+      >
+        <i class="fa-solid fa-circle-check text-font-color-sec text-5xl"></i>
+        <h2
+          class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3"
+        >
+          Thank you!
+        </h2>
+        <p class="text-lg text-center">
+          Your response has been submitted successfully.
+        </p>
+        <p class="font-bold text-center">Our team will contact you soon.</p>
+      </div>
+    </main>
 
     <footer
       class="bg-navbar-color-pri flex flex-col items-center justify-center gap-3 py-2.5 md:py-5 mt-auto"
