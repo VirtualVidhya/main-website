@@ -115,11 +115,11 @@
   }
 
   .course-card {
-    @apply flex-shrink-0 flex flex-col items-center justify-between box-border w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri;
+    @apply [scroll-snap-align:start] flex-shrink-0 flex flex-col items-center justify-between box-border w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri;
   }
 
   .course-carousel-container {
-    @apply relative overflow-hidden mx-auto mb-10 w-[300px] md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
+    @apply relative overflow-hidden [scroll-snap-type:x,mandatory] mx-auto mb-10 w-[300px] md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
   }
 
   .course-carousel {
