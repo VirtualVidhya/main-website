@@ -1,3 +1,7 @@
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+}
+
 class CustomCarousel {
   constructor(selector, options) {
     const isClass = selector.startsWith(".");
@@ -7,8 +11,8 @@ class CustomCarousel {
       // Apply functionality to all carousels with the given class
       this.carousels = Array.from(document.querySelectorAll(selector));
       // console.log(this.carousels);
-      this.carousels.forEach((carousel) =>
-        new CarouselInstance(carousel, options)
+      this.carousels.forEach(
+        (carousel) => new CarouselInstance(carousel, options)
       );
     } else if (isID) {
       // Apply functionality to a single carousel with the given ID
@@ -25,30 +29,32 @@ class CarouselInstance {
     this.carousel = carousel;
     this.cards = Array.from(this.carousel.children);
     const container = this.carousel.closest("section");
-    console.log(container);
     this.prevButton = container.querySelector(options.arrows?.prev);
     this.nextButton = container.querySelector(options.arrows?.next);
     // this.dotsContainer = this.carousel.querySelector(options.dots);
     this.progressBar = container.querySelector(options.progressBar);
-    // console.log(this.progressBar);
     this.currentIndex = 0;
     this.settings = options.settings || {};
     this.responsive = options.responsive || [];
     this.isDragging = false;
     this.startX = 0;
     this.scrollStart = 0;
+    this.autoScrollInterval = null;
+    this.autoScrollDirection = 1;
 
     this.applyResponsiveSettings();
 
     // Debounce the resize event
     this.debouncedResize = this.debounce(() => {
       this.applyResponsiveSettings();
-      this.initialize();
+      this.updateProgressBar();
+      // this.initialize();
     }, 200);
 
     window.addEventListener("resize", this.debouncedResize);
 
     this.initialize();
+    this.startAutoScroll();
   }
 
   debounce(func, delay) {
@@ -97,7 +103,10 @@ class CarouselInstance {
     // );
 
     if (this.settings.draggable) {
-      this.carousel.style.cursor = "grab";
+      if (!isTouchDevice()) {
+        this.carousel.style.cursor = "grab";
+        // console.log("not touch device");
+      }
       this.carousel.addEventListener("mousedown", (e) => this.startDrag(e));
       this.carousel.addEventListener("mousemove", (e) => this.drag(e));
       this.carousel.addEventListener("mouseup", () => this.endDrag());
@@ -109,21 +118,25 @@ class CarouselInstance {
   }
 
   scrollToNext() {
+    this.stopAutoScroll();
     const { slidesToScroll = 1, gapBwItems = 10 } = this.settings;
     const cardWidth = this.cards[0].offsetWidth + gapBwItems;
     this.carousel.scrollBy({
       left: cardWidth * slidesToScroll,
       behavior: "smooth",
     });
+    this.restartAutoScroll();
   }
 
   scrollToPrev() {
+    this.stopAutoScroll();
     const { slidesToScroll = 1, gapBwItems = 0 } = this.settings;
     const cardWidth = this.cards[0].offsetWidth + gapBwItems;
     this.carousel.scrollBy({
       left: -cardWidth * slidesToScroll,
       behavior: "smooth",
     });
+    this.restartAutoScroll();
   }
 
   handleScroll() {
@@ -168,7 +181,9 @@ class CarouselInstance {
   startDrag(event) {
     event.preventDefault();
     this.isDragging = true;
-    this.carousel.style.cursor = "grabbing";
+    if (!isTouchDevice()) {
+      this.carousel.style.cursor = "grabbing";
+    }
     this.startX =
       event.type === "mousedown" ? event.pageX : event.touches[0].pageX;
     this.scrollStart = this.carousel.scrollLeft;
@@ -179,13 +194,51 @@ class CarouselInstance {
     const x = event.type === "mousemove" ? event.pageX : event.touches[0].pageX;
     const moveX = x - this.startX;
 
-    const scrollSpeed = 1.15;
+    const scrollSpeed = 3.5;
     this.carousel.scrollLeft = this.scrollStart - moveX * scrollSpeed;
   }
 
   endDrag() {
     this.isDragging = false;
-    this.carousel.style.cursor = "grab";
+    if (!isTouchDevice()) {
+      this.carousel.style.cursor = "grab";
+    }
+    this.restartAutoScroll();
+  }
+
+  startAutoScroll() {
+    const interval = 1250; // Time between auto-scrolls
+    const { slidesToScroll = 1, gapBwItems = 10 } = this.settings;
+    const cardWidth = this.cards[0].offsetWidth + gapBwItems;
+
+    this.autoScrollInterval = setInterval(() => {
+      if (
+        this.autoScrollDirection === 1 &&
+        this.carousel.scrollLeft + this.carousel.clientWidth >=
+          this.carousel.scrollWidth
+      ) {
+        this.autoScrollDirection = -1;
+      } else if (
+        this.autoScrollDirection === -1 &&
+        this.carousel.scrollLeft <= 0
+      ) {
+        this.autoScrollDirection = 1;
+      }
+
+      this.carousel.scrollBy({
+        left: cardWidth * slidesToScroll * this.autoScrollDirection,
+        behavior: "smooth",
+      });
+    }, interval);
+  }
+
+  stopAutoScroll() {
+    clearInterval(this.autoScrollInterval);
+  }
+
+  restartAutoScroll() {
+    this.stopAutoScroll();
+    this.startAutoScroll();
   }
 }
 
@@ -221,6 +274,26 @@ new CustomCarousel(".course-carousel", {
         slidesToShow: 2,
         slidesToScroll: 1,
         itemWidth: 345,
+        gapBwItems: 40,
+        draggable: true,
+      },
+    },
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        itemWidth: 365,
+        gapBwItems: 40,
+        draggable: true,
+      },
+    },
+    {
+      breakpoint: 1536,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        itemWidth: 380,
         gapBwItems: 40,
         draggable: true,
       },

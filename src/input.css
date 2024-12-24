@@ -131,15 +131,23 @@
     @apply hidden; /* Hide scrollbar for Chrome/Safari/Edge */
   }
 
-  .course-carousel-dots {
-    @apply flex justify-center gap-[0.5rem];
+  .progress-bar-container {
+    @apply  w-[35%] h-[5px] bg-color-border-pri rounded-lg;
   }
+
+  .progress-bar {
+    @apply h-[5px] bg-font-color-pri rounded-lg;
+  }
+
+  /* .course-carousel-dots {
+    @apply flex justify-center gap-[0.5rem];
+  } */
   
-  .course-carousel-dots button {
+  /* .course-carousel-dots button {
     @apply w-[10px] h-[10px] border-none [border-radius:50%] bg-color-border-pri cursor-pointer [transition:background,0.3s];
   }
   
   .course-carousel-dots button.active {
     @apply bg-font-color-pri;
-  }
+  } */
 }
