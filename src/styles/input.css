@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 300;
+    src: url(/fonts/noto-sans-v37-latin-300.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 300;
+    src: url(/fonts/noto-sans-v37-latin-300italic.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/noto-sans-v37-latin-regular.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/noto-sans-v37-latin-italic.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/noto-sans-v37-latin-500.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 500;
+    src: url(/fonts/noto-sans-v37-latin-500italic.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 600;
+    src: url(/fonts/noto-sans-v37-latin-600.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 600;
+    src: url(/fonts/noto-sans-v37-latin-600italic.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/noto-sans-v37-latin-700.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/noto-sans-v37-latin-700italic.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 800;
+    src: url(/fonts/noto-sans-v37-latin-800.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 800;
+    src: url(/fonts/noto-sans-v37-latin-800italic.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 900;
+    src: url(/fonts/noto-sans-v37-latin-900.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NotoSans";
+    font-style: italic;
+    font-weight: 900;
+    src: url(/fonts/noto-sans-v37-latin-900italic.woff2) format("woff2");
+    font-display: swap;
+  }
+}
+
+@layer components {
+  .course-card-grid {
+    @apply grid [grid-template-columns:repeat(auto-fit,minmax(300px,max-content))] lg:[grid-template-columns:repeat(auto-fit,minmax(360px,max-content))] xl:[grid-template-columns:repeat(auto-fit,minmax(380px,max-content))] justify-center justify-items-center place-content-center gap-y-5 sm:gap-y-[30px] md:gap-y-10 gap-x-5 md:gap-x-10 mb-24;
+  }
+
+  .course-card {
+    @apply flex-shrink-0 flex flex-col items-center justify-between box-border w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri;
+  }
+
+  /* .course-carousel-container {
+    @apply relative overflow-hidden [scroll-snap-type:x,mandatory] mx-auto mb-10 w-[300px] md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
+  } */
+
+  .course-carousel-container {
+    @apply overflow-hidden mx-auto mb-10 w-[300px] md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
+  }
+
+  .course-carousel {
+    /* @apply flex flex-row transition-transform duration-500 ease-in-out gap-x-5 md:gap-x-10 mb-24; */
+    @apply flex flex-row overflow-x-auto transition-transform duration-500 ease-in-out gap-x-5 md:gap-x-10 [scroll-behavior:smooth] [scrollbar-width:none];
+  }
+
+  /* Hide scrollbar for Chrome/Safari/Edge */
+  /* .course-carousel::-webkit-scrollbar {
+    @apply hidden;
+  } */
+
+  .progress-bar-container {
+    @apply w-[35%] h-[5px] bg-color-border-pri rounded-lg;
+  }
+
+  /* .progress-bar {
+    @apply h-[5px] bg-font-color-pri rounded-lg;
+  } */
+
+  /* .course-carousel-dots {
+    @apply flex justify-center gap-[0.5rem];
+  } */
+
+  /* .course-carousel-dots button {
+    @apply w-[10px] h-[10px] border-none [border-radius:50%] bg-color-border-pri cursor-pointer [transition:background,0.3s];
+  }
+  
+  .course-carousel-dots button.active {
+    @apply bg-font-color-pri;
+  } */
+
+  /* .swiper-container {
+    @apply mx-auto mb-10 w-[300px] md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
+  } */
+
+  /* .swiper-wrapper {
+    @apply @apply flex flex-row overflow-x-auto transition-transform duration-500 ease-in-out gap-x-5 md:gap-x-10 [scroll-behavior:smooth] [scrollbar-width:none];
+  } */
+
+  /* .swiper-slide {
+    @apply [scroll-snap-align:start] flex-shrink-0 [display:flex!important] flex-col items-center justify-between box-border w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri;
+  } */
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    content: "" !important;
+  }
+
+  .carousel-nextBtn,
+  .carousel-prevBtn {
+    @apply text-3xl md:text-4xl;
+  }
+
+  /* .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 10px);
+    right: auto;
+  } */
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static !important;
+    /* top: var(--swiper-navigation-top-offset, 50%); */
+    width: auto !important;
+    height: auto !important;
+    margin-top: 0px !important;
+    /* z-index: 10; */
+    /* cursor: pointer; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: inherit !important;
+  }
+
+  .swiper-horizontal > .swiper-scrollbar,
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: static !important;
+    /* left: var(--swiper-scrollbar-sides-offset, 1%);
+    bottom: var(--swiper-scrollbar-bottom, 4px);
+    top: var(--swiper-scrollbar-top, auto);
+    z-index: 50; */
+    height: 100% !important;
+    width: auto !important;
+  }
+
+  .swiper-scrollbar {
+    border-radius: inherit !important;
+    position: static !important;
+    touch-action: none;
+    background: inherit !important;
+  }
+
+  .swiper-scrollbar-drag {
+    /* height: 100%; */
+    /* width: 100%; */
+    /* position: relative; */
+    background: inherit !important;
+    border-radius: inherit !important;
+    /* left: 0; */
+    /* top: 0 */
+}
+}

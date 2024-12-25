@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>V.Vidhya-Home</title>
 
-    <link href="../dist//output.css" rel="stylesheet" />
+    <link href="/src/styles/input.css" rel="stylesheet" />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,21 +24,21 @@
     <!-- Preloaded locally hosted necessary fonts -->
     <link
       rel="preload"
-      href="/public/fonts/noto-sans-v37-latin-regular.woff2"
+      href="/fonts/noto-sans-v37-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/public/fonts/noto-sans-v37-latin-700.woff2"
+      href="/fonts/noto-sans-v37-latin-700.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/public/fonts/noto-sans-v37-latin-800.woff2"
+      href="/fonts/noto-sans-v37-latin-800.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -54,34 +54,34 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../public/images/favicons/apple-touch-icon.png"
+      href="../images/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../public/images/favicons/favicon-32x32.png"
+      href="../images/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../public/images/favicons/favicon-16x16.png"
+      href="../images/favicons/favicon-16x16.png"
     />
     <link
       rel="manifest"
-      href="../public/images/favicon-icons/site.webmanifest"
+      href="../images/favicon-icons/site.webmanifest"
     />
     <link
       rel="mask-icon"
-      href="../public/images/favicons/safari-pinned-tab.svg"
+      href="../images/favicons/safari-pinned-tab.svg"
       color="#000000"
     />
-    <link rel="shortcut icon" href="../public/images/favicons/favicon.ico" />
+    <link rel="shortcut icon" href="../images/favicons/favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-config"
-      content="../public/images/favicon-icons/browserconfig.xml"
+      content="../images/favicon-icons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
 
@@ -111,14 +111,14 @@
         <a href="/">
           <img
             class="h-9 sm:h-12 md:h-16 lg:h-18 w-auto pr-0.5 md:pr-2"
-            src="/public/images/med-logo.png"
+            src="/images/med-logo.png"
             alt="full-logo"
           />
         </a>
       </div>
 
       <div class="text-2xl cursor-pointer mx-2 sm:hidden block">
-        <i class="fa-solid fa-bars" name="close" onclick="Menu(this)"></i>
+        <i id="topbar-menu-btn" class="fa-solid fa-bars" name="close"></i>
       </div>
 
       <div
@@ -371,7 +371,7 @@
           >
             <img
               class="w-32 h-auto"
-              src="../public/images/unity-icon.png"
+              src="../images/unity-icon.png"
               alt="course-logo"
             />
             <h4
@@ -398,7 +398,7 @@
           >
             <img
               class="w-32 h-auto"
-              src="../public/images/html-icon.png"
+              src="../images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -426,7 +426,7 @@
           >
             <img
               class="w-32 h-auto"
-              src="../public/images/graphicdesign-icon.png"
+              src="../images/graphicdesign-icon.png"
               alt="course-logo"
             />
             <h4
@@ -523,7 +523,7 @@
       </div>
     </footer>
 
-    <script src="../src/navbar-menu.js"></script>
-    <script src="../src/scroll-up-btn.js"></script>
+    <script type="module" src="/src/js/navbar-menu.js"></script>
+    <script type="module" src="/src/js/scroll-up-btn.js"></script>
   </body>
 </html>
