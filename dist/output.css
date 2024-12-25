@@ -824,6 +824,7 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(244 242 233 / var(--tw-bg-opacity));
   padding: 1.25rem;
+  scroll-snap-align: start;
 }
 
 .course-card:hover {
@@ -862,6 +863,7 @@ video {
   margin-bottom: 2.5rem;
   width: 300px;
   overflow: hidden;
+  scroll-snap-type: x,mandatory;
 }
 
 @media (min-width: 768px) {
@@ -1778,6 +1780,10 @@ video {
   .xl\:mx-44 {
     margin-left: 11rem;
     margin-right: 11rem;
+  }
+
+  .xl\:hidden {
+    display: none;
   }
 
   .xl\:h-48 {
