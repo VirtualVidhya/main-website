@@ -4,23 +4,31 @@
   "private": true,
   "main": "functions/api/submit-contact-form.js",
   "scripts": {
-    "start": "wrangler dev",
     "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
-    "build:static": "mkdir -p dist && find . -type f ! -path './dist/*' -exec cp --parents {} dist/ \\; && rm -rf dist/functions dist/package.json dist/package-lock.json dist/node_modules",
-    "build": "npm run build:worker && npm run build:static",
+    "build:vite": "vite build",
+    "build": "npm run build:worker && npm run build:vite",
+    "dev": "npm run build:worker && wrangler dev",
+    "dev:vite": "vite",
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
     "log": "npx wrangler pages deployment tail"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.5.2",
-    "tailwindcss": "^3.4.3",
+    "autoprefixer": "^10.4.20",
+    "fast-glob": "^3.3.2",
+    "parcel": "^2.13.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.5",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-imagemin": "^0.4.6",
     "wrangler": "^3.92.0"
   },
   "dependencies": {
     "esbuild": "^0.24.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "resend": "^4.0.1"
+    "resend": "^4.0.1",
+    "swiper": "^11.1.15"
   }
 }

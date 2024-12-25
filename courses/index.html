@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>V.Vidhya - Your Virtual Path to Knowledge</title>
 
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="/src/styles/input.css" rel="stylesheet" />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,21 +24,21 @@
     <!-- Preloaded locally hosted necessary fonts -->
     <link
       rel="preload"
-      href="/public/fonts/noto-sans-v37-latin-regular.woff2"
+      href="/fonts/noto-sans-v37-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/public/fonts/noto-sans-v37-latin-700.woff2"
+      href="/fonts/noto-sans-v37-latin-700.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/public/fonts/noto-sans-v37-latin-800.woff2"
+      href="/fonts/noto-sans-v37-latin-800.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -54,31 +54,31 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/public/images/favicons/apple-touch-icon.png"
+      href="/images/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/public/images/favicons/favicon-32x32.png"
+      href="/images/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/public/images/favicons/favicon-16x16.png"
+      href="/images/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="/public/images/favicon-icons/site.webmanifest" />
+    <link rel="manifest" href="/images/favicon-icons/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="/public/images/favicons/safari-pinned-tab.svg"
+      href="/images/favicons/safari-pinned-tab.svg"
       color="#000000"
     />
-    <link rel="shortcut icon" href="/public/images/favicons/favicon.ico" />
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-config"
-      content="/public/images/favicon-icons/browserconfig.xml"
+      content="/images/favicon-icons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
   </head>
@@ -100,14 +100,14 @@
         <a href="/">
           <img
             class="h-9 sm:h-12 md:h-16 lg:h-18 w-auto pr-0.5 md:pr-2"
-            src="/public/images/med-logo.png"
+            src="/images/med-logo.png"
             alt="full-logo"
           />
         </a>
       </div>
 
       <div class="text-2xl cursor-pointer mx-2 sm:hidden block">
-        <i class="fa-solid fa-bars" name="close" onclick="Menu(this)"></i>
+        <i id="topbar-menu-btn" class="fa-solid fa-bars" name="close"></i>
       </div>
 
       <div
@@ -217,6 +217,219 @@
         <h2
           class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mb-10"
         >
+          Swiper Courses
+        </h2>
+
+        <div class="swiper-container course-carousel-container">
+          <div style="transform: translateX(0)" class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="/courses/game-development.html" class="course-card">
+                <img
+                  class="w-32 h-auto"
+                  src="/images/unity-icon.png"
+                  alt="course-logo"
+                />
+                <h4
+                  class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+                >
+                  Graphics Design
+                </h4>
+                <p class="text-center mb-2">
+                  Make cool 2D & 3D games using Unity game engine & C#...
+                </p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>2-3 months</p>
+                </div>
+                <div
+                  class="flex flex-row flex-wrap gap-3 justify-center items-center"
+                >
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Corel Draw
+                  </div>
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Photoshop
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="/courses/web-design.html" class="course-card">
+                <img
+                  class="w-32 h-auto"
+                  src="/images/html-icon.png"
+                  alt="course-logo"
+                />
+                <h4
+                  class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+                >
+                  Digital Textile Design
+                </h4>
+                <p class="text-center mb-2">
+                  Make cool websites using HTML, CSS, JavaScript...
+                </p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>1.5-3 months</p>
+                </div>
+                <div
+                  class="flex flex-row flex-wrap gap-3 justify-center items-center"
+                >
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Photoshop
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="course-card">
+                <img
+                  class="w-32 h-auto"
+                  src="/images/graphicdesign-icon.png"
+                  alt="course-logo"
+                />
+                <h4
+                  class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+                >
+                  UI/UX
+                </h4>
+                <p class="text-center mb-2">
+                  Make cool designs using CorelDraw, Photoshop, Illustrator...
+                </p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>2-4 months</p>
+                </div>
+                <div
+                  class="flex flex-row flex-wrap gap-3 justify-center items-center"
+                >
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Figma
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="/courses/game-development.html" class="course-card">
+                <img
+                  class="w-32 h-auto"
+                  src="/images/unity-icon.png"
+                  alt="course-logo"
+                />
+                <h4
+                  class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+                >
+                  Graphics Design
+                </h4>
+                <p class="text-center mb-2">
+                  Make cool 2D & 3D games using Unity game engine & C#...
+                </p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>2-3 months</p>
+                </div>
+                <div
+                  class="flex flex-row flex-wrap gap-3 justify-center items-center"
+                >
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Corel Draw
+                  </div>
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Photoshop
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="/courses/game-development.html" class="course-card">
+                <img
+                  class="w-32 h-auto"
+                  src="/images/unity-icon.png"
+                  alt="course-logo"
+                />
+                <h4
+                  class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+                >
+                  Graphics Design
+                </h4>
+                <p class="text-center mb-2">
+                  Make cool 2D & 3D games using Unity game engine & C#...
+                </p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>2-3 months</p>
+                </div>
+                <div
+                  class="flex flex-row flex-wrap gap-3 justify-center items-center"
+                >
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Corel Draw
+                  </div>
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Photoshop
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="/courses/game-development.html" class="course-card">
+                <img
+                  class="w-32 h-auto"
+                  src="/images/unity-icon.png"
+                  alt="course-logo"
+                />
+                <h4
+                  class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
+                >
+                  Graphics Design
+                </h4>
+                <p class="text-center mb-2">
+                  Make cool 2D & 3D games using Unity game engine & C#...
+                </p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>2-3 months</p>
+                </div>
+                <div
+                  class="flex flex-row flex-wrap gap-3 justify-center items-center"
+                >
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Corel Draw
+                  </div>
+                  <div class="bg-font-color-blue py-1 px-2 rounded-md">
+                    Photoshop
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-row justify-center items-center gap-5">
+          <button class="swiper-button-prev carousel-prevBtn">
+            <i class="fa-solid fa-circle-left"></i>
+          </button>
+
+          <div class="progress-bar-container">
+            <div class="swiper-scrollbar">
+            </div>
+          </div>
+
+          <button class="swiper-button-next carousel-nextBtn">
+            <i class="fa-solid fa-circle-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="w-full mb-24">
+        <h2
+          class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mb-10"
+        >
           Multimedia Courses
         </h2>
 
@@ -225,7 +438,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -255,7 +468,7 @@
             <a href="/courses/web-design.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/html-icon.png"
+                src="/images/html-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -282,7 +495,7 @@
             <a href="#" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/graphicdesign-icon.png"
+                src="/images/graphicdesign-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -307,7 +520,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -337,7 +550,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -367,7 +580,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -400,7 +613,7 @@
           <a href="/courses/game-development.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/unity-icon.png"
+              src="/images/unity-icon.png"
               alt="course-logo"
             />
             <h4
@@ -430,7 +643,7 @@
           <a href="/courses/web-design.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/html-icon.png"
+              src="/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -457,7 +670,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/graphicdesign-icon.png"
+              src="/images/graphicdesign-icon.png"
               alt="course-logo"
             />
             <h4
@@ -519,7 +732,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -545,7 +758,7 @@
             <a href="#" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/html-icon.png"
+                src="/images/html-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -572,7 +785,7 @@
             <a href="#" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/graphicdesign-icon.png"
+                src="/images/graphicdesign-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -600,7 +813,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -630,7 +843,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -660,7 +873,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -693,7 +906,7 @@
           <a href="/courses/game-development.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/unity-icon.png"
+              src="/images/unity-icon.png"
               alt="course-logo"
             />
             <h4
@@ -719,7 +932,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/html-icon.png"
+              src="/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -746,7 +959,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/graphicdesign-icon.png"
+              src="/images/graphicdesign-icon.png"
               alt="course-logo"
             />
             <h4
@@ -805,7 +1018,7 @@
             <a href="/courses/ms-office.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/msoffice-icon.png"
+                src="/images/msoffice-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -838,7 +1051,7 @@
             <a href="#" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/html-icon.png"
+                src="/images/html-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -863,7 +1076,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -893,7 +1106,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -923,7 +1136,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -956,7 +1169,7 @@
           <a href="/courses/ms-office.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/msoffice-icon.png"
+              src="/images/msoffice-icon.png"
               alt="course-logo"
             />
             <h4
@@ -989,7 +1202,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/html-icon.png"
+              src="/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -1014,7 +1227,7 @@
           <a href="/courses/game-development.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/unity-icon.png"
+              src="/images/unity-icon.png"
               alt="course-logo"
             />
             <h4
@@ -1075,7 +1288,7 @@
             <a href="/courses/ms-office.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/msoffice-icon.png"
+                src="/images/msoffice-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -1108,7 +1321,7 @@
             <a href="#" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/html-icon.png"
+                src="/images/html-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -1133,7 +1346,7 @@
             <a href="/courses/game-development.html" class="course-card">
               <img
                 class="w-32 h-auto"
-                src="/public/images/unity-icon.png"
+                src="/images/unity-icon.png"
                 alt="course-logo"
               />
               <h4
@@ -1166,7 +1379,7 @@
           <a href="#" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/html-icon.png"
+              src="/images/html-icon.png"
               alt="course-logo"
             />
             <h4
@@ -1191,7 +1404,7 @@
           <a href="/courses/ms-office.html" class="course-card">
             <img
               class="w-32 h-auto"
-              src="/public/images/msoffice-icon.png"
+              src="/images/msoffice-icon.png"
               alt="course-logo"
             />
             <h4
@@ -1222,7 +1435,9 @@
           </a>
         </div> -->
 
-        <div class="w-full flex flex-row justify-center items-center gap-5 xl:hidden">
+        <div
+          class="w-full flex flex-row justify-center items-center gap-5 xl:hidden"
+        >
           <button id="prev-btn" class="text-4xl">
             <i class="fa-solid fa-circle-left"></i>
           </button>
@@ -1308,9 +1523,10 @@
       </div>
     </footer>
 
-    <script src="/src/course-sub-menu.js"></script>
-    <script src="/src/navbar-menu.js"></script>
-    <script src="/src/scroll-up-btn.js"></script>
-    <script src="/src/course-carousel.js"></script>
+    <script type="module" src="/src/js/carousel.js"></script>
+    <script type="module" src="/src/js/course-sub-menu.js"></script>
+    <script type="module" src="/src/js/navbar-menu.js"></script>
+    <script type="module" src="/src/js/scroll-up-btn.js"></script>
+    <!-- <script src="/src/course-carousel.js"></script> -->
   </body>
 </html>
