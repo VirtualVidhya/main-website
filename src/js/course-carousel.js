@@ -10,9 +10,15 @@ const swiperContainers = document.querySelectorAll(".swiper-container");
 
 // Initialize a Swiper instance for each container
 swiperContainers.forEach((container, index) => {
-  const nextButton = container.closest("section").querySelector(".swiper-button-next");
-  const prevButton = container.closest("section").querySelector(".swiper-button-prev");
-  const scrollbar = container.closest("section").querySelector(".swiper-scrollbar");
+  const nextButton = container
+    .closest("section")
+    .querySelector(".swiper-button-next");
+  const prevButton = container
+    .closest("section")
+    .querySelector(".swiper-button-prev");
+  const scrollbar = container
+    .closest("section")
+    .querySelector(".swiper-scrollbar");
 
   new Swiper(container, {
     modules: [Navigation, Scrollbar, Autoplay],
@@ -27,7 +33,7 @@ swiperContainers.forEach((container, index) => {
     },
     scrollbar: {
       el: scrollbar,
-      draggable: true, // Allow dragging the scrollbar
+      draggable: false, // Allow dragging the scrollbar
     },
     slidesPerView: 1,
     spaceBetween: 20,
