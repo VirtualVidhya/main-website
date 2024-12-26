@@ -5,6 +5,8 @@ import "swiper/css"; // Core CSS
 import "swiper/css/navigation"; // Navigation CSS
 import "swiper/css/scrollbar"; // Scrollbar CSS"
 
+const AUTOPLAY_PAUSE_DURATION = 4500;
+
 // Select all containers with the class "swiper-container"
 const swiperContainers = document.querySelectorAll(".swiper-container");
 
@@ -20,12 +22,13 @@ swiperContainers.forEach((container, index) => {
     .closest("section")
     .querySelector(".swiper-scrollbar");
 
-  new Swiper(container, {
+  const swiper = new Swiper(container, {
     modules: [Navigation, Scrollbar, Autoplay],
     direction: "horizontal",
     autoplay: {
       delay: 1500, // Slide every 1.5 seconds
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: nextButton,
@@ -48,4 +51,24 @@ swiperContainers.forEach((container, index) => {
       },
     },
   });
+
+  let autoplayTimeout;
+
+  const pauseAutoplay = () => {
+    if (autoplayTimeout) clearTimeout(autoplayTimeout);
+
+    swiper.autoplay.stop();
+
+    autoplayTimeout = setTimeout(() => {
+      swiper.autoplay.start();
+    }, AUTOPLAY_PAUSE_DURATION);
+  };
+
+  if (nextButton) nextButton.addEventListener("click", pauseAutoplay);
+
+  if (prevButton) prevButton.addEventListener("click", pauseAutoplay);
+
+  if (container) {
+    swiper.on("touchEnd", pauseAutoplay); // Trigger pause on touch end
+  }
 });
