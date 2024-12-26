@@ -22,11 +22,50 @@ swiperContainers.forEach((container, index) => {
     .closest("section")
     .querySelector(".swiper-scrollbar");
 
+  const breakpoints = {
+    768: 2,
+    1024: 2,
+    1280: 3,
+  };
+
+  const getSlidesPerViewForWidth = () => {
+    const screenWidth = window.innerWidth;
+    let slidesPerView = 1; // Default slidesPerView for smallest screens
+
+    for (const [breakpoint, value] of Object.entries(breakpoints)) {
+      if (screenWidth >= breakpoint) {
+        slidesPerView = value;
+      }
+    }
+    return slidesPerView;
+  };
+
+  const maxSlidesPerView = getSlidesPerViewForWidth();
+  // const slidesCount = slides.length;
+  const slidesCount = container.querySelectorAll(".swiper-slide").length;
+
+  const swiperWrapper = container.querySelector(".swiper-wrapper");
+  const slides = container.querySelectorAll(".swiper-slide");
+
+  if (slidesCount < maxSlidesPerView) {
+    // Add conditional styles for insufficient slides
+    swiperWrapper.classList.add("insufficient-slides");
+    slides.forEach((slide) => {
+      slide.classList.add("insufficient-slide");
+    });
+  } else {
+    // Remove styles if they exist
+    swiperWrapper.classList.remove("insufficient-slides");
+    slides.forEach((slide) => {
+      slide.classList.remove("insufficient-slide");
+    });
+  }
+
   const swiper = new Swiper(container, {
     modules: [Navigation, Scrollbar, Autoplay],
     direction: "horizontal",
     autoplay: {
-      delay: 1500, // Slide every 1.5 seconds
+      delay: 1500,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -36,17 +75,36 @@ swiperContainers.forEach((container, index) => {
     },
     scrollbar: {
       el: scrollbar,
-      draggable: false, // Allow dragging the scrollbar
+      draggable: false,
     },
+    // slidesPerView: 1,
+    // spaceBetween: 20,
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 40,
+    //   },
+    //   1024: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 40,
+    //   },
+    // },
     slidesPerView: 1,
     spaceBetween: 20,
+    // centerInsufficientSlides: true,
+    // centeredSlides: true,
+    // centeredSlidesBounds: true,
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: Math.min(slidesCount, 2),
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: Math.min(slidesCount, 2),
+        spaceBetween: 40,
+      },
+      1280: {
+        slidesPerView: Math.min(slidesCount, 3),
         spaceBetween: 40,
       },
     },
