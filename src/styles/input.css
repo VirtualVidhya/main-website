@@ -142,7 +142,7 @@
   }
 
   .home-logo-svg {
-    @apply h-20 sm:h-24 md:h-32 lg:h-40 xl:h-48 w-min;
+    @apply h-20 xs:h-[88px] sm:h-24 md:h-32 lg:h-40 xl:h-48 w-min;
   }
 
   .home-logo-svg .body-outline {
