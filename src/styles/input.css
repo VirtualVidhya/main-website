@@ -110,6 +110,10 @@
 }
 
 @layer components {
+  .scroll-up-btn {
+    @apply hidden fixed bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
+  }
+
   .side-navmenu-border {
     @apply border-solid border-[1px] border-font-color-pri my-3 md:my-5;
   }
