@@ -25,3 +25,6 @@ package.jsongit
 .wrangler
 .data.vars
 dist/
+
+# Environment Variables
+.env

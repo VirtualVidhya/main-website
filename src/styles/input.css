@@ -110,6 +110,7 @@
 }
 
 @layer components {
+  /* GENERAL */
   .header {
     @apply bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 sm:px-4 md:px-8 mb-10 sticky top-0 z-10;
   }
@@ -141,6 +142,15 @@
     @apply stroke-font-color-pri;
   }
 
+  .scroll-up-btn {
+    @apply hidden fixed bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
+  }
+
+  .side-navmenu-border {
+    @apply border-solid border-[1px] border-font-color-pri my-3 md:my-5;
+  }
+
+  /* HOME PAGE */
   .home-logo-svg {
     @apply h-20 xs:h-[88px] sm:h-24 md:h-32 lg:h-40 xl:h-48 w-auto;
   }
@@ -164,13 +174,11 @@
     @apply stroke-font-color-pri;
   }
 
-  .scroll-up-btn {
-    @apply hidden fixed bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
+  .explore-courses-btn {
+    @apply text-font-color-white bg-font-color-blue hover:text-font-color-pri text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:border-font-color-pri;
   }
 
-  .side-navmenu-border {
-    @apply border-solid border-[1px] border-font-color-pri my-3 md:my-5;
-  }
+  /* ALL COURSES PAGE   */
 
   .view-all-btn {
     @apply text-font-color-white bg-font-color-green hover:text-font-color-pri text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg;
@@ -300,5 +308,18 @@
     border-radius: inherit !important;
     /* left: 0; */
     /* top: 0 */
+  }
+
+  /* INDIVIDUAL COURSE PAGE */
+  .ind-course-heading {
+    @apply text-font-color-pri text-3xl md:text-5xl font-extrabold mb-10;
+  }
+
+  .enroll-btn {
+    @apply text-font-color-white bg-font-color-green hover:text-font-color-pri text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:border-font-color-pri;
+  }
+
+  .ind-course-duration {
+    @apply flex flex-row items-center justify-center font-semibold text-base sm:text-lg gap-2 mt-5 mb-24;
   }
 }
