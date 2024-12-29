@@ -4,7 +4,9 @@
   "private": true,
   "main": "functions/api/submit-contact-form.js",
   "scripts": {
-    "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
+    "build:contact-form": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
+    "build:umami-proxy": "esbuild functions/api/umami-proxy.js --bundle --platform=node --external:resend --outfile=dist/umami-worker.js",
+    "build:worker": "npm run build:contact-form && npm run build:umami-proxy",
     "build:vite": "vite build",
     "build": "npm run build:worker && npm run build:vite",
     "build:vite-watch": "vite build --watch",

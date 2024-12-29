@@ -9,6 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set Analytics Tracking Code
+        run: echo "VITE_ANALYTICS_TRACKING_CODE=${{ secrets.VITE_ANALYTICS_TRACKING_CODE }}" >> $GITHUB_ENV
+
       - name: Trigger Cloudflare Deployment Webhook
         run: curl -s -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${TOKEN}"
         env:
