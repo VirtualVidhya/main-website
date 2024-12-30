@@ -6,8 +6,8 @@ if (trackingCode) {
   script.async = true;
   script.defer = true;
 
-  script.src = `https://vvidhya.vercel.app/script.js`;
-  script.dataset.hostUrl = `https://vvidhya.vercel.app`;
+  script.src = `https://analytics.vvidhya.com/script.js`;
+  script.dataset.hostUrl = `https://analytics.vvidhya.com`;
   script.dataset.websiteId = trackingCode;
 
   document.head.appendChild(script);
