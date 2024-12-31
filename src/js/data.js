@@ -1,14 +1,18 @@
-const trackingCode = import.meta.env.VITE_ANALYTICS_TRACKING_CODE;
+const analyticsSrc = import.meta.env.VITE_ANALYTICS_SRC;
+const analyticsDataDomains = import.meta.env.VITE_ANALYTICS_DATA_DOMAINS;
+const analyticsDataHost = import.meta.env.VITE_ANALYTICS_DATA_HOST;
+const analyticsTrackingCode = import.meta.env.VITE_ANALYTICS_TRACKING_CODE;
 
-if (trackingCode) {
+if (analyticsTrackingCode) {
   const script = document.createElement("script");
 
   script.async = true;
   script.defer = true;
 
-  script.src = `https://analytics.vvidhya.com/script.js`;
-  script.dataset.hostUrl = `https://analytics.vvidhya.com`;
-  script.dataset.websiteId = trackingCode;
+  script.setAttribute('src', analyticsSrc);
+  script.setAttribute('data-host-url', analyticsDataHost);
+  script.setAttribute('data-domains', analyticsDataDomains);
+  script.setAttribute('data-website-id', analyticsTrackingCode);
 
   document.head.appendChild(script);
 } else {
