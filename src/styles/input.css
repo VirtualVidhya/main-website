@@ -312,7 +312,7 @@
 
   /* INDIVIDUAL COURSE PAGE */
   .ind-course-heading {
-    @apply text-font-color-pri text-3xl md:text-5xl font-extrabold mb-10;
+    @apply text-center text-font-color-pri text-3xl md:text-5xl font-extrabold mb-10;
   }
 
   .enroll-btn {
