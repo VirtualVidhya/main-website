@@ -37,6 +37,8 @@ module.exports = {
       "font-color-pink-dark": "#9C36B5",
       "font-color-red": "#FF8787",
       "font-color-red-dark": "#E03131",
+      "font-color-brown-light": "#6e6e6e",
+      "font-color-brown": "#37352f",
       "font-color-dark": "rgb(235, 235, 235)",
       "link-color": "rgb(232, 28, 79)",
       "hover-color": "rgb(108, 117, 125)",

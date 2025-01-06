@@ -179,7 +179,6 @@
   }
 
   /* ALL COURSES PAGE   */
-
   .view-all-btn {
     @apply text-font-color-white bg-font-color-green hover:text-font-color-pri text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg;
   }
@@ -321,5 +320,29 @@
 
   .ind-course-duration {
     @apply flex flex-row items-center justify-center font-semibold text-base sm:text-lg gap-2 mt-5 mb-24;
+  }
+
+  /* FOOTER */
+  .footer-logo-svg {
+    @apply h-8 md:h-10 lg:h-12 w-auto;
+  }
+
+  .footer-logo-svg .body-outline {
+    stroke-width: 11.25;
+    @apply stroke-font-color-pri;
+  }
+
+  .footer-logo-svg .eyes-outline {
+    stroke-width: 7.5;
+  }
+
+  .footer-logo-svg .brain-divider-line {
+    stroke-width: 6.25;
+    @apply stroke-font-color-pri;
+  }
+
+  .footer-logo-svg .brain-curves {
+    stroke-width: 4.15;
+    @apply stroke-font-color-pri;
   }
 }
