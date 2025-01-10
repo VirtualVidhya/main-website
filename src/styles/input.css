@@ -345,4 +345,9 @@
     stroke-width: 4.15;
     @apply stroke-font-color-pri;
   }
+
+  /* ILLUSTRATIONS */
+  .illus {
+    @apply h-auto w-auto max-h-[225px] sm:max-h-[300px] md:max-h-[425px] lg:max-h-[500px];
+  }
 }
