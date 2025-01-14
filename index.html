@@ -700,9 +700,18 @@
               <div
                 id="for-all-ages-illus"
                 class="w-full sm:w-2/5 order-2 mt-4 sm:mt-0"
-              >
-                <!-- <img src="/images/home-page/for-all.png" alt="for-all" /> -->
-              </div>
+              ></div>
+              <script type="module">
+                import lottie from "lottie-web";
+
+                lottie.loadAnimation({
+                  container: document.getElementById("for-all-ages-illus"),
+                  renderer: "svg",
+                  loop: true,
+                  autoplay: true,
+                  path: "/images/doodles/for-all-ages.json",
+                });
+              </script>
             </div>
 
             <div
@@ -711,12 +720,18 @@
               <div
                 id="learn-by-doing-illus"
                 class="w-full sm:w-2/5 order-2 sm:order-1 mt-4 sm:mt-0"
-              >
-                <!-- <img
-                  src="/images/home-page/learn-by-doing.png"
-                  alt="fun-learning"
-                /> -->
-              </div>
+              ></div>
+              <script type="module">
+                import lottie from "lottie-web";
+
+                lottie.loadAnimation({
+                  container: document.getElementById("learn-by-doing-illus"),
+                  renderer: "svg",
+                  loop: true,
+                  autoplay: true,
+                  path: "/images/doodles/learn-by-doing.json",
+                });
+              </script>
 
               <div
                 class="w-full sm:w-3/5 text-center sm:text-left order-1 sm:order-2"
@@ -756,25 +771,38 @@
               <div
                 id="personalized-approach-illus"
                 class="w-full sm:w-2/5 order-2 mt-4 sm:mt-0"
-              >
-                <!-- <img src="/images/doodles/personalized_approach.webm" alt="personalized-approach-illus"> -->
-                <!-- <img
-                  src="/images/home-page/motivation.png"
-                  alt="fun-learning"
-                /> -->
-              </div>
+              ></div>
+              <script type="module">
+                import lottie from "lottie-web";
+
+                lottie.loadAnimation({
+                  container: document.getElementById(
+                    "personalized-approach-illus"
+                  ),
+                  renderer: "svg",
+                  loop: true,
+                  autoplay: true,
+                  path: "/images/doodles/personalized-approach.json",
+                });
+              </script>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center justify-center">
               <div
                 id="integrity-illus"
                 class="w-full sm:w-2/5 order-2 sm:order-1 mt-4 sm:mt-0"
-              >
-                <!-- <img
-                  src="/images/home-page/personalization.png"
-                  alt="fun-learning"
-                /> -->
-              </div>
+              ></div>
+              <script type="module">
+                import lottie from "lottie-web";
+
+                lottie.loadAnimation({
+                  container: document.getElementById("integrity-illus"),
+                  renderer: "svg",
+                  loop: true,
+                  autoplay: true,
+                  path: "/images/doodles/integrity.json",
+                });
+              </script>
 
               <div
                 class="w-full sm:w-3/5 text-center sm:text-left order-1 sm:order-2"
@@ -1318,7 +1346,7 @@
     </footer>
 
     <!-- Animated Illustrations -->
-    <script type="module">
+    <!-- <script type="module">
       import lottie from "lottie-web";
 
       lottie.loadAnimation({
@@ -1352,7 +1380,7 @@
         autoplay: true,
         path: "/images/doodles/integrity.json",
       });
-    </script>
+    </script> -->
 
     <script type="module" src="/src/js/course-sub-menu.js"></script>
     <script type="module" src="/src/js/navbar-menu.js"></script>
