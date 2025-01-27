@@ -4,6 +4,8 @@ import path from "path";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import { createHtmlPlugin } from "vite-plugin-html";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+// import { imageToWebpPlugin } from 'vite-plugin-image-to-webp';
 
 export default defineConfig({
   base: "",
@@ -13,6 +15,20 @@ export default defineConfig({
         injectTo: "body", // Ensures JS files are placed just before </body>
       },
     }),
+    ViteImageOptimizer({
+      jpeg: { quality: 100 },
+      png: { quality: 100 },
+      webp: { quality: 100 },
+      avif: { quality: 100 },
+    }),
+    // imageToWebpPlugin({
+    //   filter: (filename) => {
+    //     return filename.includes('/public/assets/images'); // Add your directory path here
+    //   },
+    //   imageFormats: ['jpg', 'jpeg', 'png'],
+    //   webpQuality: {},
+    //   destinationFolder: 'dist',
+    // }),
   ],
   css: {
     postcss: {

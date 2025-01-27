@@ -1,0 +1,346 @@
+/*!
+ * Font Awesome Free 6.0.0-beta3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2021 Fonticons, Inc.
+ */
+.fa {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+}
+.fa,
+.fa-brands,
+.fa-regular,
+.fa-solid,
+.fab,
+.fal,
+.far,
+.fas,
+.fat {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+@-webkit-keyframes fa-beat {
+  0%,
+  90% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%,
+  90% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%,
+  to {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%,
+  to {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(
+      var(--fa-flip-x, 0),
+      var(--fa-flip-y, 1),
+      var(--fa-flip-z, 0),
+      var(--fa-flip-angle, -180deg)
+    );
+    transform: rotate3d(
+      var(--fa-flip-x, 0),
+      var(--fa-flip-y, 1),
+      var(--fa-flip-z, 0),
+      var(--fa-flip-angle, -180deg)
+    );
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(
+      var(--fa-flip-x, 0),
+      var(--fa-flip-y, 1),
+      var(--fa-flip-z, 0),
+      var(--fa-flip-angle, -180deg)
+    );
+    transform: rotate3d(
+      var(--fa-flip-x, 0),
+      var(--fa-flip-y, 1),
+      var(--fa-flip-z, 0),
+      var(--fa-flip-angle, -180deg)
+    );
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+.fa-arrow-up:before {
+  content: "\f062";
+}
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+.fa-caret-left:before {
+  content: "\f0d9";
+}
+.fa-caret-right:before {
+  content: "\f0da";
+}
+.fa-cart-shopping:before {
+  content: "\f07a";
+}
+.fa-check-circle:before,
+.fa-circle-check:before {
+  content: "\f058";
+}
+
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+
+.fa-circle-left:before {
+  content: "\f359";
+}
+
+.fa-circle-right:before {
+  content: "\f35a";
+}
+
+.fa-clock:before {
+  content: "\f017";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-file:before {
+  content: "\f15b";
+}
+.fa-globe:before {
+  content: "\f0ac";
+}
+.fa-location-dot:before {
+  content: "\f3c5";
+}
+.fa-magnifying-glass:before,
+.fa-search:before {
+  content: "\f002";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-star:before {
+  content: "\f005";
+}
+.fa-sun:before {
+  content: "\f185";
+}
+
+:root {
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-brands-400.ttf) format("truetype");
+}
+.fa-brands,
+.fab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+.fa-facebook-square:before {
+  content: "\f082";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-instagram-square:before {
+  content: "\e055";
+}
+.fa-itch-io:before {
+  content: "\f83a";
+}
+.fa-linkedin:before {
+  content: "\f08c";
+}
+
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-steam:before {
+  content: "\f1b6";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-whatsapp-square:before {
+  content: "\f40c";
+}
+.fa-youtube:before {
+  content: "\f167";
+}
+
+:root {
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-regular-400.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-regular-400.ttf) format("truetype");
+}
+.fa-regular,
+.far {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+:root {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-solid-900.ttf) format("truetype");
+}
+.fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-display: block;
+  font-weight: 400;
+  src: url(/fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-brands-400.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-display: block;
+  font-weight: 900;
+  src: url(/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-solid-900.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-display: block;
+  font-weight: 400;
+  src: url(/fontawesome/webfonts/fa-regular-400.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-regular-400.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-solid-900.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-brands-400.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-regular-400.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-regular-400.ttf) format("truetype");
+  unicode-range: U+f003, U+f006, U+f014, U+f016-f017, U+f01a-f01b, U+f01d,
+    U+f022, U+f03e, U+f044, U+f046, U+f05c-f05d, U+f06e, U+f070, U+f087-f088,
+    U+f08a, U+f094, U+f096-f097, U+f09d, U+f0a0, U+f0a2, U+f0a4-f0a7, U+f0c5,
+    U+f0c7, U+f0e5-f0e6, U+f0eb, U+f0f6-f0f8, U+f10c, U+f114-f115, U+f118-f11a,
+    U+f11c-f11d, U+f133, U+f147, U+f14e, U+f150-f152, U+f185-f186, U+f18e,
+    U+f190-f192, U+f196, U+f1c1-f1c9, U+f1d9, U+f1db, U+f1e3, U+f1ea, U+f1f7,
+    U+f1f9, U+f20a, U+f247-f248, U+f24a, U+f24d, U+f255-f25b, U+f25d,
+    U+f271-f274, U+f278, U+f27b, U+f28c, U+f28e, U+f29c, U+f2b5, U+f2b7, U+f2ba,
+    U+f2bc, U+f2be, U+f2c0-f2c1, U+f2c3, U+f2d0, U+f2d2, U+f2d4, U+f2dc;
+}
+@font-face {
+  font-family: "FontAwesome";
+  font-display: block;
+  src: url(/fontawesome/webfonts/fa-v4compatibility.woff2) format("woff2"),
+    url(/fontawesome/webfonts/fa-v4compatibility.ttf) format("truetype");
+  unicode-range: U+f041, U+f047, U+f065-f066, U+f07d-f07e, U+f080, U+f08b,
+    U+f08e, U+f090, U+f09a, U+f0ac, U+f0ae, U+f0b2, U+f0d0, U+f0d6, U+f0e4,
+    U+f0ec, U+f10a-f10b, U+f123, U+f13e, U+f148-f149, U+f14c, U+f156, U+f15e,
+    U+f160-f161, U+f163, U+f175-f178, U+f195, U+f1f8, U+f219, U+f250, U+f252,
+    U+f27a;
+}

@@ -28,3 +28,6 @@ dist/
 
 # Environment Variables
 .env
+
+# FontAwesome package
+src/styles/fontawesome.css
