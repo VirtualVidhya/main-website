@@ -15,8 +15,6 @@ let successMsg = id("form-success-msg");
 let errorCount = 0;
 
 form.addEventListener("submit", (e) => {
-  // e.preventDefault();
-
   errorCount = 0;
 
   check(username, 0, "Name cannot be blank!");
@@ -24,7 +22,10 @@ form.addEventListener("submit", (e) => {
   check(email, 2, "Email cannot be blank!");
   check(course, 3, "Course cannot be blank!");
 
-  if (errorCount > 0) return;
+  if (errorCount > 0) {
+    e.preventDefault();
+    return;
+  }
 
   onSuccessfulSubmission();
 });
