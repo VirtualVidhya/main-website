@@ -16,10 +16,12 @@ export default defineConfig({
       },
     }),
     ViteImageOptimizer({
+      jpg: { quality: 100 },
       jpeg: { quality: 100 },
       png: { quality: 100 },
       webp: { quality: 100 },
       avif: { quality: 100 },
+      svg: { quality: 100 },
     }),
     // imageToWebpPlugin({
     //   filter: (filename) => {
