@@ -8,14 +8,11 @@
   font-weight: var(--fa-style, 900);
 }
 .fa,
-.fa-brands,
 .fa-regular,
 .fa-solid,
 .fab,
-.fal,
 .far,
-.fas,
-.fat {
+.fas {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: var(--fa-display, inline-block);
@@ -140,20 +137,8 @@
 .fa-bars:before {
   content: "\f0c9";
 }
-.fa-briefcase:before {
-  content: "\f0b1";
-}
 .fa-caret-down:before {
   content: "\f0d7";
-}
-.fa-caret-left:before {
-  content: "\f0d9";
-}
-.fa-caret-right:before {
-  content: "\f0da";
-}
-.fa-cart-shopping:before {
-  content: "\f07a";
 }
 .fa-check-circle:before,
 .fa-circle-check:before {
@@ -178,27 +163,8 @@
 .fa-envelope:before {
   content: "\f0e0";
 }
-.fa-file:before {
-  content: "\f15b";
-}
-.fa-globe:before {
-  content: "\f0ac";
-}
-.fa-location-dot:before {
-  content: "\f3c5";
-}
-.fa-magnifying-glass:before,
-.fa-search:before {
-  content: "\f002";
-}
 .fa-phone:before {
   content: "\f095";
-}
-.fa-star:before {
-  content: "\f005";
-}
-.fa-sun:before {
-  content: "\f185";
 }
 
 :root {
@@ -212,44 +178,19 @@
   src: url(/fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
     url(/fontawesome/webfonts/fa-brands-400.ttf) format("truetype");
 }
-.fa-brands,
+
 .fab {
   font-family: "Font Awesome 6 Brands";
   font-weight: 400;
 }
-.fa-facebook-square:before {
-  content: "\f082";
-}
-.fa-github:before {
-  content: "\f09b";
-}
-.fa-instagram:before {
-  content: "\f16d";
-}
 .fa-instagram-square:before {
   content: "\e055";
-}
-.fa-itch-io:before {
-  content: "\f83a";
 }
 .fa-linkedin:before {
   content: "\f08c";
 }
-
-.fa-medium:before {
-  content: "\f23a";
-}
-.fa-steam:before {
-  content: "\f1b6";
-}
-.fa-twitter:before {
-  content: "\f099";
-}
 .fa-whatsapp-square:before {
   content: "\f40c";
-}
-.fa-youtube:before {
-  content: "\f167";
 }
 
 :root {

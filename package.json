@@ -11,7 +11,7 @@
     "dev": "npm run build:worker && wrangler dev",
     "dev:vite": "vite",
     "deploy": "wrangler deploy",
-    "purgecss": "purgecss --css src/styles/fontawesome.css --content '/**/*.html' --output src/styles/fontawesome.min.css",
+    "purgecss": "purgecss --css src/styles/fontawesome.css --content './**/*.html' --output src/styles/fontawesome.min.css",
     "log": "npx wrangler pages deployment tail"
   },
   "devDependencies": {
