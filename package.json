@@ -11,18 +11,22 @@
     "dev": "npm run build:worker && wrangler dev",
     "dev:vite": "vite",
     "deploy": "wrangler deploy",
+    "purgecss": "purgecss --css src/styles/fontawesome.css --content '/**/*.html' --output src/styles/fontawesome.min.css",
     "log": "npx wrangler pages deployment tail"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.5.2",
     "autoprefixer": "^10.4.20",
     "fast-glob": "^3.3.2",
-    "parcel": "^2.13.3",
     "postcss": "^8.4.49",
+    "purgecss": "^6.0.0",
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.5",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-imagemin": "^0.4.6",
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-plugin-image-to-webp": "^1.0.14",
     "wrangler": "^3.92.0"
   },
   "dependencies": {
