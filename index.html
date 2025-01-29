@@ -706,19 +706,32 @@
                 </p>
               </div>
 
-              <div
+              <!-- <div
+              id="for-all-ages-illus"
+              class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
+            ></div> -->
+              <canvas
                 id="for-all-ages-illus"
-                class="w-full sm:w-2/5 order-2 mt-4 sm:mt-0"
-              ></div>
+                class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
+              ></canvas>
               <script type="module">
-                import lottie from "lottie-web";
+                // import lottie from "lottie-web";
 
-                lottie.loadAnimation({
-                  container: document.getElementById("for-all-ages-illus"),
-                  renderer: "svg",
-                  loop: true,
+                // lottie.loadAnimation({
+                //   container: document.getElementById("for-all-ages-illus"),
+                //   renderer: "svg",
+                //   loop: true,
+                //   autoplay: true,
+                //   path: "/images/doodles/for-all-ages.json",
+                // });
+
+                import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+                const dotLottieFirst = new DotLottie({
                   autoplay: true,
-                  path: "/images/doodles/for-all-ages.json",
+                  loop: true,
+                  canvas: document.querySelector("#for-all-ages-illus"),
+                  src: "/animations/for-all-ages.lottie",
                 });
               </script>
             </div>
@@ -726,19 +739,32 @@
             <div
               class="flex flex-col sm:flex-row items-center justify-center mb-20 sm:mb-5"
             >
-              <div
+              <!-- <div
                 id="learn-by-doing-illus"
                 class="w-full sm:w-2/5 order-2 sm:order-1 mt-4 sm:mt-0"
-              ></div>
+              ></div> -->
+              <canvas
+                id="learn-by-doing-illus"
+                class="w-full sm:w-2/5 aspect-square order-2 sm:order-1 mt-4 sm:mt-0"
+              ></canvas>
               <script type="module">
-                import lottie from "lottie-web";
+                // import lottie from "lottie-web";
 
-                lottie.loadAnimation({
-                  container: document.getElementById("learn-by-doing-illus"),
-                  renderer: "svg",
-                  loop: true,
+                // lottie.loadAnimation({
+                //   container: document.getElementById("learn-by-doing-illus"),
+                //   renderer: "svg",
+                //   loop: true,
+                //   autoplay: true,
+                //   path: "/images/doodles/learn-by-doing.json",
+                // });
+
+                import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+                const dotLottieSecond = new DotLottie({
                   autoplay: true,
-                  path: "/images/doodles/learn-by-doing.json",
+                  loop: true,
+                  canvas: document.querySelector("#learn-by-doing-illus"),
+                  src: "/animations/learn-by-doing.lottie",
                 });
               </script>
 
@@ -777,39 +803,67 @@
                 </p>
               </div>
 
-              <div
+              <!-- <div
                 id="personalized-approach-illus"
                 class="w-full sm:w-2/5 order-2 mt-4 sm:mt-0"
-              ></div>
+              ></div> -->
+              <canvas
+                id="personalized-approach-illus"
+                class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
+              ></canvas>
               <script type="module">
-                import lottie from "lottie-web";
+                // import lottie from "lottie-web";
 
-                lottie.loadAnimation({
-                  container: document.getElementById(
-                    "personalized-approach-illus"
-                  ),
-                  renderer: "svg",
-                  loop: true,
+                // lottie.loadAnimation({
+                //   container: document.getElementById(
+                //     "personalized-approach-illus"
+                //   ),
+                //   renderer: "svg",
+                //   loop: true,
+                //   autoplay: true,
+                //   path: "/images/doodles/personalized-approach.json",
+                // });
+
+                import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+                const dotLottieThird = new DotLottie({
                   autoplay: true,
-                  path: "/images/doodles/personalized-approach.json",
+                  loop: true,
+                  canvas: document.querySelector(
+                    "#personalized-approach-illus"
+                  ),
+                  src: "/animations/personalized-approach.lottie",
                 });
               </script>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center justify-center">
-              <div
+              <!-- <div
                 id="integrity-illus"
                 class="w-full sm:w-2/5 order-2 sm:order-1 mt-4 sm:mt-0"
-              ></div>
+              ></div> -->
+              <canvas
+                id="integrity-illus"
+                class="w-full sm:w-2/5 aspect-square order-2 sm:order-1 mt-4 sm:mt-0"
+              ></canvas>
               <script type="module">
-                import lottie from "lottie-web";
+                // import lottie from "lottie-web";
 
-                lottie.loadAnimation({
-                  container: document.getElementById("integrity-illus"),
-                  renderer: "svg",
-                  loop: true,
+                // lottie.loadAnimation({
+                //   container: document.getElementById("integrity-illus"),
+                //   renderer: "svg",
+                //   loop: true,
+                //   autoplay: true,
+                //   path: "/images/doodles/integrity.json",
+                // });
+
+                import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+                const dotLottieForth = new DotLottie({
                   autoplay: true,
-                  path: "/images/doodles/integrity.json",
+                  loop: true,
+                  canvas: document.querySelector("#integrity-illus"),
+                  src: "/animations/integrity.lottie",
                 });
               </script>
 
