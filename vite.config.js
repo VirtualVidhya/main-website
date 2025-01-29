@@ -72,8 +72,8 @@ export default defineConfig({
             return "contact-form";
           return undefined;
         },
-        entryFileNames: "js/[name].min.js", // Disable hashing for JS files
-        chunkFileNames: "js/[name].min.js",
+        entryFileNames: "scripts/[name].min.js", // Disable hashing for JS files
+        chunkFileNames: "scripts/[name].min.js",
         assetFileNames: (assetInfo) => {
           if (/\.(css)$/.test(assetInfo.name)) {
             return "styles/[name].[ext]"; // Place CSS in styles/ directory
