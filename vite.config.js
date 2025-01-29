@@ -42,6 +42,12 @@ export default defineConfig({
   },
   build: {
     minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console logs
+        pure_funcs: ["console.log", "console.info"], // Remove debug functions
+      },
+    },
     chunkSizeWarningLimit: 500,
     rollupOptions: {
       input: Object.fromEntries(
@@ -52,7 +58,20 @@ export default defineConfig({
           .map((file) => [file, path.resolve(__dirname, file)])
       ),
       output: {
-        manualChunks: undefined,
+        // manualChunks: undefined,
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("swiper")) return "swiper"; // Swiper.js chunk
+            if (id.includes("resend")) return "resend"; // Resend email package chunk
+            return "vendor"; // Other node_modules dependencies
+          }
+          if (id.includes("/scripts/common/")) return "common"; // Shared utilities
+          if (id.includes("/scripts/specific/course-carousel.js"))
+            return "carousel";
+          if (id.includes("/scripts/specific/contact-form-validation.js"))
+            return "contact-form";
+          return undefined;
+        },
         entryFileNames: "js/[name].min.js", // Disable hashing for JS files
         chunkFileNames: "js/[name].min.js",
         assetFileNames: (assetInfo) => {
