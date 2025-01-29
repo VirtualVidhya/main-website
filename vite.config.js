@@ -41,6 +41,8 @@ export default defineConfig({
     },
   },
   build: {
+    minify: "terser",
+    chunkSizeWarningLimit: 500,
     rollupOptions: {
       input: Object.fromEntries(
         fastGlob

@@ -2,6 +2,7 @@
   "name": "vvidhya.com",
   "version": "0.0.0",
   "private": true,
+  "sideEffects": false,
   "main": "functions/api/submit-contact-form.js",
   "scripts": {
     "build:contact-form": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
@@ -28,7 +29,6 @@
     "vite": "^6.0.5",
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-image-optimizer": "^1.1.8",
-    "vite-plugin-image-to-webp": "^1.0.14",
     "wrangler": "^3.92.0"
   },
   "dependencies": {
