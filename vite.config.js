@@ -14,7 +14,7 @@ export default defineConfig({
       inject: {
         injectTo: "body", // Ensures JS files are placed just before </body>
       },
-    }),
+    },),
     ViteImageOptimizer({
       jpg: { quality: 100 },
       jpeg: { quality: 100 },
@@ -40,16 +40,26 @@ export default defineConfig({
       ],
     },
   },
+  optimizeDeps: {
+    include: ["@lottiefiles/dotlottie-web"]
+  },
   build: {
     minify: "terser",
     terserOptions: {
       compress: {
         drop_console: true, // Remove console logs
         pure_funcs: ["console.log", "console.info"], // Remove debug functions
+        module: true,
+        toplevel: true,
+        passes: 3,
       },
+      output: {
+        comments: false,
+      }
     },
     chunkSizeWarningLimit: 500,
     rollupOptions: {
+      treeshake: true,
       input: Object.fromEntries(
         fastGlob
           .sync("**/*.html", {
@@ -61,8 +71,9 @@ export default defineConfig({
         // manualChunks: undefined,
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            if (id.includes("swiper")) return "swiper"; // Swiper.js chunk
-            if (id.includes("resend")) return "resend"; // Resend email package chunk
+            if (id.includes("swiper")) return "swiper";
+            if (id.includes("resend")) return "resend";
+            if (id.includes("lottiefiles")) return "lottiefiles";
             return "vendor"; // Other node_modules dependencies
           }
           if (id.includes("/scripts/common/")) return "common"; // Shared utilities
@@ -70,6 +81,8 @@ export default defineConfig({
             return "carousel";
           if (id.includes("/scripts/specific/contact-form-validation.js"))
             return "contact-form";
+          if (id.includes("/scripts/specific/lottie-anim.js"))
+            return "lottie-anim";
           return undefined;
         },
         entryFileNames: "scripts/[name].min.js", // Disable hashing for JS files
