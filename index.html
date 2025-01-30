@@ -29,27 +29,13 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="/fonts/noto-sans-v37-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/noto-sans-v37-latin-800.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
 
     <!-- font-awesome icons -->
     <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     /> -->
-    <link rel="stylesheet" href="/src/styles/fontawesome.min.css" />
+    <link rel="stylesheet" href="/src/styles/fontawesome.min.css" media="print" onload="this.media='all'" />
 
     <!-- favicons -->
     <link
@@ -84,6 +70,7 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- lotti-anim-loader-script -->
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm" />
     <script type="module" src="/src/scripts/specific/lottie-anim.js"></script>
   </head>
 
@@ -950,7 +937,7 @@
           Whether we are the best computer educational institute or not, that's
           for you to decide, because at the end what is best for you is all that
           matters. With
-          <span class="font-bold">over 20 years of experience</span> in computer
+          <span class="font-bold">over 25 years of experience</span> in computer
           education, we are committed to make people of all age groups digitally
           literate in this ever-evolving technological world. Our mission is
           simply to be a catalyst in the process of people's creativity coming
