@@ -21,7 +21,16 @@ export default defineConfig({
       png: { quality: 100 },
       webp: { quality: 100 },
       avif: { quality: 100 },
-      svg: { quality: 100 },
+      svg: {
+        multipass: true, // Enables better compression
+        plugins: [
+          { removeViewBox: false }, // Keeps viewBox (important for responsiveness)
+          { removeDimensions: true }, // Removes width/height to use CSS scaling
+          { cleanupIDs: false }, // Prevents ID conflicts
+          { convertColors: false }, // Avoids color loss
+          { removeUnknownsAndDefaults: false }, // Keeps custom attributes
+        ],
+      },
     }),
     // imageToWebpPlugin({
     //   filter: (filename) => {
