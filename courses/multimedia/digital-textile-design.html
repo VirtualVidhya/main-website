@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>V.Vidhya-Home</title>
+    <title>V.Vidhya - Your Virtual Path to Knowledge</title>
 
     <link href="/src/styles/input.css" rel="stylesheet" />
 
@@ -29,7 +29,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link
+    <!-- <link
       rel="preload"
       href="/fonts/noto-sans-v37-latin-700.woff2"
       as="font"
@@ -42,20 +42,20 @@
       as="font"
       type="font/woff2"
       crossorigin
-    />
+    /> -->
 
     <!-- font-awesome icons -->
     <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     /> -->
-    <link rel="stylesheet" href="/src/styles/fontawesome.min.css" />
+    <link rel="stylesheet" href="/src/styles/fontawesome.min.css" media="print" onload="this.media='all'" />
 
     <!-- favicons -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../images/favicons/apple-touch-icon.png"
+      href="/images/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
@@ -82,15 +82,6 @@
       content="/images/favicon-icons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </head>
   <body
     class="bg-mainbg-color text-font-color-pri font-notosans flex flex-col min-h-screen"
