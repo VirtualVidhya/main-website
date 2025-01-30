@@ -16,21 +16,14 @@ export default defineConfig({
       },
     },),
     ViteImageOptimizer({
+      // test: /\.(jpe?g|png|gif|tiff|webp|avif)$/i,
+      test: /public\/(images\/(course-icons|course-work|logo-icons|favicons))\/.*\.(jpe?g|png|gif|tiff|webp|avif|svg)$/i, 
       jpg: { quality: 100 },
       jpeg: { quality: 100 },
       png: { quality: 100 },
       webp: { quality: 100 },
       avif: { quality: 100 },
-      svg: {
-        multipass: true, // Enables better compression
-        plugins: [
-          { removeViewBox: false }, // Keeps viewBox (important for responsiveness)
-          { removeDimensions: true }, // Removes width/height to use CSS scaling
-          { cleanupIDs: false }, // Prevents ID conflicts
-          { convertColors: false }, // Avoids color loss
-          { removeUnknownsAndDefaults: false }, // Keeps custom attributes
-        ],
-      },
+      // svg: false,
     }),
     // imageToWebpPlugin({
     //   filter: (filename) => {
