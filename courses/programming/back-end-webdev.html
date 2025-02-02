@@ -49,7 +49,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     /> -->
-    <link rel="stylesheet" href="/src/styles/fontawesome.min.css" media="print" onload="this.media='all'" />
+    <link
+      rel="stylesheet"
+      href="/src/styles/fontawesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
 
     <!-- favicons -->
     <link
@@ -77,10 +82,7 @@
     />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-config"
-      content="/favicons/browserconfig.xml"
-    />
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body
@@ -430,7 +432,7 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
 
         <div class="ind-course-duration">
           <i class="fa-regular fa-clock"></i>
-          <p>1-3 months</p>
+          <p>5-7 months</p>
         </div>
 
         <img
@@ -444,10 +446,23 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
       <section class="ind-course-overview-section">
         <h4 class="ind-course-section-heading">Overview</h4>
         <p class="text-left">
-          Absolutely, understanding computer basics is fundamental in today's
-          world, both for personal and professional reasons. From navigating
-          software to performing basic troubleshooting, having a grasp of
-          computer fundamentals is essential in various fields and industries.
+          This Back-End Web Development course will guide you through the
+          fundamental and advanced techniques of building the server-side of web
+          applications. Whether you are interested in creating powerful,
+          data-driven websites or managing backend systems, this course will
+          give you the tools and knowledge needed to manage databases, build
+          APIs, and create robust back-end services. You'll start with
+          understanding databases, both SQL and NoSQL, and how they store and
+          manage data. Then, dive into MongoDB for handling NoSQL data and
+          learning about database relationships. You'll also learn how to
+          structure RESTful APIs using Node.js—the foundation of modern web
+          servers and back-end systems. This course will equip you with the
+          skills to manage user authentication, handle client-server
+          communications, and validate data on both the client and server side.
+          By the end of the course, you'll be able to design and implement
+          scalable back-end systems for web applications, making them secure,
+          maintainable, and ready for production. You'll also gain experience in
+          deploying these systems to real-world environments.
         </p>
       </section>
 
@@ -456,52 +471,77 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
         <h4 class="ind-course-section-heading">Course Curriculum</h4>
 
         <ul class="list-outside list-none mx-auto">
-          <li class="ind-course-imp-text">Operating Systems</li>
+          <li class="ind-course-imp-text">Databases (SQL & NoSQL)</li>
           <ul class="ind-course-sublist">
-            <li>
-              Understanding how to navigate and utilize within operating systems
-            </li>
+            <li>Introduction to databases and data storage</li>
+            <li>Working with SQL databases (e.g., MySQL)</li>
+            <li>Introduction to NoSQL databases (e.g., MongoDB)</li>
+            <li>Understanding data models, queries, and joins</li>
           </ul>
 
-          <li class="ind-course-imp-text">File Management</li>
+          <li class="ind-course-imp-text">MongoDB Fundamentals</li>
           <ul class="ind-course-sublist">
-            <li>
-              Learning how to organize, store, and retrieve files efficiently on
-              a computer system.
-            </li>
+            <li>Installing MongoDB and connecting with Node.js</li>
+            <li>CRUD operations: Create, Read, Update, Delete</li>
+            <li>Structuring data in MongoDB collections and documents</li>
           </ul>
 
-          <li class="ind-course-imp-text">Word Processing</li>
+          <li class="ind-course-imp-text">Mongo Database Relationships</li>
           <ul class="ind-course-sublist">
-            <li>
-              Developing skills in using word processing software like MS Word
-              or Google Docs for creating documents, reports, and presentations.
-            </li>
+            <li>Implementing relationships between data in MongoDB</li>
+            <li>Embedding vs referencing data</li>
+            <li>Normalization and denormalization</li>
           </ul>
 
-          <li class="ind-course-imp-text">Spreadsheet Applications</li>
+          <li class="ind-course-imp-text">Node.js</li>
           <ul class="ind-course-sublist">
-            <li>
-              Familiarizing oneself with spreadsheet software such as MS Excel
-              or Google Sheets, which are widely used for data analysis,
-              budgeting, and more.
-            </li>
+            <li>Introduction to Node.js and setting up Node.js environment</li>
+            <li>Understanding npm (Node Package Manager)</li>
+            <li>Building basic server-side applications using Express.js</li>
           </ul>
 
-          <li class="ind-course-imp-text">Internet Basics</li>
+          <li class="ind-course-imp-text">REST APIs</li>
           <ul class="ind-course-sublist">
-            <li>
-              Exploring web browsers, search engines, and understanding online
-              safety and security measures.
-            </li>
+            <li>Introduction to RESTful APIs</li>
+            <li>Creating API endpoints with Node.js and Express</li>
+            <li>Handling GET, POST, PUT, DELETE requests</li>
+            <li>Error handling in APIs</li>
           </ul>
 
-          <li class="ind-course-imp-text">Email Communication</li>
+          <li class="ind-course-imp-text">Routing, Cookies & Sessions</li>
+          <ul class="ind-course-sublist">
+            <li>Implementing routing in Node.js with Express</li>
+            <li>Understanding cookies and sessions for user authentication</li>
+            <li>Managing stateful user data</li>
+          </ul>
+
+          <li class="ind-course-imp-text">Client & Server-side Validations</li>
+          <ul class="ind-course-sublist">
+            <li>Validating form data on the client-side using JavaScript</li>
+            <li>Server-side validation with Express Validator</li>
+          </ul>
+
+          <li class="ind-course-imp-text">Authorization & Authentication</li>
+          <ul class="ind-course-sublist">
+            <li>JWT (JSON Web Token) authentication</li>
+            <li>Implementing OAuth, sessions, and cookies for login</li>
+            <li>Creating secure login systems</li>
+          </ul>
+
+          <li class="ind-course-imp-text">Deployment</li>
           <ul class="ind-course-sublist">
             <li>
-              Learning how to compose, send, and manage emails effectively for
-              personal and professional communication.
+              Deploying Node.js applications on platforms like Heroku and AWS
             </li>
+            <li>Working with CI/CD pipelines for automatic deployment</li>
+            <li>Setting up production environments</li>
+          </ul>
+
+          <li class="ind-course-imp-text">Real-world Projects</li>
+          <ul class="ind-course-sublist">
+            <li>Building full-stack web apps</li>
+            <li>User management systems with authentication</li>
+            <li>E-commerce backends, content management systems, etc.</li>
           </ul>
         </ul>
       </section>
