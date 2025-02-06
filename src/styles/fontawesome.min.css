@@ -187,6 +187,9 @@
   font-family: "Font Awesome 6 Brands";
   font-weight: 400;
 }
+.fa-facebook-square:before {
+  content: "\f082";
+}
 .fa-instagram-square:before {
   content: "\e055";
 }
