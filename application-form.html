@@ -85,9 +85,8 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body
-    class="bg-mainbg-color text-font-color-pri font-notosans flex flex-col min-h-screen"
-  >
+
+  <body class="bg-mainbg-color text-font-color-pri font-notosans">
     <button id="scroll-up-btn" class="scroll-up-btn">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -326,7 +325,7 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
           class="flex flex-col items-start sm:items-stretch gap-3 sm:gap-0 sm:flex-row sm:space-x-2 md:space-x-4 font-bold text-base md:text-xl mt-10 sm:mt-0 mx-4 sm:mx-0"
         >
           <a
-            class="flex items-center hover:underline hover:underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
+            class="flex items-center hover:underline underline-offset-4 sm:underline-offset-8 hover:text-font-color-sec"
             href="/"
             >About</a
           >
@@ -362,7 +361,7 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
             </div>
           </div>
           <a
-            class="flex items-center hover:text-font-color-sec hover:underline underline-offset-4 sm:underline-offset-8"
+            class="flex items-center hover:text-font-color-sec underline underline-offset-4 sm:underline-offset-8"
             href="/contact.html"
             >Contact</a
           >
@@ -431,253 +430,227 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
       </div>
     </header>
 
-    <main class="ind-course-main-section">
-      <section class="ind-course-header-section">
-        <h2 class="ind-course-heading">Figma</h2>
+    <main class="my-20">
+      <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl 2xl:max-w-6xl"
+      >
+        <h2
+          class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold"
+        >
+          Application Form
+        </h2>
 
-        <button class="enroll-btn">
-          <a href="/contact.html">Enroll Now</a>
-        </button>
-
-        <div class="ind-course-duration">
-          <i class="fa-regular fa-clock"></i>
-          <p>1-3 months</p>
-        </div>
-
-        <img
-          src="/images/doodles/girl-completing-task.svg"
+        <!-- <img
+          src="/images/doodles/people-doing-partnership.svg"
           alt="an Illustration of a woman doing designing"
           class="ind-course-illus"
-          decoding="async"
-        />
+        /> -->
       </section>
 
-      <!-- Overview -->
-      <section class="ind-course-overview-section">
-        <h4 class="ind-course-section-heading">Overview</h4>
-        <p class="text-left">
-          This course is designed to help you master Figma, the leading UI/UX
-          design tool for creating professional web and mobile interfaces. Over
-          2-3 months, you'll learn how to design high-quality wireframes,
-          prototypes, and UI components, as well as collaborate effectively
-          using FigJam and Figma's team features. Whether you're a beginner or
-          an experienced designer, this course will teach you everything from
-          the fundamentals of Figma to advanced design systems, prototyping, and
-          developer handoff workflows. You'll work on real-world projects and
-          build a strong UI/UX portfolio to kickstart or advance your design
-          career. By the end of this course, you'll be able to confidently use
-          Figma to create responsive designs, interactive prototypes, and
-          collaborate efficiently with developers and stakeholders.
+      <!-- <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl 2xl:max-w-6xl"
+      >
+        <h2 class="contact-section-heading">Address</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8672665504605!2d72.79245137589098!3d21.197431181962674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c2d21e3ffff%3A0x84eb5f824f69b049!2sVisual%20Software%20%26%20Multimedia!5e0!3m2!1sen!2sin!4v1714146551202!5m2!1sen!2sin"
+          class="border-2 w-80 h-80 md:w-152 md:h-96"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="text-center font-semibold">
+          HGF-10, Samay Shopping Complex, Opposite Center Point, Anand Mahal
+          Road, Adajan, Surat, Gujarat - 395009
         </p>
       </section>
 
-      <!-- Curriculum -->
-      <section class="ind-course-curriculum-section">
-        <h4 class="ind-course-section-heading">Course Curriculum</h4>
-
-        <ul class="list-outside list-none mx-auto">
-          <li class="ind-course-imp-text">
-            Introduction to Figma & Workspace Setup
-          </li>
-          <ul class="ind-course-sublist">
-            <li>Overview of Figma's interface and workspace</li>
-            <li>
-              Setting up a Figma account and understanding cloud-based workflow
-            </li>
-            <li>Creating and managing projects, files, and teams</li>
-            <li>Navigating the Toolbar, Layers Panel, and Inspector</li>
-            <li>Essential keyboard shortcuts for efficient design workflow</li>
-          </ul>
-
-          <li class="ind-course-imp-text">
-            Working with Shapes & Design Tools
-          </li>
-          <ul class="ind-course-sublist">
-            <li>Using Frames, Groups, and Artboards effectively</li>
-            <li>Drawing and editing shapes using the Shape and Pen tools</li>
-            <li>Working with Boolean operations for complex shapes</li>
-            <li>Understanding Auto Layout for responsive designs</li>
-            <li>Applying fills, strokes, shadows, and gradients</li>
-          </ul>
-
-          <li class="ind-course-imp-text">Typography & Text Styling</li>
-          <ul class="ind-course-sublist">
-            <li>Adding and formatting text layers</li>
-            <li>Creating and managing text styles for consistency</li>
-            <li>Adjusting line height, letter spacing, and alignment</li>
-            <li>Using Google Fonts and custom font integration</li>
-            <li>Handling missing fonts and font scaling techniques</li>
-          </ul>
-
-          <li class="ind-course-imp-text">Using Images & Components</li>
-          <ul class="ind-course-sublist">
-            <li>Importing and placing images in designs</li>
-            <li>Masking and cropping images</li>
-            <li>Understanding and utilizing Figma Components</li>
-            <li>Creating and managing reusable design components</li>
-            <li>Understanding Variants for multiple component states</li>
-          </ul>
-
-          <li class="ind-course-imp-text">Prototyping & Interaction Design</li>
-          <ul class="ind-course-sublist">
-            <li>Linking screens to create interactive prototypes</li>
-            <li>Working with transitions, animations, and overlays</li>
-            <li>Adding interactions, hover states, and micro-interactions</li>
-            <li>Using Smart Animate for smooth UI animations</li>
-            <li>Previewing and sharing interactive prototypes</li>
-          </ul>
-
-          <li class="ind-course-imp-text">Collaboration & Design Handoff</li>
-          <ul class="ind-course-sublist">
-            <li>Real-time collaboration with team members</li>
-            <li>Adding and responding to comments</li>
-            <li>Sharing designs with developers and stakeholders</li>
-            <li>Using Figma's Inspect tool for design-to-code handoff</li>
-            <li>Exporting assets and design elements efficiently</li>
-          </ul>
-
-          <li class="ind-course-imp-text">Advanced Features & Plugins</li>
-          <ul class="ind-course-sublist">
-            <li>Exploring Figma plugins to enhance workflow</li>
-            <li>Using Figma Community resources and UI kits</li>
-            <li>Customizing workflow with design systems and libraries</li>
-            <li>Leveraging FigJam for brainstorming and team collaboration</li>
-            <li>Understanding Figma's API and automation capabilities</li>
-          </ul>
-
-          <li class="ind-course-imp-text">
-            Final Project & Portfolio Development
-          </li>
-          <ul class="ind-course-sublist">
-            <li>Creating a complete UI/UX project in Figma</li>
-            <li>Organizing and presenting designs professionally</li>
-            <li>Building a design portfolio using Figma</li>
-            <li>
-              Preparing and exporting designs for web, mobile, and presentations
-            </li>
-            <li>Best practices for working with clients and teams</li>
-          </ul>
-        </ul>
+      <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl 2xl:max-w-6xl"
+      >
+        <h2 class="contact-section-heading">Mail us At</h2>
+        <a
+          class="font-semibold hover:underline underline-offset-8"
+          href="mailto:admin@vvidhya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >contact@vvidhya.com</a
+        >
       </section>
 
-      <!-- Course Work -->
-      <!-- <section class="text-center mb-24">
-        <h4
-          class="text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5"
+      <section
+        class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl 2xl:max-w-6xl"
+      >
+        <h2 class="contact-section-heading">Call us On</h2>
+        <a
+          class="font-semibold hover:underline underline-offset-8"
+          href="tel:+919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          >+91-9429267900</a
         >
-          Course Work
-        </h4>
-        <iframe
-          class="w-80 h-80 md:w-152 md:h-96 mx-auto border-2 aspect-w-16 aspect-h-9"
-          src="https://www.youtube.com/embed/mal0ApRKU58"
-          title="Crimson Tactics: The Rise of The White Banner - RELEASE GAMEPLAY TRAILER"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
       </section> -->
 
-      <!-- Related Courses -->
-      <!-- <section class="text-center mb-24">
-        <h4
-          class="text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5"
+      <form
+        name="contact"
+        method="POST"
+        id="form"
+        action="/api/submit-contact-form"
+        class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl 2xl:max-w-5xl"
+      >
+        <!-- <h2 class="text-center contact-section-heading mt-3 mb-9">
+          Inquiry Form
+        </h2> -->
+        <fieldset
+          class="flex flex-col items-center justify-center gap-5 mx-auto py-10 md:py-20 border-solid border-2 border-b-6 rounded-xl"
         >
-          Related Courses
-        </h4>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto"
+          <div class="flex flex-col w-4/5">
+            <input
+              id="name"
+              name="name"
+              class="p-3"
+              type="text"
+              placeholder="Enter your name"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="w-4/5 hidden">
+            <input
+              id="address"
+              name="address"
+              class="p-3"
+              type="text"
+              placeholder="Enter your address"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <!-- <div class="error text-font-color-red-dark"></div> -->
+          </div>
+
+          <div class="flex flex-col w-4/5">
+            <input
+              id="phone"
+              name="phone"
+              class="p-3"
+              type="tel"
+              placeholder="Enter your contact number"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="flex flex-col w-4/5">
+            <input
+              id="email"
+              name="email"
+              class="p-3"
+              type="text"
+              placeholder="Enter your email address"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="flex flex-col w-4/5">
+            <input
+              id="course"
+              name="course"
+              class="p-3"
+              type="text"
+              placeholder="Enter your course name"
+              list="courses"
+            />
+            <datalist id="courses">
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Digital Textile Design">
+                Digital Textile Design
+              </option>
+              <option value="Interior Design">Interior Design</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Jewellery Design">Jewellery Design</option>
+              <option value="Adobe Photoshop">Adobe Photoshop</option>
+              <option value="Adobe Illustrator">Adobe Illustrator</option>
+              <option value="Adobe After Effects">Adobe After Effects</option>
+              <option value="Adobe Premier Pro">Adobe Premier Pro</option>
+              <option value="Corel Draw">Corel Draw</option>
+              <option value="Figma">Figma</option>
+
+              <option value="Game Development">Game Development</option>
+              <option value="Full-stack Web-Development">
+                Full-stack Web-Development
+              </option>
+              <option value="Front-end Web-Development">
+                Front-end Web-Development
+              </option>
+              <option value="Back-end Web-Development">
+                Back-end Web-Development
+              </option>
+              <option value="Fundamentals of Computer Application">
+                Fundamentals of Computer Application
+              </option>
+              <option value="C++ Programming">C++ Programming</option>
+              <option value="C Programming">C Programming</option>
+              <option value="Python Programming">Python Programming</option>
+              <option value="Java Programming">Java Programming</option>
+
+              <option value="Scratch Programming">Scratch Programming</option>
+              <option value="MS Office">MS Office</option>
+
+              <option value="Desktop Publishing (DTP)">
+                Desktop Publishing (DTP)
+              </option>
+              <option value="Accounting">Accounting</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="Advance Excel">Advance Excel</option>
+            </datalist>
+
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <textarea
+            class="w-4/5 p-3"
+            id="message"
+            name="message"
+            placeholder="Enter your message here"
+            cols="30"
+            rows="10"
+            resize="vertical"
+          ></textarea>
+
+          <button
+            id="submit"
+            class="text-font-color-white bg-font-color-sec hover:text-font-color-pri px-6 py-3 font-bold rounded-md"
+            type="submit"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+
+      <div
+        id="form-success-msg"
+        class="hidden flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+      >
+        <i class="fa-solid fa-circle-check text-font-color-sec text-5xl"></i>
+        <h2
+          class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3"
         >
-          <a
-            href="/courses/programming/game-development.html"
-            class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
-          >
-            <img
-              class="w-32 h-auto"
-              src="../images/unity-icon.png"
-              alt="course-logo"
-            />
-            <h4
-              class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
-            >
-              Game Development
-            </h4>
-            <p class="text-center mb-2">
-              Make cool 2D & 3D games using Unity game engine & C#...
-            </p>
-            <div class="flex flex-row items-center justify-center gap-2">
-              <i class="fa-regular fa-clock"></i>
-              <p>7-12 months</p>
-            </div>
-            <div class="flex flex-row flex-wrap gap-3">
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">Unity</div>
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">C#</div>
-            </div>
-          </a>
-
-          <a
-            href="web-design.html"
-            class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
-          >
-            <img
-              class="w-32 h-auto"
-              src="../images/html-icon.png"
-              alt="course-logo"
-            />
-            <h4
-              class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
-            >
-              Web Design
-            </h4>
-            <p class="text-center mb-2">
-              Make cool websites using HTML, CSS, JavaScript...
-            </p>
-            <div class="flex flex-row items-center justify-center gap-2">
-              <i class="fa-regular fa-clock"></i>
-              <p>5-8 months</p>
-            </div>
-            <div class="flex flex-row flex-wrap gap-3">
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">HTML5</div>
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">CSS3</div>
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">JS</div>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="flex flex-col items-center justify-center gap-2 h-auto rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri"
-          >
-            <img
-              class="w-32 h-auto"
-              src="../images/graphicdesign-icon.png"
-              alt="course-logo"
-            />
-            <h4
-              class="text-center font-extrabold text-2xl mb-3 text-font-color-sec"
-            >
-              Graphics Design
-            </h4>
-            <p class="text-center mb-2">
-              Make cool designs using CorelDraw, Photoshop, Illustrator...
-            </p>
-            <div class="flex flex-row items-center justify-center gap-2">
-              <i class="fa-regular fa-clock"></i>
-              <p>5-8 months</p>
-            </div>
-            <div class="flex flex-row flex-wrap gap-3">
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">
-                Photoshop
-              </div>
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">
-                CorelDraw
-              </div>
-              <div class="bg-font-color-blue py-1 px-2 rounded-md">
-                Illustrator
-              </div>
-            </div>
-          </a>
-        </div>
-      </section> -->
+          Thank you!
+        </h2>
+        <p class="text-lg text-center">
+          Your response has been submitted successfully.
+        </p>
+        <p class="font-bold text-center">Our team will contact you soon.</p>
+      </div>
     </main>
 
     <footer
@@ -1145,6 +1118,10 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
       </div>
     </footer>
 
+    <script
+      type="module"
+      src="/src/scripts/specific/contact-form-validation.js"
+    ></script>
     <script type="module" src="/src/scripts/common/course-sub-menu.js"></script>
     <script type="module" src="/src/scripts/common/navbar-menu.js"></script>
     <script type="module" src="/src/scripts/common/scroll-up-btn.js"></script>
