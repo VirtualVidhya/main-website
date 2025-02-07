@@ -8,7 +8,7 @@
     "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
     "build:vite": "vite build",
     "inject-metadata": "node inject-metadata.mjs",
-    "build": "npm run build:worker && npm run build:vite && inject-metadata",
+    "build": "npm run build:worker && npm run build:vite && npm run inject-metadata",
     "build:vite-watch": "vite build --watch",
     "dev": "npm run build:worker && wrangler dev",
     "dev:vite": "vite",
