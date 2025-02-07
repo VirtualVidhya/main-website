@@ -30,7 +30,7 @@ export async function onRequestPost(context) {
       return Response.redirect("https://vvidhya.com/contact.html", 303);
     }
 
-    // Using text instead of email so that I don't need to sanitize it
+    // Using text instead of email so that it doesn't need to be sanitized
     const resend = new Resend(context.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: `Inquiry at V.Vidhya <${context.env.SENDER_EMAIL}>`,
