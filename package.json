@@ -5,11 +5,9 @@
   "sideEffects": false,
   "main": "functions/api/submit-contact-form.js",
   "scripts": {
-    "build:contact-form": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
-    "build:umami-proxy": "esbuild functions/api/umami-proxy.js --bundle --platform=node --external:resend --outfile=dist/umami-worker.js",
-    "build:worker": "npm run build:contact-form && npm run build:umami-proxy",
-    "build:vite": "vite build",
-    "build": "npm run build:worker && npm run build:vite",
+    "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
+    "build:vite": "vite build && node inject-metadata.mjs",
+    "build": "npm run build:worker && npm run build:vite && node inject-metadata.mjs",
     "build:vite-watch": "vite build --watch",
     "dev": "npm run build:worker && wrangler dev",
     "dev:vite": "vite",
@@ -29,6 +27,7 @@
     "vite": "^6.0.5",
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-plugin-sitemap": "^0.7.1",
     "wrangler": "^3.92.0"
   },
   "dependencies": {
