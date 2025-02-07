@@ -14,7 +14,7 @@ const metadata = {
     title: "Contact Us - V.Vidhya | For best Computer Education in Surat",
     description: "Get in touch with V.Vidhya for the best computer education in Surat. Visit our institute, call us, or drop a message to learn more about offered courses.",
   },
-  "/courses/": {
+  "/courses": {
     title: "Explore All Computer Courses at V.Vidhya | From Design to Coding, For Kids to Senior-Citizens",
     description: "Browse our latest courses and start learning asap! Whether you are a kid exploring computers, a young digital artist, a working professional upskilling or a senior-citizen seeking to navigate technology!",
   },
@@ -27,19 +27,19 @@ const metadata = {
     description: "Understand the terms & conditions of V.Vidhya. Learn about our policies, course regulations, and usage guidelines for our computer education services.",
   },
 
-  "/courses/multimedia/": {
+  "/courses/multimedia": {
     title: "Explore best Multimedia Courses at V.Vidhya in Surat",
     description: "Learn graphics design, video editing, animation, UI/UX, interior design and more at V.Vidhya. Our multimedia courses in Surat help you master all the latest creative tools.",
   },
-  "/courses/programming/": {
+  "/courses/programming": {
     title: "Explore top Programming Courses at V.Vidhya in Surat",
     description: "Master coding with our programming courses at V.Vidhya. Learn Game Development, Web Development and all the core programming languages like C/C++, Python, Java in Surat.",
   },
-  "/courses/Kids/": {
+  "/courses/Kids": {
     title: "Explore Computer Courses for Kids at V.Vidhya in Surat",
     description: "Introduce your child to technology with fun and interactive computer courses at V.Vidhya. Learn Scratch Programming, MS Office, and essential digital skills in Surat.",
   },
-  "/courses/literacy/": {
+  "/courses/literacy": {
     title: "Explore essential Computer Literacy Courses at V.Vidhya in Surat",
     description: "Build your digital skills with our computer literacy courses at V.Vidhya. Learn MS Office, Advanced Excel, Accounting, and Digital Marketing in Surat.",
   },
