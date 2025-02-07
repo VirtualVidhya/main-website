@@ -183,15 +183,16 @@ async function injectMetadata() {
     if (fs.existsSync(file)) {
       let html = fs.readFileSync(file, "utf8");
 
-      html = html.replace(
-        /<title>.*<\/title>/,
-        `<title>${meta.title}</title>`
-      );
+      // html = html.replace(
+      //   /<title>.*<\/title>/,
+      //   `<title>${meta.title}</title>`
+      // );
 
       // Inject metadata before `</head>`
       html = html.replace(
         "</head>",
         `
+        <title>${meta.title}</title>
         <meta name="description" content="${meta.description}">
         <meta property="og:title" content="${meta.title}">
         <meta property="og:description" content="${meta.description}">
