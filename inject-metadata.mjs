@@ -35,7 +35,7 @@ const metadata = {
     title: "Explore top Programming Courses at V.Vidhya in Surat",
     description: "Master coding with our programming courses at V.Vidhya. Learn Game Development, Web Development and all the core programming languages like C/C++, Python, Java in Surat.",
   },
-  "/courses/Kids": {
+  "/courses/kids": {
     title: "Explore Computer Courses for Kids at V.Vidhya in Surat",
     description: "Introduce your child to technology with fun and interactive computer courses at V.Vidhya. Learn Scratch Programming, MS Office, and essential digital skills in Surat.",
   },
