@@ -2,6 +2,8 @@
 
 import { Resend } from "resend";
 
+const spamNamePatterns = new Map();
+
 function isSpamName(name) {
   // Check if name ends with "noita" (or slight variations)
   const spamRegex = /(no[i1í]ta|n0ita|nσita|n𝑜ita)$/i;
