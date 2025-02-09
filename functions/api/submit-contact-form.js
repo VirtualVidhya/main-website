@@ -77,6 +77,9 @@ export async function onRequestPost(context) {
       return Response.redirect("https://vvidhya.com/contact.html", 303);
     }
 
+    // Store the form-data in Supabase database
+    await storeInSupabase(context.env, output);
+
     let englishChars = (
       output.message.match(/[a-zA-Z0-9.,&%()\[\]{}?!'"\s]/g) || []
     ).length;
@@ -87,10 +90,7 @@ export async function onRequestPost(context) {
       return Response.redirect("https://vvidhya.com/contact.html", 303);
     }
 
-    // 🟢 Store the form data in Supabase
-    await storeInSupabase(context.env, output);
-
-    // Using text instead of email so that it doesn't need to be sanitized
+    // Send form-data as an email notification via Resend
     const resend = new Resend(context.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: `Inquiry at V.Vidhya <${context.env.SENDER_EMAIL}>`,
