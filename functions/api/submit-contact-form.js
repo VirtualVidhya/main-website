@@ -2,6 +2,18 @@
 
 import { Resend } from "resend";
 
+function isSpamName(name) {
+  // Check if name ends with "noita" (or slight variations)
+  const spamRegex = /(no[i1í]ta|n0ita|nσita|n𝑜ita)$/i;
+
+  if (spamRegex.test(name)) {
+    spamNamePatterns.set(name, (spamNamePatterns.get(name) || 0) + 1);
+    return true;
+  }
+
+  return false;
+}
+
 export async function onRequestPost(context) {
   try {
     // console.log("Request Method:", context.request.method);
@@ -27,6 +39,21 @@ export async function onRequestPost(context) {
 
     // Return early with pretend confirmation if bot hit honeypot
     if (honeypot !== "") {
+      return Response.redirect("https://vvidhya.com/contact.html", 303);
+    }
+
+    // If the name contains a known spam, Return early with pretend confirmation
+    if (isSpamName(output.name.toLowerCase())) {
+      return Response.redirect("https://vvidhya.com/contact.html", 303);
+    }
+
+    let englishChars = (
+      output.message.match(/[a-zA-Z0-9.,&%()\[\]{}?!'"\s]/g) || []
+    ).length;
+    let totalChars = output.message.length;
+
+    // If more than 30% of characters are non-English, Return early with pretend confirmation
+    if (englishChars / totalChars < 0.7) {
       return Response.redirect("https://vvidhya.com/contact.html", 303);
     }
 
