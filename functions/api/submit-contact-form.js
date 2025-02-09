@@ -2,6 +2,34 @@
 
 import { Resend } from "resend";
 
+// Function to store data in Supabase
+async function storeInSupabase(env, formData) {
+  const supabaseUrl = env.SUPABASE_URL;
+  const supabaseKey = env.SUPABASE_SERVICE_ROLE_KEY;
+
+  const response = await fetch(`${supabaseUrl}/rest/v1/inquiries`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      apikey: supabaseKey,
+      Authorization: `Bearer ${supabaseKey}`,
+      Prefer: "return=minimal", // Faster response
+    },
+    body: JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      course: formData.course,
+      message: formData.message,
+    }),
+  });
+
+  if (!response.ok) {
+    console.error("Supabase Insert Error:", await response.text());
+    throw new Error("Failed to store inquiry in Supabase");
+  }
+}
+
 const spamNamePatterns = new Map();
 
 function isSpamName(name) {
@@ -58,6 +86,9 @@ export async function onRequestPost(context) {
     if (englishChars / totalChars < 0.7) {
       return Response.redirect("https://vvidhya.com/contact.html", 303);
     }
+
+    // 🟢 Store the form data in Supabase
+    await storeInSupabase(context.env, output);
 
     // Using text instead of email so that it doesn't need to be sanitized
     const resend = new Resend(context.env.RESEND_API_KEY);
