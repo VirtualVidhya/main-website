@@ -31,3 +31,6 @@ dist/
 
 # FontAwesome package
 src/styles/fontawesome.css
+
+# Astro
+.astro

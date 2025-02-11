@@ -142,6 +142,10 @@
     @apply stroke-font-color-pri;
   }
 
+  .header-navmenu-hover {
+    @apply hover:text-font-color-green underline-offset-4 sm:underline-offset-8;
+  }
+
   .scroll-up-btn {
     @apply hidden fixed bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
   }

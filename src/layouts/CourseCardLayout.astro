@@ -1,0 +1,36 @@
+---
+interface Props {
+  courseCardDetails: {
+    refLink: string;
+    icon: string;
+    lazyLoadIconImg: boolean;
+    name: string;
+    description: string;
+    duration: string;
+  };
+}
+
+const { courseCardDetails = { refLink: "#", icon: "", lazyLoadIconImg: false, name: "Course Name", description: "Course Description", duration: "2-3" } } = Astro.props;
+---
+
+<a href={courseCardDetails.refLink} class="course-card">
+  <img
+    class="course-card-image"
+    src={courseCardDetails.icon}
+    alt="course-logo"
+    decoding="async"
+    loading={courseCardDetails.refLink ? "lazy" : undefined}
+  />
+  <h4 class="course-card-heading" style="white-space: pre-wrap;">{courseCardDetails.name}</h4>
+  <!-- <hr class="course-card-border" /> -->
+  <p class="course-card-desc">
+    {courseCardDetails.description}
+  </p>
+  <div class="course-card-duration">
+    <i class="fa-regular fa-clock"></i>
+    <p>{courseCardDetails.duration} months</p>
+  </div>
+  <div class="course-card-tags-container">
+    <slot name="course-tool-tags-slot" />
+  </div>
+</a>
