@@ -10,8 +10,8 @@
     "inject-metadata": "node inject-metadata.mjs",
     "build": "npm run build:worker && npm run build:vite && npm run inject-metadata",
     "build:vite-watch": "vite build --watch",
-    "dev": "npm run build:worker && wrangler dev",
     "dev:vite": "vite",
+    "dev": "vite && npm run build:worker && wrangler dev",
     "deploy": "wrangler deploy",
     "purgecss": "purgecss --css src/styles/fontawesome.css --content './**/*.html' --output src/styles/fontawesome.min.css",
     "log": "npx wrangler pages deployment tail"
