@@ -34,6 +34,7 @@
     "wrangler": "^3.92.0"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^6.0.0",
     "@playform/compress": "^0.1.7",
     "astro": "^5.2.5",

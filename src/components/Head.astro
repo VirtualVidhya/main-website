@@ -11,33 +11,53 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
 ---
 
 <head>
+  <!-- #Pragma Directives# -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Meta-Data -->
+  <!-- #Title# -->
   <title>{metadata.title}</title>
+
+  <!-- Meta-Data -->
   <meta name="description" content={metadata.description} />
   <meta property="og:title" content={metadata.title} />
   <meta property="og:description" content={metadata.description} />
   <meta name="twitter:title" content={metadata.title} />
   <meta name="twitter:description" content={metadata.description} />
 
+  <!-- #Preconnect Hints# -->
+
+  <!-- #Asynchronous Scripts# -->
+
+  <!-- #Import Styles# -->
+
+  <!-- #Synchronous Scripts# -->
+  <!-- lotti-anim-loader-script -->
+  {
+    includeLottieAnimScript && (
+      <>
+        <link
+          rel="preload"
+          as="script"
+          href="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm"
+        />
+
+        <script type="module" src="/src/scripts/specific/lottie-anim.js" />
+      </>
+    )
+  }
+
+  <!-- #Synchronous Styles# -->
   <link href="/src/styles/input.css" rel="stylesheet" />
+  <!-- font-awesome icons -->
+  <link
+    rel="stylesheet"
+    href="/src/styles/fontawesome.min.css"
+    media="print"
+    onload="this.media='all'"
+  />
 
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    /> -->
-
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    /> -->
-
+  <!-- #Preload Hints# -->
   <!-- Preloaded locally hosted necessary fonts -->
   <link
     rel="preload"
@@ -54,18 +74,11 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
     crossorigin
   />
 
-  <!-- font-awesome icons -->
-  <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    /> -->
-  <link
-    rel="stylesheet"
-    href="/src/styles/fontawesome.min.css"
-    media="print"
-    onload="this.media='all'"
-  />
+  <!-- #Deferred Scripts# -->
 
+  <!-- #Prefetch and Prerender Hints# -->
+
+  <!-- #Everything Else# -->
   <!-- favicons -->
   <link
     rel="apple-touch-icon"
@@ -94,19 +107,4 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
   <meta name="theme-color" content="#ffffff" />
-
-  <!-- lotti-anim-loader-script -->
-  {
-    includeLottieAnimScript && (
-      <>
-        <link
-          rel="preload"
-          as="script"
-          href="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm"
-        />
-
-        <script type="module" src="/src/scripts/specific/lottie-anim.js" />
-      </>
-    )
-  }
 </head>
