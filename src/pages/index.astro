@@ -1,11 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LottieAnimCanvas from "../components/LottieAnimCanvas.astro";
 
 const metadata = {
   title:
     "V.Vidhya - Your virtual path to knowledge | Computer Education for All in Surat",
   description:
     "Learn top computer courses at V.Vidhya in Surat. From programming to graphic design, boost your skills and indulge your creativity to do real work with the help of technology.",
+};
+
+const animData = {
+  forAllAgesAnim: {
+    id: "for-all-ages-illus",
+    path: "/animations/for-all-ages.lottie",
+  },
+  LearnByDoingAnim: {
+    id: "learn-by-doing-illus",
+    path: "/animations/learn-by-doing.lottie",
+  },
+  personalApproachAnim: {
+    id: "personalized-approach-illus",
+    path: "/animations/personalized-approach.lottie",
+  },
+  integrityAnim: {
+    id: "integrity-illus",
+    path: "/animations/integrity.lottie",
+  },
 };
 ---
 
@@ -298,10 +318,12 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
             id="for-all-ages-illus"
             class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
           ></div> -->
-            <canvas
+            <!-- <canvas
               id="for-all-ages-illus"
               class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
-              data-lottie="/animations/for-all-ages.lottie"></canvas>
+              data-lottie="/animations/for-all-ages.lottie"></canvas> -->
+
+            <LottieAnimCanvas animData={animData.forAllAgesAnim} />
             <!-- <script type="module">
               window.loadLottieAnimation(
                 "for-all-ages-illus",
@@ -337,10 +359,11 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
               id="learn-by-doing-illus"
               class="w-full sm:w-2/5 order-2 sm:order-1 mt-4 sm:mt-0"
             ></div> -->
-            <canvas
+            <!-- <canvas
               id="learn-by-doing-illus"
               class="w-full sm:w-2/5 aspect-square order-2 sm:order-1 mt-4 sm:mt-0"
-              data-lottie="/animations/learn-by-doing.lottie"></canvas>
+              data-lottie="/animations/learn-by-doing.lottie"></canvas> -->
+            <LottieAnimCanvas animData={animData.LearnByDoingAnim} />
             <!-- <script type="module">
               window.loadLottieAnimation(
                 "learn-by-doing-illus",
@@ -407,10 +430,11 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
               id="personalized-approach-illus"
               class="w-full sm:w-2/5 order-2 mt-4 sm:mt-0"
             ></div> -->
-            <canvas
+            <!-- <canvas
               id="personalized-approach-illus"
               class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
-              data-lottie="/animations/personalized-approach.lottie"></canvas>
+              data-lottie="/animations/personalized-approach.lottie"></canvas> -->
+            <LottieAnimCanvas animData={animData.personalApproachAnim} />
             <!-- <script type="module">
               window.loadLottieAnimation(
                 "personalized-approach-illus",
@@ -448,10 +472,11 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
               id="integrity-illus"
               class="w-full sm:w-2/5 order-2 sm:order-1 mt-4 sm:mt-0"
             ></div> -->
-            <canvas
+            <!-- <canvas
               id="integrity-illus"
               class="w-full sm:w-2/5 aspect-square order-2 sm:order-1 mt-4 sm:mt-0"
-              data-lottie="/animations/integrity.lottie"></canvas>
+              data-lottie="/animations/integrity.lottie"></canvas> -->
+            <LottieAnimCanvas animData={animData.integrityAnim} />
             <!-- <script type="module">
               window.loadLottieAnimation(
                 "integrity-illus",

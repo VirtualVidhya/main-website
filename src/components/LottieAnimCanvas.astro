@@ -1,0 +1,15 @@
+---
+interface Props {
+  animData: {
+    id: string;
+    path: string;
+  };
+}
+
+const { animData } = Astro.props;
+---
+
+<canvas
+  id={animData.id}
+  class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
+  data-lottie={animData.path}></canvas>
