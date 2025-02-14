@@ -52,33 +52,49 @@
 //   });
 // })();
 
-(async () => {
-  function loadLottie() {
-    // return import("https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm");
-    return import("https://esm.sh/@lottiefiles/dotlottie-web");
-  }
+// (async () => {
+//   function loadLottie() {
+//     // return import("https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm");
+//     return import("https://esm.sh/@lottiefiles/dotlottie-web");
+//   }
 
-  async function loadAnimation(elementId, animationSrc) {
-    const { DotLottie } = await loadLottie();
-    new DotLottie({
-      autoplay: true,
+//   async function loadAnimation(elementId, animationSrc) {
+//     const { DotLottie } = await loadLottie();
+//     new DotLottie({
+//       autoplay: true,
+//       loop: true,
+//       canvas: document.querySelector(`#${elementId}`),
+//       src: animationSrc,
+//     });
+//   }
+
+//   const observer = new IntersectionObserver(
+//     (entries, observer) => {
+//       entries.forEach(async (entry) => {
+//         if (entry.isIntersecting) {
+//           await loadAnimation(entry.target.id, entry.target.dataset.lottie);
+//           observer.unobserve(entry.target); // Load only once
+//         }
+//       });
+//     },
+//     { rootMargin: "100px" }
+//   );
+
+//   document.querySelectorAll("[data-lottie]").forEach((el) => observer.observe(el));
+// })();
+
+import lottie from "lottie-web";
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-lottie]").forEach((canvas) => {
+    const animationPath = canvas.dataset.lottie;
+
+    lottie.loadAnimation({
+      container: canvas,
+      renderer: "canvas",
       loop: true,
-      canvas: document.querySelector(`#${elementId}`),
-      src: animationSrc,
+      autoplay: true,
+      path: animationPath,
     });
-  }
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(async (entry) => {
-        if (entry.isIntersecting) {
-          await loadAnimation(entry.target.id, entry.target.dataset.lottie);
-          observer.unobserve(entry.target); // Load only once
-        }
-      });
-    },
-    { rootMargin: "100px" }
-  );
-
-  document.querySelectorAll("[data-lottie]").forEach((el) => observer.observe(el));
-})();
+  });
+});
