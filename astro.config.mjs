@@ -73,22 +73,22 @@ export default defineConfig({
         return item;
       },
     }),
-    // compress({
-    //   CSS: true,
-    //   HTML: {
-    //     "html-minifier-terser": {
-    //       removeAttributeQuotes: false,
-    //     },
-    //   },
-    //   Image: true,
-    //   JavaScript: true,
-    //   SVG: false,
-    // }),
-    // compressor({
-    //   fileExtensions: [".html", ".css", ".js", ".mjs", ".svg"],
-    //   gzip: true,
-    //   brotli: true,
-    // }),
+    compress({
+      CSS: true,
+      HTML: {
+        "html-minifier-terser": {
+          removeAttributeQuotes: false,
+        },
+      },
+      Image: true,
+      JavaScript: true,
+      SVG: false,
+    }),
+    compressor({
+      fileExtensions: [".html", ".css", ".js", ".mjs", ".svg"],
+      gzip: true,
+      brotli: true,
+    }),
   ],
 
   vite: {
