@@ -1,16 +1,17 @@
 ---
-import "/src/styles/input.css"
-import "/src/styles/fontawesome.min.css"
+import "/src/styles/global.css";
+import "/src/styles/fontawesome.min.css";
 
 interface Props {
   metadata: {
     title: string;
     description: string;
   };
-  includeLottieAnimScript?: boolean;
+  includeLottieAnimScript: boolean;
 }
 
-const { metadata, includeLottieAnimScript = false } = Astro.props;
+const metadata = Astro.props.metadata;
+const includeLottieAnimScript = Astro.props.includeLottieAnimScript ?? false;
 ---
 
 <head>
@@ -20,6 +21,9 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
 
   <!-- #Title# -->
   <title>{metadata.title}</title>
+
+  <!-- SiteMap -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
 
   <!-- Meta-Data -->
   <meta name="description" content={metadata.description} />
@@ -36,7 +40,7 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
 
   <!-- #Synchronous Scripts# -->
   <!-- lotti-anim-loader-script -->
-  <!-- {
+  {
     includeLottieAnimScript && (
       <>
         <link
@@ -48,7 +52,7 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
         <script src="../scripts/specific/lottie-anim.js" />
       </>
     )
-  } -->
+  }
 
   <!-- #Synchronous Styles# -->
   <!-- <link href="/styles/input.css" rel="stylesheet" /> -->

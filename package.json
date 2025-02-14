@@ -1,37 +1,23 @@
 {
   "name": "vvidhya.com",
+  "type": "module",
   "version": "1.1.0",
-  "private": true,
-  "sideEffects": false,
-  "main": "functions/api/submit-contact-form.js",
   "scripts": {
+    "dev:astro": "astro dev",
     "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
     "build:astro": "astro build",
     "build": "npm run build:worker && npm run build:astro",
-    "build:astro-watch": "astro build --watch",
     "preview:astro": "astro preview",
-    "dev:astro": "astro dev",
-    "dev": "npm run build:astro && npm run build:worker && wrangler dev",
-    "deploy": "wrangler deploy",
-    "purgecss": "purgecss --css src/styles/fontawesome.css --content './**/*.html' --output src/styles/fontawesome.min.css",
-    "log": "npx wrangler pages deployment tail"
-  },
-  "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.5.2",
-    "fast-glob": "^3.3.2",
-    "purgecss": "^6.0.0"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.3.0",
     "tailwindcss": "^4.0.6",
+    "@tailwindcss/vite": "^4.0.6",
     "@astrojs/sitemap": "^3.2.1",
     "@playform/compress": "^0.1.7",
-    "@tailwindcss/vite": "^4.0.6",
     "astro-compressor": "^1.0.0",
-    "chalk": "^5.4.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "resend": "^4.0.1",
-    "swiper": "^11.1.15"
+    "resend": "^4.1.2",
+    "swiper": "^11.2.3"
   }
 }

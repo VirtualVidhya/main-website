@@ -151,7 +151,7 @@
   }
 
   .scroll-up-btn {
-    @apply hidden fixed bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
+    @apply hidden fixed cursor-pointer bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
   }
 
   .side-navmenu-border {

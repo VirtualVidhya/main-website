@@ -250,28 +250,23 @@ const { navSection } = Astro.props;
         <div
           class="sub-menu hidden sm:absolute flex-col gap-4 bg-navbar-color-pri rounded-md py-3 pl-5 sm:pt-6 sm:pb-4 sm:px-6 min-w-max sm:right-0"
         >
-          <a href="/courses/index.html" class="hover:text-font-color-sec"
-            >All Courses</a
+          <a href="/courses/" class="hover:text-font-color-sec">All Courses</a>
+          <a href="/courses/multimedia/" class="hover:text-font-color-sec"
+            >Multimedia Courses</a
           >
-          <a
-            href="/courses/multimedia/index.html"
-            class="hover:text-font-color-sec">Multimedia Courses</a
+          <a href="/courses/programming/" class="hover:text-font-color-sec"
+            >Programming Courses</a
           >
-          <a
-            href="/courses/programming/index.html"
-            class="hover:text-font-color-sec">Programming Courses</a
-          >
-          <a href="/courses/kids/index.html" class="hover:text-font-color-sec"
+          <a href="/courses/kids/" class="hover:text-font-color-sec"
             >Kids Courses</a
           >
-          <a
-            href="/courses/literacy/index.html"
-            class="hover:text-font-color-sec">Literacy Courses</a
+          <a href="/courses/literacy/" class="hover:text-font-color-sec"
+            >Literacy Courses</a
           >
         </div>
       </div>
       <a
-        href="/contact.html"
+        href="/contact/"
         class={`flex items-center header-navmenu-hover ${
           navSection === "contact" ? "underline" : "hover:underline"
         }`}
@@ -281,64 +276,66 @@ const { navSection } = Astro.props;
     </nav>
 
     <div
-      class="box-border sm:box-content w-full sm:w-auto px-2 sm:px-0 sm:hidden fixed bottom-20 text-2xl md:text-3xl space-x-4"
+      class="box-border sm:box-content w-full sm:w-auto px-2 sm:px-0 sm:hidden fixed bottom-20 text-2xl md:text-3xl"
     >
       <hr class="side-navmenu-border" />
 
-      <a
-        class="hover:text-font-color-sec"
-        href="tel:+919429267900"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Phone"
-      >
-        <i class="fa fa-phone"></i>
-      </a>
-      <a
-        class="hover:text-font-color-sec"
-        href="mailto:contact@vvidhya.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Email"
-      >
-        <i class="fa fa-envelope"></i>
-      </a>
-      <a
-        class="hover:text-font-color-sec"
-        href="https://www.linkedin.com/company/vvidhya/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a
-        class="hover:text-font-color-sec"
-        href="https://wa.me/919429267900"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Whatsapp"
-      >
-        <i class="fab fa-whatsapp-square"></i>
-      </a>
-      <a
-        class="hover:text-font-color-sec"
-        href="https://www.facebook.com/visualsoftwareandmultimedia/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Facebook"
-      >
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a
-        class="hover:text-font-color-sec"
-        href="https://www.instagram.com/virtual.vidhya/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Instagram"
-      >
-        <i class="fab fa-instagram-square"></i>
-      </a>
+      <div class="px-4 space-x-4">
+        <a
+          class="hover:text-font-color-sec"
+          href="tel:+919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Phone"
+        >
+          <i class="fa fa-phone"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="mailto:contact@vvidhya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.linkedin.com/company/vvidhya/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://wa.me/919429267900"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Whatsapp"
+        >
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.facebook.com/visualsoftwareandmultimedia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Facebook"
+        >
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a
+          class="hover:text-font-color-sec"
+          href="https://www.instagram.com/virtual.vidhya/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram-square"></i>
+        </a>
+      </div>
     </div>
   </div>
 </header>

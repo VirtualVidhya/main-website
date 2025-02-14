@@ -1,18 +1,16 @@
 import { defineConfig } from "astro/config";
-// import tailwind from "@astrojs/tailwind";
-import tailwind from "@tailwindcss/vite";
+
+import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import compress from "@playform/compress";
 import compressor from "astro-compressor";
 import fs from "fs";
 import path from "path";
-import chalk from "chalk"; // for colored logs
 
 export default defineConfig({
   site: "https://www.vvidhya.com",
 
   integrations: [
-    // tailwind(),
     sitemap({
       serialize(item) {
         let relativePath = new URL(item.url).pathname; // Convert full URL to relative path
@@ -61,16 +59,16 @@ export default defineConfig({
         }
 
         // Print log only in production
-        if (process.env.NODE_ENV === "production") {
-          console.log(
-            chalk.grey(`Path:`) +
-              chalk.green(` ${relativePath}, `) +
-              chalk.grey(`Priority:`) +
-              chalk.whiteBright(` ${item.priority}, `) +
-              chalk.grey(`ChangeFreq:`) +
-              chalk.whiteBright(` ${item.changefreq}`)
-          );
-        }
+        // if (process.env.NODE_ENV === "production") {
+        //   console.log(
+        //     chalk.grey(`Path:`) +
+        //       chalk.green(` ${relativePath}, `) +
+        //       chalk.grey(`Priority:`) +
+        //       chalk.whiteBright(` ${item.priority}, `) +
+        //       chalk.grey(`ChangeFreq:`) +
+        //       chalk.whiteBright(` ${item.changefreq}`)
+        //   );
+        // }
 
         return item;
       },
@@ -84,7 +82,7 @@ export default defineConfig({
     //   },
     //   Image: true,
     //   JavaScript: true,
-    //   SVG: true,
+    //   SVG: false,
     // }),
     // compressor({
     //   fileExtensions: [".html", ".css", ".js", ".mjs", ".svg"],
@@ -93,9 +91,9 @@ export default defineConfig({
     // }),
   ],
 
-  output: "static",
-
   vite: {
-    plugins: [tailwind()],
+    plugins: [tailwindcss()],
   },
+
+  output: "static",
 });

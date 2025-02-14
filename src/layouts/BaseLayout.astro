@@ -13,16 +13,14 @@ interface Props {
   navSection: string;
 }
 
-const {
-  metadata,
-  includeLottieAnimScript = false,
-  navSection = "none",
-} = Astro.props;
+const metadata = Astro.props.metadata;
+const includeLottieAnimScript = Astro.props.includeLottieAnimScript ?? false;
+const navSection = Astro.props.navSection ?? "none";
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head metadata={metadata} includeLottieAnimScript />
+  <Head metadata={metadata} includeLottieAnimScript={includeLottieAnimScript} />
 
   <body
     class="bg-mainbg-color text-font-color-pri font-notosans flex flex-col min-h-screen"

@@ -1,9 +1,10 @@
 ---
 interface Props {
   courseCategoryName: string;
+  courseSubPageLink: string;
 }
 
-const { courseCategoryName = "" } = Astro.props;
+const { courseCategoryName = "", courseSubPageLink = "" } = Astro.props;
 ---
 
 <section class="w-full mb-24">
@@ -32,6 +33,6 @@ const { courseCategoryName = "" } = Astro.props;
   </div>
 
   <div class="flex justify-center w-full">
-    <a href="/courses/literacy/index.html" class="view-all-btn">View All</a>
+    <a href=`/courses/${courseSubPageLink}/` class="view-all-btn">View All</a>
   </div>
 </section>
