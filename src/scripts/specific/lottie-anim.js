@@ -99,25 +99,66 @@
 //   });
 // });
 
-import lottie from "lottie-web";
+// import lottie from "lottie-web";
 
-window.addEventListener("load", () => {
-  document.querySelectorAll("[data-lottie]").forEach((container) => {
-    const animationPath = container.dataset.lottie;
-    const placeholder = container.querySelector(".lottie-placeholder");
+// window.addEventListener("load", () => {
+//   document.querySelectorAll("[data-lottie]").forEach((container) => {
+//     const animationPath = container.dataset.lottie;
+//     const placeholder = container.querySelector(".lottie-placeholder");
 
-    // Replace static image with animation
-    if (placeholder) placeholder.remove();
+//     // Replace static image with animation
+//     lottie.loadAnimation({
+//       container, // Uses existing div
+//       renderer: "canvas",
+//       loop: true,
+//       autoplay: true,
+//       path: animationPath,
+//     });
 
-    lottie.loadAnimation({
-      container, // Uses existing div
-      renderer: "canvas",
-      loop: true,
+//     if (placeholder) placeholder.remove();
+
+//     // Mark animation as loaded
+//     container.setAttribute("data-loaded", "true");
+//   });
+// });
+
+(async () => {
+  function loadLottie() {
+    return import("https://esm.sh/@lottiefiles/dotlottie-web");
+  }
+
+  async function loadAnimation(canvas) {
+    const { DotLottie } = await loadLottie();
+
+    const animation = new DotLottie({
       autoplay: true,
-      path: animationPath,
+      loop: true,
+      canvas: canvas,
+      src: canvas.dataset.lottie,
     });
 
-    // Mark animation as loaded
-    container.setAttribute("data-loaded", "true");
-  });
-});
+    // When animation is ready, hide the placeholder image
+    animation.addEventListener("ready", () => {
+      const placeholder = canvas
+        .closest(".lottie-container")
+        .querySelector(".lottie-placeholder");
+      if (placeholder) placeholder.style.display = "none";
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(async (entry) => {
+        if (entry.isIntersecting) {
+          await loadAnimation(entry.target);
+          observer.unobserve(entry.target); // Load animation only once
+        }
+      });
+    },
+    { rootMargin: "100px" }
+  );
+
+  document
+    .querySelectorAll("[data-lottie]")
+    .forEach((el) => observer.observe(el));
+})();
