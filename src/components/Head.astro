@@ -39,20 +39,6 @@ const includeLottieAnimScript = Astro.props.includeLottieAnimScript ?? false;
   <!-- #Import Styles# -->
 
   <!-- #Synchronous Scripts# -->
-  <!-- lotti-anim-loader-script -->
-  {
-    includeLottieAnimScript && (
-      <>
-        <link
-          rel="preload"
-          as="script"
-          href="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm"
-        />
-
-        <script src="../scripts/specific/lottie-anim.js" />
-      </>
-    )
-  }
 
   <!-- #Synchronous Styles# -->
   <!-- <link href="/styles/input.css" rel="stylesheet" /> -->
@@ -80,6 +66,20 @@ const includeLottieAnimScript = Astro.props.includeLottieAnimScript ?? false;
     type="font/woff2"
     crossorigin
   />
+  <!-- lotti-anim-loader-script -->
+  {
+    includeLottieAnimScript && (
+      <>
+        {/* <link
+          rel="preload"
+          as="script"
+          href="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm"
+        /> */}
+
+        <script src="../scripts/specific/lottie-anim.js" />
+      </>
+    )
+  }
 
   <!-- #Deferred Scripts# -->
 
