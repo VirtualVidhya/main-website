@@ -1,4 +1,7 @@
 ---
+import "/src/styles/input.css"
+import "/src/styles/fontawesome.min.css"
+
 interface Props {
   metadata: {
     title: string;
@@ -33,7 +36,7 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
 
   <!-- #Synchronous Scripts# -->
   <!-- lotti-anim-loader-script -->
-  {
+  <!-- {
     includeLottieAnimScript && (
       <>
         <link
@@ -42,20 +45,20 @@ const { metadata, includeLottieAnimScript = false } = Astro.props;
           href="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm"
         />
 
-        <script type="module" src="/src/scripts/specific/lottie-anim.js" />
+        <script src="../scripts/specific/lottie-anim.js" />
       </>
     )
-  }
+  } -->
 
   <!-- #Synchronous Styles# -->
-  <link href="/src/styles/input.css" rel="stylesheet" />
+  <!-- <link href="/styles/input.css" rel="stylesheet" /> -->
   <!-- font-awesome icons -->
-  <link
+  <!-- <link
     rel="stylesheet"
-    href="/src/styles/fontawesome.min.css"
+    href="/styles/fontawesome.min.css"
     media="print"
     onload="this.media='all'"
-  />
+  /> -->
 
   <!-- #Preload Hints# -->
   <!-- Preloaded locally hosted necessary fonts -->

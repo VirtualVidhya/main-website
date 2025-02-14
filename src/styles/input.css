@@ -1,6 +1,10 @@
-@tailwind base;
+@import "tailwindcss";
+
+@config "../../tailwind.config.js";
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @layer base {
   @font-face {

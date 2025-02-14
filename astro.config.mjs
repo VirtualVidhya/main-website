@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+// import tailwind from "@astrojs/tailwind";
+import tailwind from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import compress from "@playform/compress";
 import compressor from "astro-compressor";
@@ -9,8 +10,9 @@ import chalk from "chalk"; // for colored logs
 
 export default defineConfig({
   site: "https://www.vvidhya.com",
+
   integrations: [
-    tailwind(),
+    // tailwind(),
     sitemap({
       serialize(item) {
         let relativePath = new URL(item.url).pathname; // Convert full URL to relative path
@@ -73,22 +75,27 @@ export default defineConfig({
         return item;
       },
     }),
-    compress({
-      CSS: true,
-      HTML: {
-        "html-minifier-terser": {
-          removeAttributeQuotes: false,
-        },
-      },
-      Image: true,
-      JavaScript: true,
-      SVG: true,
-    }),
-    compressor({
-      fileExtensions: [".html", ".css", ".js", ".mjs", ".svg"],
-      gzip: true,
-      brotli: true,
-    }),
+    // compress({
+    //   CSS: true,
+    //   HTML: {
+    //     "html-minifier-terser": {
+    //       removeAttributeQuotes: false,
+    //     },
+    //   },
+    //   Image: true,
+    //   JavaScript: true,
+    //   SVG: true,
+    // }),
+    // compressor({
+    //   fileExtensions: [".html", ".css", ".js", ".mjs", ".svg"],
+    //   gzip: true,
+    //   brotli: true,
+    // }),
   ],
+
   output: "static",
+
+  vite: {
+    plugins: [tailwind()],
+  },
 });
