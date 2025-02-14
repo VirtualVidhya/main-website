@@ -69,12 +69,12 @@ export async function onRequestPost(context) {
 
     // Return early with pretend confirmation if bot hit honeypot
     if (honeypot !== "") {
-      return Response.redirect("https://vvidhya.com/contact.html", 303);
+      return Response.redirect("https://vvidhya.com/contact/", 303);
     }
 
     // If the name contains a known spam, Return early with pretend confirmation
     if (isSpamName(output.name.toLowerCase())) {
-      return Response.redirect("https://vvidhya.com/contact.html", 303);
+      return Response.redirect("https://vvidhya.com/contact/", 303);
     }
 
     // Store the form-data in Supabase database
@@ -87,7 +87,7 @@ export async function onRequestPost(context) {
 
     // If more than 30% of characters are non-English, Return early with pretend confirmation
     if (englishChars / totalChars < 0.7) {
-      return Response.redirect("https://vvidhya.com/contact.html", 303);
+      return Response.redirect("https://vvidhya.com/contact/", 303);
     }
 
     // Send form-data as an email notification via Resend
@@ -102,9 +102,9 @@ export async function onRequestPost(context) {
     console.log({ data, error });
 
     if (error) {
-      return Response.redirect("https://vvidhya.com/index.html", 303);
+      return Response.redirect("https://vvidhya.com/", 303);
     } else {
-      return Response.redirect("https://vvidhya.com/contact.html", 303);
+      return Response.redirect("https://vvidhya.com/contact/", 303);
     }
   } catch (err) {
     console.error("Error:", err);
