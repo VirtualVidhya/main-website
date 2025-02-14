@@ -100,8 +100,8 @@ function showNoError(id, serial) {
 }
 
 function validateName(id) {
-  if (id.value.length < 3) {
-    return "Name must be atleast 3 characters long!";
+  if (id.value.length < 2) {
+    return "Name must be atleast 2 characters long!";
   } else {
     return true;
   }
