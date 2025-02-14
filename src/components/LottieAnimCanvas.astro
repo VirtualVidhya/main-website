@@ -3,6 +3,7 @@ interface Props {
   animData: {
     id: string;
     path: string;
+    img: string;
   };
 }
 
@@ -12,4 +13,12 @@ const { animData } = Astro.props;
 <div
   id={animData.id}
   class="w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
-  data-lottie={animData.path}></div>
+  data-lottie={animData.path}
+  data-loaded="false"
+>
+  <img
+    src={animData.img}
+    alt="Loading animation..."
+    class="lottie-placeholder"
+  />
+</div>

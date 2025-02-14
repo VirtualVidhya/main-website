@@ -83,18 +83,41 @@
 //   document.querySelectorAll("[data-lottie]").forEach((el) => observer.observe(el));
 // })();
 
+// import lottie from "lottie-web";
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.querySelectorAll("[data-lottie]").forEach((canvas) => {
+//     const animationPath = canvas.dataset.lottie;
+
+//     lottie.loadAnimation({
+//       container: canvas,
+//       renderer: "canvas",
+//       loop: true,
+//       autoplay: true,
+//       path: animationPath,
+//     });
+//   });
+// });
+
 import lottie from "lottie-web";
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[data-lottie]").forEach((canvas) => {
-    const animationPath = canvas.dataset.lottie;
+window.addEventListener("load", () => {
+  document.querySelectorAll("[data-lottie]").forEach((container) => {
+    const animationPath = container.dataset.lottie;
+    const placeholder = container.querySelector(".lottie-placeholder");
+
+    // Replace static image with animation
+    if (placeholder) placeholder.remove();
 
     lottie.loadAnimation({
-      container: canvas,
+      container, // Uses existing div
       renderer: "canvas",
       loop: true,
       autoplay: true,
       path: animationPath,
     });
+
+    // Mark animation as loaded
+    container.setAttribute("data-loaded", "true");
   });
 });
