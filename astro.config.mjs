@@ -96,4 +96,8 @@ export default defineConfig({
   },
 
   output: "static",
+
+  build: {
+    assets: 'resources',
+  }
 });
