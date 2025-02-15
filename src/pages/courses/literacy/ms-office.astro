@@ -1,0 +1,74 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn MS-Office at V.Vidhya",
+  description:
+    "Master MS Office at V.Vidhya in Surat. Hands-on training in Word, Excel, PowerPoint, and essential office skills.",
+};
+
+const courseDetails = {
+  name: "MS Office",
+  duration: "2-3",
+  image: "/images/doodles/old-woman-operating-comp.svg",
+  imgAlt: "an Illustration of a middle-aged woman teaching a boy using laptop",
+  overview:
+    "This course is designed to help working professionals master Microsoft Office Suite, enhancing their productivity and efficiency in the workplace. Over 2-3 months, you will gain hands-on experience with Microsoft Word, Excel, PowerPoint, Outlook, and Teams, learning industry-standard best practices for document creation, data analysis, presentations, and communication. You'll learn how to create and format professional documents in Word, analyze and visualize data using Excel formulas and pivot tables, design impactful presentations in PowerPoint, and manage emails and calendars efficiently with Outlook. Additionally, you will explore collaborative tools in Microsoft Teams to improve workflow and teamwork. By the end of the course, you will be proficient in using MS Office for professional tasks, making you more efficient in managing reports, automating workflows, and delivering high-quality work with confidence. Whether you're looking to enhance your current skills or gain an edge in your career, this course provides practical training tailored for business and corporate environments.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Operating Systems</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding how to navigate and utilize within operating systems
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">File Management</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Learning how to organize, store, and retrieve files efficiently on a
+        computer system.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Word Processing</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Developing skills in using word processing software like MS Word or
+        Google Docs for creating documents, reports, and presentations.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Spreadsheet Applications</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Familiarizing oneself with spreadsheet software such as MS Excel or
+        Google Sheets, which are widely used for data analysis, budgeting, and
+        more.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Internet Basics</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Exploring web browsers, search engines, and understanding online safety
+        and security measures.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Email Communication</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Learning how to compose, send, and manage emails effectively for
+        personal and professional communication.
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

@@ -1,0 +1,98 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn UI/UX Design at V.Vidhya",
+  description:
+    "Become a UI/UX designer at V.Vidhya in Surat. Learn Figma, Adobe XD, wireframing, prototyping, and user experience principles.",
+};
+
+const courseDetails = {
+  name: "UI/UX Design",
+  duration: "2-4",
+  image: "/images/doodles/man-designing.svg",
+  imgAlt: "an Illustration of a boy designing a user interface for an app",
+  overview:
+    "This course will equip you with the essential skills needed to become a professional UI/UX designer. Whether you're designing mobile apps, websites, or digital products, you will develop a strong foundation in user interface (UI) and user experience (UX) design. Over 3 to 4 months, you will learn industry-standard design tools such as Figma, Adobe XD, and Sketch, along with essential UX research methods, wireframing, prototyping, and usability testing. Through practical exercises and real-world projects, you will gain hands-on experience in designing user-friendly and aesthetically pleasing digital interfaces. This course covers everything from understanding user psychology to creating fully functional prototypes. By the end of the course, you'll have a complete UI/UX design portfolio and the skills needed to work as a professional UI/UX designer.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to UI/UX Design</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding UX vs UI</li>
+      <li>Basics of User-Centered Design</li>
+      <li>UX design process & methodologies</li>
+      <li>Common industry tools overview</li>
+    </ul>
+
+    <li class="ind-course-imp-text">UX Research & Ideation</li>
+    <ul class="ind-course-sublist">
+      <li>Conducting user research & surveys</li>
+      <li>Creating user personas & empathy maps</li>
+      <li>Defining user needs & problem statements</li>
+      <li>Information architecture & sitemaps</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Wireframing & Low-Fidelity Prototyping</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Figma (Alternative tools - Sketch, Adobe XD)</li>
+      <li>Creating low-fidelity wireframes</li>
+      <li>UX flows & navigation structure</li>
+      <li>Basic interactive prototypes</li>
+    </ul>
+
+    <li class="ind-course-imp-text">UI Design & Visual Aesthetics</li>
+    <ul class="ind-course-sublist">
+      <li>Design principles: typography, color theory, spacing</li>
+      <li>Component-based design systems</li>
+      <li>Creating style guides and UI kits</li>
+      <li>Accessibility in UI design</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      High-Fidelity Prototyping in Figma & Framer
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Advanced UI design techniques</li>
+      <li>Creating fully interactive prototypes in Figma</li>
+      <li>Framer for micro-interactions & animations</li>
+      <li>Usability testing and feedback integration</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Web UI Design & No-Code Development</li>
+    <ul class="ind-course-sublist">
+      <li>Webflow for no-code website building</li>
+      <li>Designing responsive layouts</li>
+      <li>Animations & interactions in Webflow</li>
+    </ul>
+
+    <li class="ind-course-imp-text">3D UI & Motion Design</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Spline 3D for UI elements</li>
+      <li>Creating interactive 3D assets</li>
+      <li>Adding 3D elements to web & mobile interfaces</li>
+      <li>Framer for animated UI interactions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">UX Testing, Analytics & Optimization</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing Analytics</li>
+      <li>Conducting usability tests</li>
+      <li>A/B testing and iteration process</li>
+      <li>Improving user experience based on data</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Building</li>
+    <ul class="ind-course-sublist">
+      <li>Design a full-scale UI/UX project (app or website)</li>
+      <li>Creating case studies for portfolio</li>
+      <li>Preparing for UI/UX job interviews & freelancing</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

@@ -1,0 +1,20 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/jewellery-design/",
+  icon: "/images/course-icons/jewel.png",
+  lazyLoadIconImg: false,
+  name: "Jewellery Design",
+  description:
+    "Create stunning digital jewellery designs with modern techniques and tools...",
+  duration: "2-3",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Photoshop" />
+  </slot>
+</CourseCardLayout>

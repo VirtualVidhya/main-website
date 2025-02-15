@@ -1,0 +1,23 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/video-editing/",
+  icon: "/images/course-icons/video-editing.png",
+  lazyLoadIconImg: false,
+  name: "Video Editing",
+  description:
+    "Edit and create captivating videos for any platform and purpose...",
+  duration: "8-12",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Illustrator" />
+    <CourseCardToolTag toolName="Photoshop" />
+    <CourseCardToolTag toolName="Premiere Pro" />
+    <CourseCardToolTag toolName="After Effects" />
+  </slot>
+</CourseCardLayout>

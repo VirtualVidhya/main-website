@@ -1,0 +1,41 @@
+---
+import CourseCategoryHomeLayout from "../../../layouts/CourseCategoryHomeLayout.astro";
+
+import DtpCourseCard from "../../../components/couse-cards/literacy/DtpCourseCard.astro";
+import AccountingCourseCard from "../../../components/couse-cards/literacy/AccountingCourseCard.astro";
+import MarketingCourseCard from "../../../components/couse-cards/literacy/MarketingCourseCard.astro";
+import MsOfficeCourseCard from "../../../components/couse-cards/literacy/MsOfficeCourseCard.astro";
+import AdvExcelCourseCard from "../../../components/couse-cards/literacy/AdvExcelCourseCard.astro";
+
+const metadata = {
+  title: "Explore essential Computer Literacy Courses at V.Vidhya in Surat",
+  description:
+    "Build your digital skills with our computer literacy courses at V.Vidhya. Learn MS Office, Advanced Excel, Accounting, and Digital Marketing in Surat.",
+};
+
+const categoryDetails = {
+  name: "Literacy Courses",
+  image: "/images/doodles/woman-presenting.svg",
+  imgAlt: "an Illustration of a young woman giving a presentation",
+  hasLongTermCourses: false,
+  hasShortTermCourses: false,
+};
+---
+
+<CourseCategoryHomeLayout
+  metadata={metadata}
+  navSection="none"
+  categoryDetails={categoryDetails}
+>
+  <slot slot="longterm-courses-slot">
+    <DtpCourseCard />
+
+    <AccountingCourseCard />
+
+    <MarketingCourseCard />
+
+    <MsOfficeCourseCard />
+
+    <AdvExcelCourseCard />
+  </slot>
+</CourseCategoryHomeLayout>

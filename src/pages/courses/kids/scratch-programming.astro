@@ -1,0 +1,79 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Scratch Programming at V.Vidhya",
+  description:
+    "Let your child explore coding with Scratch at V.Vidhya in Surat. A fun, drag-and-drop way to learn programming and create animations.",
+};
+
+const courseDetails = {
+  name: "Scratch Programming",
+  duration: "3-6",
+  image: "/images/doodles/boy-exploring-machines.svg",
+  imgAlt: "an Illustration of a boy interacting with a robot",
+  overview:
+    "This Scratch Programming Course is designed for school-going kids to introduce them to the world of coding in a fun and interactive way. Scratch, developed by MIT, is a visual block-based programming language that allows kids to create games, animations, and interactive stories without needing to write complex code. Through this course, kids will learn logical thinking, problem-solving, and creativity while building their own projects. By using Scratch's drag-and-drop interface, they will understand the fundamentals of coding, including loops, variables, and conditionals, in an engaging way. By the end of the course, students will be able to design and develop their own mini-games, animations, and interactive applications, giving them a strong foundation in programming.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Scratch</li>
+    <ul class="ind-course-sublist">
+      <li>What is Scratch and how does it work?</li>
+      <li>Understanding the Scratch interface</li>
+      <li>Creating your first Scratch project</li>
+      <li>Moving and animating characters (sprites)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Basics of Programming in Scratch</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to block-based coding</li>
+      <li>Events & Sequences: Making actions happen</li>
+      <li>Loops & Repetitions: Automating actions</li>
+      <li>Conditions (If-Else Statements): Making decisions in code</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Creating Animations & Interactive Stories
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Adding backgrounds and sounds</li>
+      <li>Making characters talk and move</li>
+      <li>Controlling animations with keyboard and mouse inputs</li>
+      <li>Creating interactive storytelling projects</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Game Development Basics</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding game logic</li>
+      <li>Controlling characters with keyboard/mouse</li>
+      <li>Using variables and scoring systems</li>
+      <li>
+        Creating simple games like maze runner, catch-the-apple, and bouncing
+        ball
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Scratch Features</li>
+    <ul class="ind-course-sublist">
+      <li>Cloning Sprites for multiple objects</li>
+      <li>Using operators to create smarter game mechanics</li>
+      <li>Broadcast messages for multi-scene games</li>
+      <li>Timers & Countdown mechanics</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Brainstorming game ideas</li>
+      <li>Designing characters, sounds, and interactions</li>
+      <li>Building, testing, and refining the project</li>
+      <li>Showcasing the final project to peers & family</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

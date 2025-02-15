@@ -1,0 +1,90 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Desktop Publishing (DTP) at V.Vidhya",
+  description:
+    "Learn Desktop Publishing at V.Vidhya in Surat. Master Photoshop, CorelDRAW, and InDesign for print & digital media.",
+};
+
+const courseDetails = {
+  name: "Desktop Publishing (DTP)",
+  duration: "2-3",
+  image: "/images/doodles/woman-doing-digital-art.svg",
+  imgAlt: "an Illustration of a woman doing design mockups on a laptop",
+  overview:
+    "This course is designed to teach you professional document design, layout creation, and publishing techniques using industry-standard tools. Over 1-2 months, you will learn how to design brochures, business cards, newsletters, magazines, flyers, and other print or digital materials with a professional touch. The course covers page layout techniques, typography, color theory, image editing, and printing processes, ensuring you develop a strong foundation in visual communication. Whether you're a student, designer, marketer, or business professional, this course will give you the skills to create stunning print and digital media assets. By the end of the course, you'll be proficient in creating high-quality publications for print and online distribution, making you ready for a career in graphic design, marketing, or corporate communications.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Desktop Publishing</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding what is desktop publishing (DTP)</li>
+      <li>Importance of DTP in business, marketing, and print media</li>
+      <li>Overview of publishing softwares</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Basics of Design & Layout</li>
+    <ul class="ind-course-sublist">
+      <li>Typography: Choosing the right fonts for readability & aesthetics</li>
+      <li>Color theory & contrast for professional-looking documents</li>
+      <li>Layout principles: Margins, grids, columns, and white space usage</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Working with Images & Graphics</li>
+    <ul class="ind-course-sublist">
+      <li>Image formats (JPEG, PNG, TIFF, SVG, etc.) & their best use cases</li>
+      <li>Editing images for print & web using publishing tools</li>
+      <li>Vector vs. raster graphics and their role in publishing</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Creating Business & Marketing Materials</li>
+    <ul class="ind-course-sublist">
+      <li>Designing brochures, flyers, business cards, and posters</li>
+      <li>Creating newsletters, magazines, and digital reports</li>
+      <li>Working with master pages and templates for consistency</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Page Layout Techniques</li>
+    <ul class="ind-course-sublist">
+      <li>Multi-column layouts and grid-based design</li>
+      <li>Using text wrapping, drop caps, and paragraph styles</li>
+      <li>Creating interactive digital PDFs with clickable links & buttons</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Preparing Documents for Printing & Digital Publishing
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Understanding CMYK vs. RGB color modes</li>
+      <li>Setting up print bleed, margins, and crop marks</li>
+      <li>Exporting high-quality PDFs for print, web, or eBook publishing</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Introduction to Interactive & Digital Publishing
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Creating flipbooks and eBooks</li>
+      <li>Designing social media graphics & online advertisements</li>
+      <li>Exporting designs for web-based publishing platforms</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Real-World Projects & Portfolio Development
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Designing a magazine layout from scratch</li>
+      <li>
+        Creating a brand identity package (business card, letterhead, etc.)
+      </li>
+      <li>Building a portfolio of professional DTP projects</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

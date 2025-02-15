@@ -1,0 +1,101 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Digital Textile Design at V.Vidhya",
+  description:
+    "Learn digital textile design at V.Vidhya in Surat. Master fabric patterns, fashion graphics, and print design for the textile industry.",
+};
+
+const courseDetails = {
+  name: "Digital Textile Design",
+  duration: "4-6",
+  image: "/images/doodles/girl-shopping-online.svg",
+  imgAlt: "an Illustration of a girl shopping for clothes",
+  overview:
+    "Our Digital Textile Design course is tailored for creative individuals who want to transform their artistic ideas into stunning fabric patterns and designs. This course focuses on mastering Adobe Photoshop for designing, editing, and creating digital textile patterns. From exploring traditional and modern design techniques to understanding industry-specific processes like seamless pattern creation and colorways, this course equips students with the skills to create professional-quality designs for fashion, interiors, and other textile applications. By the end of the program, students will have the expertise and confidence to design unique textiles and build a portfolio for a successful career in textile design.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Digital Textile Design</li>
+    <ul class="ind-course-sublist">
+      <li>Basics of Textile Design and Industry Applications</li>
+      <li>Types of Textile Patterns: Repeats, Placement Prints, and Motifs</li>
+      <li>Introduction to Digital Design Workflow</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Adobe Photoshop Basics for Textile Design
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Photoshop Interface and Tools</li>
+      <li>Working with Layers and Layer Masks</li>
+      <li>Understanding Color Modes: RGB vs. CMYK</li>
+      <li>
+        Essential Tools for Textile Design: Pen Tool, Brush Tool, and Shapes
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Creating Seamless Patterns and Repeats</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding Repeats and Their Types: Half-Drop, Brick, and Mirror
+        Repeats
+      </li>
+      <li>Creating Seamless Patterns Using Photoshop</li>
+      <li>Tips for Ensuring Precision and Alignment</li>
+      <li>Working with Grids and Guides for Accuracy</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Designing for Different Textile Applications
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Developing Patterns for Fashion (Clothing, Accessories)</li>
+      <li>Designing Prints for Home Textiles (Curtains, Upholstery, etc.)</li>
+      <li>Creating Scarves, Cushion Covers, and Bed Linen Designs</li>
+      <li>Preparing Textures and Overlays for Unique Effects</li>
+      <li>Retouching, Scanning of images, Vertical & Horizondal offset</li>
+      <li>
+        Resa-Doting- Daba-Bandini-Lehriya-Spray-Hand Desines, Frame Setting in
+        Diffeerent measurements
+      </li>
+      <li>
+        Computerized Photo Manipulation, Special Effects, Colour Matching,
+        Repeat Setting - Cross and Negative, Stroke & Recording Paths
+      </li>
+      <li>Detailed study on Layers & Layer Management & Layer Based Dress</li>
+      <li>Design & Creating new Patterns</li>
+      <li>
+        Illustration of Different Brushes, new Brush Creation and Define
+        Patterns
+      </li>
+      <li>Creating Digital Sarees on joint free</li>
+      <li>Alteration, Retouching Of Damage - Images in Different modes</li>
+      <li>Portfolio Management in Composite -mode & splitting spot Channels</li>
+      <li>Ideas of Screen Printing & Hand Printing</li>
+      <li>Study on Textile Processing & Exposing</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Color Theory and Colorways</li>
+    <ul class="ind-course-sublist">
+      <li>Exploring Color Theory for Textiles</li>
+      <li>Creating Multiple Colorways for the Same Pattern</li>
+      <li>Adjusting Hue, Saturation, and Brightness</li>
+      <li>Working with Swatches and Custom Color Palettes</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Capstone Project</li>
+    <ul class="ind-course-sublist">
+      <li>Designing a Complete Textile Collection</li>
+      <li>Preparing Production-Ready Files</li>
+      <li>Feedback and Refinement</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

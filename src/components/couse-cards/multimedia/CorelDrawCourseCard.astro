@@ -1,0 +1,20 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/corel-draw/",
+  icon: "/images/course-icons/coreldraw.svg",
+  lazyLoadIconImg: true,
+  name: "Corel Draw",
+  description:
+    "Create striking designs and graphics with CorelDRAW's powerful features...",
+  duration: "2-3",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Corel Draw" />
+  </slot>
+</CourseCardLayout>

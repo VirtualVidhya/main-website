@@ -1,0 +1,101 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Advance Excel at V.Vidhya",
+  description:
+    "Master Advanced Excel at V.Vidhya in Surat. Learn formulas, pivot tables, data analysis, and automation with real-world applications.",
+};
+
+const courseDetails = {
+  name: "Advance Excel",
+  duration: "1-3",
+  image: "/images/doodles/woman-presenting-with-tablet.svg",
+  imgAlt: "an Illustration of a woman presenting growth data",
+  overview:
+    "This course is designed for professionals who want to take their Excel skills to the next level by learning advanced data analysis, automation, and reporting techniques. Over 1-3 months, you will master functions and features that allow you to handle large datasets, create interactive dashboards, automate repetitive tasks, and analyze data efficiently. Through hands-on projects and real-world examples, you will learn how to use PivotTables, Power Query, Macros, VBA, and advanced formulas to simplify complex tasks and improve decision-making. Whether you're working in finance, business analytics, project management, or operations, this course will help you increase productivity, accuracy, and efficiency in handling data. By the end of this course, you will be able to build automated reports, create dynamic charts, and perform complex data analysis, making you a valuable asset in any data-driven industry.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Recap of Excel Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Quick refresher on basic Excel functions</li>
+      <li>Formatting, conditional formatting, and data validation</li>
+      <li>Sorting and filtering large datasets</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Formulas & Functions</li>
+    <ul class="ind-course-sublist">
+      <li>Logical functions: IF, AND, OR, IFERROR, SWITCH</li>
+      <li>Lookup functions: VLOOKUP, HLOOKUP, INDEX-MATCH, XLOOKUP</li>
+      <li>Text functions: CONCATENATE, LEFT, RIGHT, MID, TRIM</li>
+      <li>Date & time functions: DATE, EOMONTH, NETWORKDAYS, WEEKDAY</li>
+      <li>Dynamic array formulas & usage</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Data Analysis & Visualization</li>
+    <ul class="ind-course-sublist">
+      <li>Using PivotTables & PivotCharts for interactive reports</li>
+      <li>Advanced filtering techniques with slicers & timelines</li>
+      <li>Creating dynamic dashboards</li>
+      <li>Advanced charting techniques (Waterfall, Radar, Gantt charts)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Power Query & Data Automation</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Power Query</li>
+      <li>Cleaning and transforming data with Power Query</li>
+      <li>Merging and appending datasets</li>
+      <li>Automating repetitive tasks with Power Query</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Data Handling & Large Dataset Management
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Working with large datasets efficiently</li>
+      <li>Removing duplicates, consolidating data</li>
+      <li>Using named ranges and structured references</li>
+    </ul>
+
+    <li class="ind-course-imp-text">What-If Analysis & Forecasting</li>
+    <ul class="ind-course-sublist">
+      <li>Goal Seek, Scenario Manager, Data Tables</li>
+      <li>Creating forecast sheets</li>
+      <li>Solver for complex problem-solving</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Introduction to Macros & VBA for Automation
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Recording and running macros</li>
+      <li>Basics of VBA: Understanding the Excel object model</li>
+      <li>Writing simple VBA scripts to automate repetitive tasks</li>
+      <li>Creating custom functions using VBA</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Advanced Security & Collaboration Features
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Protecting worksheets and workbooks</li>
+      <li>Sharing and collaborating on workbooks</li>
+      <li>Track changes and version history</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Real-World Projects & Case Studies</li>
+    <ul class="ind-course-sublist">
+      <li>Building a financial dashboard</li>
+      <li>Automating inventory management reports</li>
+      <li>Creating a data consolidation tool</li>
+      <li>Sales performance analysis with dynamic charts</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

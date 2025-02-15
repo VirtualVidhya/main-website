@@ -1,0 +1,20 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/premier-pro/",
+  icon: "/images/course-icons/premiere-pro.svg",
+  lazyLoadIconImg: true,
+  name: "Adobe Premier Pro",
+  description:
+    "Edit and produce professional videos with ease in Premiere Pro...",
+  duration: "2-3",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Premiere Pro" />
+  </slot>
+</CourseCardLayout>

@@ -1,0 +1,85 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn C++ Programming at V.Vidhya",
+  description:
+    "Master C++ programming at V.Vidhya in Surat. Learn OOP, data structures, STL, game development, and competitive programming.",
+};
+
+const courseDetails = {
+  name: "C++ Programming",
+  duration: "2-5",
+  image: "/images/doodles/boy-coding-1.svg",
+  imgAlt: "an Illustration of a boy coding on his laptop",
+  overview:
+    "This course is designed to take you from a complete beginner to a confident C++ programmer. Over 2-3 months, you will learn how to write, test, and debug C++ programs while understanding how software is built using this powerful language. You'll start with the fundamentals, such as writing simple programs, handling user input, and using conditions and loops. As you progress, you'll explore more advanced concepts like functions, data structures, and object-oriented programming, which are widely used in game development, software engineering, and system programming. By the end of the course, you'll be able to build real-world applications, understand how memory works in programs, and write efficient, structured code. Whether you're interested in creating games, working with hardware, or becoming a software developer, this course will give you a strong foundation to move forward with confidence.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Introduction to computers, understanding how it works fundamentally
+      </li>
+      <li>Understanding of what does the process of programming mean</li>
+      <li>
+        Familiarity with the whole field of software development and different
+        roles within the industry
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Core Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of C++ as a programming language</li>
+      <li>Variables</li>
+      <li>Data Types</li>
+      <li>User Input/Output</li>
+      <li>Operators</li>
+      <li>Conditional Statements</li>
+      <li>Loops</li>
+      <li>Control flow statements</li>
+      <li>Functions</li>
+      <li>Strings</li>
+      <li>Arrays</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Memory Management</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding of the memory management and operations within a program
+      </li>
+      <li>References & Pointers</li>
+      <li>Dynamic memory allocation</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Object-Oriented Programming</li>
+    <ul class="ind-course-sublist">
+      <li>Program-Defined (user-defined) Types</li>
+      <li>Enums</li>
+      <li>Structs</li>
+      <li>Introduction to object oriented programming</li>
+      <li>Class</li>
+      <li>Member variables and functions</li>
+      <li>Access Specifiers</li>
+      <li>Benefits of data hiding (Encapsulation)</li>
+      <li>Contructors</li>
+      <li>Inheritance</li>
+      <li>Polymorphism</li>
+      <li>Abstraction</li>
+      <li>Templates</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Continuous exercises based on real life problem statements</li>
+      <li>Basic text based applications and games project work</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

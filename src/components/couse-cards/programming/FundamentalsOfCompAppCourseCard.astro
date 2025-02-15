@@ -1,0 +1,22 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/programming/fundamentals-of-comp-app/",
+  icon: "/images/course-icons/comp-app.png",
+  lazyLoadIconImg: false,
+  name: "Fundamentals of\nComputer Application",
+  description: "Learn the fundamentals of programming, web, software...",
+  duration: "8-12",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="HTML" />
+    <CourseCardToolTag toolName="CSS" />
+    <CourseCardToolTag toolName="JS" />
+    <CourseCardToolTag toolName="C++" />
+  </slot>
+</CourseCardLayout>

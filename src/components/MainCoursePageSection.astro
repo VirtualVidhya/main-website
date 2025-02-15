@@ -1,0 +1,38 @@
+---
+interface Props {
+  courseCategoryName: string;
+  courseSubPageLink: string;
+}
+
+const { courseCategoryName = "", courseSubPageLink = "" } = Astro.props;
+---
+
+<section class="w-full mb-24">
+  <h2
+    class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mb-10"
+  >
+    {courseCategoryName} Courses
+  </h2>
+
+  <div class="swiper-container course-carousel-container">
+    <div style="transform: translateX(0)" class="swiper-wrapper">
+      <slot />
+    </div>
+  </div>
+
+  <div class="w-full flex flex-row justify-center items-center gap-5">
+    <button class="swiper-button-prev carousel-prevBtn">
+      <i class="fa-solid fa-circle-left"></i>
+    </button>
+
+    <div class="swiper-scrollbar"></div>
+
+    <button class="swiper-button-next carousel-nextBtn">
+      <i class="fa-solid fa-circle-right"></i>
+    </button>
+  </div>
+
+  <div class="flex justify-center w-full">
+    <a href=`/courses/${courseSubPageLink}/` class="view-all-btn">View All</a>
+  </div>
+</section>

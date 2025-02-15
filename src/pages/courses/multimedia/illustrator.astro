@@ -1,0 +1,130 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Adobe Illustrator at V.Vidhya",
+  description:
+    "Learn Adobe Illustrator at V.Vidhya in Surat. Master vector graphics, logo design, typography, and illustration for creative projects.",
+};
+
+const courseDetails = {
+  name: "Adobe Illustrator",
+  duration: "2-3",
+  image: "/images/doodles/boy-wfh.svg",
+  imgAlt: "an Illustration of a boy working on laptop",
+  overview:
+    "This course is perfect for aspiring graphic designers, illustrators, or anyone wanting to learn Adobe Illustrator to create vector-based graphics for professional or personal projects. Whether you're a beginner or looking to improve your skills, this course will guide you through key design principles like typography, color theory, and composition, while giving you hands-on experience in crafting professional-quality vector designs. By the end of the course, you'll be able to confidently use Illustrator to produce graphic design projects and build a professional portfolio.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">
+      Introduction to Illustrator & Basic Tools
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Adobe Illustrator interface and workspace</li>
+      <li>Basic drawing tools: Pen Tool, Pencil Tool, and Shape Tools</li>
+      <li>
+        Working with the selection tools: Direct Selection, Group Selection
+      </li>
+      <li>Introduction to the toolbar, panels, and navigation</li>
+      <li>Creating and saving files (artboards, document setup)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Working with Color, Gradients, and Strokes
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Understanding color modes (RGB vs CMYK) and color palettes</li>
+      <li>Using the Color Picker, Swatches, and the Eyedropper Tool</li>
+      <li>Applying gradients and blending colors</li>
+      <li>
+        Working with stroke properties: thickness, dash patterns, and joins
+      </li>
+      <li>Using color groups and creating custom color palettes</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Typography & Text in Illustrator</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding typography principles: font selection, hierarchy, and
+        spacing
+      </li>
+      <li>Creating and manipulating text using the Type Tool</li>
+      <li>Working with text on paths, shapes, and custom effects</li>
+      <li>Applying text styles and effects (distort, wrap text, 3D)</li>
+      <li>Exploring text formatting and integration with graphic elements</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Drawing Techniques & Paths</li>
+    <ul class="ind-course-sublist">
+      <li>Mastering the Pen Tool for creating complex shapes and paths</li>
+      <li>
+        Using the Pathfinder panel to combine, subtract, and divide objects
+      </li>
+      <li>Creating custom shapes using the Shape Builder Tool</li>
+      <li>
+        Converting shapes and paths into outlines and creating compound paths
+      </li>
+      <li>Using the Anchor Point Tool for editing paths and curves</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Working with Layers, Grouping & Organization
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to layers: creating, organizing, and managing them</li>
+      <li>Locking, hiding, and selecting layers for better workflow</li>
+      <li>Grouping and ungrouping objects for efficient design</li>
+      <li>Aligning and distributing objects using guides and grids</li>
+      <li>Using the Layers panel to keep designs organized</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Logo Design & Vector Illustration Techniques
+    </li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding the principles of logo design (simplicity, scalability)
+      </li>
+      <li>Designing logos using basic shapes, type, and effects</li>
+      <li>
+        Introduction to vector illustration techniques for creating digital art
+      </li>
+      <li>
+        Working with gradients, shading, and highlights for vector illustrations
+      </li>
+      <li>Combining text and shapes to create a cohesive logo</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Patterns, Brushes, and Custom Effects</li>
+    <ul class="ind-course-sublist">
+      <li>Creating custom patterns and textures for use in designs</li>
+      <li>Working with brushes: modifying and creating custom brushes</li>
+      <li>Adding effects like 3D, shadows, and reflections</li>
+      <li>Using the Appearance panel to apply multiple effects and styles</li>
+      <li>Creating repeat patterns and designing seamless backgrounds</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Development</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Final project: Creating a complete graphic design (logo, poster, or
+        illustration)
+      </li>
+      <li>
+        Preparing designs for print and digital output (resizing, resolution)
+      </li>
+      <li>Organizing your portfolio with selected projects</li>
+      <li>Exporting files for various formats (AI, PDF, PNG, SVG)</li>
+      <li>
+        Tips for client presentations and working in a professional setting
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

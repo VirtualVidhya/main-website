@@ -1,0 +1,115 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Adobe Photoshop at V.Vidhya",
+  description:
+    "Become a Photoshop expert at V.Vidhya in Surat. Learn image editing, photo retouching, and creative design techniques for professional work.",
+};
+
+const courseDetails = {
+  name: "Adobe Photoshop",
+  duration: "2-3",
+  image: "/images/doodles/girl-using-tablet.svg",
+  imgAlt: "an Illustration of a girl doodling on a tablet",
+  overview:
+    "This course is ideal for those who want to master Photoshop for graphic design, whether for professional use or as a hobby. You'll also explore essential design principles like color theory, typography, and layout, while mastering Photoshop's features for creating polished, professional-quality designs. By the end of the course, you will have the skills needed to produce compelling design projects, as well as a portfolio to showcase your work.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Photoshop & Basic Tools</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Photoshop workspace, tools, and panels</li>
+      <li>Basic tools: selection tools, brushes, layers, and the magic wand</li>
+      <li>
+        Understanding image resolution, file formats, and saving for different
+        uses
+      </li>
+      <li>Basic editing: cropping, resizing, and retouching images</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Working with Layers & Text</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to layers and layer management</li>
+      <li>Understanding layer styles, blending modes, and opacity</li>
+      <li>Working with text: adding, formatting, and applying effects</li>
+      <li>Creating custom fonts, text effects, and typographic designs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Photo Manipulation & Retouching</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Basic photo enhancement techniques: brightness, contrast, and color
+        correction
+      </li>
+      <li>Using the clone stamp, healing brush, and other retouching tools</li>
+      <li>
+        Advanced photo manipulation: combining multiple images, creating
+        composites
+      </li>
+      <li>Using layer masks for non-destructive editing</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Color Theory & Creating Effects</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding color theory: color schemes, harmony, and palettes</li>
+      <li>Using Photoshop's color tools to create mood and impact</li>
+      <li>Applying gradients, patterns, and textures to designs</li>
+      <li>
+        Creating and applying special effects (e.g., shadows, glows, 3D text)
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Digital Illustration & Painting in Photoshop
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Using brushes and the brush tool for digital painting</li>
+      <li>Creating custom brushes and textures</li>
+      <li>Building digital illustrations using shapes, paths, and gradients</li>
+      <li>
+        Exploring advanced painting techniques (e.g., layer blending, opacity)
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Layout & Design for Print & Web</li>
+    <ul class="ind-course-sublist">
+      <li>Designing layouts for print materials: flyers, posters, brochures</li>
+      <li>Understanding print resolution, CMYK color mode, and bleeds</li>
+      <li>Designing for web: creating web banners, social media graphics</li>
+      <li>Exporting files for web and print use (JPEG, PNG, PDF)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Photoshop Techniques</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Working with smart objects, smart filters, and non-destructive editing
+      </li>
+      <li>
+        Advanced photo manipulation: masking, clipping paths, and blending
+      </li>
+      <li>Creating mockups for branding and packaging</li>
+      <li>Creating GIFs and animations in Photoshop (basic frame animation)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Development</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Final project: Create a complete design (e.g., logo, brochure, or
+        advertisement)
+      </li>
+      <li>Organizing your work into a digital portfolio</li>
+      <li>Preparing designs for presentation and client delivery</li>
+      <li>
+        Tips for freelancing, collaborating with clients, and growing your
+        design business
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

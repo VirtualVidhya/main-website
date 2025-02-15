@@ -1,0 +1,74 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn MS-Office for kids at V.Vidhya",
+  description:
+    "Introduce your child to MS Office at V.Vidhya in Surat. Learn Word, Excel, and PowerPoint with interactive, kid-friendly lessons.",
+};
+
+const courseDetails = {
+  name: "MS Office",
+  duration: "2-4",
+  image: "/images/doodles/boy-studying.svg",
+  imgAlt: "an Illustration of a boy studying on a laptop",
+  overview:
+    "This course is designed to introduce school students to the essential tools of Microsoft Office Suite, helping them build foundational digital skills for academics and daily tasks. Over 2-4 months, students will learn to create documents, spreadsheets, and presentations, gaining hands-on experience with MS Word, MS Excel, MS PowerPoint, and MS Paint. Through engaging activities, they will develop the ability to type efficiently, format documents, create interactive slideshows, and organize data in spreadsheets. By the end of the course, students will be confident in using Microsoft Office for school projects, assignments, and presentations. This course makes learning fun with creative exercises, storytelling presentations, and mini-projects tailored for young learners.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Operating Systems</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding how to navigate and utilize within operating systems
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">File Management</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Learning how to organize, store, and retrieve files efficiently on a
+        computer system.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Word Processing</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Developing skills in using word processing software like MS Word or
+        Google Docs for creating documents, reports, and presentations.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Spreadsheet Applications</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Familiarizing oneself with spreadsheet software such as MS Excel or
+        Google Sheets, which are widely used for data analysis, budgeting, and
+        more.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Internet Basics</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Exploring web browsers, search engines, and understanding online safety
+        and security measures.
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Email Communication</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Learning how to compose, send, and manage emails effectively for
+        personal and professional communication.
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

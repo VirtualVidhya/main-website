@@ -1,0 +1,97 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Computer Accounting at V.Vidhya",
+  description:
+    "Learn accounting software like Tally and gain financial management skills at V.Vidhya in Surat. Ideal for students & professionals.",
+};
+
+const courseDetails = {
+  name: "Accounting",
+  duration: "2-4",
+  image: "/images/doodles/woman-handling-money.svg",
+  imgAlt: "an Illustration of a girl handling money",
+  overview:
+    "This course is designed to introduce you to the world of computerized accounting and equip you with the essential skills to manage financial transactions, bookkeeping, and business accounting using modern accounting software. Over 2-4 months, you will learn the basics of accounting principles and how to apply them using advanced digital tools for tasks like ledger management, invoicing, balance sheets, and financial reporting. You will develop a solid understanding of financial recordkeeping and gain proficiency in automating accounting tasks, making it easier to handle real-time data and generate reports. The course also covers essential topics like GST, tax calculations, and financial statements, which are crucial for both small businesses and large organizations. By the end of this course, you will be ready to manage and maintain an organization's accounts using computerized accounting systems, improving accuracy and efficiency in accounting tasks.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Computerized Accounting</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding the need for computer accounting</li>
+      <li>Introduction to basic accounting principles</li>
+      <li>Comparison of manual vs. computerized accounting</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Financial Accounting Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Basic concepts of bookkeeping and accounting</li>
+      <li>Types of accounts: Assets, Liabilities, Expenses, Revenues</li>
+      <li>Double-entry system of accounting</li>
+      <li>Journals, ledgers, and trial balance</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Setting Up Accounts & Creating Financial Documents
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Creating and managing company profiles in accounting software</li>
+      <li>Setting up chart of accounts</li>
+      <li>Creating and managing customers, vendors, and employees</li>
+      <li>Generating invoices, receipts, and payments</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Transactions and Ledger Management</li>
+    <ul class="ind-course-sublist">
+      <li>Recording day-to-day transactions</li>
+      <li>Posting to journals and ledgers</li>
+      <li>Managing purchase and sales entries</li>
+      <li>Managing cash and bank accounts</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Understanding and Managing Taxes</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of GST and other taxes</li>
+      <li>Tax calculation and ledger setup</li>
+      <li>Generating tax-related reports and filings</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Financial Reporting</li>
+    <ul class="ind-course-sublist">
+      <li>Generating profit and loss statements</li>
+      <li>Generating balance sheets and cash flow reports</li>
+      <li>Customizing reports for different business needs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Automation and Efficiency in Accounting</li>
+    <ul class="ind-course-sublist">
+      <li>Automating accounting entries</li>
+      <li>Managing recurring payments and invoices</li>
+      <li>Reconciling bank statements and transactions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Accounting Features</li>
+    <ul class="ind-course-sublist">
+      <li>Managing payroll and employee compensation</li>
+      <li>Managing inventories and cost of goods sold</li>
+      <li>Generating and interpreting financial reports for decision-making</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Real-World Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Creating accounting setups for a small business</li>
+      <li>Handling accounts for a hypothetical company</li>
+      <li>
+        Preparing a set of financial reports (Income Statement, Balance Sheet,
+        Tax Reports)
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

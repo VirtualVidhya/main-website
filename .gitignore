@@ -1,6 +1,29 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
 node_modules/
 package-lock.json
 package.jsongit
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
 
 ### VisualStudioCode ###
 .vscode/*
@@ -24,10 +47,6 @@ package.jsongit
 # Local Cloudflare folder
 .wrangler
 .data.vars
-dist/
-
-# Environment Variables
-.env
 
 # FontAwesome package
 src/styles/fontawesome.css

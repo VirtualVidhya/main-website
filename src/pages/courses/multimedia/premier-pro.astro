@@ -1,0 +1,129 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Adobe Premier-Pro at V.Vidhya",
+  description:
+    "Learn Adobe Premiere Pro at V.Vidhya in Surat. Master professional video editing, color grading, and cinematic effects for film and social media.",
+};
+
+const courseDetails = {
+  name: "Adobe Premier Pro",
+  duration: "2-3",
+  image: "/images/doodles/girl-drawing-on-tablet.svg",
+  imgAlt: "an Illustration of a girl watching a video on a tablet",
+  overview:
+    "This course will give you the skills needed to confidently use Adobe Premiere Pro for editing professional videos. Whether you're editing short clips, full-length features, or promotional content, you'll develop a strong foundation in the software and editing techniques to create visually stunning videos. Over 2-3 months, you will learn how to use Premiere Pro to create high-quality videos, from editing raw footage to finalizing projects for various platforms. Whether you're a beginner or looking to refine your skills, this course will teach you the essential tools and techniques used by video editors in the creative industry. Through practical exercises, you'll gain hands-on experience in editing, color correction, audio mixing, and exporting videos for web, social media, and broadcast. By the end of the course, you'll be proficient in Premiere Pro and ready to create professional videos for a variety of uses.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">
+      Introduction to Premiere Pro & Workspace Setup
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Premiere Pro interface and workspace</li>
+      <li>
+        Setting up projects, sequences, and working with different media formats
+      </li>
+      <li>Importing and organizing media (video, audio, and images)</li>
+      <li>Understanding the Timeline, Program Monitor, and Project Panel</li>
+      <li>Basic navigation and keyboard shortcuts for efficient editing</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Basic Video Editing Techniques</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding the Timeline and Sequence setup</li>
+      <li>
+        Cutting, trimming, and splicing clips using the Razor and Selection
+        tools
+      </li>
+      <li>Working with transitions: fade, dissolve, and more</li>
+      <li>Adding titles and text to your video</li>
+      <li>Basic video effects: resizing, rotating, and positioning clips</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Audio Editing & Mixing</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to audio tracks and levels</li>
+      <li>Adjusting audio volume, fading, and normalizing audio</li>
+      <li>Working with audio effects and keyframes</li>
+      <li>Using the Essential Sound panel for audio mixing</li>
+      <li>Syncing audio and video for better playback and consistency</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Editing & Multicam Editing</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Working with multiple video tracks and advanced editing techniques
+      </li>
+      <li>
+        Introduction to multi-camera editing: syncing and switching between
+        multiple camera angles
+      </li>
+      <li>Color correction and grading basics using Lumetri Color Panel</li>
+      <li>
+        Using the Essential Graphics panel to add dynamic titles and animations
+      </li>
+      <li>Advanced trimming tools (Ripple, Rolling, Slip, Slide)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Effects, Transitions, and Motion Graphics
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Applying video effects: filters, blurs, and special effects</li>
+      <li>Creating custom transitions between clips</li>
+      <li>Working with motion graphics templates and animations</li>
+      <li>Using keyframes to animate clips and effects over time</li>
+      <li>Advanced motion graphics: positioning, scaling, and movement</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Color Correction & Grading</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Introduction to color correction: understanding the Lumetri Color panel
+      </li>
+      <li>Correcting exposure, white balance, and contrast</li>
+      <li>
+        Creating custom looks and applying color grading for mood and style
+      </li>
+      <li>Using masks and adjustment layers for advanced grading techniques</li>
+      <li>Matching color between clips for seamless visual consistency</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Exporting & Finalizing Projects</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Exporting your video in various formats for different platforms (web,
+        social media, broadcast)
+      </li>
+      <li>
+        Setting up export settings: resolution, aspect ratio, and frame rate
+      </li>
+      <li>Understanding codecs and file formats for optimized export</li>
+      <li>Creating presets for efficient workflow</li>
+      <li>Finalizing video projects for delivery and archiving</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Development</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Final project: Complete a video editing project (e.g., short film, vlog,
+        commercial, or music video)
+      </li>
+      <li>Organizing and presenting your edited video project</li>
+      <li>Creating a personal portfolio with your best video editing work</li>
+      <li>Tips for working with clients and understanding their needs</li>
+      <li>
+        Preparing your video for different distribution channels (YouTube,
+        Vimeo, social media)
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

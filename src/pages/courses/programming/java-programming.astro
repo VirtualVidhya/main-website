@@ -1,0 +1,73 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Java Programming at V.Vidhya",
+  description:
+    "Master Java programming at V.Vidhya in Surat. Learn OOP, multithreading, JDBC, Spring Boot, and build real-world applications.",
+};
+
+const courseDetails = {
+  name: "Java Programming",
+  duration: "2-5",
+  image: "/images/doodles/boy-communicating-digitally.svg",
+  imgAlt: "an Illustration of a boy coding on a laptop",
+  overview:
+    "This course is designed to take you from a beginner to a confident Java programmer, equipping you with the skills needed to build real-world applications. Over 2-3 months, you will learn how to write, test, and debug Java programs, making you proficient in one of the most popular programming languages used in web development, mobile apps, and enterprise software. You'll start with the fundamentals, including writing simple programs, handling user input, and working with loops and conditions. As you progress, you'll explore object-oriented programming (OOP), data structures, file handling, and multi-threading, which are essential for scalable and efficient applications. By the end of this course, you will be able to develop desktop applications, understand how Java is used in Android development, and create backend systems for web applications. Whether you want to become a Java developer, build mobile apps, or work with large-scale systems, this course will provide you with the strong foundation you need.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Introduction to computers, understanding how it works fundamentally
+      </li>
+      <li>Understanding of what does the process of programming mean</li>
+      <li>
+        Familiarity with the whole field of software development and different
+        roles within the industry
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Core Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Java as a programming language</li>
+      <li>Variables</li>
+      <li>Data Types</li>
+      <li>User Input/Output</li>
+      <li>Operators</li>
+      <li>Conditional Statements</li>
+      <li>Loops</li>
+      <li>Control flow statements</li>
+      <li>Strings</li>
+      <li>Arrays</li>
+      <li>Functions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Object-Oriented Programming</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to object oriented programming</li>
+      <li>Class & Object</li>
+      <li>Member variables and functions</li>
+      <li>Access Specifiers</li>
+      <li>Benefits of data hiding (Encapsulation)</li>
+      <li>Contructors</li>
+      <li>Inheritance</li>
+      <li>Polymorphism</li>
+      <li>Abstraction</li>
+      <li>Templates</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Continuous exercises based on real life problem statements</li>
+      <li>Basic text based applications and games project work</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

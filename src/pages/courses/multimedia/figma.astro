@@ -1,0 +1,100 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Figma at V.Vidhya",
+  description:
+    "Learn UI/UX design with Figma at V.Vidhya in Surat. Master wireframing, prototyping, and user experience design for websites & mobile apps.",
+};
+
+const courseDetails = {
+  name: "Figma",
+  duration: "1-3",
+  image: "/images/doodles/girl-completing-task.svg",
+  imgAlt: "an Illustration of a girl completing tasks",
+  overview:
+    "This course is designed to help you master Figma, the leading UI/UX design tool for creating professional web and mobile interfaces. Over 2-3 months, you'll learn how to design high-quality wireframes, prototypes, and UI components, as well as collaborate effectively using FigJam and Figma's team features. Whether you're a beginner or an experienced designer, this course will teach you everything from the fundamentals of Figma to advanced design systems, prototyping, and developer handoff workflows. You'll work on real-world projects and build a strong UI/UX portfolio to kickstart or advance your design career. By the end of this course, you'll be able to confidently use Figma to create responsive designs, interactive prototypes, and collaborate efficiently with developers and stakeholders.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Figma & Workspace Setup</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Figma's interface and workspace</li>
+      <li>Setting up a Figma account and understanding cloud-based workflow</li>
+      <li>Creating and managing projects, files, and teams</li>
+      <li>Navigating the Toolbar, Layers Panel, and Inspector</li>
+      <li>Essential keyboard shortcuts for efficient design workflow</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Working with Shapes & Design Tools</li>
+    <ul class="ind-course-sublist">
+      <li>Using Frames, Groups, and Artboards effectively</li>
+      <li>Drawing and editing shapes using the Shape and Pen tools</li>
+      <li>Working with Boolean operations for complex shapes</li>
+      <li>Understanding Auto Layout for responsive designs</li>
+      <li>Applying fills, strokes, shadows, and gradients</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Typography & Text Styling</li>
+    <ul class="ind-course-sublist">
+      <li>Adding and formatting text layers</li>
+      <li>Creating and managing text styles for consistency</li>
+      <li>Adjusting line height, letter spacing, and alignment</li>
+      <li>Using Google Fonts and custom font integration</li>
+      <li>Handling missing fonts and font scaling techniques</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Using Images & Components</li>
+    <ul class="ind-course-sublist">
+      <li>Importing and placing images in designs</li>
+      <li>Masking and cropping images</li>
+      <li>Understanding and utilizing Figma Components</li>
+      <li>Creating and managing reusable design components</li>
+      <li>Understanding Variants for multiple component states</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Prototyping & Interaction Design</li>
+    <ul class="ind-course-sublist">
+      <li>Linking screens to create interactive prototypes</li>
+      <li>Working with transitions, animations, and overlays</li>
+      <li>Adding interactions, hover states, and micro-interactions</li>
+      <li>Using Smart Animate for smooth UI animations</li>
+      <li>Previewing and sharing interactive prototypes</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Collaboration & Design Handoff</li>
+    <ul class="ind-course-sublist">
+      <li>Real-time collaboration with team members</li>
+      <li>Adding and responding to comments</li>
+      <li>Sharing designs with developers and stakeholders</li>
+      <li>Using Figma's Inspect tool for design-to-code handoff</li>
+      <li>Exporting assets and design elements efficiently</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Features & Plugins</li>
+    <ul class="ind-course-sublist">
+      <li>Exploring Figma plugins to enhance workflow</li>
+      <li>Using Figma Community resources and UI kits</li>
+      <li>Customizing workflow with design systems and libraries</li>
+      <li>Leveraging FigJam for brainstorming and team collaboration</li>
+      <li>Understanding Figma's API and automation capabilities</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Development</li>
+    <ul class="ind-course-sublist">
+      <li>Creating a complete UI/UX project in Figma</li>
+      <li>Organizing and presenting designs professionally</li>
+      <li>Building a design portfolio using Figma</li>
+      <li>
+        Preparing and exporting designs for web, mobile, and presentations
+      </li>
+      <li>Best practices for working with clients and teams</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

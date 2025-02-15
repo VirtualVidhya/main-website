@@ -1,0 +1,22 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/programming/front-end-webdev/",
+  icon: "/images/course-icons/programming.png",
+  lazyLoadIconImg: false,
+  name: "Front-end\nWeb-Development",
+  description: "Create beautiful, responsive websites using modern tools...",
+  duration: "4-6",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="HTML" />
+    <CourseCardToolTag toolName="CSS" />
+    <CourseCardToolTag toolName="JS" />
+    <CourseCardToolTag toolName="React" />
+  </slot>
+</CourseCardLayout>
