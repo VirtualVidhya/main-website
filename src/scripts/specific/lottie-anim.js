@@ -122,17 +122,63 @@
 //   });
 // });
 
+// (async () => {
+//   function loadLottie() {
+//     return import("https://esm.sh/@lottiefiles/dotlottie-web");
+//   }
+
+//   async function loadAnimation(canvas) {
+//     const { DotLottieWorker } = await loadLottie();
+
+//     const animation = new DotLottieWorker({
+//       canvas: canvas,
+//       src: canvas.dataset.lottie,
+//       autoplay: true,
+//       loop: true,
+//       workerId: canvas.dataset.lottie,
+//     });
+
+//     // When animation is ready, hide the placeholder image
+//     animation.addEventListener("ready", () => {
+//       const placeholder = canvas
+//         .closest(".lottie-container")
+//         .querySelector(".lottie-placeholder");
+//       if (placeholder) placeholder.style.display = "none";
+//     });
+//   }
+
+//   const observer = new IntersectionObserver(
+//     (entries, observer) => {
+//       entries.forEach(async (entry) => {
+//         if (entry.isIntersecting) {
+//           await loadAnimation(entry.target);
+//           observer.unobserve(entry.target); // Load animation only once
+//         }
+//       });
+//     },
+//     { rootMargin: "100px" }
+//   );
+
+//   document
+//     .querySelectorAll("[data-lottie]")
+//     .forEach((el) => observer.observe(el));
+// })();
+
 (async () => {
   function loadLottie() {
     return import("https://esm.sh/@lottiefiles/dotlottie-web");
   }
 
   async function loadAnimation(canvas) {
-    const { DotLottie } = await loadLottie();
+    const { DotLottieWorker } = await loadLottie();
+
+    // Construct the absolute URL
+    const relativePath = canvas.dataset.lottie;
+    const absoluteUrl = new URL(relativePath, window.location.origin).href;
 
     const animation = new DotLottieWorker({
       canvas: canvas,
-      src: canvas.dataset.lottie,
+      src: absoluteUrl, // Use the absolute URL here
       autoplay: true,
       loop: true,
       workerId: canvas.dataset.lottie,
