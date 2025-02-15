@@ -22,13 +22,16 @@ const { animData } = Astro.props;
     class="lottie-placeholder"
   />
 </canvas> -->
-
-<div class="lottie-container relative w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0">
+<div
+  class="lottie-container relative w-full sm:w-2/5 aspect-square order-2 mt-4 sm:mt-0"
+>
   <!-- Static Image (Placeholder) -->
   <img
     src={animData.img}
     alt="Loading animation..."
     class="lottie-placeholder absolute inset-0 w-full h-full object-contain"
+    decoding="async"
+    loading="lazy"
   />
 
   <!-- Lottie Animation Canvas -->
@@ -36,6 +39,5 @@ const { animData } = Astro.props;
     id={animData.id}
     class="w-full h-full"
     data-lottie={animData.path}
-    data-loaded="false"
-  ></canvas>
+    data-loaded="false"></canvas>
 </div>

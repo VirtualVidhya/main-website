@@ -130,11 +130,12 @@
   async function loadAnimation(canvas) {
     const { DotLottie } = await loadLottie();
 
-    const animation = new DotLottie({
-      autoplay: true,
-      loop: true,
+    const animation = new DotLottieWorker({
       canvas: canvas,
       src: canvas.dataset.lottie,
+      autoplay: true,
+      loop: true,
+      workerId: canvas.dataset.lottie,
     });
 
     // When animation is ready, hide the placeholder image
