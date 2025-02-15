@@ -218,7 +218,7 @@
         }
       });
     },
-    { rootMargin: "100px" }
+    { rootMargin: "500px" }
   );
 
   document
