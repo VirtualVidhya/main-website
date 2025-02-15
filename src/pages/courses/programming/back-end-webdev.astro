@@ -1,0 +1,98 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Back-end Web-Development at V.Vidhya",
+  description:
+    "Master back-end development at V.Vidhya in Surat. Learn server-side programming, databases, APIs, Node.js, Python, PHP & more.",
+};
+
+const courseDetails = {
+  name: "Back-end Web-Development",
+  duration: "5-7",
+  image: "/images/doodles/boy-handling-server.svg",
+  imgAlt:
+    "an Illustration of a boy downloading something from internet (cloud)",
+  overview:
+    "This Back-End Web Development course will guide you through the fundamental and advanced techniques of building the server-side of web applications. Whether you are interested in creating powerful,data-driven websites or managing backend systems, this course will give you the tools and knowledge needed to manage databases, build APIs, and create robust back-end services. You'll start with understanding databases, both SQL and NoSQL, and how they store and manage data. Then, dive into MongoDB for handling NoSQL data and learning about database relationships. You'll also learn how to structure RESTful APIs using Node.js—the foundation of modern web servers and back-end systems. This course will equip you with the skills to manage user authentication, handle client-server communications, and validate data on both the client and server side. By the end of the course, you'll be able to design and implement scalable back-end systems for web applications, making them secure, maintainable, and ready for production. You'll also gain experience in deploying these systems to real-world environments.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Databases (SQL & NoSQL)</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to databases and data storage</li>
+      <li>Working with SQL databases (e.g., MySQL)</li>
+      <li>Introduction to NoSQL databases (e.g., MongoDB)</li>
+      <li>Understanding data models, queries, and joins</li>
+    </ul>
+
+    <li class="ind-course-imp-text">MongoDB Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Installing MongoDB and connecting with Node.js</li>
+      <li>CRUD operations: Create, Read, Update, Delete</li>
+      <li>Structuring data in MongoDB collections and documents</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Mongo Database Relationships</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing relationships between data in MongoDB</li>
+      <li>Embedding vs referencing data</li>
+      <li>Normalization and denormalization</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Node.js</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Node.js and setting up Node.js environment</li>
+      <li>Understanding npm (Node Package Manager)</li>
+      <li>Building basic server-side applications using Express.js</li>
+    </ul>
+
+    <li class="ind-course-imp-text">REST APIs</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to RESTful APIs</li>
+      <li>Creating API endpoints with Node.js and Express</li>
+      <li>Handling GET, POST, PUT, DELETE requests</li>
+      <li>Error handling in APIs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Routing, Cookies & Sessions</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing routing in Node.js with Express</li>
+      <li>Understanding cookies and sessions for user authentication</li>
+      <li>Managing stateful user data</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Client & Server-side Validations</li>
+    <ul class="ind-course-sublist">
+      <li>Validating form data on the client-side using JavaScript</li>
+      <li>Server-side validation with Express Validator</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Authorization & Authentication</li>
+    <ul class="ind-course-sublist">
+      <li>JWT (JSON Web Token) authentication</li>
+      <li>Implementing OAuth, sessions, and cookies for login</li>
+      <li>Creating secure login systems</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Deployment</li>
+    <ul class="ind-course-sublist">
+      <li>Deploying Node.js applications on platforms like Heroku and AWS</li>
+      <li>Working with CI/CD pipelines for automatic deployment</li>
+      <li>Setting up production environments</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Real-world Projects</li>
+    <ul class="ind-course-sublist">
+      <li>Building full-stack web apps</li>
+      <li>User management systems with authentication</li>
+      <li>E-commerce backends, content management systems, etc.</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

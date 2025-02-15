@@ -1,0 +1,105 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Game Development at V.Vidhya",
+  description:
+    "Learn game development at V.Vidhya in Surat. Master Unity, Unreal Engine, C#, 2D & 3D game mechanics, and game design principles.",
+};
+
+const courseDetails = {
+  name: "Game Development",
+  duration: "7-12",
+  image: "/images/doodles/girl-playing-games.svg",
+  imgAlt: "an Illustration of a girl playing games on a computer",
+  overview:
+    "This course is designed to take you from a beginner to a proficient game developer using Unity and C#. Over 7-12 months, you will learn how to design, program, and optimize games for different platforms, from PC and mobile to web and console. You'll start with C++ programming basics, followed by Object-Oriented Programming (OOPs) concepts, ensuring a strong programming foundation before diving into Unity. From there, you will explore Unity's interface, physics, animation, UI/UX design, input handling, audio management, and game mechanics. As the course progresses, you will work on building actual 2D and 3D games, implement basic enemy AI, and refine your game development skills. The final phase will focus on performance optimization, best coding practices, and version control with Git & GitHub. By the end of the course, you will be able to publish your own game on PC, mobile, and web platforms. This course is perfect for aspiring game developers who want to create indie games, professional projects, or even break into the game industry.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">
+      Introduction to Game Development & Programming
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Understanding how games work</li>
+      <li>Overview of game development industry & roles</li>
+      <li>Basics of programming in C++</li>
+      <li>Fundamentals of Object-Oriented Programming (OOPs) in C++</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Introduction to Unity & C#</li>
+    <ul class="ind-course-sublist">
+      <li>Installing & setting up Unity & Visual Studio</li>
+      <li>Unity interface & project structure</li>
+      <li>Basics of C# programming in Unity</li>
+      <li>Understanding GameObjects, Components & Prefabs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">UI/UX Fundamentals for Games</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to UI in Unity</li>
+      <li>Best practices for good UI/UX design</li>
+      <li>Creating menus, buttons, and HUDs</li>
+      <li>Handling UI Events & Input systems</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Animations & Effects in Unity</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Unity Animator & Animation Clips</li>
+      <li>Creating smooth character & object animations</li>
+      <li>Using Animation Events for gameplay interactions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Sound & Audio Management</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing sound effects & background music</li>
+      <li>Managing 3D spatial audio</li>
+      <li>Working with Unity's Audio Mixer</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Physics & Game Mechanics (2D & 3D)</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding Unity Physics Engine</li>
+      <li>Rigidbody & Colliders in 2D & 3D</li>
+      <li>Implementing gravity, friction, and forces</li>
+      <li>Creating player movement & interactions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Basic Enemy AI & Game Logic</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding AI fundamentals</li>
+      <li>Creating a simple enemy movement & attack system</li>
+      <li>Using NavMesh for pathfinding</li>
+      <li>Implementing state-based AI behavior</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Camera & Gameplay Mechanics</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing smooth camera movement</li>
+      <li>Creating cinematic cutscenes</li>
+      <li>Using camera shake & post-processing effects</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Game Builds & Publishing</li>
+    <ul class="ind-course-sublist">
+      <li>Preparing games for different platforms (PC, Mobile, Web, etc.)</li>
+      <li>Optimizing game settings & resolution</li>
+      <li>
+        Exporting & publishing a game on Google Play Store, Steam, or itch.io
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Performance Optimization & Code Quality</li>
+    <ul class="ind-course-sublist">
+      <li>Reducing lag & improving frame rates</li>
+      <li>Optimizing graphics, assets & scripts</li>
+      <li>Writing clean & efficient C# code</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

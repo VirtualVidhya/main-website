@@ -1,0 +1,100 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Corel-Draw at V.Vidhya",
+  description:
+    "Become a graphic design pro with our CorelDRAW course at V.Vidhya. Learn logo design, vector art, and illustration skills in Surat.",
+};
+
+const courseDetails = {
+  name: "Corel Draw",
+  duration: "2-3",
+  image: "/images/doodles/girl-painting.svg",
+  imgAlt: "an Illustration of a girl painting",
+  overview:
+    "This course offers an in-depth introduction to CorelDRAW, one of the most popular graphic design software programs. Over the course of 2-3 months, you will learn how to use CorelDRAW to create stunning vector-based designs for various applications, including logos, brochures, posters, and more. Whether you're a beginner or looking to refine your design skills, this course will guide you through the essential tools, techniques, and design principles to help you produce professional-quality graphics. By the end of the course, you'll be confident in using CorelDRAW for a wide range of creative projects.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to CorelDRAW & Basic Tools</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of CorelDRAW interface and workspace</li>
+      <li>Basic tools: selecting, drawing, shaping, and grouping objects</li>
+      <li>Working with colors, gradients, and fills</li>
+      <li>Using the toolbar, menus, and keyboard shortcuts efficiently</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Working with Text & Typography</li>
+    <ul class="ind-course-sublist">
+      <li>Creating and manipulating text objects</li>
+      <li>
+        Exploring typography: font selection, style, spacing, and alignment
+      </li>
+      <li>Using text effects like curves, 3D, and shadows</li>
+      <li>Combining text with graphics to create balanced designs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Vector Design & Advanced Drawing Techniques
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Mastering pen tools: creating curves and shapes</li>
+      <li>Working with Bezier curves and nodes</li>
+      <li>Creating complex vector illustrations and designs</li>
+      <li>Using layers and the object manager to organize projects</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Color Theory & Applying Effects</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding color theory and color harmonies</li>
+      <li>Creating custom color palettes and applying them to designs</li>
+      <li>Using gradients, blends, and color transitions</li>
+      <li>Applying artistic effects and textures to vector artwork</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Logo Design & Branding</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to logo design principles</li>
+      <li>Using CorelDRAW tools to create logos and branding elements</li>
+      <li>
+        Working with shapes, text, and custom graphics to design unique logos
+      </li>
+      <li>Tips for creating scalable and versatile logo designs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Layout & Print Design</li>
+    <ul class="ind-course-sublist">
+      <li>Designing brochures, flyers, posters, and other print materials</li>
+      <li>Setting up page sizes, margins, and print bleeds</li>
+      <li>Using grids and guides for precise layout design</li>
+      <li>
+        Preparing files for print: file formats, color modes, and resolution
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Techniques & Special Effects</li>
+    <ul class="ind-course-sublist">
+      <li>Working with 3D effects and object transparency</li>
+      <li>Creating patterns, textures, and special illustrations</li>
+      <li>Importing and editing images in CorelDRAW</li>
+      <li>Advanced techniques like vectorizing bitmap images</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Development</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Final project: Creating a complete design project (logo, brochure, etc.)
+      </li>
+      <li>Organizing your portfolio with completed works</li>
+      <li>Preparing designs for presentation and sharing</li>
+      <li>Tips for working with clients and presenting your design work</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

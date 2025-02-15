@@ -1,0 +1,98 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Video Editing at V.Vidhya",
+  description:
+    "Learn professional video editing at V.Vidhya in Surat. Master Premiere Pro, After Effects, transitions, effects, and storytelling techniques.",
+};
+
+const courseDetails = {
+  name: "Video Editing",
+  duration: "8-10",
+  image: "/images/doodles/woman-watching-video.svg",
+  imgAlt: "an Illustration of a girl doing live streaming",
+  overview:
+    "Our Video Editing course is designed for aspiring creators who want to bring their stories to life through captivating visuals and seamless editing. This course takes students through the essentials of graphic design and video editing, equipping them with the skills to create stunning visuals, dynamic transitions, and polished videos. From mastering Adobe tools like Premiere Pro and After Effects to enhancing visuals using Illustrator and Photoshop, this course empowers students to produce professional-grade content for films, social media, and other platforms. By the end of the program, students will have the confidence to craft engaging videos and visual effects, ready to make their mark in the vibrant world of video production.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">
+      Introduction to Video Editing and Design
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Basics of Video Editing and Its Applications</li>
+      <li>
+        Principles of Visual Storytelling: Composition, Timing, and Narrative
+      </li>
+      <li>Understanding File Formats, Resolutions, and Aspect Ratios</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Graphic Design Fundamentals with Illustrator
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Adobe Illustrator Interface</li>
+      <li>Creating Graphics for Video: Logos, Icons, and Lower Thirds</li>
+      <li>Working with Shapes, Text, and Colors</li>
+      <li>Preparing Vector Graphics for Video Editing</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Enhancing Visuals with Photoshop</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Photoshop for Video Creators</li>
+      <li>Photo Editing and Retouching for Video Projects</li>
+      <li>Creating Thumbnails, Posters, and Social Media Graphics</li>
+      <li>Exporting Assets for Integration with Video Editing Software</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Video Editing Essentials with Premiere Pro
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Adobe Premiere Pro Interface</li>
+      <li>Importing and Organizing Media</li>
+      <li>Basic Video Editing: Cutting, Trimming, and Transitions</li>
+      <li>Working with Audio: Syncing, Mixing, and Voiceovers</li>
+      <li>Color Correction and Grading for Professional Look</li>
+      <li>Exporting Videos for Different Platforms</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Motion Graphics and VFX with After Effects
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Overview of After Effects Interface and Workflow</li>
+      <li>Creating Dynamic Text Animations and Motion Graphics</li>
+      <li>Working with Keyframes, Masks, and Effects</li>
+      <li>Introduction to Compositing: Green Screen and Visual Effects</li>
+      <li>Enhancing Videos with Transitions and Title Sequences</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Design and Editing Projects</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Hands-On Projects i.e. Creating a Logo Animation, Editing a Short Video
+        with Transitions and Effects, Producing a Social Media Ad with Motion
+        Graphics, Designing and Editing a Film Trailer
+      </li>
+      <li>Feedback and Iterative Improvements</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Portfolio Development and Career Readiness
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Preparing a Showreel of Completed Projects</li>
+      <li>Freelancing Tips for Video Creators</li>
+      <li>Career Opportunities in Video Production</li>
+      <li>Final Capstone Project: Comprehensive Video Editing and Design</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

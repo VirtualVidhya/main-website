@@ -1,0 +1,78 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn fundamentals of Computer Application at V.Vidhya",
+  description:
+    "Learn fundamental computer applications at V.Vidhya in Surat. Covers MS Office, Windows, email, internet, and essential IT skills.",
+};
+
+const courseDetails = {
+  name: "Fundamentals of Computer Application",
+  duration: "8-12",
+  image: "/images/doodles/girls-developing-together.svg",
+  imgAlt: "an Illustration of two young girls discussing a project idea",
+  overview:
+    "This Fundamentals of Computer Applications course is designed to provide students with a strong foundation in software development and web technologies. It is structured to be equivalent to the Bachelor of Computer Applications (BCA) program, ensuring that students gain essential knowledge and hands-on experience in programming, software development, and web technologies. Throughout the course, students will learn the fundamentals of programming using C++, covering core programming concepts and Object-Oriented Programming (OOP) principles. Simultaneously, they will explore front-end web development, learning how to create interactive and responsive web applications using HTML, CSS, and JavaScript. By the end of this course, students will have a solid understanding of computer applications, programming logic, and web development, preparing them for advanced learning or entry into the professional tech industry.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Computer Applications</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding computer systems, software, and hardware</li>
+      <li>Overview of operating systems (Windows, Linux, macOS)</li>
+      <li>Basics of networking and the internet</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Fundamentals of Programming (C++)</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to C++ and its syntax</li>
+      <li>Data types, variables, and operators</li>
+      <li>Control structures (loops, conditional statements)</li>
+      <li>Functions and modular programming</li>
+      <li>Data structures</li>
+      <li>
+        Object-Oriented Programming (OOP): Classes, objects, inheritance,
+        polymorphism
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Introduction to Web Development</li>
+    <ul class="ind-course-sublist">
+      <li>HTML5: Structure of a webpage, elements, forms, tables</li>
+      <li>CSS3: Styling web pages, layouts, Flexbox, Grid</li>
+      <li>JavaScript (ES6): Variables, data types, functions, events</li>
+      <li>DOM Manipulation: Selecting and modifying HTML elements</li>
+      <li>Basic Responsive Web Design</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Software Development Basics</li>
+    <ul class="ind-course-sublist">
+      <li>Software development life cycle (SDLC)</li>
+      <li>Introduction to version control (Git & GitHub)</li>
+      <li>Writing clean and efficient code</li>
+      <li>Debugging and testing basics</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Hands-on Projects & Assignments</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Simple C++ Console Applications (calculator, student management system)
+      </li>
+      <li>
+        Basic Web Development Projects (portfolio website, interactive form
+        validation)
+      </li>
+      <li>
+        Mini Capstone Project combining C++ programming and web development
+        concepts
+      </li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

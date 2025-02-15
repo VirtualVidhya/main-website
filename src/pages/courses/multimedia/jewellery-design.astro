@@ -1,0 +1,56 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Jewellery Design at V.Vidhya",
+  description:
+    "Learn jewellery design at V.Vidhya in Surat. Master CAD software, hand sketching, and rendering techniques for stunning jewellery creations.",
+};
+
+const courseDetails = {
+  name: "Jewellery Design",
+  duration: "2-3",
+  image: "/images/doodles/woman-exploring-jewellery.svg",
+  imgAlt: "an Illustration of two women showing jewellery item to each other",
+  overview:
+    "This course combines traditional jewelry design skills with modern digital tools, specifically Photoshop, to help you create stunning jewelry pieces. Over 2-3 months, you will learn the fundamentals of jewelry design, including sketching, color theory, and material rendering, as well as advanced techniques like 3D effects and professional presentations. The course is structured to guide you through the entire design process—from concept to final presentation—while building your proficiency in Photoshop. By the end of the course, you'll have a polished portfolio showcasing your jewelry designs and a solid understanding of how to present your work to clients.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">
+      Introduction to Jewelry Design & Photoshop Basics
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to jewelry design principles and tools</li>
+      <li>
+        Basics of Photoshop: workspace, tools, layers, and file management
+      </li>
+      <li>
+        Digital sketching for jewelry using Photoshop (brush and pen tools)
+      </li>
+      <li>Color theory and material rendering (metal, gemstones)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Advanced Jewelry Design Techniques</li>
+    <ul class="ind-course-sublist">
+      <li>Advanced rendering techniques: shading, reflections, highlights</li>
+      <li>Creating depth and dimension with 3D effects in Photoshop</li>
+      <li>Designing a jewelry collection with a specific theme</li>
+      <li>Creating mockups and visualizing designs in real-life settings</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Project & Portfolio Development</li>
+    <ul class="ind-course-sublist">
+      <li>Refining designs and preparing for production</li>
+      <li>Building a professional jewelry design portfolio</li>
+      <li>Presentation skills for client interactions</li>
+      <li>Final project submission and course review</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

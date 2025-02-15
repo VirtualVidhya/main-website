@@ -1,0 +1,64 @@
+---
+import CourseCategoryHomeLayout from "../../../layouts/CourseCategoryHomeLayout.astro";
+
+import GraphicsDesignCourseCard from "../../../components/couse-cards/multimedia/GraphicsDesignCourseCard.astro";
+import VideoEditingCourseCard from "../../../components/couse-cards/multimedia/VideoEditingCourseCard.astro";
+import TextileDesignCourseCard from "../../../components/couse-cards/multimedia/TextileDesignCourseCard.astro";
+import InteriorDesignCourseCard from "../../../components/couse-cards/multimedia/InteriorDesignCourseCard.astro";
+import UiUxDesignCourseCard from "../../../components/couse-cards/multimedia/UiUxDesignCourseCard.astro";
+import JewelleryDesignCourseCard from "../../../components/couse-cards/multimedia/JewelleryDesignCourseCard.astro";
+import PhotoshopCourseCard from "../../../components/couse-cards/multimedia/PhotoshopCourseCard.astro";
+import IllustratorCourseCard from "../../../components/couse-cards/multimedia/IllustratorCourseCard.astro";
+import AfterEffectsCourseCard from "../../../components/couse-cards/multimedia/AfterEffectsCourseCard.astro";
+import PremiereProCourseCard from "../../../components/couse-cards/multimedia/PremiereProCourseCard.astro";
+import CorelDrawCourseCard from "../../../components/couse-cards/multimedia/CorelDrawCourseCard.astro";
+import FigmaCourseCard from "../../../components/couse-cards/multimedia/FigmaCourseCard.astro";
+
+const metadata = {
+  title: "Explore best Multimedia Courses at V.Vidhya in Surat",
+  description:
+    "Learn graphics design, video editing, animation, UI/UX, interior design and more at V.Vidhya. Our multimedia courses in Surat help you master all the latest creative tools.",
+};
+
+const categoryDetails = {
+  name: "Multimedia Courses",
+  image: "/images/doodles/woman-doing-digital-art.svg",
+  imgAlt: "an Illustration of a girl designing on her laptop",
+  hasLongTermCourses: true,
+  hasShortTermCourses: true,
+};
+---
+
+<CourseCategoryHomeLayout
+  metadata={metadata}
+  navSection="none"
+  categoryDetails={categoryDetails}
+>
+  <slot slot="longterm-courses-slot">
+    <GraphicsDesignCourseCard />
+
+    <VideoEditingCourseCard />
+
+    <TextileDesignCourseCard />
+
+    <InteriorDesignCourseCard />
+
+    <UiUxDesignCourseCard />
+
+    <JewelleryDesignCourseCard />
+  </slot>
+
+  <slot slot="shortterm-courses-slot">
+    <PhotoshopCourseCard />
+
+    <IllustratorCourseCard />
+
+    <AfterEffectsCourseCard />
+
+    <PremiereProCourseCard />
+
+    <CorelDrawCourseCard />
+
+    <FigmaCourseCard />
+  </slot>
+</CourseCategoryHomeLayout>

@@ -1,0 +1,20 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/digital-textile-design/",
+  icon: "/images/course-icons/textile.png",
+  lazyLoadIconImg: false,
+  name: "Digital Textile Design",
+  description:
+    "Design vibrant patterns for textiles with creativity and precision...",
+  duration: "4-6",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Photoshop" />
+  </slot>
+</CourseCardLayout>

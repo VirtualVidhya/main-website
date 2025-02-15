@@ -1,0 +1,21 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/programming/back-end-webdev/",
+  icon: "/images/course-icons/client-server.png",
+  lazyLoadIconImg: false,
+  name: "Back-end\nWeb-Development",
+  description: "Learn to build and manage scalable server-side applicaions...",
+  duration: "5-7",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="SQL" />
+    <CourseCardToolTag toolName="MongoDB" />
+    <CourseCardToolTag toolName="NodeJS" />
+  </slot>
+</CourseCardLayout>

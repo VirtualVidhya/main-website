@@ -1,0 +1,79 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Python Programming at V.Vidhya",
+  description:
+    "Learn Python at V.Vidhya in Surat. Covers programming basics, data science, machine learning, Django, Flask, and automation.",
+};
+
+const courseDetails = {
+  name: "Python Programming",
+  duration: "2-3",
+  image: "/images/doodles/girl-working-on-idea.svg",
+  imgAlt: "an Illustration of a girl who just have got a project idea",
+  overview:
+    "This course is designed to help you master Python from the ground up, giving you the skills to build everything from simple scripts to real-world applications. Over 2-3 months, you'll learn how to write, test, and debug Python programs, making you proficient in one of the most versatile and widely used programming languages. You'll start with basic programming concepts, including writing simple scripts, handling user input, and using loops and conditions. As you progress, you'll explore functions, file handling, object-oriented programming (OOP), and working with external libraries, which are essential for web development, data analysis, automation, and AI/ML applications. By the end of this course, you'll be able to build real-world projects, automate repetitive tasks, analyze data, and develop web applications. Whether you want to become a software developer, data scientist, or AI engineer, this course will provide a strong foundation for your journey into Python programming.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Introduction to computers, understanding how it works fundamentally
+      </li>
+      <li>Understanding of what does the process of programming mean</li>
+      <li>
+        Familiarity with the whole field of software development and different
+        roles within the industry
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Core Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Python as a programming language</li>
+      <li>Variables</li>
+      <li>Data Types</li>
+      <li>User Input/Output</li>
+      <li>Operators</li>
+      <li>Conditional Statements</li>
+      <li>Loops</li>
+      <li>Control flow statements</li>
+      <li>Strings</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Functions & Modules</li>
+    <ul class="ind-course-sublist">
+      <li>Functions</li>
+      <li>Modules</li>
+      <li>Introduction to Libraries</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Data Structures</li>
+    <ul class="ind-course-sublist">
+      <li>Lists</li>
+      <li>Sets</li>
+      <li>Tuples</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Object-Oriented Programming</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding classes & objects</li>
+      <li>Atttributes & Methods</li>
+      <li>Inheritance & Polymorphism</li>
+      <li>Encapsulation & Abstraction</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Continuous exercises based on real life problem statements</li>
+      <li>Basic text based applications and games project work</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

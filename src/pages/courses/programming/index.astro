@@ -1,0 +1,55 @@
+---
+import CourseCategoryHomeLayout from "../../../layouts/CourseCategoryHomeLayout.astro";
+
+import GameDevCourseCard from "../../../components/couse-cards/programming/GameDevCourseCard.astro";
+import FullStackWebDevCourseCard from "../../../components/couse-cards/programming/FullStackWebDevCourseCard.astro";
+import FrontEndWebDevCourseCard from "../../../components/couse-cards/programming/FrontEndWebDevCourseCard.astro";
+import BackEndWebDevCourseCard from "../../../components/couse-cards/programming/BackEndWebDevCourseCard.astro";
+import FundamentalsOfCompAppCourseCard from "../../../components/couse-cards/programming/FundamentalsOfCompAppCourseCard.astro";
+import CppProgramCourseCard from "../../../components/couse-cards/programming/CppProgramCourseCard.astro";
+import CProgramCourseCard from "../../../components/couse-cards/programming/CProgramCourseCard.astro";
+import PythonProgramCourseCard from "../../../components/couse-cards/programming/PythonProgramCourseCard.astro";
+import JavaProgramCourseCard from "../../../components/couse-cards/programming/JavaProgramCourseCard.astro";
+
+const metadata = {
+  title: "Explore top Programming Courses at V.Vidhya in Surat",
+  description:
+    "Master coding with our programming courses at V.Vidhya. Learn Game Development, Web Development and all the core programming languages like C/C++, Python, Java in Surat.",
+};
+
+const categoryDetails = {
+  name: "Programming Courses",
+  image: "/images/doodles/woman-programming.svg",
+  imgAlt: "an Illustration of a girl developing a software on her laptop",
+  hasLongTermCourses: true,
+  hasShortTermCourses: true,
+};
+---
+
+<CourseCategoryHomeLayout
+  metadata={metadata}
+  navSection="none"
+  categoryDetails={categoryDetails}
+>
+  <slot slot="longterm-courses-slot">
+    <GameDevCourseCard />
+
+    <FullStackWebDevCourseCard />
+
+    <FrontEndWebDevCourseCard />
+
+    <BackEndWebDevCourseCard />
+
+    <FundamentalsOfCompAppCourseCard />
+  </slot>
+
+  <slot slot="shortterm-courses-slot">
+    <CppProgramCourseCard />
+
+    <CProgramCourseCard />
+
+    <PythonProgramCourseCard />
+
+    <JavaProgramCourseCard />
+  </slot>
+</CourseCategoryHomeLayout>

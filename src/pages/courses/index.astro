@@ -1,0 +1,192 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import MainCoursePageSection from "../../components/MainCoursePageSection.astro";
+
+import SwiperSlideCard from "../../components/couse-cards/SwiperSlideCard.astro";
+
+import GraphicsDesignCourseCard from "../../components/couse-cards/multimedia/GraphicsDesignCourseCard.astro";
+import VideoEditingCourseCard from "../../components/couse-cards/multimedia/VideoEditingCourseCard.astro";
+import TextileDesignCourseCard from "../../components/couse-cards/multimedia/TextileDesignCourseCard.astro";
+import InteriorDesignCourseCard from "../../components/couse-cards/multimedia/InteriorDesignCourseCard.astro";
+import UiUxDesignCourseCard from "../../components/couse-cards/multimedia/UiUxDesignCourseCard.astro";
+import JewelleryDesignCourseCard from "../../components/couse-cards/multimedia/JewelleryDesignCourseCard.astro";
+import PhotoshopCourseCard from "../../components/couse-cards/multimedia/PhotoshopCourseCard.astro";
+import IllustratorCourseCard from "../../components/couse-cards/multimedia/IllustratorCourseCard.astro";
+import AfterEffectsCourseCard from "../../components/couse-cards/multimedia/AfterEffectsCourseCard.astro";
+import PremiereProCourseCard from "../../components/couse-cards/multimedia/PremiereProCourseCard.astro";
+import CorelDrawCourseCard from "../../components/couse-cards/multimedia/CorelDrawCourseCard.astro";
+import FigmaCourseCard from "../../components/couse-cards/multimedia/FigmaCourseCard.astro";
+
+import GameDevCourseCard from "../../components/couse-cards/programming/GameDevCourseCard.astro";
+import FullStackWebDevCourseCard from "../../components/couse-cards/programming/FullStackWebDevCourseCard.astro";
+import FrontEndWebDevCourseCard from "../../components/couse-cards/programming/FrontEndWebDevCourseCard.astro";
+import BackEndWebDevCourseCard from "../../components/couse-cards/programming/BackEndWebDevCourseCard.astro";
+import FundamentalsOfCompAppCourseCard from "../../components/couse-cards/programming/FundamentalsOfCompAppCourseCard.astro";
+import CppProgramCourseCard from "../../components/couse-cards/programming/CppProgramCourseCard.astro";
+import CProgramCourseCard from "../../components/couse-cards/programming/CProgramCourseCard.astro";
+import PythonProgramCourseCard from "../../components/couse-cards/programming/PythonProgramCourseCard.astro";
+import JavaProgramCourseCard from "../../components/couse-cards/programming/JavaProgramCourseCard.astro";
+
+import ScratchProgramCourseCard from "../../components/couse-cards/kids/ScratchProgramCourseCard.astro";
+import MsOfficeKidsCourseCard from "../../components/couse-cards/kids/MsOfficeCourseCard.astro";
+
+import DtpCourseCard from "../../components/couse-cards/literacy/DtpCourseCard.astro";
+import AccountingCourseCard from "../../components/couse-cards/literacy/AccountingCourseCard.astro";
+import MarketingCourseCard from "../../components/couse-cards/literacy/MarketingCourseCard.astro";
+import MsOfficeProCourseCard from "../../components/couse-cards/literacy/MsOfficeCourseCard.astro";
+import AdvExcelCourseCard from "../../components/couse-cards/literacy/AdvExcelCourseCard.astro";
+
+const metadata = {
+  title:
+    "Explore All Computer Courses at V.Vidhya | From Design to Coding, For Kids to Senior-Citizens",
+  description:
+    "Browse our latest courses and start learning asap! Whether you are a kid exploring computers, a young digital artist, a working professional upskilling or a senior-citizen seeking to navigate technology!",
+};
+---
+
+<BaseLayout metadata={metadata} navSection="courses">
+  <main
+    class="flex flex-col items-center justify-center gap-24 mt-10 mb-20 mx-4"
+  >
+    <img
+      src="/images/doodles/students-learning.svg"
+      alt="an Illustration of a woman doing designing"
+      class="illus"
+      decoding="async"
+    />
+
+    <MainCoursePageSection
+      courseCategoryName="Multimedia"
+      courseSubPageLink="multimedia"
+    >
+      <SwiperSlideCard>
+        <GraphicsDesignCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <VideoEditingCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <TextileDesignCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <InteriorDesignCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <UiUxDesignCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <JewelleryDesignCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <PhotoshopCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <IllustratorCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <AfterEffectsCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <PremiereProCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <CorelDrawCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <FigmaCourseCard />
+      </SwiperSlideCard>
+    </MainCoursePageSection>
+
+    <MainCoursePageSection
+      courseCategoryName="Programming"
+      courseSubPageLink="programming"
+    >
+      <SwiperSlideCard>
+        <GameDevCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <FullStackWebDevCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <FrontEndWebDevCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <BackEndWebDevCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <FundamentalsOfCompAppCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <CppProgramCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <CProgramCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <PythonProgramCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <JavaProgramCourseCard />
+      </SwiperSlideCard>
+    </MainCoursePageSection>
+
+    <MainCoursePageSection courseCategoryName="Kids" courseSubPageLink="kids">
+      <SwiperSlideCard>
+        <ScratchProgramCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <MsOfficeKidsCourseCard />
+      </SwiperSlideCard>
+    </MainCoursePageSection>
+
+    <MainCoursePageSection
+      courseCategoryName="Literacy"
+      courseSubPageLink="literacy"
+    >
+      <SwiperSlideCard>
+        <DtpCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <AccountingCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <MarketingCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <MsOfficeProCourseCard />
+      </SwiperSlideCard>
+
+      <SwiperSlideCard>
+        <AdvExcelCourseCard />
+      </SwiperSlideCard>
+    </MainCoursePageSection>
+  </main>
+
+  <slot slot="specific-scripts-slot">
+    <script src="../../scripts/specific/course-carousel.js"></script>
+  </slot>
+</BaseLayout>

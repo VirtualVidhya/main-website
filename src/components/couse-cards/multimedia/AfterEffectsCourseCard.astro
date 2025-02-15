@@ -1,0 +1,20 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/after-effects/",
+  icon: "/images/course-icons/after-effects.svg",
+  lazyLoadIconImg: true,
+  name: "Adobe After Effects",
+  description:
+    "Bring your designs to life with dynamic animations in After Effects...",
+  duration: "2-3",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="After Effects" />
+  </slot>
+</CourseCardLayout>

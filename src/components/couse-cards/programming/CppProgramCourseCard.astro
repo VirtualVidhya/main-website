@@ -1,0 +1,20 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/programming/cpp-programming/",
+  icon: "/images/course-icons/c++-programming.svg",
+  lazyLoadIconImg: true,
+  name: "C++ Programming",
+  description:
+    "Master C++ and build powerful, efficient software from scratch...",
+  duration: "2-5",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="C++" />
+  </slot>
+</CourseCardLayout>

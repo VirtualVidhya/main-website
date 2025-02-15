@@ -1,0 +1,89 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Graphics Design at V.Vidhya",
+  description:
+    "Kickstart your design career with our graphic design course at V.Vidhya. Learn Photoshop, Illustrator, CorelDRAW & more in Surat.",
+};
+
+const courseDetails = {
+  name: "Graphics Design",
+  duration: "6-8",
+  image: "/images/doodles/woman--graphic-designing.svg",
+  imgAlt: "an Illustration of a girl designing things on a tablet",
+  overview:
+    "Our Graphic Design course is crafted for creative individuals who want to transform their artistic visions into stunning visual communication. Through practical projects, students will explore the fundamentals of design principles, typography, color theory, and layout techniques. From mastering industry-standard software to developing branding and visual storytelling skills, this course equips students to create compelling designs for print, digital media, and beyond. By the end of the program, students will have the expertise and confidence to build their own design portfolio, ready to embark on a rewarding journey in the dynamic field of graphic design.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Graphic Design</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding Graphic Design and its Applications</li>
+      <li>
+        Principles of Design: Balance, Contrast, Alignment, Repetition,
+        Proximity
+      </li>
+      <li>The Role of Graphic Designers in Various Industries</li>
+    </ul>
+
+    <li class="ind-course-imp-text">CorelDRAW Essentials</li>
+    <ul class="ind-course-sublist">
+      <li>Getting Started with CorelDRAW: Interface and Tools</li>
+      <li>Working with Shapes, Lines, and Colors</li>
+      <li>Designing Vector Graphics and Illustrations</li>
+      <li>Typography and Text Effects in CorelDRAW</li>
+      <li>Creating Logos and Business Stationery</li>
+      <li>Exporting and Printing Projects</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Mastering Adobe Photoshop</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Photoshop: Interface and Workspace</li>
+      <li>Basic Photo Editing: Cropping, Resizing, and Retouching</li>
+      <li>Layers and Masks: Essential Techniques</li>
+      <li>Working with Brushes and Textures</li>
+      <li>Creating Posters, Flyers, and Social Media Graphics</li>
+      <li>Advanced Image Manipulation and Compositing</li>
+      <li>File Formats and Exporting for Different Media</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Adobe Illustrator for Advanced Vector Design
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Illustrator Interface and Tools</li>
+      <li>Creating Vector Art: Paths, Anchor Points, and Pen Tool</li>
+      <li>Working with Gradients, Patterns, and Blending Modes</li>
+      <li>Advanced Typography and Text Effects</li>
+      <li>Designing Logos, Infographics, and Digital Illustrations</li>
+      <li>Preparing Graphics for Web and Print</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Design Projects and Portfolio Development
+    </li>
+    <ul class="ind-course-sublist">
+      <li>
+        Real-World Design Projects i.e. Logo Design, Social Media Templates,
+        Marketing Materials (Flyers, Brochures, etc.), Product Packaging and
+        Mockups
+      </li>
+      <li>Feedback and Iterations on Projects</li>
+      <li>Building a Professional Portfolio</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Career Guidance and Final Project</li>
+    <ul class="ind-course-sublist">
+      <li>Freelancing Tips and Building a Client Base</li>
+      <li>Preparing for Design Job Interviews</li>
+      <li>Final Capstone Project: A Comprehensive Design Solution</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

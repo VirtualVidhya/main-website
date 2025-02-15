@@ -1,0 +1,22 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/literacy/digital-marketing/",
+  icon: "/images/course-icons/marketing.png",
+  lazyLoadIconImg: false,
+  name: "Digital Marketing",
+  description:
+    "Learn to grow brands online with effective digital marketing strategies...",
+  duration: "2-4",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="SEO" />
+    <CourseCardToolTag toolName="SMM" />
+    <CourseCardToolTag toolName="SMO" />
+  </slot>
+</CourseCardLayout>

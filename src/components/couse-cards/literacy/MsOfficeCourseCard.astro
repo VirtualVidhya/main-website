@@ -1,0 +1,21 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/literacy/ms-office/",
+  icon: "/images/course-icons/ms-office.svg",
+  lazyLoadIconImg: false,
+  name: "MS Office",
+  description:
+    "Boost productivity with advanced MS Office skills for the workplace...",
+  duration: "2-3",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Internet" />
+    <CourseCardToolTag toolName="MS Suite" />
+  </slot>
+</CourseCardLayout>

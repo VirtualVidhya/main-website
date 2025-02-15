@@ -1,0 +1,21 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/literacy/dtp/",
+  icon: "/images/course-icons/picture.svg",
+  lazyLoadIconImg: false,
+  name: "Desktop Publishing\n(DTP)",
+  description:
+    "Create professional layouts and designs for print and digital media...",
+  duration: "2-3",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Corel Draw" />
+    <CourseCardToolTag toolName="Photoshop" />
+  </slot>
+</CourseCardLayout>

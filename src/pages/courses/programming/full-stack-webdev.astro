@@ -1,0 +1,206 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Full-stack Web-Development at V.Vidhya",
+  description:
+    "Learn full-stack development at V.Vidhya in Surat. Master front-end, back-end, databases, and deployment for complete web apps.",
+};
+
+const courseDetails = {
+  name: "Full-stack Web-Development",
+  duration: "9-12",
+  image: "/images/doodles/co-working.svg",
+  imgAlt: "an Illustration of three young students discussing a project idea",
+  overview:
+    "This comprehensive Full Stack Web Development course is designed for aspiring developers who want to become proficient in both front-end and back-end development. Over 9-12 months, you'll be introduced to modern web technologies, from building responsive websites to creating dynamic back-end systems. The course starts with front-end web development, where you'll learn HTML, CSS, JavaScript, and UI frameworks like Bootstrap and Tailwind CSS. You'll gain practical experience through demo projects, including real-world applications. Moving on to the back-end, you will dive into Node.js, MongoDB, and RESTful APIs, while mastering key concepts such as authentication, database relationships, and deployment. Finally, you'll combine both the front-end and back-end skills to become a full-stack developer, using version control with Git & GitHub. By the end of this course, you will have the skills needed to build dynamic websites, work on real-world projects, and deploy them online. Whether you are looking to get a job as a full-stack developer or start freelancing, this course will equip you with everything you need to succeed.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Basic Workings of the Internet</li>
+    <ul class="ind-course-sublist">
+      <li>Understanding how the internet functions</li>
+      <li>Introduction to servers, browsers, and HTTP/HTTPS protocols</li>
+      <li>Understanding DNS, IP addresses, and Web Hosting</li>
+    </ul>
+
+    <li class="ind-course-imp-text">HTML5 (HyperText Markup Language)</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of HTML5 structure and elements</li>
+      <li>Creating basic web pages</li>
+      <li>Working with forms, tables, media elements (images, videos)</li>
+      <li>HTML5 semantic elements (header, footer, article, etc.)</li>
+    </ul>
+
+    <li class="ind-course-imp-text">CSS3 (Cascading Style Sheets)</li>
+    <ul class="ind-course-sublist">
+      <li>CSS Basics (selectors, properties, values)</li>
+      <li>Box Model and layout concepts</li>
+      <li>Positioning and Z-index</li>
+      <li>Styling text, colors, and backgrounds</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Responsive Design</li>
+    <ul class="ind-course-sublist">
+      <li>Importance of responsive design for various devices</li>
+      <li>Using media queries to adapt layout based on screen sizes</li>
+      <li>Mobile-first design principles</li>
+    </ul>
+
+    <li class="ind-course-imp-text">CSS-Flexbox</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to flexbox layout system</li>
+      <li>Creating flexible layouts and designs</li>
+      <li>Practical use cases for flexbox</li>
+    </ul>
+
+    <li class="ind-course-imp-text">CSS-Grid</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of CSS Grid Layout</li>
+      <li>Grid container and grid items</li>
+      <li>Creating complex, responsive grid layouts</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Responsive Layout Design</li>
+    <ul class="ind-course-sublist">
+      <li>Building fluid layouts</li>
+      <li>
+        Working with percentage-based widths, flexbox, and grid to design for
+        any screen size
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">JavaScript (ES6)</li>
+    <ul class="ind-course-sublist">
+      <li>Basics of JavaScript syntax and variables</li>
+      <li>Working with functions, objects, and arrays</li>
+      <li>
+        ES6 features: let/const, arrow functions, template literals,
+        destructuring, etc.
+      </li>
+      <li>
+        Handling asynchronous JavaScript: callbacks, promises, and async/await
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">JavaScript DOM Manipulation</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to the DOM (Document Object Model)</li>
+      <li>Manipulating HTML elements using JavaScript</li>
+      <li>Handling events (click, hover, input, etc.)</li>
+      <li>Updating page content dynamically</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      UI Library / Framework (Bootstrap / Tailwind CSS)
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Bootstrap for building responsive layouts</li>
+      <li>Using Tailwind CSS for utility-first design</li>
+      <li>Customizing UI components with classes</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Constant Demo Projects at Every Interval
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Hands-on projects after each section</li>
+      <li>Mini-projects: personal portfolio, landing pages, etc.</li>
+      <li>Applying skills to real-world problems</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Real-world Projects</li>
+    <ul class="ind-course-sublist">
+      <li>Building interactive websites</li>
+      <li>E-commerce site, Blog platform, or Portfolio site</li>
+      <li>Complete end-to-end web development</li>
+      <li>Creating web applications using front-end technologies</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Portfolio Development + Freelancing Guidelines
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Creating a professional portfolio showcasing your work</li>
+      <li>Freelancing tips: How to find clients and price projects</li>
+      <li>Showcasing projects on GitHub or personal websites</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Databases (SQL & NoSQL)</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to databases and data storage</li>
+      <li>Working with SQL databases (e.g., MySQL)</li>
+      <li>Introduction to NoSQL databases (e.g., MongoDB)</li>
+      <li>Understanding data models, queries, and joins</li>
+    </ul>
+
+    <li class="ind-course-imp-text">MongoDB Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Installing MongoDB and connecting with Node.js</li>
+      <li>CRUD operations: Create, Read, Update, Delete</li>
+      <li>Structuring data in MongoDB collections and documents</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Mongo Database Relationships</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing relationships between data in MongoDB</li>
+      <li>Embedding vs referencing data</li>
+      <li>Normalization and denormalization</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Node.js</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Node.js and setting up Node.js environment</li>
+      <li>Understanding npm (Node Package Manager)</li>
+      <li>Building basic server-side applications using Express.js</li>
+    </ul>
+
+    <li class="ind-course-imp-text">REST APIs</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to RESTful APIs</li>
+      <li>Creating API endpoints with Node.js and Express</li>
+      <li>Handling GET, POST, PUT, DELETE requests</li>
+      <li>Error handling in APIs</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Routing, Cookies & Sessions</li>
+    <ul class="ind-course-sublist">
+      <li>Implementing routing in Node.js with Express</li>
+      <li>Understanding cookies and sessions for user authentication</li>
+      <li>Managing stateful user data</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Client & Server-side Validations</li>
+    <ul class="ind-course-sublist">
+      <li>Validating form data on the client-side using JavaScript</li>
+      <li>Server-side validation with Express Validator</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Authorization & Authentication</li>
+    <ul class="ind-course-sublist">
+      <li>JWT (JSON Web Token) authentication</li>
+      <li>Implementing OAuth, sessions, and cookies for login</li>
+      <li>Creating secure login systems</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Deployment</li>
+    <ul class="ind-course-sublist">
+      <li>Deploying Node.js applications on platforms like Heroku and AWS</li>
+      <li>Working with CI/CD pipelines for automatic deployment</li>
+      <li>Setting up production environments</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Real-world Projects</li>
+    <ul class="ind-course-sublist">
+      <li>Building full-stack web apps</li>
+      <li>User management systems with authentication</li>
+      <li>E-commerce backends, content management systems, etc.</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

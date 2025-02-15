@@ -1,0 +1,105 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Interior Design at V.Vidhya",
+  description:
+    "Master interior design at V.Vidhya in Surat. Learn space planning, 3D modeling, and architectural visualization for stunning designs.",
+};
+
+const courseDetails = {
+  name: "Interior Design",
+  duration: "10-12",
+  image: "/images/doodles/man-making-rocket-sim.svg",
+  imgAlt: "an Illustration of a boy designing 3d rocket model on a laptop",
+  overview:
+    "This course is perfect for aspiring graphic designers, illustrators, or anyone wanting to learn Adobe Illustrator to create vector-based graphics for professional or personal projects. Whether you're a beginner or looking to improve your skills, this course will guide you through key design principles like typography, color theory, and composition, while giving you hands-on experience in crafting professional-quality vector designs. By the end of the course, you'll be able to confidently use Illustrator to produce graphic design projects and build a professional portfolio.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Fundamentals of Interior Design</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Interior Design and its Applications</li>
+      <li>Principles of Space Planning, Layout, and Functionality</li>
+      <li>Understanding Color Theory, Lighting, and Materials</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Technical Drafting with AutoCAD</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of AutoCAD Interface and Tools</li>
+      <li>Drafting Floor Plans, Elevations, and Sections</li>
+      <li>Working with Dimensions, Layers, and Annotations</li>
+      <li>Creating Furniture Layouts and Detailed Technical Drawings</li>
+      <li>Exporting Files for Further Design Development</li>
+    </ul>
+
+    <li class="ind-course-imp-text">3D Modeling with SketchUp</li>
+    <ul class="ind-course-sublist">
+      <li>Getting Started with SketchUp: Interface and Navigation</li>
+      <li>Creating 3D Models from Floor Plans</li>
+      <li>Adding Furniture, Fixtures, and Accessories</li>
+      <li>Applying Materials and Textures to Models</li>
+      <li>Exporting SketchUp Models for Rendering</li>
+    </ul>
+
+    <li class="ind-course-imp-text">High-Quality Renders with 3ds Max</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to 3ds Max and Rendering Basics</li>
+      <li>Importing Models from AutoCAD and SketchUp</li>
+      <li>Adding Lighting, Shadows, and Camera Views</li>
+      <li>Applying Advanced Textures and Materials</li>
+      <li>Rendering Realistic Visuals for Interiors</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Enhancing Visuals with Photoshop</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of Photoshop for Interior Designers</li>
+      <li>Editing and Enhancing Rendered Images</li>
+      <li>Creating Mood Boards and Concept Presentations</li>
+      <li>Adding Text, Labels, and Annotations to Designs</li>
+      <li>Exporting High-Quality Images for Client Reviews</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Presentation and Video Editing with Premiere Pro
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to Adobe Premiere Pro Interface</li>
+      <li>Creating Professional Walkthrough Videos</li>
+      <li>Adding Background Music, Narration, and Transitions</li>
+      <li>Compiling Design Process Videos and Final Presentations</li>
+      <li>Exporting Videos for Client and Portfolio Use</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Real-World Design Projects</li>
+    <ul class="ind-course-sublist">
+      <li>Residential Interiors: Bedroom, Living Room, Kitchen Design</li>
+      <li>Commercial Spaces: Office, Retail, and Hospitality Design</li>
+      <li>Collaborative Group Projects for Realistic Design Challenges</li>
+      <li>Client Presentation Techniques and Feedback Sessions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">
+      Portfolio Development and Career Readiness
+    </li>
+    <ul class="ind-course-sublist">
+      <li>Compiling and Organizing Design Projects into a Portfolio</li>
+      <li>Creating a Digital Portfolio with Rendered Images and Videos</li>
+      <li>Freelancing Tips and Industry Networking Strategies</li>
+      <li>Preparing for Job Interviews and Design Competitions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Final Capstone Project</li>
+    <ul class="ind-course-sublist">
+      <li>Designing a Complete Interior Space (Residential or Commercial)</li>
+      <li>Drafting, Modeling, Rendering, and Presenting the Design</li>
+      <li>Peer and Instructor Feedback for Final Refinements</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

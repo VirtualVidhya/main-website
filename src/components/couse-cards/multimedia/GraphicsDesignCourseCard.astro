@@ -1,0 +1,22 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/multimedia/graphics-design/",
+  icon: "/images/course-icons/desktop-design.png",
+  lazyLoadIconImg: false,
+  name: "Graphics Design",
+  description:
+    "Transform your creativity into professional designs with powerful tools...",
+  duration: "6-8",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="Corel Draw" />
+    <CourseCardToolTag toolName="Photoshop" />
+    <CourseCardToolTag toolName="Illustrator" />
+  </slot>
+</CourseCardLayout>

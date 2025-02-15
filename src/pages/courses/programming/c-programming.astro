@@ -1,0 +1,74 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn C Programming at V.Vidhya",
+  description:
+    "Learn C programming from scratch at V.Vidhya in Surat. Master functions, loops, data structures, and algorithms for software development.",
+};
+
+const courseDetails = {
+  name: "C Programming",
+  duration: "2-3",
+  image: "/images/doodles/girl-using-laptop.svg",
+  imgAlt: "an Illustration of a girl working on her laptop",
+  overview:
+    "This course is designed to teach you C programming from the ground up, helping you build a solid foundation in one of the most powerful and widely used programming languages. Over 2-3 months, you'll learn how to write, debug, and optimize C programs, making you confident in working with software development, embedded systems, and system programming. You'll start with the basics, such as writing simple programs, handling user input, and using loops and conditions. As you progress, you'll learn about functions, arrays, pointers, and memory management, which are essential for writing efficient and structured code. By the end of this course, you will be able to build real-world applications, understand how computers process information, and write optimized programs used in software, operating systems, and embedded devices. Whether you're aiming for a career in programming, game development, or cybersecurity, this course will give you a strong technical foundation to grow from.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Introduction to computers, understanding how it works fundamentally
+      </li>
+      <li>Understanding of what does the process of programming mean</li>
+      <li>
+        Familiarity with the whole field of software development and different
+        roles within the industry
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Core Fundamentals</li>
+    <ul class="ind-course-sublist">
+      <li>Overview of C as a programming language</li>
+      <li>Variables</li>
+      <li>Data Types</li>
+      <li>User Input/Output</li>
+      <li>Operators</li>
+      <li>Conditional Statements</li>
+      <li>Loops</li>
+      <li>Control flow statements</li>
+      <li>Strings</li>
+      <li>Arrays</li>
+      <li>Functions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Memory Management</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Understanding of the memory management and operations within a program
+      </li>
+      <li>Pointers</li>
+      <li>Memory layout and Memory allocation</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Data Structures</li>
+    <ul class="ind-course-sublist">
+      <li>Structures</li>
+      <li>Unions</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Continuous exercises based on real life problem statements</li>
+      <li>Basic text based applications and games project work</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

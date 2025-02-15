@@ -1,0 +1,32 @@
+---
+import CourseCategoryHomeLayout from "../../../layouts/CourseCategoryHomeLayout.astro";
+
+import ScratchProgramCourseCard from "../../../components/couse-cards/kids/ScratchProgramCourseCard.astro";
+import MsOfficeCourseCard from "../../../components/couse-cards/kids/MsOfficeCourseCard.astro";
+
+const metadata = {
+  title: "Explore Computer Courses for Kids at V.Vidhya in Surat",
+  description:
+    "Introduce your child to technology with fun and interactive computer courses at V.Vidhya. Learn Scratch Programming, MS Office, and essential digital skills in Surat.",
+};
+
+const categoryDetails = {
+  name: "Kids Courses",
+  image: "/images/doodles/kids-exploring.svg",
+  imgAlt: "an Illustration of two kids exploring something",
+  hasLongTermCourses: false,
+  hasShortTermCourses: false,
+};
+---
+
+<CourseCategoryHomeLayout
+  metadata={metadata}
+  navSection="none"
+  categoryDetails={categoryDetails}
+>
+  <slot slot="longterm-courses-slot">
+    <ScratchProgramCourseCard />
+
+    <MsOfficeCourseCard />
+  </slot>
+</CourseCategoryHomeLayout>
