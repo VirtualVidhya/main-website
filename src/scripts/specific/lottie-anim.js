@@ -166,33 +166,49 @@
 
 (async () => {
   function loadLottie() {
-    return import("https://esm.sh/@lottiefiles/dotlottie-web");
+    try {
+      return import("@lottiefiles/dotlottie-web");
+    } catch (error) {
+      console.warn("Local dotLottie failed, falling back to CDN.");
+      return import("https://esm.sh/@lottiefiles/dotlottie-web");
+    }
   }
 
   async function loadAnimation(canvas) {
     const { DotLottieWorker } = await loadLottie();
 
-    // Construct the absolute URL
+    // Construct absolute URL
     const relativePath = canvas.dataset.lottie;
     const absoluteUrl = new URL(relativePath, window.location.origin).href;
 
+    // Get placeholder image
+    const placeholder = canvas
+      .closest(".lottie-container")
+      .querySelector(".lottie-placeholder");
+
+    // Ensure canvas is hidden initially
+    canvas.style.opacity = "0";
+
     const animation = new DotLottieWorker({
       canvas: canvas,
-      src: absoluteUrl, // Use the absolute URL here
+      src: absoluteUrl,
       autoplay: true,
       loop: true,
       workerId: canvas.dataset.lottie,
     });
 
-    // When animation is ready, hide the placeholder image
-    animation.addEventListener("ready", () => {
-      const placeholder = canvas
-        .closest(".lottie-container")
-        .querySelector(".lottie-placeholder");
-      if (placeholder) placeholder.style.display = "none";
+    // Wait until first frame renders before hiding the placeholder
+    animation.addEventListener("frame", () => {
+      if (canvas.style.opacity === "0") {
+        canvas.style.transition = "opacity 0.2s ease-in-out";
+        canvas.style.opacity = "1"; // Fade in animation
+        if (placeholder) placeholder.style.opacity = "0"; // Fade out placeholder
+        setTimeout(() => placeholder?.remove(), 200); // Remove after fade-out
+      }
     });
   }
 
+  // Lazy-load animations using IntersectionObserver
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach(async (entry) => {

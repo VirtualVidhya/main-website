@@ -186,6 +186,10 @@
     @apply text-font-color-white bg-font-color-blue hover:text-font-color-pri text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:border-font-color-pri;
   }
 
+  .lottie-placeholder {
+    transition: opacity 0.2s ease-in-out;
+  }
+
   /* ALL COURSES PAGE   */
   .view-all-btn {
     @apply text-font-color-white bg-font-color-green hover:text-font-color-pri text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg;
