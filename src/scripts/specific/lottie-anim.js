@@ -229,19 +229,26 @@
 (async () => {
   let dotLottieModule;
 
-  // Preload dotLottie library **after** the page loads
-  window.addEventListener("DOMContentLoaded", async () => {
-    dotLottieModule = await loadLottie();
-  });
-
-  function loadLottie() {
+  async function loadLottie() {
+    // try {
+    //   return import("@lottiefiles/dotlottie-web");
+    // } catch (error) {
+    //   console.warn("Local dotLottie failed, falling back to CDN.");
+    //   return import("https://esm.sh/@lottiefiles/dotlottie-web");
+    // }
     try {
-      return import("@lottiefiles/dotlottie-web");
+      return await import("https://esm.sh/@lottiefiles/dotlottie-web");
     } catch (error) {
-      console.warn("Local dotLottie failed, falling back to CDN.");
-      return import("https://esm.sh/@lottiefiles/dotlottie-web");
+      console.warn("CDN failed, falling back to local dotLottie.");
+      return await import("@lottiefiles/dotlottie-web");
     }
   }
+
+    // Preload dotLottie library **after** the page loads
+    window.addEventListener("DOMContentLoaded", async () => {
+      dotLottieModule = await loadLottie();
+    });
+  
 
   async function loadAnimation(canvas) {
     // If the library isn’t loaded yet, load it now
