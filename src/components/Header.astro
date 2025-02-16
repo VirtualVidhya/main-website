@@ -234,7 +234,7 @@ const { navSection } = Astro.props;
       <a
         href="/"
         class={`flex items-center header-navmenu-hover ${
-          navSection === "about" ? "underline" : "hover:underline"
+          navSection === "about" ? "underline" : "link-interaction-underline-effect"
         }`}
       >
         About
@@ -243,7 +243,7 @@ const { navSection } = Astro.props;
         <span
           name="close"
           class={`submenu-trigger h-full flex items-center cursor-pointer header-navmenu-hover ${
-            navSection === "courses" ? "underline" : "hover:underline"
+            navSection === "courses" ? "underline" : "link-interaction-underline-effect"
           }`}
           ><span>Courses<i class="fa-solid fa-caret-down pl-1"></i></span></span
         >
@@ -268,7 +268,7 @@ const { navSection } = Astro.props;
       <a
         href="/contact/"
         class={`flex items-center header-navmenu-hover ${
-          navSection === "contact" ? "underline" : "hover:underline"
+          navSection === "contact" ? "underline" : "link-interaction-underline-effect"
         }`}
       >
         Contact
