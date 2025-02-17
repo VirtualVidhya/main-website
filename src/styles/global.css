@@ -492,4 +492,8 @@
   .form-submit-btn {
     @apply text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md;
   }
+
+  .form-fieldbox {
+    @apply p-3 border-solid border-1 bg-font-color-white border-color-border-pri rounded-lg;
+  }
 }
