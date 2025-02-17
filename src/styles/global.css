@@ -115,6 +115,11 @@
 
 @layer components {
   /* GENERAL */
+  .util-icon {
+    width: 1em !important;
+    height: 1em !important;
+  }
+
   @media (hover: hover) {
     .link-interaction-effect {
       @apply hover:text-font-color-green focus:text-font-color-green active:text-font-color-green;
@@ -220,7 +225,7 @@
   }
 
   .scroll-up-btn {
-    @apply hidden fixed cursor-pointer bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white;
+    @apply hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white;
   }
 
   .side-navmenu-border {
@@ -338,7 +343,7 @@
 
   .carousel-nextBtn,
   .carousel-prevBtn {
-    @apply text-3xl md:text-4xl;
+    @apply flex justify-center items-center text-3xl md:text-4xl;
   }
 
   .swiper-button-prev,
@@ -385,7 +390,7 @@
     /* height: 100%; */
     /* width: 100%; */
     /* position: relative; */
-    background: inherit !important;
+    @apply !bg-font-color-pri;
     border-radius: inherit !important;
     /* left: 0; */
     /* top: 0 */
@@ -486,5 +491,9 @@
 
   .form-submit-btn {
     @apply text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md;
+  }
+
+  .form-fieldbox {
+    @apply p-3 border-solid border-1 bg-font-color-white border-color-border-pri rounded-lg;
   }
 }

@@ -1,8 +1,5 @@
 ---
-// import courseSubMenu from "/src/scripts/common/course-sub-menu.js";
-// import "/src/scripts/common/navbar-menu.js";
-// import "/src/scripts/common/scroll-up-btn.js";
-// import "/src/scripts/common/data.js";
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <footer
@@ -394,67 +391,10 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
       >
     </div>
 
-    <div class="order-1 md:order-3 text-xl md:text-2xl space-x-4">
-      <a
-        class="link-interaction-effect"
-        href="tel:+919429267900"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Phone"
-        aria-label="Phone"
-      >
-        <i class="fa fa-phone"></i>
-      </a>
-      <a
-        class="link-interaction-effect"
-        href="mailto:contact@vvidhya.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Email"
-        aria-label="Email"
-      >
-        <i class="fa fa-envelope"></i>
-      </a>
-      <a
-        class="link-interaction-effect"
-        href="https://www.linkedin.com/company/vvidhya/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a
-        class="link-interaction-effect"
-        href="https://wa.me/919429267900"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Whatsapp"
-        aria-label="Whatsapp"
-      >
-        <i class="fab fa-whatsapp-square"></i>
-      </a>
-      <a
-        class="link-interaction-effect"
-        href="https://www.facebook.com/visualsoftwareandmultimedia/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Facebook"
-        aria-label="Facebook"
-      >
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a
-        class="link-interaction-effect"
-        href="https://www.instagram.com/virtual.vidhya/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Instagram"
-        aria-label="Instagram"
-      >
-        <i class="fab fa-instagram-square"></i>
-      </a>
+    <div
+      class="flex flex-row justify-center items-center order-1 md:order-3 text-xl md:text-2xl space-x-4"
+    >
+      <SocialLinks />
     </div>
   </div>
 </footer>

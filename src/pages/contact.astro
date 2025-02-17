@@ -87,7 +87,7 @@ const metadata = {
           <input
             id="name"
             name="name"
-            class="p-3"
+            class="form-fieldbox"
             type="text"
             placeholder="Enter your name"
           />
@@ -100,7 +100,7 @@ const metadata = {
           <input
             id="address"
             name="address"
-            class="p-3"
+            class="form-fieldbox"
             type="text"
             placeholder="Enter your address"
           />
@@ -113,7 +113,7 @@ const metadata = {
           <input
             id="phone"
             name="phone"
-            class="p-3"
+            class="form-fieldbox"
             type="tel"
             placeholder="Enter your contact number"
           />
@@ -126,7 +126,7 @@ const metadata = {
           <input
             id="email"
             name="email"
-            class="p-3"
+            class="form-fieldbox"
             type="text"
             placeholder="Enter your email address"
           />
@@ -139,7 +139,7 @@ const metadata = {
           <input
             id="course"
             name="course"
-            class="p-3"
+            class="form-fieldbox"
             type="text"
             placeholder="Enter your course name"
             list="courses"
@@ -195,7 +195,7 @@ const metadata = {
         </div>
 
         <textarea
-          class="w-4/5 p-3"
+          class="w-4/5 form-fieldbox"
           id="message"
           name="message"
           placeholder="Enter your message here"
@@ -213,7 +213,21 @@ const metadata = {
       id="form-success-msg"
       class="hidden flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
     >
-      <i class="fa-solid fa-circle-check text-font-color-sec text-5xl"></i>
+      <!-- <i class="fa-solid fa-circle-check text-font-color-sec text-5xl"></i> -->
+      <div class="text-font-color-green text-5xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="util-icon"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="5"
+        >
+          <path
+            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+          ></path></svg
+        >
+      </div>
       <h2 class="text-font-color-sec text-3xl md:text-5xl font-extrabold mb-3">
         Thank you!
       </h2>

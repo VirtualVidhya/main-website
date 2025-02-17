@@ -4,7 +4,8 @@ function setupScrollButton() {
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100 || window.scrollY > 100) {
-      btn.style.display = "block";
+      // btn.style.display = "block";
+      btn.style.display = "flex";
     } else {
       btn.style.display = "none";
     }
