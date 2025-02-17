@@ -390,7 +390,7 @@
     /* height: 100%; */
     /* width: 100%; */
     /* position: relative; */
-    background: inherit !important;
+    @apply !bg-font-color-pri;
     border-radius: inherit !important;
     /* left: 0; */
     /* top: 0 */
