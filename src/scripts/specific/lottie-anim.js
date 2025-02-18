@@ -244,11 +244,10 @@
     }
   }
 
-    // Preload dotLottie library **after** the page loads
-    window.addEventListener("DOMContentLoaded", async () => {
-      dotLottieModule = await loadLottie();
-    });
-  
+  // Preload dotLottie library **after** the page loads
+  window.addEventListener("DOMContentLoaded", async () => {
+    dotLottieModule = await loadLottie();
+  });
 
   async function loadAnimation(canvas) {
     // If the library isn’t loaded yet, load it now
@@ -272,7 +271,7 @@
       src: absoluteUrl,
       autoplay: true,
       loop: true,
-      workerId: canvas.dataset.lottie,
+      workerId: `worker-${canvas.id}`,
     });
 
     animation.addEventListener("frame", () => {
