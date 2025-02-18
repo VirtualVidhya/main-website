@@ -122,11 +122,11 @@
 
   @media (hover: hover) {
     .link-interaction-effect {
-      @apply hover:text-font-color-green focus:text-font-color-green active:text-font-color-green;
+      @apply transition-all hover:text-font-color-green focus:text-font-color-green active:text-font-color-green;
     }
 
     .link-interaction-underline-effect {
-      @apply hover:underline focus:underline active:underline;
+      @apply transition-all hover:underline focus:underline active:underline;
     }
 
     .header-navmenu-hover {
@@ -156,11 +156,11 @@
 
   @media (hover: none) {
     .link-interaction-effect {
-      @apply focus:text-font-color-green active:text-font-color-green;
+      @apply transition-all focus:text-font-color-green active:text-font-color-green;
     }
 
     .link-interaction-underline-effect {
-      @apply focus:underline active:underline;
+      @apply transition-all focus:underline active:underline;
     }
 
     .header-navmenu-hover {
@@ -185,6 +185,11 @@
 
     .form-submit-btn {
       @apply active:text-font-color-pri focus:text-font-color-pri;
+    }
+
+    textarea:focus,
+    input:focus {
+      outline: none;
     }
   }
 
@@ -221,11 +226,11 @@
   }
 
   .header-navmenu-hover {
-    @apply underline-offset-4 sm:underline-offset-8;
+    @apply transition-all underline-offset-4 sm:underline-offset-8;
   }
 
   .scroll-up-btn {
-    @apply hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 transition z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white;
+    @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white;
   }
 
   .side-navmenu-border {
@@ -257,7 +262,7 @@
   }
 
   .explore-courses-btn {
-    @apply text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark;
+    @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark;
   }
 
   .lottie-placeholder {
@@ -266,7 +271,7 @@
 
   /* ALL COURSES PAGE   */
   .view-all-btn {
-    @apply text-font-color-white bg-font-color-green text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg;
+    @apply transition-all text-font-color-white bg-font-color-green text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg;
   }
 
   .course-card-grid {
@@ -416,7 +421,7 @@
   }
 
   .enroll-btn {
-    @apply text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark;
+    @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark;
   }
 
   .ind-course-duration {
@@ -490,10 +495,10 @@
   }
 
   .form-submit-btn {
-    @apply text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md;
+    @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md;
   }
 
   .form-fieldbox {
-    @apply p-3 border-solid border-1 bg-font-color-white border-color-border-pri active:border-font-color-pri focus:border-font-color-pri rounded-lg;
+    @apply transition-all p-3 border-solid border-1 bg-font-color-white border-color-border-pri active:border-font-color-pri focus:border-font-color-pri rounded-lg;
   }
 }
