@@ -120,7 +120,39 @@
     height: 1em !important;
   }
 
-  @media (hover: hover) {
+  .link-interaction-effect {
+    @apply transition-all hover:text-font-color-green;
+  }
+
+  .link-interaction-underline-effect {
+    @apply transition-all hover:underline;
+  }
+
+  .header-navmenu-hover {
+    @apply hover:text-font-color-green;
+  }
+
+  .scroll-up-btn {
+    @apply hover:text-font-color-pri;
+  }
+
+  .explore-courses-btn {
+    @apply hover:text-font-color-pri hover:border-font-color-pri;
+  }
+
+  .view-all-btn {
+    @apply hover:text-font-color-pri;
+  }
+
+  .enroll-btn {
+    @apply hover:text-font-color-pri hover:border-font-color-pri;
+  }
+
+  .form-submit-btn {
+    @apply hover:text-font-color-pri;
+  }
+
+  /* @media (hover: hover) {
     .link-interaction-effect {
       @apply transition-all hover:text-font-color-green focus:text-font-color-green active:text-font-color-green;
     }
@@ -152,10 +184,10 @@
     .form-submit-btn {
       @apply hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri;
     }
-  }
+  } */
 
   @media (hover: none) {
-    .link-interaction-effect {
+    /* .link-interaction-effect {
       @apply transition-all focus:text-font-color-green active:text-font-color-green;
     }
 
@@ -185,7 +217,7 @@
 
     .form-submit-btn {
       @apply active:text-font-color-pri focus:text-font-color-pri;
-    }
+    } */
 
     textarea:focus,
     input:focus {
