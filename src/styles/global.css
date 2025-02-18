@@ -499,6 +499,6 @@
   }
 
   .form-fieldbox {
-    @apply transition-all p-3 border-solid border-1 bg-font-color-white border-color-border-pri active:border-font-color-pri focus:border-font-color-pri rounded-lg;
+    @apply transition-all p-3 border-solid border-1 focus:border-2 bg-font-color-white border-color-border-pri active:border-font-color-pri focus:border-font-color-pri rounded-lg;
   }
 }
