@@ -25,7 +25,7 @@ const { metadata, navSection, courseDetails } = Astro.props;
     <section class="ind-course-header-section">
       <h2 class="ind-course-heading">{courseDetails.name}</h2>
 
-      <button class="enroll-btn">
+      <button class="enroll-btn" aria-label="Enroll Now">
         <a href="/contact/">Enroll Now</a>
       </button>
 
