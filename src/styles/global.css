@@ -164,27 +164,27 @@
     }
 
     .header-navmenu-hover {
-      @apply focus:text-font-color-green active:text-font-color-green;
+      @apply active:text-font-color-green focus:text-font-color-green;
     }
 
     .scroll-up-btn {
-      @apply focus:text-font-color-pri active:text-font-color-pri;
+      @apply active:text-font-color-pri focus:text-font-color-pri;
     }
 
     .explore-courses-btn {
-      @apply focus:text-font-color-pri active:text-font-color-pri focus:border-font-color-pri active:border-font-color-pri;
+      @apply active:text-font-color-pri focus:text-font-color-pri active:border-font-color-pri focus:border-font-color-pri;
     }
 
     .view-all-btn {
-      @apply focus:text-font-color-pri active:text-font-color-pri;
+      @apply active:text-font-color-pri focus:text-font-color-pri;
     }
 
     .enroll-btn {
-      @apply focus:text-font-color-pri active:text-font-color-pri focus:border-font-color-pri active:border-font-color-pri;
+      @apply active:text-font-color-pri focus:text-font-color-pri active:border-font-color-pri focus:border-font-color-pri;
     }
 
     .form-submit-btn {
-      @apply focus:text-font-color-pri active:text-font-color-pri;
+      @apply active:text-font-color-pri focus:text-font-color-pri;
     }
   }
 
@@ -494,6 +494,6 @@
   }
 
   .form-fieldbox {
-    @apply p-3 border-solid border-1 bg-font-color-white border-color-border-pri rounded-lg;
+    @apply p-3 border-solid border-1 bg-font-color-white border-color-border-pri active:border-font-color-pri focus:border-font-color-pri rounded-lg;
   }
 }
