@@ -3,7 +3,7 @@ import { Navigation, Scrollbar, Autoplay } from "swiper/modules";
 
 import "swiper/css"; // Core CSS
 import "swiper/css/navigation"; // Navigation CSS
-import "swiper/css/scrollbar"; // Scrollbar CSS"
+import "swiper/css/scrollbar"; // Scrollbar CSS
 
 const AUTOPLAY_PAUSE_DURATION = 4500;
 
