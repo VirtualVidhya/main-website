@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities; */
 
-@custom-variant hover (&:hover);
+/* @custom-variant hover (&:hover); */
 
 @layer base {
   @font-face {
@@ -124,12 +124,12 @@
 
   .link-interaction-effect {
     /* @apply transition-all hover:text-font-color-green focus:text-font-color-green active:text-font-color-green; */
-    @apply transition-all hover:text-font-color-green;
+    @apply transition-all hover:text-font-color-green active:text-font-color-green;
   }
 
   .link-interaction-underline-effect {
     /* @apply transition-all hover:underline focus:underline active:underline; */
-    @apply transition-all hover:underline;
+    @apply transition-all hover:underline active::underline;
   }
 
   /* .header-navmenu-hover {
@@ -263,12 +263,12 @@
 
   .header-navmenu-hover {
     /* @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green focus:text-font-color-green active:text-font-color-green; */
-    @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green;
+    @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green active:text-font-color-green;
   }
 
   .scroll-up-btn {
     /* @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri; */
-    @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri;
+    @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri active:text-font-color-pri;
   }
 
   .side-navmenu-border {
@@ -301,7 +301,7 @@
 
   .explore-courses-btn {
     /* @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
-    @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri hover:border-font-color-pri;
+    @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
   .lottie-placeholder {
@@ -310,7 +310,7 @@
 
   /* ALL COURSES PAGE   */
   .view-all-btn {
-    @apply transition-all text-font-color-white bg-font-color-green text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg hover:text-font-color-pri;
+    @apply transition-all text-font-color-white bg-font-color-green text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg hover:text-font-color-pri active:text-font-color-pri;
   }
 
   .course-card-grid {
@@ -333,7 +333,7 @@
 
   .course-card {
     /* @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
-    @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri;
+    @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
   .course-card-image {
@@ -462,7 +462,7 @@
 
   .enroll-btn {
     /* @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
-    @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri hover:border-font-color-pri;
+    @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
   .ind-course-duration {
@@ -537,10 +537,10 @@
 
   .form-submit-btn {
     /* @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri; */
-    @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri;
+    @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri active:text-font-color-pri;
   }
 
   .form-fieldbox {
-    @apply transition-all p-3 border-solid border-1 focus:border-2 bg-font-color-white border-color-border-pri active:border-font-color-pri focus:border-font-color-pri rounded-lg;
+    @apply transition-all p-3 border-solid border-1 focus:border-2 bg-font-color-white border-color-border-pri focus:border-font-color-pri active:border-font-color-pri rounded-lg;
   }
 }
