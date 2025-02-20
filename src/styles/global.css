@@ -129,7 +129,7 @@
 
   .link-interaction-underline-effect {
     /* @apply transition-all hover:underline focus:underline active:underline; */
-    @apply transition-all hover:underline active::underline;
+    @apply transition-all hover:underline active:underline;
   }
 
   /* .header-navmenu-hover {
