@@ -127,9 +127,17 @@
     @apply transition-all hover:text-font-color-green active:text-font-color-green;
   }
 
+  .link-interaction-effect.touch {
+    @apply text-font-color-green;
+  }
+
   .link-interaction-underline-effect {
     /* @apply transition-all hover:underline focus:underline active:underline; */
     @apply transition-all hover:underline active:underline;
+  }
+
+  .link-interaction-underline-effect.touch {
+    @apply underline;
   }
 
   /* .header-navmenu-hover {
@@ -266,9 +274,17 @@
     @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green active:text-font-color-green;
   }
 
+  .header-navmenu-hover.touch {
+    @apply text-font-color-green;
+  }
+
   .scroll-up-btn {
     /* @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri; */
     @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri active:text-font-color-pri;
+  }
+
+  .scroll-up-btn.touch {
+    @apply text-font-color-pri;
   }
 
   .side-navmenu-border {
@@ -304,6 +320,10 @@
     @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
+  .explore-courses-btn.touch {
+    @apply text-font-color-pri border-font-color-pri;
+  }
+
   .lottie-placeholder {
     transition: opacity 0.2s ease-in-out;
   }
@@ -311,6 +331,10 @@
   /* ALL COURSES PAGE   */
   .view-all-btn {
     @apply transition-all text-font-color-white bg-font-color-green text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg hover:text-font-color-pri active:text-font-color-pri;
+  }
+
+  .view-all-btn.touch {
+    @apply text-font-color-pri;
   }
 
   .course-card-grid {
@@ -334,6 +358,10 @@
   .course-card {
     /* @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
     @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri active:border-font-color-pri;
+  }
+
+  .course-card.touch {
+    @apply border-font-color-pri;
   }
 
   .course-card-image {
@@ -465,6 +493,10 @@
     @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
+  .enroll-btn.touch {
+    @apply text-font-color-pri border-font-color-pri;
+  }
+
   .ind-course-duration {
     @apply flex flex-row items-center justify-center font-semibold text-base sm:text-lg gap-2 mt-5 mb-10;
   }
@@ -538,6 +570,10 @@
   .form-submit-btn {
     /* @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri; */
     @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri active:text-font-color-pri;
+  }
+
+  .form-submit-btn.touch {
+    @apply text-font-color-pri;
   }
 
   .form-fieldbox {
