@@ -399,6 +399,42 @@ c0,12.78-10.44,23.24-23.19,23.24H78.04c-12.75,0-23.19-10.46-23.19-23.24v-62.9"
   </div>
 </footer>
 
+<script>
+  // Check if the device supports touch events
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  }
+
+  // Function to handle touch interactions
+  function handleTouchInteractions() {
+    // Get all interactive elements
+    const interactiveElements = document.querySelectorAll(
+      ".link-interaction-effect, .link-interaction-underline-effect, .header-navmenu-hover, .explore-courses-btn, .view-all-btn, .course-card, .enroll-btn, .form-submit-btn"
+    );
+
+    console.log(interactiveElements);
+
+    // Add event listeners for touch devices
+    interactiveElements.forEach((element) => {
+      element.addEventListener("touchstart", () => {
+        // Add a class to simulate hover/active state
+        element.classList.add("touch");
+      });
+
+      element.addEventListener("touchend", () => {
+        // Remove the class after a short delay to mimic hover effect
+        setTimeout(() => {
+          element.classList.remove("touch");
+        }, 150); // Adjust delay as needed
+      });
+    });
+  }
+
+  // Execute only on touch devices
+  if (isTouchDevice()) {
+    handleTouchInteractions();
+  }
+</script>
 <script src="../scripts/common/course-sub-menu.js"></script>
 <script src="../scripts/common/navbar-menu.js"></script>
 <script src="../scripts/common/scroll-up-btn.js"></script>
