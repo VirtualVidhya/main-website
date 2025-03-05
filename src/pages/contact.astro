@@ -70,149 +70,179 @@ const metadata = {
       >
     </section>
 
-    <form
-      name="contact"
-      method="POST"
-      id="form"
-      action="/api/submit-contact-form"
+    <div
       class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl 2xl:max-w-5xl"
     >
       <h2 class="text-center contact-section-heading mt-3 mb-9">
         Inquiry Form
       </h2>
-      <fieldset
-        class="flex flex-col items-center justify-center gap-5 mx-auto py-10 md:py-20 border-solid border-2 border-b-6 rounded-xl"
+
+      <form
+        name="contact"
+        method="POST"
+        id="form"
+        action="/api/submit-contact-form"
+        autocomplete="off"
+        novalidate
       >
-        <div class="flex flex-col w-4/5">
-          <input
-            id="name"
-            name="name"
-            class="form-fieldbox"
-            type="text"
-            placeholder="Enter your name"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <div class="w-4/5 hidden">
-          <input
-            id="address"
-            name="address"
-            class="form-fieldbox"
-            type="text"
-            placeholder="Enter your address"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <!-- <div class="error text-font-color-red-dark"></div> -->
-        </div>
-
-        <div class="flex flex-col w-4/5">
-          <input
-            id="phone"
-            name="phone"
-            class="form-fieldbox"
-            type="tel"
-            placeholder="Enter your contact number"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <div class="flex flex-col w-4/5">
-          <input
-            id="email"
-            name="email"
-            class="form-fieldbox"
-            type="text"
-            placeholder="Enter your email address"
-          />
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <div class="flex flex-col w-4/5">
-          <input
-            id="course"
-            name="course"
-            class="form-fieldbox"
-            type="text"
-            placeholder="Enter your course name"
-            list="courses"
-          />
-          <datalist id="courses">
-            <option value="Graphics Design">Graphics Design</option>
-            <option value="Video Editing">Video Editing</option>
-            <option value="Digital Textile Design">
-              Digital Textile Design
-            </option>
-            <option value="Interior Design">Interior Design</option>
-            <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Jewellery Design">Jewellery Design</option>
-            <option value="Adobe Photoshop">Adobe Photoshop</option>
-            <option value="Adobe Illustrator">Adobe Illustrator</option>
-            <option value="Adobe After Effects">Adobe After Effects</option>
-            <option value="Adobe Premier Pro">Adobe Premier Pro</option>
-            <option value="Corel Draw">Corel Draw</option>
-            <option value="Figma">Figma</option>
-
-            <option value="Game Development">Game Development</option>
-            <option value="Full-stack Web-Development">
-              Full-stack Web-Development
-            </option>
-            <option value="Front-end Web-Development">
-              Front-end Web-Development
-            </option>
-            <option value="Back-end Web-Development">
-              Back-end Web-Development
-            </option>
-            <option value="Fundamentals of Computer Application">
-              Fundamentals of Computer Application
-            </option>
-            <option value="C++ Programming">C++ Programming</option>
-            <option value="C Programming">C Programming</option>
-            <option value="Python Programming">Python Programming</option>
-            <option value="Java Programming">Java Programming</option>
-
-            <option value="Scratch Programming">Scratch Programming</option>
-            <option value="MS Office">MS Office</option>
-
-            <option value="Desktop Publishing (DTP)">
-              Desktop Publishing (DTP)
-            </option>
-            <option value="Accounting">Accounting</option>
-            <option value="Digital Marketing">Digital Marketing</option>
-            <option value="Advance Excel">Advance Excel</option>
-          </datalist>
-
-          <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
-          <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
-          <div class="error text-font-color-red-dark"></div>
-        </div>
-
-        <textarea
-          class="w-4/5 form-fieldbox"
-          id="message"
-          name="message"
-          placeholder="Enter your message here"
-          cols="30"
-          rows="10"
-          resize="vertical"></textarea>
-
-        <button
-          id="submit"
-          class="form-submit-btn"
-          type="submit"
-          aria-label="Submit Form"
+        <fieldset
+          class="flex flex-col items-center justify-center gap-5 mx-auto py-10 md:py-20 border-solid border-2 border-b-6 rounded-xl"
         >
-          Submit
-        </button>
-      </fieldset>
-    </form>
+          <div class="flex flex-col w-4/5">
+            <label class="form-label"
+              >Name <span class="form-req-label">*</span></label
+            >
+
+            <input
+              id="name"
+              name="name"
+              class="form-fieldbox"
+              type="text"
+              placeholder="Enter your name"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="w-4/5 hidden">
+            <label class="form-label"
+              >Address <span class="form-req-label">*</span></label
+            >
+
+            <input
+              id="address"
+              name="address"
+              class="form-fieldbox"
+              type="text"
+              placeholder="Enter your address"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <!-- <div class="error text-font-color-red-dark"></div> -->
+          </div>
+
+          <div class="flex flex-col w-4/5">
+            <label class="form-label"
+              >Contact Number <span class="form-req-label">*</span></label
+            >
+
+            <input
+              id="phone"
+              name="phone"
+              class="form-fieldbox"
+              type="tel"
+              placeholder="Enter your contact number"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="flex flex-col w-4/5">
+            <label class="form-label"
+              >Email ID <span class="form-req-label">*</span></label
+            >
+
+            <input
+              id="email"
+              name="email"
+              class="form-fieldbox"
+              type="text"
+              placeholder="Enter your email address"
+            />
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="flex flex-col w-4/5">
+            <label class="form-label"
+              >Course Name <span class="form-req-label">*</span></label
+            >
+
+            <input
+              id="course"
+              name="course"
+              class="form-fieldbox"
+              type="text"
+              placeholder="Enter your course name"
+              list="courses"
+            />
+            <datalist id="courses">
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Digital Textile Design">
+                Digital Textile Design
+              </option>
+              <option value="Interior Design">Interior Design</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Jewellery Design">Jewellery Design</option>
+              <option value="Adobe Photoshop">Adobe Photoshop</option>
+              <option value="Adobe Illustrator">Adobe Illustrator</option>
+              <option value="Adobe After Effects">Adobe After Effects</option>
+              <option value="Adobe Premier Pro">Adobe Premier Pro</option>
+              <option value="Corel Draw">Corel Draw</option>
+              <option value="Figma">Figma</option>
+
+              <option value="Game Development">Game Development</option>
+              <option value="Full-stack Web-Development">
+                Full-stack Web-Development
+              </option>
+              <option value="Front-end Web-Development">
+                Front-end Web-Development
+              </option>
+              <option value="Back-end Web-Development">
+                Back-end Web-Development
+              </option>
+              <option value="Fundamentals of Computer Application">
+                Fundamentals of Computer Application
+              </option>
+              <option value="C++ Programming">C++ Programming</option>
+              <option value="C Programming">C Programming</option>
+              <option value="Python Programming">Python Programming</option>
+              <option value="Java Programming">Java Programming</option>
+
+              <option value="Scratch Programming">Scratch Programming</option>
+              <option value="MS Office">MS Office</option>
+
+              <option value="Desktop Publishing (DTP)">
+                Desktop Publishing (DTP)
+              </option>
+              <option value="Accounting">Accounting</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="Advance Excel">Advance Excel</option>
+            </datalist>
+
+            <!-- <i class="fas fa-exclamation-circle failure-icon opacity-0"></i> -->
+            <!-- <i class="far fa-check-circle success-icon opacity-0"></i> -->
+            <div class="error text-font-color-red-dark"></div>
+          </div>
+
+          <div class="w-4/5">
+            <label class="form-label">Message</label>
+
+            <textarea
+              class="w-full form-fieldbox mt-1"
+              id="message"
+              name="message"
+              placeholder="Enter your message here"
+              cols="30"
+              rows="10"
+              resize="vertical"></textarea>
+          </div>
+
+          <button
+            id="submit"
+            class="form-submit-btn"
+            type="submit"
+            aria-label="Submit Form"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+    </div>
 
     <div
       id="form-success-msg"

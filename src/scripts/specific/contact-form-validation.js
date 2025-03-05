@@ -2,15 +2,30 @@ let id = (id) => document.getElementById(id);
 
 let classes = (classes) => document.getElementsByClassName(classes);
 
-let username = id("name");
-let phone = id("phone");
-let email = id("email");
-let course = id("course");
-let errorMsg = classes("error");
-let form = id("form");
-let successMsg = id("form-success-msg");
+const form = id("form");
+const errorMsg = classes("error");
+const successMsg = id("form-success-msg");
+
+const username = id("name");
+const phone = id("phone");
+const email = id("email");
+const course = id("course");
+
 //let successIcon = classes("success-icon");
 //let failureIcon = classes("failure-icon");
+
+username.addEventListener("blur", () => {
+  check(username, 0, "Name cannot be blank!");
+});
+phone.addEventListener("blur", () => {
+  check(phone, 1, "Phone cannot be blank!");
+});
+email.addEventListener("blur", () => {
+  check(email, 2, "Email cannot be blank!");
+});
+course.addEventListener("blur", () => {
+  check(course, 3, "Course cannot be blank!");
+});
 
 let errorCount = 0;
 
@@ -38,7 +53,7 @@ function onSuccessfulSubmission() {
 
 let check = (id, serial, message) => {
   if (id.value.trim() === "") {
-    showError(id, serial, message);
+    showInvalidInputIndication(id, serial, message);
   } else {
     let response;
 
@@ -58,14 +73,14 @@ let check = (id, serial, message) => {
     }
 
     if (response == true) {
-      showNoError(id, serial);
+      showValidInputIndication(id, serial);
     } else {
-      showError(id, serial, response);
+      showInvalidInputIndication(id, serial, response);
     }
   }
 };
 
-function showError(id, serial, msg) {
+function showInvalidInputIndication(id, serial, msg) {
   errorMsg[serial].innerHTML = msg;
 
   errorCount++;
@@ -76,24 +91,16 @@ function showError(id, serial, msg) {
     id.classList.add("border-2");
   }
 
-  if (!id.classList.contains("rounded-md")) {
-    id.classList.add("rounded-md");
-  }
-
   id.classList.add("border-font-color-red-dark");
 }
 
-function showNoError(id, serial) {
+function showValidInputIndication(id, serial) {
   errorMsg[serial].innerHTML = "";
 
   id.classList.remove("border-font-color-red-dark");
 
   if (!id.classList.contains("border-2")) {
     id.classList.add("border-2");
-  }
-
-  if (!id.classList.contains("rounded-md")) {
-    id.classList.add("rounded-md");
   }
 
   id.classList.add("border-font-color-sec");
