@@ -74,7 +74,7 @@ export default defineConfig({
       },
     }),
     compress({
-      CSS: true,
+      CSS: false,
       HTML: {
         "html-minifier-terser": {
           removeAttributeQuotes: false,
@@ -85,7 +85,7 @@ export default defineConfig({
       SVG: false,
     }),
     compressor({
-      fileExtensions: [".html", ".css", ".js", ".mjs", ".svg"],
+      fileExtensions: [".html", ".css", ".js", ".cjs", ".mjs", ".svg", ".xml"],
       gzip: true,
       brotli: true,
     }),
@@ -98,6 +98,6 @@ export default defineConfig({
   output: "static",
 
   build: {
-    assets: 'resources',
-  }
+    assets: "resources",
+  },
 });
