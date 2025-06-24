@@ -1,7 +1,7 @@
 {
   "name": "vvidhya.com",
   "type": "module",
-  "packageManager":	"pnpm@10.12.3",
+  "packageManager": "pnpm@10.12.3",
   "version": "1.2.1",
   "scripts": {
     "dev:astro": "astro dev",
@@ -10,6 +10,11 @@
     "build": "pnpm run build:worker && pnpm run build:astro",
     "preview:astro": "astro preview",
     "astro": "astro"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.3.0",
