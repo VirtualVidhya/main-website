@@ -1,4 +1,6 @@
 ---
+import LinkPage from "../components/LinkPage.astro";
+
 interface Props {
   courseCardDetails: {
     refLink: string;
@@ -22,7 +24,7 @@ const {
 } = Astro.props;
 ---
 
-<a href={courseCardDetails.refLink} class="course-card">
+<LinkPage href={courseCardDetails.refLink} class="course-card" title="">
   <img
     class="course-card-image"
     src={courseCardDetails.icon}
@@ -56,4 +58,4 @@ const {
   <div class="course-card-tags-container">
     <slot name="course-tool-tags-slot" />
   </div>
-</a>
+</LinkPage>

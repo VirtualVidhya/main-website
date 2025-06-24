@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import LinkPage from "../components/LinkPage.astro";
 
 interface Props {
   metadata: {
@@ -26,7 +27,7 @@ const { metadata, navSection, courseDetails } = Astro.props;
       <h2 class="ind-course-heading">{courseDetails.name}</h2>
 
       <button class="enroll-btn" aria-label="Enroll Now">
-        <a href="/contact/">Enroll Now</a>
+        <LinkPage href="/contact/" title="Enroll Now" />
       </button>
 
       <div class="ind-course-duration">
