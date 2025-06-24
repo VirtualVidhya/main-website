@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LinkPage from "../components/LinkPage.astro";
 
 const metadata = {
   title: "Privacy Policy - V.Vidhya | Your Data, Our Responsibility",
@@ -157,11 +158,12 @@ const metadata = {
 
         <p>
           If you wish to exercise these rights, please contact us at
-          <a
+
+          <LinkPage
             href="mailto: contact@vvidya.com"
             class="underline underline-offset-4 link-interaction-effect"
-            >contact@vvidhya.com</a
-          >.
+            title="contact@vvidya.com"
+          />.
         </p>
       </div>
 
@@ -274,11 +276,11 @@ const metadata = {
         <p>
           If you have any questions or concerns about this privacy policy,
           please contact us at
-          <a
+          <LinkPage
             href="mailto: contact@vvidya.com"
             class="underline underline-offset-4 link-interaction-effect"
-            >contact@vvidhya.com</a
-          >.
+            title="contact@vvidya.com"
+          />.
         </p>
       </div>
     </section>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LinkPage from "../components/LinkPage.astro";
 
 const metadata = {
   title: "About Us - V.Vidhya | Computer Education for All in Surat",
@@ -229,11 +230,13 @@ const metadata = {
           and technology becomes a tool for empowerment.
         </p>
         <p class="text-left">
-          To collaborate or learn more, please <a
+          To collaborate or learn more, please
+          <LinkPage
             href="/contact/"
             class="underline underline-offset-4 link-interaction-effect"
-            >contact us</a
-          >.
+            title="contact us"
+          />
+          .
         </p>
       </div>
     </section>

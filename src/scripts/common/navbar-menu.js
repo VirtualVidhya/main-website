@@ -1,60 +1,46 @@
-let btn = document.getElementById("topbar-menu-btn");
-btn.addEventListener("click", Menu);
+function initializeNavbarMenu() {
+  const btn = document.getElementById("topbar-menu-btn");
 
-let closeBtnIcon = document.querySelector(
-  "#topbar-menu-btn > svg[data-state='close']"
-);
-let openBtnIcon = document.querySelector(
-  "#topbar-menu-btn > svg[data-state='open']"
-);
-
-function Menu() {
-  let list = document.querySelector(".topbar-menu");
-  let body = document.body;
-
-  if (btn.name === "close") {
-    btn.name = "open";
-
-    closeBtnIcon.style.display = "block";
-    openBtnIcon.style.display = "none";
-
-    list.classList.add("translate-x-[640px]", "opacity-100");
-    body.style.overflow = "hidden";
-  } else {
-    btn.name = "close";
-
-    closeBtnIcon.style.display = "none";
-    openBtnIcon.style.display = "block";
-
-    list.classList.remove("translate-x-[640px]", "opacity-100");
-    body.style.overflow = "";
+  if (!btn) {
+    return;
   }
 
-  // if (btn.name === "open") {
-  //   btn.name = "close";
+  btn.addEventListener("click", toggleMenu);
 
-  //   closeBtnIcon.style.display = "none";
-  //   openBtnIcon.style.display = "block";
+  const closeBtnIcon = btn.querySelector("svg[data-state='close']");
+  const openBtnIcon = btn.querySelector("svg[data-state='open']");
 
-  //   // btn.classList.remove("fa-bars");
-  //   // btn.classList.add("fa-xmark");
+  function toggleMenu() {
+    const list = document.querySelector(".topbar-menu");
+    const nav = document.querySelector(".topbar-nav");
+    const body = document.body;
 
-  //   list.classList.add("translate-x-[640px]");
-  //   list.classList.add("opacity-100");
+    const isOpen = btn.getAttribute("data-topbarmenu-state") === "open";
 
-  //   body.style.overflow = "hidden";
-  // } else {
-  //   btn.name = "open";
+    if (!isOpen) {
+      // Open the menu
+      btn.setAttribute("data-topbarmenu-state", "open");
 
-  //   openBtnIcon.style.display = "none";
-  //   closeBtnIcon.style.display = "block";
+      if (closeBtnIcon) closeBtnIcon.style.display = "block";
+      if (openBtnIcon) openBtnIcon.style.display = "none";
 
-  //   // btn.classList.add("fa-bars");
-  //   // btn.classList.remove("fa-xmark");
+      list.classList.add("translate-x-[640px]", "opacity-100");
+      // document.documentElement.style.overflow = "hidden";
+      body.style.overflow = "hidden";
+      nav.style.overflowY = "auto";
+    } else {
+      // Close the menu
+      btn.setAttribute("data-topbarmenu-state", "close");
 
-  //   list.classList.remove("translate-x-[640px]");
-  //   list.classList.remove("opacity-100");
+      if (closeBtnIcon) closeBtnIcon.style.display = "none";
+      if (openBtnIcon) openBtnIcon.style.display = "block";
 
-  //   body.style.overflow = "";
-  // }
+      list.classList.remove("translate-x-[640px]", "opacity-100");
+      // document.documentElement.style.overflow = "";
+      body.style.overflow = "";
+      nav.style.overflowY = "";
+    }
+  }
 }
+
+initializeNavbarMenu();

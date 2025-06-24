@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import compress from "@playform/compress";
@@ -90,6 +89,15 @@ export default defineConfig({
       brotli: true,
     }),
   ],
+  
+  prefetch: {
+    // Automatically prefetch all links once the page loads.
+    // (If you prefer hover-only, set this to false and add data-astro-prefetch on each <a>.)
+    prefetchAll: false,
+
+    // Optionally override the default strategy for links without an explicit value.
+    // defaultStrategy: 'viewport',
+  },
 
   vite: {
     plugins: [tailwindcss()],

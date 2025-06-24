@@ -35,6 +35,10 @@ importers:
       tailwindcss:
         specifier: ^4.0.17
         version: 4.1.10
+    devDependencies:
+      esbuild:
+        specifier: ^0.25.5
+        version: 0.25.5
 
 packages:
 
