@@ -116,136 +116,11 @@
 }
 
 @layer components {
-  /* GENERAL */
-  .util-icon {
-    width: 1em !important;
-    height: 1em !important;
-  }
+  /* #region VVIDHYA LOGO */
 
-  .link-interaction-effect {
-    /* @apply transition-all hover:text-font-color-green focus:text-font-color-green active:text-font-color-green; */
-    @apply transition-all hover:text-font-color-green active:text-font-color-green;
-  }
+  /* general */
 
-  .link-interaction-effect.touch {
-    @apply text-font-color-green;
-  }
-
-  .link-interaction-underline-effect {
-    /* @apply transition-all hover:underline focus:underline active:underline; */
-    @apply transition-all hover:underline active:underline;
-  }
-
-  .link-interaction-underline-effect.touch {
-    @apply underline;
-  }
-
-  /* .header-navmenu-hover {
-    @apply hover:text-font-color-green;
-  } */
-
-  /* .scroll-up-btn {
-    @apply hover:text-font-color-pri;
-  } */
-
-  /* .explore-courses-btn {
-    @apply hover:text-font-color-pri hover:border-font-color-pri;
-  } */
-
-  /* .view-all-btn {
-    @apply hover:text-font-color-pri;
-  } */
-
-  /* .enroll-btn {
-    @apply hover:text-font-color-pri hover:border-font-color-pri;
-  } */
-
-  /* .form-submit-btn {
-    @apply hover:text-font-color-pri;
-  } */
-
-  /* @media (hover: hover) {
-    .link-interaction-effect {
-      @apply transition-all hover:text-font-color-green focus:text-font-color-green active:text-font-color-green;
-    }
-
-    .link-interaction-underline-effect {
-      @apply transition-all hover:underline focus:underline active:underline;
-    }
-
-    .header-navmenu-hover {
-      @apply hover:text-font-color-green focus:text-font-color-green active:text-font-color-green;
-    }
-
-    .scroll-up-btn {
-      @apply hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri;
-    }
-
-    .explore-courses-btn {
-      @apply hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri;
-    }
-
-    .view-all-btn {
-      @apply hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri;
-    }
-
-    .enroll-btn {
-      @apply hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri;
-    }
-
-    .form-submit-btn {
-      @apply hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri;
-    }
-  } */
-
-  /* @media (hover: none) {
-    .link-interaction-effect {
-      @apply transition-all focus:text-font-color-green active:text-font-color-green;
-    }
-
-    .link-interaction-underline-effect {
-      @apply transition-all focus:underline active:underline;
-    }
-
-    .header-navmenu-hover {
-      @apply active:text-font-color-green focus:text-font-color-green;
-    }
-
-    .scroll-up-btn {
-      @apply active:text-font-color-pri focus:text-font-color-pri;
-    }
-
-    .explore-courses-btn {
-      @apply active:text-font-color-pri focus:text-font-color-pri active:border-font-color-pri focus:border-font-color-pri;
-    }
-
-    .view-all-btn {
-      @apply active:text-font-color-pri focus:text-font-color-pri;
-    }
-
-    .enroll-btn {
-      @apply active:text-font-color-pri focus:text-font-color-pri active:border-font-color-pri focus:border-font-color-pri;
-    }
-
-    .form-submit-btn {
-      @apply active:text-font-color-pri focus:text-font-color-pri;
-    }
-  } */
-
-  textarea:focus,
-  input:focus {
-    outline: none;
-  }
-
-  /* HEADER */
-  .header {
-    @apply bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 sm:px-4 md:px-8 mb-10 sticky top-0 z-10;
-  }
-
-  .header-logo-text {
-    @apply text-font-color-pri text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 sm:mt-3 lg:mt-4 font-black;
-  }
-
+  /* header-logo */
   .header-logo-svg {
     @apply h-9 sm:h-12 md:h-16 lg:h-18 w-auto;
   }
@@ -269,29 +144,7 @@
     @apply stroke-font-color-pri;
   }
 
-  .header-navmenu-hover {
-    /* @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green focus:text-font-color-green active:text-font-color-green; */
-    @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green active:text-font-color-green;
-  }
-
-  .header-navmenu-hover.touch {
-    @apply text-font-color-green;
-  }
-
-  .scroll-up-btn {
-    /* @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri; */
-    @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri active:text-font-color-pri;
-  }
-
-  .scroll-up-btn.touch {
-    @apply text-font-color-pri;
-  }
-
-  .side-navmenu-border {
-    @apply border-solid border-[1px] border-font-color-pri my-3 md:my-5;
-  }
-
-  /* HOME PAGE */
+  /* home-logo */
   .home-logo-svg {
     @apply h-20 xs:h-[88px] sm:h-24 md:h-32 lg:h-40 xl:h-48 w-auto;
   }
@@ -315,8 +168,105 @@
     @apply stroke-font-color-pri;
   }
 
+  /* footer-logo */
+  .footer-logo-svg {
+    @apply h-8 md:h-10 lg:h-12 w-auto;
+  }
+
+  .footer-logo-svg .body-outline {
+    stroke-width: 11.25;
+    @apply stroke-font-color-pri;
+  }
+
+  .footer-logo-svg .eyes-outline {
+    stroke-width: 7.5;
+  }
+
+  .footer-logo-svg .brain-divider-line {
+    stroke-width: 6.25;
+    @apply stroke-font-color-pri;
+  }
+
+  .footer-logo-svg .brain-curves {
+    stroke-width: 4.15;
+    @apply stroke-font-color-pri;
+  }
+
+  /* #endregion */
+
+  /* GENERAL */
+  .util-icon {
+    width: 1em !important;
+    height: 1em !important;
+  }
+
+  .link-interaction-effect {
+    @apply transition-all hover:text-font-color-green active:text-font-color-green;
+  }
+
+  .link-interaction-effect.touch {
+    @apply text-font-color-green;
+  }
+
+  .link-interaction-underline-effect {
+    @apply transition-all hover:underline active:underline;
+  }
+
+  .link-interaction-underline-effect.touch {
+    @apply underline;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+
+  .scroll-up-btn {
+    @apply transition-all hidden fixed justify-center items-center cursor-pointer bottom-4 right-4 z-[5] w-10 h-10 rounded-full bg-font-color-sec text-font-color-white hover:text-font-color-pri active:text-font-color-pri;
+  }
+
+  .scroll-up-btn.touch {
+    @apply text-font-color-pri;
+  }
+  /* #endregion */
+
+  /* #region HEADER */
+  .header {
+    @apply bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 sm:px-4 md:px-8 mb-10 sticky top-0 z-10;
+  }
+
+  .header-logo-text {
+    @apply text-font-color-pri text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 sm:mt-3 lg:mt-4 font-black hover:text-font-color-green active:text-font-color-green;
+  }
+
+  .header-logo-text.touch {
+    @apply text-font-color-green;
+  }
+
+  .header-logo-svg:hover + .header-logo-text,
+  .header-logo-svg:active + .header-logo-text {
+    @apply text-font-color-green;
+  }
+
+  .header-logo-svg.touch + .header-logo-text {
+    @apply text-font-color-green;
+  }
+
+  .header-navmenu-hover {
+    @apply transition-all underline-offset-4 sm:underline-offset-8 hover:text-font-color-green active:text-font-color-green;
+  }
+
+  .header-navmenu-hover.touch {
+    @apply text-font-color-green;
+  }
+
+  .side-navmenu-border {
+    @apply border-solid border-[1px] border-font-color-pri my-3 md:my-5;
+  }
+  /* #endregion */
+
+  /* #region HOME PAGE */
   .explore-courses-btn {
-    /* @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
     @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
@@ -327,8 +277,9 @@
   .lottie-placeholder {
     transition: opacity 0.2s ease-in-out;
   }
+  /* #endregion */
 
-  /* ALL COURSES PAGE   */
+  /* #region ALL COURSES PAGE   */
   .view-all-btn {
     @apply transition-all text-font-color-white bg-font-color-green text-base sm:text-lg px-5 sm:px-7 py-2 sm:py-3 font-bold rounded-lg hover:text-font-color-pri active:text-font-color-pri;
   }
@@ -338,7 +289,6 @@
   }
 
   .course-card-grid {
-    /* @apply grid [grid-template-columns:repeat(auto-fit,minmax(300px,max-content))] md:[grid-template-columns:repeat(auto-fit,minmax(320px,max-content))] lg:[grid-template-columns:repeat(auto-fit,minmax(345px,max-content))] xl:[grid-template-columns:repeat(auto-fit,minmax(365px,max-content))] 2xl:[grid-template-columns:repeat(auto-fit,minmax(380px,max-content))] justify-center justify-items-center place-content-center gap-y-5 sm:gap-y-[30px] md:gap-y-10 gap-x-5 md:gap-x-10 mb-24; */
     @apply grid [grid-template-columns:repeat(1,300px)] md:[grid-template-columns:repeat(2,320px)] lg:[grid-template-columns:repeat(2,345px)] xl:[grid-template-columns:repeat(3,365px)] 2xl:[grid-template-columns:repeat(auto-fit,minmax(380px,max-content))] justify-center justify-items-center place-content-center gap-y-5 sm:gap-y-[30px] md:gap-y-10 gap-x-5 md:gap-x-10 mb-24;
   }
 
@@ -351,12 +301,10 @@
   }
 
   .course-carousel {
-    /* @apply flex flex-row transition-transform duration-500 ease-in-out gap-x-5 md:gap-x-10 mb-24; */
     @apply flex flex-row overflow-x-auto transition-transform duration-500 ease-in-out gap-x-5 md:gap-x-10 [scroll-behavior:smooth] [scrollbar-width:none];
   }
 
   .course-card {
-    /* @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
     @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
@@ -468,14 +416,15 @@
     /* left: 0; */
     /* top: 0 */
   }
+  /* #endregion */
 
-  /* COMBINE COURSE PAGE */
+  /* #region COMBINE COURSE PAGE */
   .main-combine-course-section {
-    /* @apply flex flex-col items-center justify-center gap-24 mt-10 mb-20 mx-4 sm:mx-10 md:mx-16 lg:mx-24 xl:mx-44; */
     @apply flex flex-col items-center justify-center gap-24 mt-10 mb-20 mx-4 2xl:mx-10;
   }
+  /* #endregion */
 
-  /* INDIVIDUAL COURSE PAGE */
+  /* #region INDIVIDUAL COURSE PAGE */
   .ind-course-main-section {
     @apply flex flex-col gap-3 px-6 lg:px-0 mx-auto mt-10 mb-20 max-w-mdsm md:max-w-2xl lg:max-w-4xl 2xl:max-w-6xl;
   }
@@ -489,7 +438,6 @@
   }
 
   .enroll-btn {
-    /* @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri focus:border-font-color-pri active:border-font-color-pri; */
     @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
   }
 
@@ -532,43 +480,20 @@
   .ind-course-sublist {
     @apply list-outside list-disc mx-auto mb-5 pl-5;
   }
-
-  /* FOOTER */
-  .footer-logo-svg {
-    @apply h-8 md:h-10 lg:h-12 w-auto;
-  }
-
-  .footer-logo-svg .body-outline {
-    stroke-width: 11.25;
-    @apply stroke-font-color-pri;
-  }
-
-  .footer-logo-svg .eyes-outline {
-    stroke-width: 7.5;
-  }
-
-  .footer-logo-svg .brain-divider-line {
-    stroke-width: 6.25;
-    @apply stroke-font-color-pri;
-  }
-
-  .footer-logo-svg .brain-curves {
-    stroke-width: 4.15;
-    @apply stroke-font-color-pri;
-  }
+  /* #region */
 
   /* ILLUSTRATIONS */
   .illus {
     @apply h-auto w-auto max-h-[225px] sm:max-h-[300px] md:max-h-[425px] lg:max-h-[500px];
   }
+  /* #endregion */
 
-  /* CONTACT */
+  /* #region CONTACT PAGE */
   .contact-section-heading {
     @apply text-font-color-green text-2xl md:text-4xl font-extrabold mb-3;
   }
 
   .form-submit-btn {
-    /* @apply transition-all text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri focus:text-font-color-pri active:text-font-color-pri; */
     @apply transition-all cursor-pointer text-font-color-white bg-font-color-green px-6 py-3 font-bold rounded-md hover:text-font-color-pri active:text-font-color-pri;
   }
 
@@ -577,7 +502,6 @@
   }
 
   .form-fieldbox {
-    /* @apply transition-all p-3 border-solid border-1 focus:border-2 bg-font-color-white border-color-border-pri focus:border-font-color-pri active:border-font-color-pri rounded-lg; */
     @apply transition-all w-full bg-mainbg-color p-3 border-solid border-1 focus:outline-1 focus:outline-font-color-pri border-color-border-pri focus:border-font-color-pri active:border-font-color-pri rounded-lg;
   }
 
@@ -592,4 +516,5 @@
   .form-req-label {
     @apply text-font-color-red-dark;
   }
+  /* #endregion */
 }
