@@ -1,4 +1,6 @@
 ---
+import LinkPage from "./LinkPage.astro";
+
 interface Props {
   courseCategoryName: string;
   courseSubPageLink: string;
@@ -65,6 +67,10 @@ const { courseCategoryName = "", courseSubPageLink = "" } = Astro.props;
   </div>
 
   <div class="flex justify-center w-full">
-    <a href=`/courses/${courseSubPageLink}/` class="view-all-btn">View All</a>
+    <LinkPage
+      href=`/courses/${courseSubPageLink}/`
+      title="View All"
+      class="view-all-btn"
+    />
   </div>
 </section>
