@@ -1,12 +1,13 @@
 {
   "name": "vvidhya.com",
   "type": "module",
-  "version": "1.2.0",
+  "packageManager":	"pnpm@10.12.3",
+  "version": "1.2.1",
   "scripts": {
     "dev:astro": "astro dev",
     "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
     "build:astro": "astro build",
-    "build": "npm run build:worker && npm run build:astro",
+    "build": "pnpm run build:worker && pnpm run build:astro",
     "preview:astro": "astro preview",
     "astro": "astro"
   },
