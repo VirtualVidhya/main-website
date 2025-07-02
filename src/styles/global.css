@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./typography.css";
 
 @config "../../tailwind.config.js";
 
@@ -8,110 +9,90 @@
 
 /* @custom-variant hover (&:hover); */
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root,
+html[data-theme="light"] {
+  --background: #f9f8f4;
+  --navbar: #f4f2e9;
+
+  --foreground: #1e1e1e;
+  --texthover: #6c757d;
+  --accent: #006cac;
+
+  /* --codeblock: #e7e5dd; */
+  --codeblock: #f4f2e9;
+  --muted: #e6e6e6;
+  --border: #9c9a97;
+  --borderhover: #1e1e1e;
+}
+
+html[data-theme="dark"] {
+  --background: #1e1e1e;
+  --navbar: #121212;
+
+  --foreground: #f9f8f4;
+  --texthover: #6c757d;
+  --accent: #ff6b01;
+
+  /* --codeblock: #121212; */
+  --codeblock: #121212;
+  --muted: #343f60bf;
+  --border: #6c757d;
+  --borderhover: #f9f8f4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-navbar: var(--navbar);
+
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-texthover: var(--texthover);
+
+  --color-codeblock: var(--codeblock);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-borderhover: var(--borderhover);
+}
+
 @layer base {
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 300;
-    src: url(/fonts/noto-sans-v37-latin-300.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 300;
-    src: url(/fonts/noto-sans-v37-latin-300italic.woff2) format("woff2");
-    font-display: swap;
+  :root {
+    --header-height: 52px;
+    --main-section-pt: 40px;
+    --main-section-pb: 40px;
   }
 
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 400;
-    src: url(/fonts/noto-sans-v37-latin-regular.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 400;
-    src: url(/fonts/noto-sans-v37-latin-italic.woff2) format("woff2");
-    font-display: swap;
+  @media (min-width: 640px) {
+    :root {
+      --header-height: 64px;
+    }
   }
 
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 500;
-    src: url(/fonts/noto-sans-v37-latin-500.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 500;
-    src: url(/fonts/noto-sans-v37-latin-500italic.woff2) format("woff2");
-    font-display: swap;
+  @media (min-width: 768px) {
+    :root {
+      --header-height: 88px;
+    }
   }
 
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 600;
-    src: url(/fonts/noto-sans-v37-latin-600.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 600;
-    src: url(/fonts/noto-sans-v37-latin-600italic.woff2) format("woff2");
-    font-display: swap;
+  @media (min-width: 1024px) {
+    :root {
+      --header-height: 94px;
+    }
   }
 
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/noto-sans-v37-latin-700.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 700;
-    src: url(/fonts/noto-sans-v37-latin-700italic.woff2) format("woff2");
-    font-display: swap;
+  html {
+    @apply scroll-smooth;
   }
 
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 800;
-    src: url(/fonts/noto-sans-v37-latin-800.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 800;
-    src: url(/fonts/noto-sans-v37-latin-800italic.woff2) format("woff2");
-    font-display: swap;
+  body {
+    @apply flex flex-col min-h-screen bg-background font-notosans text-foreground selection:bg-accent/75 selection:text-background;
   }
 
-  @font-face {
-    font-family: "NotoSans";
-    font-style: normal;
-    font-weight: 900;
-    src: url(/fonts/noto-sans-v37-latin-900.woff2) format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NotoSans";
-    font-style: italic;
-    font-weight: 900;
-    src: url(/fonts/noto-sans-v37-latin-900italic.woff2) format("woff2");
-    font-display: swap;
+  main {
+    padding-top: calc(var(--header-height) + var(--main-section-pt));
+    padding-bottom: var(--main-section-pb);
+    @apply mt-10 mb-16;
   }
 }
 
@@ -119,6 +100,9 @@
   /* #region VVIDHYA LOGO */
 
   /* general */
+  .dynamic-stroke {
+    stroke: var(--foreground);
+  }
 
   /* header-logo */
   .header-logo-svg {
@@ -127,7 +111,6 @@
 
   .header-logo-svg .body-outline {
     stroke-width: 11.25;
-    @apply stroke-font-color-pri;
   }
 
   .header-logo-svg .eyes-outline {
@@ -136,12 +119,10 @@
 
   .header-logo-svg .brain-divider-line {
     stroke-width: 6.25;
-    @apply stroke-font-color-pri;
   }
 
   .header-logo-svg .brain-curves {
     stroke-width: 4.15;
-    @apply stroke-font-color-pri;
   }
 
   /* home-logo */
@@ -151,7 +132,6 @@
 
   .home-logo-svg .body-outline {
     stroke-width: 9.5;
-    @apply stroke-font-color-pri;
   }
 
   .home-logo-svg .eyes-outline {
@@ -160,12 +140,10 @@
 
   .home-logo-svg .brain-divider-line {
     stroke-width: 6.25;
-    @apply stroke-font-color-pri;
   }
 
   .home-logo-svg .brain-curves {
     stroke-width: 3.5;
-    @apply stroke-font-color-pri;
   }
 
   /* footer-logo */
@@ -175,7 +153,6 @@
 
   .footer-logo-svg .body-outline {
     stroke-width: 11.25;
-    @apply stroke-font-color-pri;
   }
 
   .footer-logo-svg .eyes-outline {
@@ -184,17 +161,14 @@
 
   .footer-logo-svg .brain-divider-line {
     stroke-width: 6.25;
-    @apply stroke-font-color-pri;
   }
 
   .footer-logo-svg .brain-curves {
     stroke-width: 4.15;
-    @apply stroke-font-color-pri;
   }
-
   /* #endregion */
 
-  /* GENERAL */
+  /* #region GENERAL */
   .util-icon {
     width: 1em !important;
     height: 1em !important;
@@ -232,11 +206,13 @@
 
   /* #region HEADER */
   .header {
-    @apply bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 sm:px-4 md:px-8 mb-10 sticky top-0 z-10;
+    /* @apply bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 sm:px-4 md:px-8 mb-10 sticky top-0 z-10; */
+    @apply fixed top-0 right-0 left-0 z-10 mb-10 flex w-auto justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
+    height: var(--header-height);
   }
 
   .header-logo-text {
-    @apply text-font-color-pri text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 sm:mt-3 lg:mt-4 font-black hover:text-font-color-green active:text-font-color-green;
+    @apply text-foreground text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 sm:mt-3 lg:mt-4 font-black hover:text-font-color-green active:text-font-color-green;
   }
 
   .header-logo-text.touch {
@@ -261,17 +237,39 @@
   }
 
   .side-navmenu-border {
-    @apply border-solid border-[1px] border-font-color-pri my-3 md:my-5;
+    @apply border-solid border-[1px] border-foreground my-3 md:my-5;
+  }
+  /* #endregion */
+
+  /* #region NAV MENU */
+  .topbar-menu {
+    @apply z-10 box-border w-full bg-navbar p-4 sm:z-auto sm:box-content sm:w-auto sm:p-0;
+
+    height: calc(100vh - var(--header-height) + 5px);
+  }
+
+  @media (min-width: 640px) {
+    .topbar-menu {
+      height: auto;
+    }
+  }
+
+  .topbar-nav {
+    @apply text-base font-bold sm:flex sm:items-center sm:justify-center md:text-xl;
   }
   /* #endregion */
 
   /* #region HOME PAGE */
+  .home-stroke-path {
+    fill: var(--navbar);
+  }
+
   .explore-courses-btn {
-    @apply transition-all text-font-color-white bg-font-color-blue text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg border-2 border-b-6 border-font-color-blue-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
+    @apply rounded-lg border-2 border-b-6 border-font-color-blue-dark bg-font-color-blue px-6 py-3 text-lg font-bold text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri hover:border-borderhover active:border-borderhover sm:px-8 sm:py-4 sm:text-xl;
   }
 
   .explore-courses-btn.touch {
-    @apply text-font-color-pri border-font-color-pri;
+    @apply text-font-color-pri border-borderhover;
   }
 
   .lottie-placeholder {
@@ -289,7 +287,7 @@
   }
 
   .course-card-grid {
-    @apply grid [grid-template-columns:repeat(1,300px)] md:[grid-template-columns:repeat(2,320px)] lg:[grid-template-columns:repeat(2,345px)] xl:[grid-template-columns:repeat(3,365px)] 2xl:[grid-template-columns:repeat(auto-fit,minmax(380px,max-content))] justify-center justify-items-center place-content-center gap-y-5 sm:gap-y-[30px] md:gap-y-10 gap-x-5 md:gap-x-10 mb-24;
+    @apply grid [grid-template-columns:repeat(1,300px)] md:[grid-template-columns:repeat(2,320px)] lg:[grid-template-columns:repeat(2,345px)] xl:[grid-template-columns:repeat(auto-fit,minmax(365px,max-content))] 2xl:[grid-template-columns:repeat(auto-fit,minmax(380px,max-content))] justify-center justify-items-center place-content-center gap-y-5 sm:gap-y-[30px] md:gap-y-10 gap-x-5 md:gap-x-10;
   }
 
   /* .course-carousel-container {
@@ -305,11 +303,11 @@
   }
 
   .course-card {
-    @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar-color-pri p-5 border-2 border-b-6 border-color-border-pri hover:border-font-color-pri active:border-font-color-pri;
+    @apply flex-shrink-0 flex flex-col items-center justify-between gap-2 box-border h-full w-[300px] md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px] rounded-xl bg-navbar p-5 border-2 border-b-6 border-border hover:border-borderhover active:border-borderhover;
   }
 
   .course-card.touch {
-    @apply border-font-color-pri;
+    @apply border-borderhover;
   }
 
   .course-card-image {
@@ -396,11 +394,11 @@
   }
 
   .progress-bar-container {
-    @apply w-[35%] h-[5px] bg-color-border-pri rounded-lg;
+    @apply w-[35%] h-[5px] bg-border rounded-lg;
   }
 
   .swiper-scrollbar {
-    @apply !bg-color-border-pri !rounded-lg;
+    @apply !bg-border !rounded-lg;
     /* border-radius: inherit !important; */
     position: static !important;
     touch-action: none;
@@ -411,7 +409,7 @@
     /* height: 100%; */
     /* width: 100%; */
     /* position: relative; */
-    @apply !bg-font-color-pri;
+    @apply !bg-foreground;
     border-radius: inherit !important;
     /* left: 0; */
     /* top: 0 */
@@ -420,7 +418,7 @@
 
   /* #region COMBINE COURSE PAGE */
   .main-combine-course-section {
-    @apply flex flex-col items-center justify-center gap-24 mt-10 mb-20 mx-4 2xl:mx-10;
+    @apply flex flex-col items-center justify-center gap-24 mx-4 2xl:mx-10;
   }
   /* #endregion */
 
@@ -434,15 +432,15 @@
   }
 
   .ind-course-heading {
-    @apply text-center text-font-color-pri text-3xl md:text-5xl font-extrabold mb-10;
+    @apply text-center text-foreground text-3xl md:text-5xl font-extrabold mb-10;
   }
 
   .enroll-btn {
-    @apply transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri active:text-font-color-pri hover:border-font-color-pri active:border-font-color-pri;
+    @apply cursor-pointer transition-all text-font-color-white bg-font-color-green text-lg sm:text-xl px-6 sm:px-8 py-3 font-bold rounded-lg border-2 border-b-6 border-font-color-green-dark hover:text-font-color-pri active:text-font-color-pri hover:border-borderhover active:border-borderhover;
   }
 
   .enroll-btn.touch {
-    @apply text-font-color-pri border-font-color-pri;
+    @apply text-font-color-pri border-borderhover;
   }
 
   .ind-course-duration {
@@ -480,9 +478,9 @@
   .ind-course-sublist {
     @apply list-outside list-disc mx-auto mb-5 pl-5;
   }
-  /* #region */
+  /* #endregion */
 
-  /* ILLUSTRATIONS */
+  /* #region ILLUSTRATIONS */
   .illus {
     @apply h-auto w-auto max-h-[225px] sm:max-h-[300px] md:max-h-[425px] lg:max-h-[500px];
   }
@@ -491,6 +489,10 @@
   /* #region CONTACT PAGE */
   .contact-section-heading {
     @apply text-font-color-green text-2xl md:text-4xl font-extrabold mb-3;
+  }
+
+  .contact-form {
+    @apply bg-navbar;
   }
 
   .form-submit-btn {
@@ -502,7 +504,7 @@
   }
 
   .form-fieldbox {
-    @apply transition-all w-full bg-mainbg-color p-3 border-solid border-1 focus:outline-1 focus:outline-font-color-pri border-color-border-pri focus:border-font-color-pri active:border-font-color-pri rounded-lg;
+    @apply transition-all w-full bg-background p-3 border-solid border-1 focus:outline-1 focus:outline-foreground border-border focus:border-foreground active:border-foreground rounded-lg;
   }
 
   .form-label {

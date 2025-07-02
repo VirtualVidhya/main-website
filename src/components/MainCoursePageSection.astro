@@ -4,12 +4,17 @@ import LinkPage from "./LinkPage.astro";
 interface Props {
   courseCategoryName: string;
   courseSubPageLink: string;
+  isLastSection?: boolean;
 }
 
-const { courseCategoryName = "", courseSubPageLink = "" } = Astro.props;
+const {
+  courseCategoryName = "",
+  courseSubPageLink = "",
+  isLastSection = false,
+} = Astro.props;
 ---
 
-<section class="w-full mb-24">
+<section class="w-full" class:list={[{ "mb-24": !isLastSection }]}>
   <h2
     class="text-center text-font-color-sec text-3xl md:text-5xl font-extrabold mb-10"
   >

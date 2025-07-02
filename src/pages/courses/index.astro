@@ -46,9 +46,7 @@ const metadata = {
 ---
 
 <BaseLayout metadata={metadata} navSection="courses">
-  <main
-    class="flex flex-col items-center justify-center gap-24 mt-10 mb-20 mx-4"
-  >
+  <main class="flex flex-col items-center justify-center gap-24 mx-4">
     <img
       src="/images/doodles/students-learning.svg"
       alt="an Illustration of a woman doing designing"
@@ -163,6 +161,7 @@ const metadata = {
     <MainCoursePageSection
       courseCategoryName="Literacy"
       courseSubPageLink="literacy"
+      isLastSection={true}
     >
       <SwiperSlideCard>
         <DtpCourseCard />

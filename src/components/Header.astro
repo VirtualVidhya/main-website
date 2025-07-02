@@ -21,8 +21,6 @@ const { navSection } = Astro.props;
     class="text-2xl cursor-pointer mx-2 flex justify-center items-center sm:hidden"
     aria-label="Toggle Navigation Menu"
   >
-    <!-- <i id="topbar-menu-btn" class="fa-solid fa-bars" name="close"></i> -->
-    <!-- <i id="topbar-menu-btn" class="fa-solid fa-xmark" name="close"></i> -->
     <svg
       data-state="open"
       xmlns="http://www.w3.org/2000/svg"
@@ -56,92 +54,94 @@ const { navSection } = Astro.props;
   </button>
 
   <div
-    class="topbar-menu bg-navbar-color-pri sm:flex z-10 sm:z-auto absolute sm:static box-border sm:box-content h-dvh sm:h-auto w-full sm:w-auto left-[-640px] top-[50px] opacity-0 sm:opacity-100 transition-all ease-in duration-200"
+    class="topbar-menu fixed left-[-640px] top-[50px] opacity-0 transition-transform ease-in sm:static sm:flex sm:opacity-100 sm:transition-none"
   >
-    <nav
-      class="topbar-nav flex flex-col items-start sm:items-stretch gap-3 sm:gap-0 sm:flex-row sm:space-x-2 md:space-x-4 font-bold text-base md:text-xl mt-10 sm:mt-0 mx-4 sm:mx-0"
-    >
-      <LinkPage
-        href="/"
-        class={`flex items-center header-navmenu-hover ${
-          navSection === "home"
-            ? "underline"
-            : "link-interaction-underline-effect"
-        }`}
-        title="Home"
-      />
-      <LinkPage
-        href="/about/"
-        class={`flex items-center header-navmenu-hover ${
-          navSection === "about"
-            ? "underline"
-            : "link-interaction-underline-effect"
-        }`}
-        title="About"
-      />
-      <div class="sm:relative group">
-        <span
-          data-cousemenu-state="close"
-          class={`submenu-trigger h-full flex flex-row items-center cursor-pointer header-navmenu-hover ${
-            navSection === "courses"
+    <div class="topbar-nav box-border h-full pb-20 sm:box-content sm:pb-0">
+      <nav
+        class="relative flex flex-col items-start gap-3 pb-10 pt-10 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 sm:pb-0 sm:pt-0 md:space-x-4"
+      >
+        <LinkPage
+          href="/"
+          class={`flex items-center header-navmenu-hover ${
+            navSection === "home"
+              ? "underline"
+              : "link-interaction-underline-effect"
+          }`}
+          title="Home"
+        />
+        <LinkPage
+          href="/about/"
+          class={`flex items-center header-navmenu-hover ${
+            navSection === "about"
+              ? "underline"
+              : "link-interaction-underline-effect"
+          }`}
+          title="About"
+        />
+        <div class="sm:relative group">
+          <span
+            data-cousemenu-state="close"
+            class={`submenu-trigger h-full flex flex-row items-center cursor-pointer header-navmenu-hover ${
+              navSection === "courses"
+                ? "underline"
+                : "link-interaction-underline-effect"
+            }`}
+          >
+            Courses
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+              class="util-icon"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="15"
+            >
+              <path
+                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+              ></path></svg
+            >
+            <!-- <span>Courses<i class="fa-solid fa-caret-down pl-1"></i></span> -->
+          </span>
+          <div
+            class="sub-menu hidden sm:absolute flex-col gap-4 bg-navbar-color-pri rounded-md py-3 pl-5 sm:pt-6 sm:pb-4 sm:px-6 min-w-max sm:right-0"
+          >
+            <LinkPage
+              href="/courses/"
+              class="link-interaction-effect"
+              title="All Courses"
+            />
+            <LinkPage
+              href="/courses/multimedia/"
+              class="link-interaction-effect"
+              title="Multimedia Courses"
+            />
+            <LinkPage
+              href="/courses/programming/"
+              class="link-interaction-effect"
+              title="Programming Courses"
+            />
+            <LinkPage
+              href="/courses/kids/"
+              class="link-interaction-effect"
+              title="Kids Courses"
+            />
+          </div>
+        </div>
+        <a
+          href="/contact/"
+          class={`flex items-center header-navmenu-hover ${
+            navSection === "contact"
               ? "underline"
               : "link-interaction-underline-effect"
           }`}
         >
-          Courses
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            class="util-icon"
-            fill="currentColor"
-            stroke="currentColor"
-            stroke-width="15"
-          >
-            <path
-              d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
-            ></path></svg
-          >
-          <!-- <span>Courses<i class="fa-solid fa-caret-down pl-1"></i></span> -->
-        </span>
-        <div
-          class="sub-menu hidden sm:absolute flex-col gap-4 bg-navbar-color-pri rounded-md py-3 pl-5 sm:pt-6 sm:pb-4 sm:px-6 min-w-max sm:right-0"
-        >
-          <LinkPage
-            href="/courses/"
-            class="link-interaction-effect"
-            title="All Courses"
-          />
-          <LinkPage
-            href="/courses/multimedia/"
-            class="link-interaction-effect"
-            title="Multimedia Courses"
-          />
-          <LinkPage
-            href="/courses/programming/"
-            class="link-interaction-effect"
-            title="Programming Courses"
-          />
-          <LinkPage
-            href="/courses/kids/"
-            class="link-interaction-effect"
-            title="Kids Courses"
-          />
-        </div>
-      </div>
-      <a
-        href="/contact/"
-        class={`flex items-center header-navmenu-hover ${
-          navSection === "contact"
-            ? "underline"
-            : "link-interaction-underline-effect"
-        }`}
-      >
-        Contact
-      </a>
-    </nav>
+          Contact
+        </a>
+      </nav>
+    </div>
 
     <div
-      class="box-border sm:box-content w-full sm:w-auto px-2 sm:px-0 sm:hidden fixed bottom-20 text-xl"
+      class="mobile-social-links bg-navbar absolute bottom-0 left-0 z-20 box-border w-full px-2 pb-10 text-xl sm:box-content sm:hidden sm:w-auto sm:px-0 sm:pb-0"
     >
       <hr class="side-navmenu-border" />
 

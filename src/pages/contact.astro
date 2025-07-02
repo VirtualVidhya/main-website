@@ -9,7 +9,7 @@ const metadata = {
 ---
 
 <BaseLayout metadata={metadata} navSection="contact">
-  <main class="my-20">
+  <main>
     <section
       class="flex flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl 2xl:max-w-6xl"
     >
@@ -71,7 +71,7 @@ const metadata = {
     </section>
 
     <div
-      class="mx-auto mb-24 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl 2xl:max-w-5xl"
+      class="mx-auto max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl 2xl:max-w-5xl"
     >
       <h2 class="text-center contact-section-heading mt-3 mb-9">
         Inquiry Form
@@ -81,6 +81,7 @@ const metadata = {
         name="contact"
         method="POST"
         id="form"
+        class="contact-form"
         action="/api/submit-contact-form"
         autocomplete="off"
         novalidate
@@ -223,13 +224,12 @@ const metadata = {
             <label class="form-label">Message</label>
 
             <textarea
-              class="w-full form-fieldbox mt-1"
+              class="w-full form-fieldbox mt-1 resize-none"
               id="message"
               name="message"
               placeholder="Enter your message here"
               cols="30"
-              rows="10"
-              resize="vertical"></textarea>
+              rows="10"></textarea>
           </div>
 
           <button
@@ -246,7 +246,7 @@ const metadata = {
 
     <div
       id="form-success-msg"
-      class="hidden flex-col items-center justify-center gap-3 mx-auto mb-24 max-w-mdsm md:max-w-2xl lg:max-w-4xl"
+      class="hidden flex-col items-center justify-center gap-3 mx-auto max-w-mdsm md:max-w-2xl lg:max-w-4xl"
     >
       <!-- <i class="fa-solid fa-circle-check text-font-color-sec text-5xl"></i> -->
       <div class="text-font-color-green text-5xl">

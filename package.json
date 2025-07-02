@@ -22,6 +22,7 @@
     "@astrojs/sitemap": "^3.3.0",
     "@lottiefiles/dotlottie-web": "^0.40.2",
     "@playform/compress": "^0.1.8",
+    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.17",
     "astro": "^5.5.5",
     "astro-compressor": "^1.0.0",

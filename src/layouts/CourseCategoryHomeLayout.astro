@@ -38,7 +38,7 @@ const { metadata, navSection, categoryDetails } = Astro.props;
         />
       </div>
 
-      <section class="mb-20">
+      <section class:list={[{ "mb-24": categoryDetails.hasShortTermCourses }]}>
         {
           categoryDetails.hasLongTermCourses && (
             <h3 class="text-center text-font-color-sec text-2xl md:text-4xl font-extrabold mb-10">
