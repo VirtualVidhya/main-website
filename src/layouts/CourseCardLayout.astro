@@ -30,7 +30,7 @@ const {
     src={courseCardDetails.icon}
     alt="course-logo"
     decoding="async"
-    loading={courseCardDetails.refLink ? "lazy" : undefined}
+    loading={courseCardDetails.lazyLoadIconImg ? "lazy" : undefined}
   />
   <h4 class="course-card-heading" style="white-space: pre-wrap;">
     {courseCardDetails.name}

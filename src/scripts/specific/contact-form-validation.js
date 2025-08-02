@@ -52,7 +52,10 @@ function onSuccessfulSubmission() {
 }
 
 let check = (id, serial, message) => {
-  if (id.value.trim() === "") {
+  const trimmedValue = id.value.trim();
+  id.value = trimmedValue;
+
+  if (trimmedValue === "") {
     showInvalidInputIndication(id, serial, message);
   } else {
     let response;
