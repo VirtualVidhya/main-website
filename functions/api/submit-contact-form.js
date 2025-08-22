@@ -32,9 +32,20 @@ async function storeInSupabase(env, formData) {
 
 const spamNamePatterns = new Map();
 
-function isSpamName(name) {
-  // Check if name ends with "noita" (or slight variations) or is a known spam name
-  const spamRegex = /(no[i1í]ta|n0ita|nσita|n𝑜ita)$|^terencelielt$/i;
+const knownSpamNames = new Set(["terencelielt", "ellisbit"]);
+
+function isSpamName(raw_name) {
+  if (!raw_name) return false;
+
+  const name = String(raw_name).trim().toLowerCase();
+
+  // exact-name check (fast)
+  if (knownSpamNames.has(name)) {
+    spamNamePatterns.set(name, (spamNamePatterns.get(name) || 0) + 1);
+    return true;
+  }
+
+  const spamRegex = /(no[i1í]ta|n0ita|noita|noita)$/i;
 
   if (spamRegex.test(name)) {
     spamNamePatterns.set(name, (spamNamePatterns.get(name) || 0) + 1);
