@@ -32,14 +32,13 @@ async function storeInSupabase(env, formData) {
 
 const spamNamePatterns = new Map();
 
-const knownSpamNames = new Set(["terencelielt", "ellisbit"]);
+const knownSpamNames = new Set(["terencelielt", "ellisbit", "bradyfet"]);
 
 function isSpamName(raw_name) {
   if (!raw_name) return false;
 
   const name = String(raw_name).trim().toLowerCase();
 
-  // exact-name check (fast)
   if (knownSpamNames.has(name)) {
     spamNamePatterns.set(name, (spamNamePatterns.get(name) || 0) + 1);
     return true;
