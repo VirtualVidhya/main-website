@@ -365,6 +365,18 @@ html[data-theme="dark"] {
     @apply flex justify-center items-center text-3xl md:text-4xl;
   }
 
+  .course-nav-btn {
+    fill: var(--foreground) !important;
+  }
+
+  .course-nav-btn:hover {
+    @apply !fill-font-color-green;
+  }
+
+  .course-nav-btn.touch {
+    @apply !fill-font-color-green;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     position: static !important;
