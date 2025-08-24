@@ -5,6 +5,7 @@
   "version": "1.2.1",
   "scripts": {
     "dev:astro": "astro dev",
+    "dev": "pnpm run dev:astro",
     "build:worker": "esbuild functions/api/submit-contact-form.js --bundle --platform=node --external:resend --outfile=dist/worker.js",
     "build:astro": "astro build",
     "build": "pnpm run build:worker && pnpm run build:astro",
