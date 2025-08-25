@@ -277,7 +277,7 @@ html[data-theme="dark"] {
   }
 
   .read-more-btn {
-    @apply bg-font-color-blue !py-1 sm:!py-2 !px-0 !pl-3 !pr-[10px] sm:!pl-4 sm:pr-[14px] transition-all text-font-color-white text-base sm:text-lg font-bold rounded-md sm:rounded-lg hover:text-font-color-pri active:text-font-color-pri;
+    @apply bg-font-color-blue !py-1 sm:!py-2 !px-0 !pl-3 !pr-[10px] sm:!pl-4 sm:pr-[14px] transition-all text-font-color-white text-base sm:text-lg font-bold rounded-md sm:rounded-lg hover:text-font-color-pri active:text-font-color-pri border-2 border-b-6 border-font-color-blue-dark hover:border-borderhover active:border-borderhover;
   }
 
   .read-more-btn.touch {
