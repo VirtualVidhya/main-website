@@ -539,4 +539,18 @@ html[data-theme="dark"] {
     @apply text-font-color-red-dark;
   }
   /* #endregion */
+
+  /* #region LINK TREE */
+  .linktree-box {
+    @apply bg-navbar p-4 rounded-md w-full flex flex-col md:flex-row justify-center items-center text-center gap-3 md:gap-5;
+  }
+
+  .linktree-heading {
+    @apply text-font-color-green font-bold text-xl md:text-2xl;
+  }
+
+  .linktree-info {
+    @apply font-semibold text-base md:text-lg underline-offset-4;
+  }
+  /* #endregion */
 }

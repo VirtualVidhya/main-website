@@ -102,6 +102,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  
+  trailingSlash: "always", // Ensure URLs always have a trailing slash
 
   output: "static",
 
