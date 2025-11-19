@@ -1,9 +1,10 @@
 name: Ping Supabase to Prevent Pausing
 
+# Runs at 09:00 UTC every Monday and Thursday. Adjust cron as needed.
 on:
   schedule:
-    - cron: "0 9 * * 1,4" # Runs at 9:00 AM UTC every Monday and Thursday
-  workflow_dispatch: # Allows manual triggering from the GitHub UI
+    - cron: "0 9 * * 1,4"
+  workflow_dispatch:
 
 concurrency:
   group: ping-supabase
@@ -14,12 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
       # Optional debug: basic reachability checks (will show HTTP/TLS/DNS symptoms in logs)
-      - name: Debug: network & endpoint check
+      - name: Debug (network & endpoint check)
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_KEY: ${{ secrets.DATABASE_SERVICE_ROLE_KEY }}
@@ -69,7 +69,6 @@ jobs:
               break
             else
               echo "Ping attempt $i failed (transient)."
-              # print small debug: HTTP status if available
               if [ -f "$tmp_resp" ]; then
                 echo "Response body (if any):"
                 cat "$tmp_resp" || true
@@ -88,46 +87,61 @@ jobs:
 
       - name: Cleanup temp files
         run: rm -f /tmp/supabase-ping-resp || true
+# name: Ping Supabase to Prevent Pausing
 
-      # # Step 2: Set up Node.js
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '20' # Use Node.js 18
+# on:
+#   schedule:
+#     - cron: '0 9 * * 1,4' # Runs at 9:00 AM UTC every Monday and Thursday
+#   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
-      # # Step 3: Install Supabase Client
-      # - name: Install Supabase Client
-      #   run: npm install @supabase/supabase-js --force
+# jobs:
+#   ping:
+#     runs-on: ubuntu-latest
 
-      # Step 4: Ping Supabase
-      # - name: Ping Supabase
-      #   env:
-      #     DATABASE_URL: ${{ secrets.DATABASE_URL }} # Supabase project URL
-      #     DATABASE_KEY: ${{ secrets.DATABASE_SERVICE_ROLE_KEY }} # Supabase service role key
-      #   run: |
-      #     node -e "
-      #     (async () => {
-      #       try {
-      #         // Debugging: Log environment variables (optional)
-      #         console.log('Supabase URL:', process.env.DATABASE_URL);
-      #         console.log('Supabase Key:', process.env.DATABASE_KEY);
+#     steps:
+#       # Step 1: Checkout the repository
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      #         // Import Supabase client
-      #         const { createClient } = require('@supabase/supabase-js');
-      #         const supabase = createClient(process.env.DATABASE_URL, process.env.DATABASE_KEY);
+#       # Step 2: Set up Node.js
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '20' # Use Node.js 18
 
-      #         // Ping Supabase by querying a table (e.g., 'songs')
-      #         const { data, error } = await supabase.from('inquiries').select('*').limit(10);
+#       # Step 3: Install Supabase Client
+#       - name: Install Supabase Client
+#         run: npm install @supabase/supabase-js --force
 
-      #         // Handle errors
-      #         if (error) throw error;
+#       # Step 4: Ping Supabase
+#       - name: Ping Supabase
+#         env:
+#           DATABASE_URL: ${{ secrets.DATABASE_URL }} # Supabase project URL
+#           DATABASE_KEY: ${{ secrets.DATABASE_SERVICE_ROLE_KEY }} # Supabase service role key
+#         run: |
+#           node -e "
+#           (async () => {
+#             try {
+#               // Debugging: Log environment variables (optional)
+#               console.log('Supabase URL:', process.env.DATABASE_URL);
+#               console.log('Supabase Key:', process.env.DATABASE_KEY);
 
-      #         // Log success
-      #         console.log('Ping successful:', data);
-      #       } catch (err) {
-      #         // Log and exit with error
-      #         console.error('Error pinging Supabase:', err.message);
-      #         process.exit(1);
-      #       }
-      #     })();
-      #     "
+#               // Import Supabase client
+#               const { createClient } = require('@supabase/supabase-js');
+#               const supabase = createClient(process.env.DATABASE_URL, process.env.DATABASE_KEY);
+
+#               // Ping Supabase by querying a table (e.g., 'songs')
+#               const { data, error } = await supabase.from('certificates').select('*').limit(10);
+
+#               // Handle errors
+#               if (error) throw error;
+
+#               // Log success
+#               console.log('Ping successful:', data);
+#             } catch (err) {
+#               // Log and exit with error
+#               console.error('Error pinging Supabase:', err.message);
+#               process.exit(1);
+#             }
+#           })();
+#           "
