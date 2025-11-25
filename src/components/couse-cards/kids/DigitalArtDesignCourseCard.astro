@@ -1,0 +1,21 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/kids/digital-art-and-design/",
+  icon: "/images/course-icons/drawing.png",
+  lazyLoadIconImg: false,
+  name: "Digital Art & Design",
+  description:
+    "Learn to express and align your creative ideas through digital art...",
+  duration: "2-4",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="MS Paint" />
+    <CourseCardToolTag toolName="Canva" />
+  </slot>
+</CourseCardLayout>

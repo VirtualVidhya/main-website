@@ -1,0 +1,97 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Digital Art & Design for kids at V.Vidhya",
+  description:
+    "Unlock your child's creativity with our Digital Art & Design course at V.Vidhya in Surat. Learn MS Paint, Canvas like simple tools and create projects in fun and playful way.",
+};
+
+const courseDetails = {
+  name: "Digital Art & Design",
+  duration: "2-4",
+  image: "/images/doodles/gamer-boy.svg",
+  imgAlt: "an Illustration of a boy enjoying digital art",
+  overview:
+    "This Digital Art & Design Course for Kids transforms your child's imagination into colorful, creative digital art - in a fun, easy-to-follow way. Through playful, project-based lessons, students will learn how to draw, design, and build digital artwork using tools like MS Paint, Canva (and optionally simple AI-image tools). They’ll discover the basics of shapes, color, layout, and composition, and gradually learn to use digital tools to bring their ideas to life. Over the course, your child will not only master essential digital drawing and design skills but also learn how to plan and build their own projects - from simple posters and cards to more imaginative “story-world” art pieces. By the end, they will confidently create polished, shareable digital art that reflects their creativity, helps them communicate ideas visually, and builds a strong foundation for future design skills.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Introduction to Digital Art & Design</li>
+    <ul class="ind-course-sublist">
+      <li>
+        What is digital art & design - why do people design things? What is the
+        need of design in society?
+      </li>
+      <li>
+        How design is all around us - in games, packaging, school projects
+      </li>
+      <li>ntroduction to the tools: MS Paint, Canva</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Basic Drawing & Shapes</li>
+    <ul class="ind-course-sublist">
+      <li>Drawing with MS Paint: basic tools (brush, pencil, shapes, fill)</li>
+      <li>
+        Understanding and using geometric shapes: circles, squares, triangles
+      </li>
+      <li>
+        Combining shapes to make simple drawings (flower, house, robot, animal)
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Color Theory for Kids</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to color: primary colors, secondary colors</li>
+      <li>
+        What is a “color palette” - how to pick colors that look good together
+      </li>
+      <li>
+        Using color in digital tools: how to fill shapes, change brush colors in
+        Paint / Canva
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Typography Basics</li>
+    <ul class="ind-course-sublist">
+      <li>What is typography: fonts, text styles, sizes</li>
+      <li>
+        How to choose the right font for different purposes (fun poster vs
+        serious message)
+      </li>
+      <li>Text effects (bold, italic, color) in Canva or Paint</li>
+      <li>How to combine graphics + text effectively</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Composition & Layout</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to visual composition: balance, symmetry, hierarchy</li>
+      <li>
+        White space (or “negative space”) - why not everything needs to be
+        filled
+      </li>
+      <li>What are layers and why are they useful in design</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Simple Animation / Effects</li>
+    <ul class="ind-course-sublist">
+      <li>Basic transition and movement: making elements appear, fade, move</li>
+      <li>Using “presentations” or “slides” for mini animated story</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>Brainstorming sessions: think of a world, a story, or a theme (superheroes, fantasy land, space)</li>
+      <li>Sketching ideas on paper (layout, characters, colors) and planning how to build this design in digital form</li>
+      <li>How to export designs and understand the basic file types</li>
+      <li>Receive feedback and lessons learned: favorite tool, favorite design part, what was challenging</li>
+      <li>Showcasing the final project to peers & family</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>

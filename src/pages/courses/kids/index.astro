@@ -3,6 +3,7 @@ import CourseCategoryHomeLayout from "../../../layouts/CourseCategoryHomeLayout.
 
 import ScratchProgramCourseCard from "../../../components/couse-cards/kids/ScratchProgramCourseCard.astro";
 import MsOfficeCourseCard from "../../../components/couse-cards/kids/MsOfficeCourseCard.astro";
+import DigitalArtDesignCourseCard from "../../../components/couse-cards/kids/DigitalArtDesignCourseCard.astro";
 
 const metadata = {
   title: "Explore Computer Courses for Kids at V.Vidhya in Surat",
@@ -26,6 +27,8 @@ const categoryDetails = {
 >
   <slot slot="longterm-courses-slot">
     <ScratchProgramCourseCard />
+
+    <DigitalArtDesignCourseCard />
 
     <MsOfficeCourseCard />
   </slot>
