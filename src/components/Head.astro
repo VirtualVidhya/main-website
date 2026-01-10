@@ -12,6 +12,9 @@ interface Props {
 
 const metadata = Astro.props.metadata;
 const includeLottieAnimScript = Astro.props.includeLottieAnimScript ?? false;
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = `${Astro.site}images/og_image.jpg`;
 ---
 
 <head>
@@ -27,11 +30,16 @@ const includeLottieAnimScript = Astro.props.includeLottieAnimScript ?? false;
   <link rel="sitemap" href="/sitemap-index.xml" />
 
   <!-- Meta-Data -->
-  <meta name="description" content={metadata.description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={pageUrl} />
   <meta property="og:title" content={metadata.title} />
   <meta property="og:description" content={metadata.description} />
+  <meta name="description" content={metadata.description} />
+  <meta property="og:image" content={ogImageUrl} />
   <meta name="twitter:title" content={metadata.title} />
   <meta name="twitter:description" content={metadata.description} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImageUrl} />
 
   <!-- #Preconnect Hints# -->
 
