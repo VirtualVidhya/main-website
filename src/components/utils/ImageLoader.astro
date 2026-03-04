@@ -1,0 +1,25 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+  asyncDecode?: boolean;
+  lazyLoad?: boolean;
+}
+
+const {
+  src,
+  alt: altName = "",
+  class: className = "",
+  asyncDecode = true,
+  lazyLoad = true,
+} = Astro.props as Props;
+---
+
+<img
+  src={src}
+  alt={altName}
+  {...asyncDecode && { decoding: "async" }}
+  {...lazyLoad && { loading: "lazy" }}
+  {...className && { class: className }}
+/>

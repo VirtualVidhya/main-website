@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LinkPage from "../components/LinkPage.astro";
+import ImageLoader from "../components/utils/ImageLoader.astro";
 
 const metadata = {
   title: "About Us - V.Vidhya | Computer Education for All in Surat",
@@ -60,26 +61,20 @@ const metadata = {
       <div
         class="flex flex-row gap-x-4 gap-y-0 flex-wrap items-center justify-center mb-2"
       >
-        <img
+        <ImageLoader
           src="/images/logo-icons/foundation-forum-logo.svg"
           alt="foundation-forum-logo"
           class="h-14 sm:h-18 md:h-20 lg:h-24 aspect-[234/132]"
-          decoding="async"
-          loading="lazy"
         />
-        <img
+        <ImageLoader
           src="/images/logo-icons/visual-logo.svg"
           alt="visual-logo"
           class="h-9 sm:h-12 md:h-14 lg:h-18 aspect-[209/41]"
-          decoding="async"
-          loading="lazy"
         />
-        <img
+        <ImageLoader
           src="/images/logo-icons/vvidhya-logo-bold.svg"
           alt="visual-logo"
           class="h-16 sm:h-18 md:h-[90px] lg:h-28 aspect-square"
-          decoding="async"
-          loading="lazy"
         />
       </div>
 
@@ -88,9 +83,8 @@ const metadata = {
           You may have known us as <span class="font-bold"
             >Foundation Forum</span
           >
-          - that's where it all began. A small initiative driven by passion soon
-          became a place where students discovered their potential in the world of
-          technology.
+          - that's where it all began. A small initiative driven by passion soon became
+          a place where students discovered their potential in the world of technology.
         </p>
         <p class="mb-[6px]">
           Over time, we expanded our reach and collaborated with <span
@@ -114,13 +108,11 @@ const metadata = {
         Meet our Founder
       </h3>
 
-      <div class="flex flex-col justify-center items-center gap-2">
-        <img
-          src="/images/about-page/founder-photo.webp"
-          alt="foundation-forum-logo"
-          class="w-[250px] sm:w-[400px] md:w-[550px] lg:w-[700px] 2xl:w-[800px] aspect-[1.5]"
-          decoding="async"
-          loading="lazy"
+      <div class="flex flex-col justify-center items-center gap-2.5">
+        <ImageLoader
+          src="/images/about-page/founder-sitting-in-cabin.webp"
+          alt="photo of the founder sitting in their office with a laptop"
+          class="w-[250px] sm:w-[400px] md:w-[550px] lg:w-[700px] 2xl:w-[800px] h-auto"
         />
 
         <div class="text-left">
@@ -157,8 +149,28 @@ const metadata = {
             Beyond technology, she cherishes every moment of teaching and
             connecting with people. Her motherly nature, filled with charm and
             an ever-positive spirit, touches hearts and leaves a lasting impact
-            - whether in people's professional or personal lives.
+            - whether in people's professional or personal lives. Alongside
+            classroom work she leads community outreach with NGOs and trusts,
+            mentors underprivileged learners and represents the local
+            IT-education community as <span class="font-bold">the President of ITASU</span> (Information
+            Technology Association of Surat), working to broaden access and
+            practical opportunities for learners.
           </p>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center sm:items-stretch w-full gap-2.5"
+        >
+          <ImageLoader
+            src="/images/about-page/founder-honoured-by-dmjtrust.webp"
+            alt="photo of the founder getting honoured by the DMJ Muslim Trust"
+            class="max-w-full sm:max-w-1/2 h-auto"
+          />
+          <ImageLoader
+            src="/images/about-page/founder-honoured-by-dayaljitrust.webp"
+            alt="photo of the founder getting honoured by Dayalji Ashram Trust"
+            class="max-w-full sm:max-w-1/2 h-auto"
+          />
         </div>
       </div>
     </section>
@@ -179,21 +191,27 @@ const metadata = {
         </p>
         <ul class="pl-5 list-outside list-disc">
           <li>
-            Workshops & Seminars: Hands-on sessions designed for students,
-            professionals and organizations to explore emerging technologies and
-            industry-relevant skills
+            <span class="font-semibold">Workshops & Seminars:</span> Hands-on sessions
+            designed for students, professionals and organizations to explore emerging
+            technologies and industry-relevant skills
           </li>
           <li>
-            Community Outreach: Bringing digital literacy to those who need it
-            most, from underprivileged communities to senior citizens, ensuring
-            no one is left behind in the digital era
+            <span class="font-semibold">Community Outreach:</span> Bringing digital
+            literacy to those who need it most, from underprivileged communities to
+            senior citizens, ensuring no one is left behind in the digital era
           </li>
           <li>
-            Student Projects & Internships: Real-world learning opportunities
-            that help students gain practical experience, preparing them for
-            careers in technology and beyond
+            <span class="font-semibold">Student Projects & Internships:</span> Real-world
+            learning opportunities that help students gain practical experience, preparing
+            them for careers in technology and beyond
           </li>
         </ul>
+
+        <ImageLoader
+          src="/images/about-page/founder-taking-seminar.webp"
+          alt="photo of the founder taking seminar for 250+ students"
+          class="w-[250px] sm:w-[400px] md:w-[550px] lg:w-[700px] 2xl:w-[800px] h-auto mt-2.5 mx-auto"
+        />
       </div>
     </section>
 
@@ -212,17 +230,17 @@ const metadata = {
         </p>
         <ul class="pl-5 list-outside list-disc mb-[6px]">
           <li>
-            Learners & Enthusiasts: Whether you're here to gain new skills,
-            upskill your team or contribute as a mentor, there's a place for you
-            at V.Vidhya
+            <span class="font-semibold">Learners & Enthusiasts:</span> Whether you're
+            here to gain new skills, upskill your team or contribute as a mentor,
+            there's a place for you at V.Vidhya
           </li>
           <li>
-            Schools & Colleges: Partner with us to equip students with essential
-            digital skills
+            <span class="font-semibold">Schools & Colleges:</span> Partner with us
+            to equip students with essential digital skills
           </li>
           <li>
-            Corporates & Companies: Host workshops, internships and training
-            programs to shape the future workforce
+            <span class="font-semibold">Corporates & Companies:</span> Host workshops,
+            internships and training programs to shape the future workforce
           </li>
         </ul>
         <p class="text-left mb-[6px]">
