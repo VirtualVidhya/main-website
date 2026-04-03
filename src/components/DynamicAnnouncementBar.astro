@@ -1,0 +1,35 @@
+---
+import IconBrain from "./icons/IconBrain.astro";
+import IconCertificate from "./icons/IconCertificate.astro";
+import IconInstagramLink from "./icons/socials/IconInstagramLink.astro";
+import IconWhatsappLink from "./icons/socials/IconWhatsappLink.astro";
+---
+
+<div class="dynamic-announcement-bar" id="dynamic-announcement-bar" style="display: flex;">
+  <a
+    href="https://portal.vvidhya.com/certificate-authenticator/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="announcement-bar-content link-interaction-effect"
+    ><IconCertificate styleClass="text-xl" /><span
+      class="text-base leading-none">Verify Certificate</span
+    ></a
+  >
+
+  <a
+    href="https://learn.vvidhya.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="announcement-bar-content link-interaction-effect"
+    ><IconBrain styleClass="text-xl" />
+    <span class="text-base leading-none">Explore learning hub</span
+    ></a
+  >
+
+  <div
+    class="announcement-bar-content"
+  >
+    <IconInstagramLink styleClass="" />
+    <IconWhatsappLink styleClass="" />
+  </div>
+</div>

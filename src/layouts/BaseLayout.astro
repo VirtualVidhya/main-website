@@ -1,6 +1,8 @@
 ---
 import Head from "../components/Head.astro";
 import ScrollUpBtn from "../components/Scroll-Up-Btn.astro";
+import FixedAnnouncementBar from "../components/FixedAnnouncementBar.astro";
+import DynamicAnnouncementBar from "../components/DynamicAnnouncementBar.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -25,6 +27,9 @@ const navSection = Astro.props.navSection ?? "none";
   <body>
     <ScrollUpBtn />
 
+    <FixedAnnouncementBar />
+    <DynamicAnnouncementBar />
+
     <Header navSection={navSection} />
 
     <slot />
@@ -41,7 +46,7 @@ const navSection = Astro.props.navSection ?? "none";
       function handleTouchInteractions() {
         // Get all interactive elements
         const interactiveElements = document.querySelectorAll(
-          ".link-interaction-effect, .link-interaction-underline-effect, .header-logo-svg, .header-logo-text, .header-navmenu-hover, .scroll-up-btn, .explore-courses-btn, .read-more-btn, .view-all-btn, .course-card, .course-nav-btn, .enroll-btn, .form-submit-btn"
+          ".link-interaction-effect, .link-interaction-underline-effect, .header-logo-svg, .header-logo-text, .header-navmenu-hover, .scroll-up-btn, .explore-courses-btn, .read-more-btn, .view-all-btn, .course-card, .course-nav-btn, .enroll-btn, .form-submit-btn",
         );
 
         // console.log(interactiveElements);
@@ -67,9 +72,10 @@ const navSection = Astro.props.navSection ?? "none";
         handleTouchInteractions();
       }
     </script>
+    <script src="../scripts/common/scroller.js"></script>
     <script src="../scripts/common/course-sub-menu.js"></script>
     <script src="../scripts/common/navbar-menu.js"></script>
-    <script src="../scripts/common/scroll-up-btn.js"></script>
+    <script src="../scripts/common/scroll-handler.js"></script>
     <script src="../scripts/common/data.js"></script>
     <script src="../scripts/common/instant-page.js"></script>
 

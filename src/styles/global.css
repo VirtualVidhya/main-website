@@ -58,25 +58,40 @@ html[data-theme="dark"] {
 
 @layer base {
   :root {
+    --fixed-announcement-bar-height: 35px;
+    --dynamic-announcement-bar-height: 85px;
     --header-height: 52px;
     --main-section-pt: 40px;
     --main-section-pb: 40px;
   }
 
+  @media (min-width: 0px) {
+    :root {
+      --fixed-announcement-bar-height: 35px;
+      --dynamic-announcement-bar-height: 85px;
+      --header-height: 52px;
+      --main-section-pt: 40px;
+      --main-section-pb: 40px;
+    }
+  }
+
   @media (min-width: 640px) {
     :root {
+      --dynamic-announcement-bar-height: 40px;
       --header-height: 64px;
     }
   }
 
   @media (min-width: 768px) {
     :root {
+      --dynamic-announcement-bar-height: 40px;
       --header-height: 88px;
     }
   }
 
   @media (min-width: 1024px) {
     :root {
+      --dynamic-announcement-bar-height: 40px;
       --header-height: 94px;
     }
   }
@@ -90,7 +105,11 @@ html[data-theme="dark"] {
   }
 
   main {
-    padding-top: calc(var(--header-height) + var(--main-section-pt));
+    padding-top: calc(
+      var(--fixed-announcement-bar-height) +
+        var(--dynamic-announcement-bar-height) + var(--header-height) +
+        var(--main-section-pt)
+    );
     padding-bottom: var(--main-section-pb);
     @apply mt-10 mb-16;
   }
@@ -209,11 +228,101 @@ html[data-theme="dark"] {
   }
   /* #endregion */
 
+  /* #region ANNOUNCEMENT-BAR */
+  .dynamic-announcement-bar {
+    @apply bg-foreground fixed z-20 w-full flex flex-col xs:flex-row justify-center xs:justify-between text-center items-center gap-1.5 xs:gap-1 text-background px-5 transition-all;
+    height: var(--dynamic-announcement-bar-height);
+    top: var(--fixed-announcement-bar-height);
+  }
+
+  .announcement-bar-content {
+    @apply flex flex-row items-center gap-1 md:gap-1.5 grow-0 text-left;
+  }
+
+  .announcement-bar-content span {
+    @apply w-fit;
+  }
+
+  .fixed-announcement-bar {
+    @apply bg-font-color-green fixed z-20 w-full transition-all;
+
+    height: var(--fixed-announcement-bar-height);
+  }
+
+  .fixed-announcement-bar-wrapper::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .fixed-announcement-scroller {
+    @apply justify-center items-center text-background text-center font-semibold text-lg;
+  }
+
+  .scroller__inner {
+    padding-block: 0.15rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    gap: var(--gap, 0.25rem);
+  }
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+  }
+
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+
+  @keyframes scroll {
+    to {
+      /* transform: translate(calc(-50% - 0.5rem)); */
+      transform: translate(calc(-50% - (var(--gap, 1rem) / 2)));
+    }
+  }
+  /* #endregion */
+
   /* #region HEADER */
   .header {
     /* @apply bg-navbar-color-pri flex justify-between py-2 md:py-3 px-2 sm:px-4 md:px-8 mb-10 sticky top-0 z-10; */
-    @apply fixed top-0 right-0 left-0 z-10 mb-10 flex w-auto justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
+    @apply fixed right-0 left-0 z-10 mb-10 flex w-auto justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
     height: var(--header-height);
+    top: calc(
+      var(--fixed-announcement-bar-height) +
+        var(--dynamic-announcement-bar-height)
+    );
   }
 
   .header-logo-text {
@@ -249,8 +358,12 @@ html[data-theme="dark"] {
   /* #region NAV MENU */
   .topbar-menu {
     @apply z-10 box-border w-full bg-navbar p-4 sm:z-auto sm:box-content sm:w-auto sm:p-0;
-
-    height: calc(100vh - var(--header-height) + 5px);
+    height: calc(
+      100vh - var(--header-height) - var(--fixed-announcement-bar-height) -
+        var(--dynamic-announcement-bar-height) + 5px
+    );
+    top: calc(var(--header-height) + var(--fixed-announcement-bar-height)) +
+      var(--dynamic-announcement-bar-height);
   }
 
   @media (min-width: 640px) {
