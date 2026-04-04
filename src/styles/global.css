@@ -302,6 +302,10 @@ html[data-theme="dark"] {
     --_animation-duration: 20s;
   }
 
+  .scroller[data-speed="med"] {
+    --_animation-duration: 40s;
+  }
+
   .scroller[data-speed="slow"] {
     --_animation-duration: 60s;
   }
