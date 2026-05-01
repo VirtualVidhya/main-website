@@ -13,7 +13,7 @@ const courseDetails = {
   image: "/images/doodles/girls-developing-together.svg",
   imgAlt: "an Illustration of two young girls discussing a project idea",
   overview:
-    "This Fundamentals of Computer Applications course is designed to provide students with a strong foundation in software development and web technologies. It is structured to be equivalent to the Bachelor of Computer Applications (BCA) program, ensuring that students gain essential knowledge and hands-on experience in programming, software development, and web technologies. Throughout the course, students will learn the fundamentals of programming using C++, covering core programming concepts and Object-Oriented Programming (OOP) principles. Simultaneously, they will explore front-end web development, learning how to create interactive and responsive web applications using HTML, CSS, and JavaScript. By the end of this course, students will have a solid understanding of computer applications, programming logic, and web development, preparing them for advanced learning or entry into the professional tech industry.",
+    "This Fundamentals of Computer Applications course is designed to provide students with a strong foundation in software development. It is ideal for BCA, MCA, BSc IT, MSc IT students, as well as beginners who want to start their career journey with confidence and clarity. The course is built to develop real skills, industry awareness, and a problem-solving mindset through a balanced mix of learning, practice, and project work. It gives students the right direction, discipline, and technical base needed to grow in today’s digital world. By the end of the course, students will be better prepared to continue advanced learning, build their own projects, and move toward internships, freelancing, or entry-level opportunities in software development.",
 };
 ---
 
@@ -23,55 +23,153 @@ const courseDetails = {
   courseDetails={courseDetails}
 >
   <slot slot="course-curriculum-slot">
-    <li class="ind-course-imp-text">Introduction to Computer Applications</li>
+    <li class="ind-course-imp-text">
+      Computer Fundamentals & Digital Literacy
+    </li>
     <ul class="ind-course-sublist">
-      <li>Understanding computer systems, software, and hardware</li>
-      <li>Overview of operating systems (Windows, Linux, macOS)</li>
-      <li>Basics of networking and the internet</li>
+      <li>Introduction to computers and their components</li>
+      <li>Hardware, software, and operating systems</li>
+      <li>File management, storage, and system basics</li>
+      <li>Introduction to typing, productivity, and digital etiquette</li>
+      <li>Basics of cyber safety and responsible computer use</li>
     </ul>
 
-    <li class="ind-course-imp-text">Fundamentals of Programming (C++)</li>
+    <li class="ind-course-imp-text">Internet, Web & Online Tools</li>
     <ul class="ind-course-sublist">
-      <li>Introduction to C++ and its syntax</li>
-      <li>Data types, variables, and operators</li>
-      <li>Control structures (loops, conditional statements)</li>
-      <li>Functions and modular programming</li>
-      <li>Data structures</li>
+      <li>How the internet works</li>
+      <li>Browsers, search engines, email, and cloud storage</li>
+      <li>Downloading, uploading, and managing online resources</li>
+      <li>Online collaboration and communication tools</li>
       <li>
-        Object-Oriented Programming (OOP): Classes, objects, inheritance,
-        polymorphism
+        Introduction to internet safety, privacy, and cybersecurity awareness
       </li>
     </ul>
 
-    <li class="ind-course-imp-text">Introduction to Web Development</li>
+    <li class="ind-course-imp-text">MS Office / Productivity Suite</li>
     <ul class="ind-course-sublist">
-      <li>HTML5: Structure of a webpage, elements, forms, tables</li>
-      <li>CSS3: Styling web pages, layouts, Flexbox, Grid</li>
-      <li>JavaScript (ES6): Variables, data types, functions, events</li>
-      <li>DOM Manipulation: Selecting and modifying HTML elements</li>
-      <li>Basic Responsive Web Design</li>
+      <li>
+        Microsoft Word: formatting, reports, assignments, and professional
+        documents
+      </li>
+      <li>
+        Microsoft Excel: formulas, functions, charts, data handling, and basic
+        analysis
+      </li>
+      <li>
+        Microsoft PowerPoint: presentations, layouts, and visual communication
+      </li>
+      <li>Practical office-based tasks for academic and professional use</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Programming Foundations</li>
+    <ul class="ind-course-sublist">
+      <li>What programming is and how programmers think</li>
+      <li>Algorithms, flowcharts, logic building, and problem solving</li>
+      <li>Variables, data types, operators, and expressions</li>
+      <li>Conditions, loops, and decision making</li>
+      <li>Functions, modular programming, and reusable code</li>
+      <li>Debugging basics and common programming mistakes</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Primary Programming Language Track</li>
+    <p class="font-semibold">
+      (Student chooses one language: C / C++ / Python)
+    </p>
+    <ul class="ind-course-sublist">
+      <li>Syntax and structure of the selected language</li>
+      <li>Input/output handling</li>
+      <li>Control structures and loops</li>
+      <li>Functions and parameter passing</li>
+      <li>Arrays, strings, and basic data handling</li>
+      <li>Object-Oriented Programming concepts</li>
+      <li>Classes, objects, inheritance, polymorphism, and encapsulation</li>
+      <li>Introduction to standard libraries and practical usage</li>
+      <li>
+        Problem-solving through coding exercises and logic-based assignments
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Web Development Essentials</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to web development and website structure</li>
+      <li>
+        HTML5: elements, headings, lists, links, images, tables, and forms
+      </li>
+      <li>CSS3: styling, colors, typography, spacing, positioning</li>
+      <li>Layouts using Flexbox and Grid</li>
+      <li>Responsive design for mobile and desktop</li>
+      <li>
+        JavaScript basics: variables, functions, conditions, loops, events
+      </li>
+      <li>DOM manipulation and interactive user interfaces</li>
+      <li>Form validation and simple dynamic features</li>
     </ul>
 
     <li class="ind-course-imp-text">Software Development Basics</li>
     <ul class="ind-course-sublist">
-      <li>Software development life cycle (SDLC)</li>
-      <li>Introduction to version control (Git & GitHub)</li>
-      <li>Writing clean and efficient code</li>
-      <li>Debugging and testing basics</li>
+      <li>Understanding the software development life cycle (SDLC)</li>
+      <li>Introduction to version control using Git and GitHub</li>
+      <li>How teams work in software projects</li>
+      <li>Code organization, readability, and best practices</li>
+      <li>Basics of testing, debugging, and code review</li>
+      <li>Introduction to documentation and project presentation</li>
+    </ul>
+
+    <li class="ind-course-imp-text">AI Tools & Modern Workflow Enhancement</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Introduction to artificial intelligence and its growing role in
+        education, software development, and everyday productivity
+      </li>
+      <li>
+        Understanding how modern AI tools can help students learn faster, think
+        better, work smarter, and complete tasks more efficiently
+      </li>
+      <li>
+        Using AI for research, idea generation, coding support, debugging,
+        documentation, content creation, and workflow optimization
+      </li>
+      <li>Learning prompt writing for better and more useful AI responses</li>
+      <li>Understanding responsible, ethical, and effective use of AI tools</li>
+      <li>
+        Developing the ability to evaluate AI-generated results critically and
+        use them wisely
+      </li>
+      <li>
+        Gaining practical awareness of how AI is transforming the tech industry
+      </li>
+      <li>
+        Learning how to use AI to improve productivity, save time, and stay
+        future-ready for academics and career growth
+      </li>
+    </ul>
+
+    <li class="ind-course-imp-text">Industry Awareness & Career Orientation</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Different roles in software development: frontend developer, backend developer,
+        full-stack developer, app developer, game developer, QA tester, UI/UX
+        designer, and software engineer etc.
+      </li>
+      <li>Skills required for different career paths</li>
+      <li>How to build a learning roadmap after the course</li>
+      <li>Introduction to portfolios, resumes, and interview preparation</li>
+      <li>
+        Career guidance for internships, junior roles, and freelance
+        opportunities
+      </li>
     </ul>
 
     <li class="ind-course-imp-text">Hands-on Projects & Assignments</li>
     <ul class="ind-course-sublist">
+      <li>Computer literacy tasks and office document creation</li>
+      <li>Word, Excel, and PowerPoint practical assignments</li>
+      <li>Logic-building exercises and programming worksheets</li>
+      <li>Console-based + Web projects</li>
+      <li>Mini projects based on the student's chosen language</li>
       <li>
-        Simple C++ Console Applications (calculator, student management system)
-      </li>
-      <li>
-        Basic Web Development Projects (portfolio website, interactive form
-        validation)
-      </li>
-      <li>
-        Mini Capstone Project combining C++ programming and web development
-        concepts
+        Final capstone project combining programming logic, web basics, and
+        presentation skills
       </li>
     </ul>
   </slot>
