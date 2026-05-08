@@ -28,10 +28,10 @@ import CProgramCourseCard from "../../components/couse-cards/programming/CProgra
 import PythonProgramCourseCard from "../../components/couse-cards/programming/PythonProgramCourseCard.astro";
 import JavaProgramCourseCard from "../../components/couse-cards/programming/JavaProgramCourseCard.astro";
 
+import AllInOneKidsCourseCard from "../../components/couse-cards/kids/AllInOneKidsCourseCard.astro";
 import ScratchProgramCourseCard from "../../components/couse-cards/kids/ScratchProgramCourseCard.astro";
 import DigitalArtDesignCourseCard from "../../components/couse-cards/kids/DigitalArtDesignCourseCard.astro";
 import MsOfficeKidsCourseCard from "../../components/couse-cards/kids/MsOfficeCourseCard.astro";
-
 
 import DtpCourseCard from "../../components/couse-cards/literacy/DtpCourseCard.astro";
 import AccountingCourseCard from "../../components/couse-cards/literacy/AccountingCourseCard.astro";
@@ -151,6 +151,10 @@ const metadata = {
     </MainCoursePageSection>
 
     <MainCoursePageSection courseCategoryName="Kids" courseSubPageLink="kids">
+      <SwiperSlideCard>
+        <AllInOneKidsCourseCard />
+      </SwiperSlideCard>
+
       <SwiperSlideCard>
         <ScratchProgramCourseCard />
       </SwiperSlideCard>

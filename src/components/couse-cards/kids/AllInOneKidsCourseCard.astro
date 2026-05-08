@@ -1,0 +1,22 @@
+---
+import CourseCardLayout from "../../../layouts/CourseCardLayout.astro";
+import CourseCardToolTag from "../../CourseCardToolTag.astro";
+
+const courseCardDetails = {
+  refLink: "/courses/kids/all-in-one-kids/",
+  icon: "/images/course-icons/school.png",
+  lazyLoadIconImg: false,
+  name: "All In One",
+  description:
+    "Build strong computer skills all in one complete course...",
+  duration: "3-5",
+};
+---
+
+<CourseCardLayout {courseCardDetails}>
+  <slot slot="course-tool-tags-slot">
+    <CourseCardToolTag toolName="MS Suite" />
+    <CourseCardToolTag toolName="Canva" />
+    <CourseCardToolTag toolName="Scratch" />
+  </slot>
+</CourseCardLayout>

@@ -1,6 +1,7 @@
 ---
 import CourseCategoryHomeLayout from "../../../layouts/CourseCategoryHomeLayout.astro";
 
+import AllInOneKidsCourseCard from "../../../components/couse-cards/kids/AllInOneKidsCourseCard.astro";
 import ScratchProgramCourseCard from "../../../components/couse-cards/kids/ScratchProgramCourseCard.astro";
 import MsOfficeCourseCard from "../../../components/couse-cards/kids/MsOfficeCourseCard.astro";
 import DigitalArtDesignCourseCard from "../../../components/couse-cards/kids/DigitalArtDesignCourseCard.astro";
@@ -26,6 +27,8 @@ const categoryDetails = {
   categoryDetails={categoryDetails}
 >
   <slot slot="longterm-courses-slot">
+    <AllInOneKidsCourseCard />
+
     <ScratchProgramCourseCard />
 
     <DigitalArtDesignCourseCard />

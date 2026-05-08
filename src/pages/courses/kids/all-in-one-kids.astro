@@ -1,0 +1,78 @@
+---
+import IndCourseDetailsLayout from "../../../layouts/IndCourseDetailsLayout.astro";
+
+const metadata = {
+  title: "Learn Computer Skills, Creativity & Coding for Kids at V.Vidhya",
+  description:
+    "Help your child build computer skills with our Kids All-in-One Computer Skills Course at V.Vidhya in Surat. Learn computer basics, MS Office, digital creativity, and beginner coding through fun activities and hands-on projects.",
+};
+
+const courseDetails = {
+  name: "All In One - Computer Skills",
+  duration: "3-5",
+  image: "/images/doodles/girl-multitasking.svg",
+  imgAlt: "an Illustration of a girl easily able to manage multiple tasks",
+  overview:
+    "This Kids All-in-One Computer Skills Course is designed to help children build confidence with computers in a fun, creative, and easy-to-understand way. Through engaging, activity-based learning, students will explore essential computer skills, digital creativity, and beginner-friendly coding concepts while developing logical thinking and problem-solving abilities. The course combines creativity, practical learning, and interactive exercises to make technology enjoyable and approachable for young learners. From creating digital artwork and presentations to building simple animations and projects, children will gradually learn how to use computers productively and creatively. By the end of the course, students will have a strong foundation in computer usage, improved digital confidence, and the ability to create and present their own creative projects independently.",
+};
+---
+
+<IndCourseDetailsLayout
+  metadata={metadata}
+  navSection="none"
+  courseDetails={courseDetails}
+>
+  <slot slot="course-curriculum-slot">
+    <li class="ind-course-imp-text">Basics</li>
+    <ul class="ind-course-sublist">
+      <li>Windows - Introduction to Computer</li>
+      <li>Typing - Speed Typing Training</li>
+      <li>File management for personal files and projects</li>
+    </ul>
+
+    <li class="ind-course-imp-text">MS Suite</li>
+    <ul class="ind-course-sublist">
+      <li>Word processing for essays, stories, etc.</li>
+      <li>PowerPoint for presentations</li>
+      <li>Excel for creating charts and doing math</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Digital Art & Design</li>
+    <ul class="ind-course-sublist">
+      <li>Drawing with MS Paint</li>
+      <li>Understanding geometry and shapes</li>
+      <li>Color theory and typography</li>
+      <li>Composition and layouting</li>
+      <li>Canva for simple creative designs and presentations</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Scratch Programming</li>
+    <ul class="ind-course-sublist">
+      <li>Introduction to block-based coding</li>
+      <li>Events, sequences, loops, and conditions</li>
+      <li>Adding background sound</li>
+      <li>Animations and inputs</li>
+      <li>Understanding gameplay and game design</li>
+    </ul>
+
+    <li class="ind-course-imp-text">Project Work</li>
+    <ul class="ind-course-sublist">
+      <li>
+        Regular practice through fun and engaging activity-based exercises
+      </li>
+      <li>
+        Hands-on creative and computer-based projects to improve confidence and
+        practical understanding
+      </li>
+      <li>
+        Interactive learning sessions, mini challenges, and friendly
+        competitions to make learning exciting
+      </li>
+      <li>
+        Team activities and creative thinking exercises to strengthen
+        problem-solving skills
+      </li>
+      <li>Showcasing final projects and creative work to peers & family</li>
+    </ul>
+  </slot>
+</IndCourseDetailsLayout>
